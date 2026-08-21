@@ -565,6 +565,14 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 .btn--line { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
 .btn--line:hover { background: var(--ink); color: var(--paper); }
 
+/* Author display on .btn overrides the UA [hidden] rule — force hide */
+.btn[hidden],
+[data-live-open][hidden],
+[data-demo-open][hidden],
+.feature__links > [hidden] {
+  display: none !important;
+}
+
 .persona__social {
   display: flex; flex-wrap: wrap; gap: 0.25rem 0.85rem; margin-top: 1rem;
 }

@@ -52,10 +52,14 @@
     if (!el) return
     if (on) {
       el.hidden = false
+      el.removeAttribute('hidden')
       el.removeAttribute('aria-hidden')
+      el.style.removeProperty('display')
     } else {
       el.hidden = true
+      el.setAttribute('hidden', '')
       el.setAttribute('aria-hidden', 'true')
+      el.style.display = 'none'
     }
   }
 
