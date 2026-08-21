@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>TryTokka Blog</title>
+    <link>https://trytokka.com/blog</link>
+    <description>One dashboard for all your AI API spend. OpenAI, Anthropic, Gemini, OpenRouter — daily sync, email alerts, and model savings estimates.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Aug 2026 06:15:28 GMT</lastBuildDate>
+    <atom:link href="https://trytokka.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://trytokka.com/icons/icon-512.png</url>
+      <title>TryTokka</title>
+      <link>https://trytokka.com</link>
+    </image>
+    <item>
+      <title>LLM API Pricing Index — Downloadable Data</title>
+      <link>https://trytokka.com/research/llm-api-pricing-index</link>
+      <guid isPermaLink="true">https://trytokka.com/research/llm-api-pricing-index</guid>
+      <pubDate>Sat, 18 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Dated OpenAI and Anthropic direct-API list-rate pins with methodology, official sources, CSV, and JSON.</description>
+      <dc:date>2026-07-18</dc:date>
+    </item>
+    <item>
+      <title>What Is TryTokka? (Not TikTok — AI Spend Tool)</title>
+      <link>https://trytokka.com/blog/what-is-trytokka-not-tiktok</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/what-is-trytokka-not-tiktok</guid>
+      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Searched trytokka and saw ToreTokka, TikTok, or a crypto firm? TryTokka tracks AI API spend. Those other brands are unrelated.</description>
+      <dc:date>2026-08-18</dc:date>
+    </item>
+    <item>
+      <title>How to Track Google Gemini API Costs</title>
+      <link>https://trytokka.com/blog/how-to-track-google-gemini-api-costs</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-track-google-gemini-api-costs</guid>
+      <pubDate>Sat, 11 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Gemini is the odd one out: its costs are buried inside your broader Google Cloud bill, not a dedicated AI dashboard. Here is how to actually see them.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+    <item>
+      <title>How to Track OpenRouter API Costs</title>
+      <link>https://trytokka.com/blog/how-to-track-openrouter-api-costs</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-track-openrouter-api-costs</guid>
+      <pubDate>Sat, 11 Jul 2026 12:00:00 GMT</pubDate>
+      <description>OpenRouter already spans hundreds of models — but its spend still lives in one dashboard, drawn from a prepaid balance that can run dry mid-job. Here is how to stay ahead of it.</description>
+      <dc:date>2026-07-17</dc:date>
+    </item>
+    <item>
+      <title>How to Track AI API Costs Across a Team</title>
+      <link>https://trytokka.com/blog/track-ai-api-costs-across-a-team</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/track-ai-api-costs-across-a-team</guid>
+      <pubDate>Sat, 11 Jul 2026 12:00:00 GMT</pubDate>
+      <description>One developer watching one dashboard is easy. A team sharing four providers across a dozen keys is where AI spend quietly gets out of hand. Here is how to get one number everyone trusts.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+    <item>
+      <title>How to Track Cursor AI API Costs (BYOK &amp; Sub)</title>
+      <link>https://trytokka.com/blog/cursor-api-cost-tracking</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/cursor-api-cost-tracking</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <description>Cursor&apos;s BYOK mode means your AI coding costs can come from multiple places at once. Here&apos;s how to see all of it in one number.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+    <item>
+      <title>TryTokka vs TrackCost vs Helicone: Which Fits?</title>
+      <link>https://trytokka.com/blog/trytokka-vs-trackcost-ai-cost-tracker-comparison</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/trytokka-vs-trackcost-ai-cost-tracker-comparison</guid>
+      <pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+      <description>The AI cost tracking space now has half a dozen tools. Here is an honest breakdown of the main options and who each one is actually built for.</description>
+      <dc:date>2026-07-17</dc:date>
+    </item>
+    <item>
+      <title>OpenAI Spend Alerts vs TryTokka: What Differs</title>
+      <link>https://trytokka.com/blog/openai-spend-alerts-vs-trytokka</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/openai-spend-alerts-vs-trytokka</guid>
+      <pubDate>Tue, 07 Jul 2026 12:00:00 GMT</pubDate>
+      <description>OpenAI&apos;s alerts are useful. They&apos;re also incomplete. Here&apos;s exactly what they cover — and what they can&apos;t.</description>
+      <dc:date>2026-07-07</dc:date>
+    </item>
+    <item>
+      <title>How to Reduce AI API Costs Without Changing Code</title>
+      <link>https://trytokka.com/blog/how-to-reduce-ai-api-costs</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-reduce-ai-api-costs</guid>
+      <pubDate>Mon, 06 Jul 2026 12:00:00 GMT</pubDate>
+      <description>You probably don&apos;t need GPT-4o for every request. Here&apos;s how to find which models are costing you the most and what to switch to.</description>
+      <dc:date>2026-07-07</dc:date>
+    </item>
+    <item>
+      <title>Why Did My AI API Bill Spike? Investigate Fast</title>
+      <link>https://trytokka.com/blog/why-did-my-ai-api-bill-spike</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/why-did-my-ai-api-bill-spike</guid>
+      <pubDate>Mon, 06 Jul 2026 12:00:00 GMT</pubDate>
+      <description>A spend spike on its own tells you nothing. The question is which model drove it, and how far above normal it went.</description>
+      <dc:date>2026-07-07</dc:date>
+    </item>
+    <item>
+      <title>How to Track OpenAI API Spend Without Daily Checks</title>
+      <link>https://trytokka.com/blog/how-to-track-openai-api-spend</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-track-openai-api-spend</guid>
+      <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
+      <description>OpenAI&apos;s own dashboard works, but it only tells you what you already spent. Here&apos;s how to actually stay ahead of it.</description>
+      <dc:date>2026-07-07</dc:date>
+    </item>
+    <item>
+      <title>How to Avoid Surprise AI API Bills</title>
+      <link>https://trytokka.com/blog/how-to-avoid-surprise-ai-api-bills</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-avoid-surprise-ai-api-bills</guid>
+      <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
+      <description>A $300 invoice rarely starts as a $300 charge. It starts as a forgotten batch job nobody was watching. Here&apos;s how to actually catch it early.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+    <item>
+      <title>Best AI API Cost Tracker for Indie Devs in 2026</title>
+      <link>https://trytokka.com/blog/best-ai-api-cost-tracker-for-indie-developers</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/best-ai-api-cost-tracker-for-indie-developers</guid>
+      <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Most &quot;AI cost&quot; tools are built for enterprise FinOps teams with a budget line for tooling. Here&apos;s what actually fits a one-person side project.</description>
+      <dc:date>2026-07-07</dc:date>
+    </item>
+    <item>
+      <title>How to Monitor Anthropic Claude API Costs</title>
+      <link>https://trytokka.com/blog/how-to-monitor-anthropic-claude-api-costs</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/how-to-monitor-anthropic-claude-api-costs</guid>
+      <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
+      <description>The Anthropic Console shows your Claude spend — but only your Claude spend. Here&apos;s how to actually see it alongside everything else you&apos;re paying for.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+    <item>
+      <title>OpenAI vs Anthropic Billing: What Each Shows</title>
+      <link>https://trytokka.com/blog/openai-vs-anthropic-billing-dashboard</link>
+      <guid isPermaLink="true">https://trytokka.com/blog/openai-vs-anthropic-billing-dashboard</guid>
+      <pubDate>Mon, 29 Jun 2026 12:00:00 GMT</pubDate>
+      <description>Both dashboards are fine on their own. The problem shows up the moment you use both providers in the same project.</description>
+      <dc:date>2026-07-26</dc:date>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" width="31" height="31" role="img" aria-hidden="true">
+  <!-- Official Product Hunt mark: coral circle + white P. Extracted from public/badges/producthunt-review.svg -->
+  <path fill="#FF6154" d="M31 15.5C31 24.06 24.06 31 15.5 31S0 24.06 0 15.5 6.94 0 15.5 0 31 6.94 31 15.5"/>
+  <path fill="#fff" d="M17.433 15.956H13.093v-4.65h4.34a2.325 2.325 0 0 1 0 4.65m0-7.75H10.03v15.5h3.063v-4.65h4.34a6.425 6.425 0 0 0 0-12.85"/>
+</svg>
