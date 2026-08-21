@@ -110,6 +110,13 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
   height: var(--top);
   box-sizing: border-box;
 }
+.top__start {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  min-width: 0;
+}
 .top__name {
   font-family: "Inter Display", sans-serif;
   font-weight: 800; font-size: 0.95rem; letter-spacing: -0.06em;
