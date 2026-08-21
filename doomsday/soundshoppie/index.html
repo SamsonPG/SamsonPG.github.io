@@ -121,24 +121,25 @@
         transform: translateX(-50%);
         z-index: 45;
       }
-      /* Premium line below carousel — keep original black→fade shadow */
+      /* Soft blend from carousel image → premium line → page (no solid black edge) */
       .cursoul .carousel {
         margin-bottom: 0;
       }
       .cursoul .running-text {
         position: relative;
         z-index: 6;
-        margin: 0;
-        padding: 1.35rem 1rem 2.75rem;
+        margin: -2.75rem 0 0 !important;
+        padding: 2.75rem 1rem 2.5rem !important;
         text-align: center;
-        color: #fff;
+        color: #fff !important;
         background: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.42) 0%,
-          rgba(0, 0, 0, 0.32) 28%,
-          rgba(0, 0, 0, 0.16) 58%,
-          rgba(228, 228, 228, 0) 100%
-        );
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.12) 18%,
+          rgba(0, 0, 0, 0.28) 42%,
+          rgba(0, 0, 0, 0.18) 68%,
+          rgba(236, 237, 238, 0) 100%
+        ) !important;
       }
       .cursoul .running-text .train-running2 {
         display: inline-block;
@@ -146,13 +147,15 @@
         font-weight: 700;
         font-size: clamp(1rem, 2.4vw, 1.65rem);
         letter-spacing: 0.01em;
-        color: #fff;
-        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+        color: #fff !important;
+        text-shadow:
+          0 1px 2px rgba(0, 0, 0, 0.45),
+          0 2px 14px rgba(0, 0, 0, 0.35);
       }
       .cursoul .feel-sound {
         position: relative;
         z-index: 5;
-        margin-top: -0.35rem;
+        margin-top: -0.5rem;
         padding: 0.35rem 0 0.75rem;
       }
       .cursoul .feel-sound h1 {
@@ -163,8 +166,8 @@
           bottom: 3.75rem;
         }
         .cursoul .running-text {
-          margin-top: 0;
-          padding: 1.1rem 0.75rem 2.1rem;
+          margin-top: -2rem !important;
+          padding: 2.1rem 0.75rem 2rem !important;
         }
         .cursoul .running-text .train-running2,
         .cursoul .feel-sound .train-running1 {
