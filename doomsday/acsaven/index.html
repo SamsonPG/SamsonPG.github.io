@@ -6,78 +6,67 @@
   <title>Acsaven — tools that stay with you</title>
   <meta name="description" content="Studio hub behind TryTokka and the free Try utilities." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../demo-site.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="top__inner">
+  <header class="nav">
+    <div class="nav__inner">
       <a class="logo" href="./">Acsaven</a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#top">Home</a>
         <a href="#features">Features</a>
         <a href="#product">Product</a>
-        <a class="btn btn--fill btn--sm" href="#get-started">Pick a tool</a>
+        <a href="#get-started">Get started</a>
       </nav>
+      <div class="nav__actions">
+        <a class="btn btn--primary" href="#get-started">Pick a tool</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero site">
-      <div class="hero__grid">
-        <div>
-          <p class="kicker">Acsaven</p>
-          <h1>Tools that stay with you.</h1>
-          <p class="lede">Studio hub behind TryTokka and the free Try utilities.</p>
-          <div class="actions">
-            <a class="btn btn--fill" href="#get-started">Pick a tool</a>
-            <a class="btn btn--ghost" href="#product">See products</a>
-          </div>
+  <main id="top">
+    <section class="cinema">
+      <div class="cinema__copy">
+        <p class="kicker">Acsaven</p>
+        <h1>Tools that stay with you.</h1>
+        <p class="promise">Studio hub behind TryTokka and the free Try utilities.</p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#get-started">Pick a tool</a>
+          <a class="btn btn--secondary btn--lg" href="#product">See products</a>
         </div>
-        <figure class="hero-shot">
-          <img src="./shot.webp" alt="Acsaven product" width="1440" height="900" loading="eager">
-        </figure>
+        <p class="trust">acsaven.com</p>
+      </div>
+      <div class="stage" id="product">
+        <div class="stage__chrome">
+          <span class="stage__dots" aria-hidden="true"></span>
+          <span class="stage__title">Acsaven — demo</span>
+          <span class="stage__badge">● DEMO</span>
+        </div>
+        <img class="stage__img" src="./shot.webp" alt="Acsaven homepage" width="1440" height="900" loading="eager">
       </div>
     </section>
 
-    <section class="band site" id="features">
-      <h2>Built for how you work</h2>
-      
-      <div class="cards">
-<article class="card"><h3>Studio</h3><p>Parent home for the Try family.</p></article>
-<article class="card"><h3>Products</h3><p>TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow.</p></article>
-<article class="card"><h3>Founder-built</h3><p>Independent studio by Samson P G.</p></article>
-      </div>
+    <section class="chapter" id="features">
+      <h2>Built for the job</h2>
+      <ul class="steps">
+<li><h3>Studio</h3><p>Parent home for the Try family.</p></li>
+<li><h3>Products</h3><p>TryTokka and free utilities.</p></li>
+<li><h3>Founder-built</h3><p>Independent studio by Samson P G.</p></li>
+      </ul>
     </section>
 
-    <section class="band site" id="product">
-      <h2>See the product</h2>
-      
-      <figure class="stage" style="margin-top:1rem">
-        <img src="./shot.webp" alt="Acsaven homepage" width="1440" height="900" loading="lazy">
-      </figure>
-    </section>
+    <section class="bleed" aria-label="More"><img src="./acsaven-cover.webp" alt="Acsaven" width="1440" height="900" loading="lazy"></section>
 
-    <section class="band site" id="gallery">
-      <h2>Product</h2>
-      <div class="gallery"><figure><img src="./acsaven-cover.webp" alt="Acsaven" width="1200" height="750" loading="lazy"></figure></div>
-    </section>
-
-    <section class="site" id="get-started">
-      <div class="cta-band">
-        <div>
-          <h2>Explore the studio</h2>
-          <p>Find the tool that fits the job.</p>
-        </div>
-        <div class="actions" style="margin:0">
-          <a class="btn btn--fill" href="#product">Explore product</a>
-          <a class="btn btn--ghost" href="#features">Features</a>
-        </div>
+    <section class="chapter" id="get-started">
+      <h2>Pick a tool</h2>
+      <p class="promise">Studio hub behind TryTokka and the free Try utilities.</p>
+      <div class="cta">
+        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
+        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
       </div>
     </section>
   </main>
 
-  <footer class="site site-foot">
-    <span>© 2026 Acsaven</span>
-    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
-  </footer>
+  <footer class="foot"><div class="foot-inner"><span>© 2026 Acsaven</span><span>An Acsaven / Samson PG product</span></div></footer>
 </body>
 </html>

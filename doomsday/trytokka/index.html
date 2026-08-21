@@ -1,84 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="trytokka">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryTokka — AI API spend monitoring</title>
-  <meta name="description" content="Sync providers, set budgets, and catch overruns before the bill lands." />
+  <title>TryTokka — AI API Invoice Monitor for OpenAI &amp; Anthropic</title>
+  <meta name="description" content="Paste a read-only key — no proxy, no SDK, no code change. Scout emails you after daily sync when you cross your limit." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="top__inner">
-      <a class="logo" href="./">TryTokka</a>
-      <nav class="nav" aria-label="Primary">
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="nav__brand">
+        <a class="logo" href="./" aria-label="TryTokka home">
+          <span class="logo__marks" aria-hidden="true">
+            <span class="logo__dot"></span>
+            <span class="logo__dot logo__dot--2"></span>
+          </span>
+          <span class="logo__word">TryTokka</span>
+        </a>
+        <a class="pill" href="#product">Try family</a>
+      </div>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#top">Home</a>
         <a href="#features">Features</a>
         <a href="#product">Product</a>
-        <a class="btn btn--fill btn--sm" href="#get-started">Start free</a>
+        <a href="#get-started">Pricing</a>
       </nav>
+      <div class="nav__actions">
+        <a class="link-quiet" href="#get-started">Sign in</a>
+        <a class="btn btn--primary" href="#get-started">Start free trial</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero site">
-      <div class="hero__grid">
-        <div>
-          <p class="kicker">TryTokka</p>
-          <h1>Know your API invoice before finance asks.</h1>
-          <p class="lede">Sync providers, set budgets, and catch overruns before the bill lands.</p>
-          <div class="actions">
-            <a class="btn btn--fill" href="#get-started">Start free</a>
-            <a class="btn btn--ghost" href="#product">See product</a>
-          </div>
+  <main id="top">
+    <section class="cinema">
+      <div class="cinema__wash" aria-hidden="true"></div>
+      <div class="cinema__copy">
+        <p class="brand-row">
+          <span class="logo__marks" aria-hidden="true">
+            <span class="logo__dot"></span>
+            <span class="logo__dot logo__dot--2"></span>
+          </span>
+          <span class="brand-word">TryTokka</span>
+        </p>
+        <h1>
+          Know your <span class="sketch">API invoice</span> before finance asks.
+        </h1>
+        <p class="promise">
+          Paste a read-only key — no proxy, no SDK, no code change. Scout emails you
+          after daily sync when you cross your limit, usually within ~24h.
+        </p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#get-started">Start free trial</a>
+          <a class="btn btn--secondary btn--lg" href="#product">Estimate without account</a>
         </div>
-        <figure class="hero-shot">
-          <img src="./shot.webp" alt="TryTokka product" width="1440" height="900" loading="eager">
-        </figure>
+        <div class="trust">
+          <span>✓ 7 days free · No card · Not TikTok</span>
+          <span>🔒 Read-only keys · AES-256 · Security</span>
+        </div>
+        <ul class="receipt">
+          <li>8 providers</li>
+          <li>Daily Scout</li>
+          <li>Email after sync</li>
+          <li>No proxy</li>
+        </ul>
+        <p class="byline">An <strong>Acsaven</strong> product by Samson PG</p>
+      </div>
+
+      <div class="stage" id="product">
+        <div class="stage__chrome">
+          <span class="stage__dots" aria-hidden="true"></span>
+          <span class="stage__title">TryTokka — demo workspace</span>
+          <span class="stage__badge">● DEMO</span>
+        </div>
+        <img
+          class="stage__img"
+          src="./shot.webp"
+          alt="TryTokka demo workspace dashboard"
+          width="1440"
+          height="900"
+          loading="eager"
+        />
       </div>
     </section>
 
-    <section class="band site" id="features">
-      <h2>Built for how you work</h2>
-      
-      <div class="cards">
-<article class="card"><h3>Multi-provider sync</h3><p>Pull usage from the AI APIs you already pay for.</p></article>
-<article class="card"><h3>Budgets & alerts</h3><p>Know when spend drifts — before finance asks.</p></article>
-<article class="card"><h3>Read-only keys</h3><p>Paste a read-only key. No proxy, no SDK required to start.</p></article>
-      </div>
+    <section class="chapter" id="features">
+      <p class="label">The whole idea</p>
+      <h2>You don’t watch your spend. Scout does.</h2>
+      <ol class="steps">
+        <li>
+          <span class="steps__n">1</span>
+          <h3>Connect once</h3>
+          <p>Add the provider credential. Revoke or replace a connection later.</p>
+        </li>
+        <li>
+          <span class="steps__n">2</span>
+          <h3>Scout syncs daily</h3>
+          <p>Every provider pulled into one number automatically.</p>
+        </li>
+        <li>
+          <span class="steps__n">3</span>
+          <h3>Email only when it matters</h3>
+          <p>Silent under budget. When sync finds you over the limit, Scout emails you.</p>
+        </li>
+      </ol>
     </section>
 
-    <section class="band site" id="product">
-      <h2>See the product</h2>
-      
-      <figure class="stage" style="margin-top:1rem">
-        <img src="./shot.webp" alt="TryTokka homepage" width="1440" height="900" loading="lazy">
-      </figure>
+    <section class="chapter chapter--shot">
+      <img src="./dashboard.webp" alt="TryTokka spend dashboard" width="1600" height="900" loading="lazy" />
     </section>
 
-    <section class="band site" id="gallery">
-      <h2>Product</h2>
-      <div class="gallery"><figure><img src="./trytokka-dashboard.webp" alt="TryTokka" width="1200" height="750" loading="lazy"></figure>
-<figure><img src="./trytokka-ui-dashboard.webp" alt="TryTokka" width="1200" height="750" loading="lazy"></figure></div>
-    </section>
-
-    <section class="site" id="get-started">
-      <div class="cta-band">
-        <div>
-          <h2>Start tracking spend</h2>
-          <p>Budgets, alerts, and provider sync in one place.</p>
-        </div>
-        <div class="actions" style="margin:0">
-          <a class="btn btn--fill" href="#product">Explore product</a>
-          <a class="btn btn--ghost" href="#features">Features</a>
-        </div>
+    <section class="chapter" id="get-started">
+      <h2>Start free trial</h2>
+      <p class="promise">7 days free · No credit card · Read-only keys</p>
+      <div class="cta">
+        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
+        <a class="btn btn--secondary btn--lg" href="#features">See how it works</a>
       </div>
     </section>
   </main>
 
-  <footer class="site site-foot">
-    <span>© 2026 TryTokka</span>
-    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  <footer class="foot">
+    <div class="foot__inner">
+      <span>© 2026 TryTokka · An Acsaven product</span>
+      <span>Built by Samson PG</span>
+    </div>
   </footer>
 </body>
 </html>

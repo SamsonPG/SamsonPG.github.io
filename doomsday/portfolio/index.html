@@ -6,78 +6,67 @@
   <title>Samson P G — full-stack engineer</title>
   <meta name="description" content="Multi-provider sync, alerts, payments — products under Acsaven." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../demo-site.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="top__inner">
+  <header class="nav">
+    <div class="nav__inner">
       <a class="logo" href="./">Samson P G</a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#features">Software</a>
-        <a href="#product">Work</a>
-        <a class="btn btn--fill btn--sm" href="#get-started">Explore software</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#top">Home</a>
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a href="#get-started">Get started</a>
       </nav>
+      <div class="nav__actions">
+        <a class="btn btn--primary" href="#get-started">Explore software</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero site">
-      <div class="hero__grid">
-        <div>
-          <p class="kicker">Samson P G</p>
-          <h1>I build production web systems.</h1>
-          <p class="lede">Multi-provider sync, alerts, payments — products under Acsaven.</p>
-          <div class="actions">
-            <a class="btn btn--fill" href="#get-started">Explore software</a>
-            <a class="btn btn--ghost" href="#product">See work</a>
-          </div>
+  <main id="top">
+    <section class="cinema">
+      <div class="cinema__copy">
+        <p class="kicker">Samson P G</p>
+        <h1>I build production web systems.</h1>
+        <p class="promise">Multi-provider sync, alerts, payments — products under Acsaven.</p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#get-started">Explore software</a>
+          <a class="btn btn--secondary btn--lg" href="#product">See work</a>
         </div>
-        <figure class="hero-shot">
-          <img src="./shot.webp" alt="Samson P G product" width="1440" height="900" loading="eager">
-        </figure>
+        <p class="trust">samsonpg.github.io</p>
+      </div>
+      <div class="stage" id="product">
+        <div class="stage__chrome">
+          <span class="stage__dots" aria-hidden="true"></span>
+          <span class="stage__title">Samson P G — demo</span>
+          <span class="stage__badge">● DEMO</span>
+        </div>
+        <img class="stage__img" src="./shot.webp" alt="Samson P G homepage" width="1440" height="900" loading="eager">
       </div>
     </section>
 
-    <section class="band site" id="features">
-      <h2>Built for how you work</h2>
-      
-      <div class="cards">
-<article class="card"><h3>Software</h3><p>TryTokka, utilities, and Benagon / 20X.</p></article>
-<article class="card"><h3>Path</h3><p>From electronics and design to founder.</p></article>
-<article class="card"><h3>Creative</h3><p>Print, branding, and production craft.</p></article>
-      </div>
+    <section class="chapter" id="features">
+      <h2>Built for the job</h2>
+      <ul class="steps">
+<li><h3>Software</h3><p>TryTokka, utilities, Benagon / 20X.</p></li>
+<li><h3>Path</h3><p>Electronics to founder.</p></li>
+<li><h3>Creative</h3><p>Print, branding, production.</p></li>
+      </ul>
     </section>
 
-    <section class="band site" id="product">
-      <h2>See the product</h2>
-      
-      <figure class="stage" style="margin-top:1rem">
-        <img src="./shot.webp" alt="Samson P G homepage" width="1440" height="900" loading="lazy">
-      </figure>
-    </section>
+    <section class="bleed" aria-label="More"><img src="./profile.webp" alt="Samson P G" width="1440" height="900" loading="lazy"></section>
 
-    <section class="band site" id="gallery">
-      <h2>Product</h2>
-      <div class="gallery"><figure><img src="./profile.webp" alt="Samson P G" width="1200" height="750" loading="lazy"></figure></div>
-    </section>
-
-    <section class="site" id="get-started">
-      <div class="cta-band">
-        <div>
-          <h2>See the work</h2>
-          <p>Software-first portfolio — production systems shipped.</p>
-        </div>
-        <div class="actions" style="margin:0">
-          <a class="btn btn--fill" href="#product">Explore product</a>
-          <a class="btn btn--ghost" href="#features">Features</a>
-        </div>
+    <section class="chapter" id="get-started">
+      <h2>Explore software</h2>
+      <p class="promise">Multi-provider sync, alerts, payments — products under Acsaven.</p>
+      <div class="cta">
+        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
+        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
       </div>
     </section>
   </main>
 
-  <footer class="site site-foot">
-    <span>© 2026 Samson P G</span>
-    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
-  </footer>
+  <footer class="foot"><div class="foot-inner"><span>© 2026 Samson P G</span><span>An Acsaven / Samson PG product</span></div></footer>
 </body>
 </html>

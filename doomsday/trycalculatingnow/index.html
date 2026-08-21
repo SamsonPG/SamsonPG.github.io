@@ -6,78 +6,67 @@
   <title>TryCalculatingNow — GPA & finance calculators</title>
   <meta name="description" content="GPA, grades, finance, and unit calculators — no signup wall." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../demo-site.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="top__inner">
+  <header class="nav">
+    <div class="nav__inner">
       <a class="logo" href="./">TryCalculatingNow</a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#top">Home</a>
         <a href="#features">Features</a>
         <a href="#product">Product</a>
-        <a class="btn btn--fill btn--sm" href="#get-started">Open calculators</a>
+        <a href="#get-started">Get started</a>
       </nav>
+      <div class="nav__actions">
+        <a class="btn btn--primary" href="#get-started">Open calculators</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero site">
-      <div class="hero__grid">
-        <div>
-          <p class="kicker">TryCalculatingNow</p>
-          <h1>What grade do I need on my final?</h1>
-          <p class="lede">GPA, grades, finance, and unit calculators — no signup wall.</p>
-          <div class="actions">
-            <a class="btn btn--fill" href="#get-started">Open calculators</a>
-            <a class="btn btn--ghost" href="#product">See product</a>
-          </div>
+  <main id="top">
+    <section class="cinema">
+      <div class="cinema__copy">
+        <p class="kicker">TryCalculatingNow</p>
+        <h1>What grade do I need on my final?</h1>
+        <p class="promise">GPA, grades, finance, and unit calculators — no signup wall.</p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#get-started">Open calculators</a>
+          <a class="btn btn--secondary btn--lg" href="#product">See product</a>
         </div>
-        <figure class="hero-shot">
-          <img src="./shot.webp" alt="TryCalculatingNow product" width="1440" height="900" loading="eager">
-        </figure>
+        <p class="trust">trycalculatingnow.com</p>
+      </div>
+      <div class="stage" id="product">
+        <div class="stage__chrome">
+          <span class="stage__dots" aria-hidden="true"></span>
+          <span class="stage__title">TryCalculatingNow — demo</span>
+          <span class="stage__badge">● DEMO</span>
+        </div>
+        <img class="stage__img" src="./shot.webp" alt="TryCalculatingNow homepage" width="1440" height="900" loading="eager">
       </div>
     </section>
 
-    <section class="band site" id="features">
-      <h2>Built for how you work</h2>
-      
-      <div class="cards">
-<article class="card"><h3>Grades</h3><p>Current grade, final weight, target — result updates live.</p></article>
-<article class="card"><h3>Finance</h3><p>Everyday calculators without an account.</p></article>
-<article class="card"><h3>Fast UI</h3><p>Open a calculator and go.</p></article>
-      </div>
+    <section class="chapter" id="features">
+      <h2>Built for the job</h2>
+      <ul class="steps">
+<li><h3>Grades</h3><p>Current grade, weight, target — live result.</p></li>
+<li><h3>Finance</h3><p>Everyday calculators, no account.</p></li>
+<li><h3>Fast</h3><p>Open and go.</p></li>
+      </ul>
     </section>
 
-    <section class="band site" id="product">
-      <h2>See the product</h2>
-      
-      <figure class="stage" style="margin-top:1rem">
-        <img src="./shot.webp" alt="TryCalculatingNow homepage" width="1440" height="900" loading="lazy">
-      </figure>
-    </section>
+    <section class="bleed" aria-label="More"><img src="./trycalculatingnow-cover.webp" alt="TryCalculatingNow" width="1440" height="900" loading="lazy"></section>
 
-    <section class="band site" id="gallery">
-      <h2>Product</h2>
-      <div class="gallery"><figure><img src="./trycalculatingnow-cover.webp" alt="TryCalculatingNow" width="1200" height="750" loading="lazy"></figure></div>
-    </section>
-
-    <section class="site" id="get-started">
-      <div class="cta-band">
-        <div>
-          <h2>Run a calculator</h2>
-          <p>Grades, GPA, finance — ready when you are.</p>
-        </div>
-        <div class="actions" style="margin:0">
-          <a class="btn btn--fill" href="#product">Explore product</a>
-          <a class="btn btn--ghost" href="#features">Features</a>
-        </div>
+    <section class="chapter" id="get-started">
+      <h2>Open calculators</h2>
+      <p class="promise">GPA, grades, finance, and unit calculators — no signup wall.</p>
+      <div class="cta">
+        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
+        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
       </div>
     </section>
   </main>
 
-  <footer class="site site-foot">
-    <span>© 2026 TryCalculatingNow</span>
-    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
-  </footer>
+  <footer class="foot"><div class="foot-inner"><span>© 2026 TryCalculatingNow</span><span>An Acsaven / Samson PG product</span></div></footer>
 </body>
 </html>
