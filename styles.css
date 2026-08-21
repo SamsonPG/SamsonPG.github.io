@@ -384,22 +384,28 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 
 .persona__top {
   display: grid;
-  grid-template-columns: 5.5rem 1fr;
-  gap: 0.9rem;
+  grid-template-columns: 30% 70%;
+  gap: 0.85rem 1rem;
   align-items: center;
+  max-width: 34rem;
+  margin-inline: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 @media (min-width: 960px) {
   .persona__top {
-    grid-template-columns: 1fr;
-    justify-items: start;
-    text-align: left;
-    gap: 0.85rem;
+    max-width: none;
+    margin-inline: 0;
+    gap: 0.75rem;
   }
 }
 
 .persona__photo {
-  margin: 0;
-  width: 5.5rem; height: 5.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 7.5rem;
+  aspect-ratio: 1;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid color-mix(in srgb, var(--green) 35%, var(--line));
@@ -408,15 +414,54 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
   flex-shrink: 0;
 }
 @media (min-width: 960px) {
-  .persona__photo { width: 7.25rem; height: 7.25rem; }
+  .persona__photo { max-width: 100%; }
 }
 .persona__photo img {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: 50% 18%;
+  display: block;
 }
 
-.persona__intro { min-width: 0; }
+.persona__intro {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+@media (max-width: 959px) {
+  .persona__inner {
+    text-align: center;
+  }
+  .persona__intro {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .persona__bio,
+  .persona__focus,
+  .persona__now,
+  .persona__meta,
+  .persona__actions,
+  .persona__social {
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .persona__chips,
+  .persona__actions,
+  .persona__social,
+  .persona__now ul {
+    justify-content: center;
+  }
+  .persona__meta {
+    text-align: left;
+  }
+  .persona__status {
+    margin-inline: 0;
+  }
+}
 .persona__name {
   margin: 0;
   font-family: "Inter Display", sans-serif;
