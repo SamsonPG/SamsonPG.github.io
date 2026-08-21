@@ -31,8 +31,7 @@ html[data-theme="light"],
   --shadow: 0 14px 32px -22px rgba(14, 22, 18, 0.4);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --top: 3.75rem;
-  --persona: 17.5rem;
-  --stage: 72rem; /* TryTokka content-app ≈ max-w-6xl */
+  --persona: 20%;
   --stage-pad: clamp(1rem, 2.5vw, 2rem);
 }
 
@@ -200,8 +199,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 .theme-switch--labeled { width: 100%; }
 .theme-switch--labeled .theme-switch-btn { min-height: 2.5rem; }
 
-/* Shell */
-/* Shell — full width canvas; stage width lives in .main */
+/* Shell — 20% persona / 80% main on wide screens */
 .shell {
   display: grid;
   grid-template-columns: 1fr;
@@ -212,7 +210,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 }
 @media (min-width: 960px) {
   .shell {
-    grid-template-columns: var(--persona) minmax(0, 1fr);
+    grid-template-columns: 20% minmax(0, 80%);
     border-inline: 0;
   }
 }
@@ -393,13 +391,19 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 }
 .persona__social a:hover { color: var(--green-deep); }
 
+/* Main — on wide screens, content is 70% of the 80% column (15% gutters each side) */
 .main {
   min-width: 0;
   width: 100%;
-  max-width: var(--stage);
-  margin-inline: auto;
+  margin-inline: 0;
+  max-width: none;
   padding: clamp(1.25rem, 3vw, 2rem) var(--stage-pad) 3rem;
   background: transparent;
+}
+@media (min-width: 960px) {
+  .main {
+    padding-inline: 15%; /* → 70% content width inside the 80% pane */
+  }
 }
 
 .feature {
