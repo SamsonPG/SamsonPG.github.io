@@ -3,47 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Final Grade &amp; GPA Calculators | TryCalculatingNow</title>
-  <meta name="description" content="What grade do I need on my final? Enter current grade, final weight, and target — result updates live. No account." />
+  <title>Final Grade & GPA Calculators | TryCalculatingNow</title>
+  <meta name="description" content="What grade do I need on my final? Live calculators, no account." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="./site.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
+    .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
+    .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
+    @media(min-width:640px){.domain{display:inline}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#b45309;color:#fff}
+    .page{width:100%;height:auto;display:block}
+  </style>
 </head>
 <body>
-  <header class="top"><div class="top__inner">
-    <a class="logo" href="./"><img src="./assets/trycalculatingnow.svg" width="24" height="24" alt="" />TryCalculatingNow</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#top">Home</a><a href="#tool">Final Grade</a><a href="#popular">GPA</a><a href="#popular">All tools</a>
-    </nav>
-    <a class="btn btn--fill" href="#tool">Calculate</a>
-  </div></header>
-  <main id="top">
-    <section class="wrap">
-      <p class="eyebrow" style="margin:0;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)">trycalculatingnow.com</p>
-      <p class="brandlock"><img src="./assets/trycalculatingnow.svg" width="28" height="28" alt="" />TryCalculatingNow</p>
-      <h1>What grade do I need on my final?</h1>
-      <p class="lede">Enter current grade, final weight, and target — result updates live. No account.</p>
-      <p class="badge">No signup · Live result</p>
-    </section>
-    <section class="embed" id="tool">
-      <h2>Try it — what do I need on my final?</h2>
-      <div class="field"><label>Current grade %</label><input value="85" readonly /></div>
-      <div class="field"><label>Final weight %</label><input value="20" readonly /></div>
-      <div class="field"><label>Target grade %</label><input value="90" readonly /></div>
-      <div class="actions">
-        <a class="btn btn--fill" href="#tool">Calculate</a>
-        <a class="btn btn--line" href="#popular">Open full calculator →</a>
-      </div>
-    </section>
-    <section class="section" id="popular">
-      <h2>Popular calculators</h2>
-      <div class="tools">
-        <article class="tool"><h3>Final Grade Calculator</h3><p>What you need on the final.</p></article>
-        <article class="tool"><h3>GPA Calculator</h3><p>Weighted GPA fast.</p></article>
-        <article class="tool"><h3>Percentage Calculator</h3><p>Everyday percent math.</p></article>
-      </div>
-    </section>
-    <figure class="shot"><img src="./shot.webp" alt="TryCalculatingNow" width="1440" height="900" loading="lazy"></figure>
-  </main>
-  <footer class="foot">© 2026 TryCalculatingNow · An Acsaven product · Samson PG</footer>
+  <header class="top">
+    <a class="logo" href="./">TryCalculatingNow <span class="domain">trycalculatingnow.com</span></a>
+    <a class="btn" href="#page">Open calculators</a>
+  </header>
+  <img id="page" class="page" src="./home-full.webp" width="1440" alt="TryCalculatingNow homepage" loading="eager" decoding="async" />
 </body>
 </html>

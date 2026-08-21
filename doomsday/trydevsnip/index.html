@@ -3,46 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JSON Formatter &amp; Dev Tools in Browser | TryDevSnip</title>
-  <meta name="description" content="Format JSON privately in your browser. Paste JSON, hit Format — stays on your device. No upload, no signup." />
+  <title>JSON Formatter & Dev Tools in Browser | TryDevSnip</title>
+  <meta name="description" content="Format JSON privately in your browser. No upload, no signup." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="./site.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
+    .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
+    .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
+    @media(min-width:640px){.domain{display:inline}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#0369a1;color:#fff}
+    .page{width:100%;height:auto;display:block}
+  </style>
 </head>
 <body>
-  <header class="top"><div class="top__inner">
-    <a class="logo" href="./"><img src="./assets/trydevsnip.svg" width="24" height="24" alt="" />TryDevSnip</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#top">Home</a><a href="#tool">JSON Formatter</a><a href="#popular">Cron Helper</a><a href="#popular">All tools</a>
-    </nav>
-    <a class="btn btn--fill" href="#tool">Format</a>
-  </div></header>
-  <main id="top">
-    <section class="wrap">
-      <p class="brandlock"><img src="./assets/trydevsnip.svg" width="28" height="28" alt="" />TryDevSnip</p>
-      <h1>Format JSON privately in your browser.</h1>
-      <p class="lede">Paste JSON, hit Format — stays on your device. No upload, no signup.</p>
-      <p class="badge">Private in your browser · No upload</p>
-    </section>
-    <section class="embed" id="tool">
-      <h2>Try it — format JSON here</h2>
-      <div class="field"><label>Input</label><input value='{"hello":"world","ok":true}' readonly /></div>
-      <div class="field"><label>Output</label><input value='{ "hello": "world", "ok": true }' readonly /></div>
-      <div class="actions">
-        <a class="btn btn--fill" href="#tool">Format</a>
-        <a class="btn btn--line" href="#popular">Open full tool →</a>
-      </div>
-    </section>
-    <section class="section" id="popular">
-      <h2>Popular tools</h2>
-      <div class="tools">
-        <article class="tool"><h3>JSON Formatter</h3><p>Pretty-print privately.</p></article>
-        <article class="tool"><h3>JSON Diff</h3><p>Compare two payloads.</p></article>
-        <article class="tool"><h3>Timestamp Converter</h3><p>Unix ↔ human time.</p></article>
-        <article class="tool"><h3>Cron Helper</h3><p>Read and build cron expressions.</p></article>
-      </div>
-    </section>
-    <figure class="shot"><img src="./shot.webp" alt="TryDevSnip" width="1440" height="900" loading="lazy"></figure>
-  </main>
-  <footer class="foot">© 2026 TryDevSnip · An Acsaven product · Samson PG</footer>
+  <header class="top">
+    <a class="logo" href="./">TryDevSnip <span class="domain">trydevsnip.com</span></a>
+    <a class="btn" href="#page">Open tools</a>
+  </header>
+  <img id="page" class="page" src="./home-full.webp" width="1440" alt="TryDevSnip homepage" loading="eager" decoding="async" />
 </body>
 </html>

@@ -4,43 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Acsaven — private Try tools that stay with you</title>
-  <meta name="description" content="Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka." />
+  <meta name="description" content="Tools that stay with you. Parent studio behind the Try family." />
   <meta name="robots" content="noindex,follow" />
-  <meta name="theme-color" content="#101216" />
-  <link rel="stylesheet" href="./site.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
+    .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
+    .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
+    @media(min-width:640px){.domain{display:inline}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#334155;color:#fff}
+    .page{width:100%;height:auto;display:block}
+  </style>
 </head>
 <body>
-  <header class="top"><div class="top__inner">
-    <a class="logo" href="./"><img src="./assets/acsaven-mark.svg" width="24" height="24" alt="" />Acsaven</a>
-    <nav class="nav" aria-label="Primary"><a href="#top">Home</a><a href="#products">Products</a><a href="#about">About</a></nav>
-    <a class="btn btn--fill" href="#products">Pick a tool</a>
-  </div></header>
-  <main id="top">
-    <section class="hero">
-      <img class="hero__veil" src="./assets/haven-veil-lcp.webp" alt="" width="960" height="540" />
-      <div class="hero__copy">
-        <p class="brand"><img src="./assets/acsaven-mark.svg" width="28" height="28" alt="" />Acsaven</p>
-        <h1>Tools that stay with you.</h1>
-        <p class="lede">Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka. Three free browser tools that never upload your files — plus Scout emails when AI API spend crosses your limit.</p>
-        <div class="cta"><a class="btn btn--fill" href="#products">Pick a tool</a></div>
-      </div>
-      <div class="orbit"><img class="char" src="./assets/haven-character.svg" alt="" width="480" height="480" /></div>
-    </section>
-    <section class="section" id="products">
-      <h2>What do you need to do today?</h2>
-      <div class="grid">
-        <article class="card"><h3>TryQuickImg</h3><p>Compress &amp; convert images privately in your browser.</p></article>
-        <article class="card"><h3>TryDevSnip</h3><p>JSON, JWT, cron, timestamps — local-first.</p></article>
-        <article class="card"><h3>TryCalculatingNow</h3><p>GPA, grades, finance calculators.</p></article>
-        <article class="card"><h3>TryTokka</h3><p>AI API spend monitor — Scout emails after sync.</p></article>
-      </div>
-    </section>
-    <section class="section" id="about">
-      <h2>Built for people who just need the job done.</h2>
-      <p class="lede" style="text-align:center;margin:0 auto;max-width:44ch;color:var(--muted)">Four products. Equal care. An independent studio by Samson PG.</p>
-    </section>
-    <figure class="shot"><img src="./shot.webp" alt="Acsaven" width="1440" height="900" loading="lazy" /></figure>
-  </main>
-  <footer class="foot">© 2026 Acsaven · Samson PG</footer>
+  <header class="top">
+    <a class="logo" href="./">Acsaven <span class="domain">acsaven.com</span></a>
+    <a class="btn" href="#page">Pick a tool</a>
+  </header>
+  <img id="page" class="page" src="./home-full.webp" width="1440" alt="Acsaven homepage" loading="eager" decoding="async" />
 </body>
 </html>

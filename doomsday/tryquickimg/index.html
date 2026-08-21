@@ -3,47 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Compress &amp; Convert Images in Browser | TryQuickImg</title>
-  <meta name="description" content="TryQuickImg — free private image tools in your browser. Convert, compress, resize, and make QR codes with no upload and no signup." />
+  <title>Compress & Convert Images in Browser | TryQuickImg</title>
+  <meta name="description" content="Free private image tools in your browser. No upload, no signup." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="./site.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
+    .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
+    .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
+    @media(min-width:640px){.domain{display:inline}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#6d28d9;color:#fff}
+    .page{width:100%;height:auto;display:block}
+  </style>
 </head>
 <body>
-  <header class="top"><div class="top__inner">
-    <a class="logo" href="./"><img src="./assets/tryquickimg.svg" width="24" height="24" alt="" />TryQuickImg</a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#top">Home</a><a href="#tool">Compress Image</a><a href="#popular">Resize Image</a><a href="#popular">All tools</a>
-    </nav>
-    <a class="btn btn--fill" href="#tool">Compress</a>
-  </div></header>
-  <main id="top">
-    <section class="wrap">
-      <p class="brandlock"><img src="./assets/tryquickimg.svg" width="28" height="28" alt="" />TryQuickImg</p>
-      <h1>Compress JPG, PNG &amp; WebP to a KB target — private in your browser.</h1>
-      <p class="lede">Drop a file, set a size, download — compression stays on your device. No signup, no watermark.</p>
-      <p class="badge">Private in your browser · No upload for processing</p>
-    </section>
-    <section class="embed" id="tool">
-      <h2>Try it — compress to ~100 KB here</h2>
-      <div class="drop">Drop an image here (offline demo UI)</div>
-      <div class="field" style="margin-top:.75rem"><label>Target size (KB)</label><input value="100" readonly /></div>
-      <div class="actions">
-        <a class="btn btn--fill" href="#tool">Compress</a>
-        <a class="btn btn--line" href="#popular">Open full Compress tool →</a>
-      </div>
-    </section>
-    <section class="section" id="popular">
-      <h2>Popular tools</h2>
-      <div class="tools">
-        <article class="tool"><h3>Compress image</h3><p>Any KB target in your browser.</p></article>
-        <article class="tool"><h3>HEIC to JPG</h3><p>Convert HEIC without uploading.</p></article>
-        <article class="tool"><h3>Resize image</h3><p>Exact pixel sizes for web and docs.</p></article>
-        <article class="tool"><h3>Compress to 100 KB</h3><p>Fast path for common limits.</p></article>
-        <article class="tool"><h3>Passport photo size</h3><p>Size &amp; KB cheat sheet.</p></article>
-      </div>
-    </section>
-    <figure class="shot"><img src="./shot.webp" alt="TryQuickImg" width="1440" height="900" loading="lazy"></figure>
-  </main>
-  <footer class="foot">© 2026 TryQuickImg · An Acsaven product · Samson PG</footer>
+  <header class="top">
+    <a class="logo" href="./">TryQuickImg <span class="domain">tryquickimg.com</span></a>
+    <a class="btn" href="#page">Open tools</a>
+  </header>
+  <img id="page" class="page" src="./home-full.webp" width="1440" alt="TryQuickImg homepage" loading="eager" decoding="async" />
 </body>
 </html>
