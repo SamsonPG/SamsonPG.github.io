@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TryTokka — AI API Invoice Monitor for OpenAI &amp; Anthropic</title>
-  <meta name="description" content="Paste a read-only key — no proxy, no SDK, no code change. Scout emails you after daily sync when you cross your limit." />
+  <meta name="description" content="Paste a read-only key — no proxy, no SDK, no code change. Scout emails you after daily sync when you cross your limit, usually within ~24h." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="./site.css" />
 </head>
@@ -12,19 +12,17 @@
   <header class="nav">
     <div class="nav__inner">
       <div class="nav__brand">
-        <a class="logo" href="./" aria-label="TryTokka home">
-          <span class="logo__marks" aria-hidden="true">
-            <span class="logo__dot"></span>
-            <span class="logo__dot logo__dot--2"></span>
-          </span>
-          <span class="logo__word">TryTokka</span>
+        <a class="logo" href="./">
+          <img src="./assets/trytokka.svg" width="28" height="28" alt="" />
+          <span>TryTokka</span>
         </a>
-        <a class="pill" href="#product">Try family</a>
+        <span class="pill">Try family</span>
       </div>
       <nav class="nav__links" aria-label="Primary">
         <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
+        <a href="#how">Features</a>
+        <a href="#product">Docs</a>
+        <a href="#product">Tools</a>
         <a href="#get-started">Pricing</a>
       </nav>
       <div class="nav__actions">
@@ -36,18 +34,15 @@
 
   <main id="top">
     <section class="cinema">
-      <div class="cinema__wash" aria-hidden="true"></div>
+      <div class="cinema__atmosphere" aria-hidden="true">
+        <img class="cinema__veil" src="./assets/haven-veil-lcp.webp" alt="" width="960" height="540" />
+      </div>
       <div class="cinema__copy">
         <p class="brand-row">
-          <span class="logo__marks" aria-hidden="true">
-            <span class="logo__dot"></span>
-            <span class="logo__dot logo__dot--2"></span>
-          </span>
-          <span class="brand-word">TryTokka</span>
+          <img src="./assets/trytokka.svg" width="30" height="30" alt="" />
+          <span>TryTokka</span>
         </p>
-        <h1>
-          Know your <span class="sketch">API invoice</span> before finance asks.
-        </h1>
+        <h1>Know your <span class="sketch">API invoice</span> before finance asks.</h1>
         <p class="promise">
           Paste a read-only key — no proxy, no SDK, no code change. Scout emails you
           after daily sync when you cross your limit, usually within ~24h.
@@ -75,37 +70,23 @@
           <span class="stage__title">TryTokka — demo workspace</span>
           <span class="stage__badge">● DEMO</span>
         </div>
-        <img
-          class="stage__img"
-          src="./shot.webp"
-          alt="TryTokka demo workspace dashboard"
-          width="1440"
-          height="900"
-          loading="eager"
-        />
+        <img class="stage__img" src="./shot.webp" alt="TryTokka demo workspace" width="1440" height="900" loading="eager" />
       </div>
     </section>
 
-    <section class="chapter" id="features">
+    <section class="chapter" id="how">
       <p class="label">The whole idea</p>
       <h2>You don’t watch your spend. Scout does.</h2>
       <ol class="steps">
-        <li>
-          <span class="steps__n">1</span>
-          <h3>Connect once</h3>
-          <p>Add the provider credential. Revoke or replace a connection later.</p>
-        </li>
-        <li>
-          <span class="steps__n">2</span>
-          <h3>Scout syncs daily</h3>
-          <p>Every provider pulled into one number automatically.</p>
-        </li>
-        <li>
-          <span class="steps__n">3</span>
-          <h3>Email only when it matters</h3>
-          <p>Silent under budget. When sync finds you over the limit, Scout emails you.</p>
-        </li>
+        <li><span class="steps__n">1</span><h3>Connect once</h3><p>Add the provider credential type documented in Product setup. You can revoke or replace a connection later.</p></li>
+        <li><span class="steps__n">2</span><h3>Scout syncs daily</h3><p>Every provider pulled into one number automatically. No dashboards to remember.</p></li>
+        <li><span class="steps__n">3</span><h3>It emails you — only when it matters</h3><p>Silent while under budget. When sync finds you over the limit, Scout emails you — usually within ~24h.</p></li>
       </ol>
+      <div class="cta" style="margin-top:1.5rem">
+        <a class="btn btn--primary" href="#get-started">Start free trial →</a>
+        <a class="btn btn--secondary" href="#product">Browse product</a>
+      </div>
+      <p class="promise" style="margin-top:.75rem">7 days free · No credit card</p>
     </section>
 
     <section class="chapter chapter--shot">
@@ -113,11 +94,11 @@
     </section>
 
     <section class="chapter" id="get-started">
-      <h2>Start free trial</h2>
-      <p class="promise">7 days free · No credit card · Read-only keys</p>
+      <h2>Scout is ready to watch your back.</h2>
+      <p class="promise">Start free — 7 days, no card.</p>
       <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">See how it works</a>
+        <a class="btn btn--primary btn--lg" href="#product">Start free trial</a>
+        <a class="btn btn--secondary btn--lg" href="#how">See how it works</a>
       </div>
     </section>
   </main>

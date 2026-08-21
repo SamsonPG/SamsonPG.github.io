@@ -1,72 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="portfolio">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Samson P G — full-stack engineer</title>
-  <meta name="description" content="Multi-provider sync, alerts, payments — products under Acsaven." />
+  <title>Samson P G — Full-Stack Engineer &amp; Acsaven Founder</title>
+  <meta name="description" content="I ship production web systems — sync, alerts, payments, privacy-first tools — and keep them online." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">Samson P G</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Explore software</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">Samson P G</p>
-        <h1>I build production web systems.</h1>
-        <p class="promise">Multi-provider sync, alerts, payments — products under Acsaven.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Explore software</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See work</a>
+  <header class="top"><div class="top__inner">
+    <a class="logo" href="./">Samson P G</a>
+    <nav class="nav" aria-label="Primary"><a href="#software">Software</a><a href="#top">Path</a><a href="#top">Creative</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn--fill" href="mailto:samsonpg077@gmail.com">Email</a>
+  </div></header>
+  <main class="wrap" id="top">
+    <section class="persona">
+      <figure class="photo"><img src="./assets/profile.webp" alt="Samson P G" width="320" height="320" /></figure>
+      <div>
+        <h1>Samson P G</h1>
+        <p class="handle">Full-stack engineer · Founder @ Acsaven</p>
+        <p class="status">Open to roles</p>
+        <p class="bio">I ship production web systems — sync, alerts, payments, privacy-first tools — and keep them online. Craft &amp; media is the foundation; software is the focus.</p>
+        <div class="actions">
+          <a class="btn btn--fill" href="#software">Software work</a>
+          <a class="btn btn--line" href="mailto:samsonpg077@gmail.com">Email me</a>
         </div>
-        <p class="trust">samsonpg.github.io</p>
-      </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">Samson P G — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="Samson P G homepage" width="1440" height="900" loading="eager">
       </div>
     </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>Software</h3><p>TryTokka, utilities, Benagon / 20X.</p></li>
-<li><h3>Path</h3><p>Electronics to founder.</p></li>
-<li><h3>Creative</h3><p>Print, branding, production.</p></li>
-      </ul>
-    </section>
-
-    <section class="bleed" aria-label="More"><img src="./profile.webp" alt="Samson P G" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Explore software</h2>
-      <p class="promise">Multi-provider sync, alerts, payments — products under Acsaven.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
+    <section class="hero" id="software">
+      <h2>I build production web systems — multi-provider sync, alerts, payments, and privacy-first tools.</h2>
+      <p>Six live products under Acsaven. Dashboard UIs, CI gates, VS Code extension, and demos you can watch.</p>
+      <div class="actions">
+        <a class="btn btn--fill" href="#software">Explore software</a>
+        <a class="btn btn--line" href="#shot">Watch TryTokka demo →</a>
       </div>
+      <figure class="shot" id="shot"><img src="./shot.webp" alt="Portfolio" width="1440" height="900" loading="lazy" /></figure>
+    </section>
+    <section id="contact" style="margin-top:2rem">
+      <h2 style="margin:0;font-size:1.25rem">Contact</h2>
+      <p style="color:var(--muted)"><a href="mailto:samsonpg077@gmail.com">samsonpg077@gmail.com</a></p>
     </section>
   </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 Samson P G</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <footer class="foot">© 2026 Samson P G · Static · No tracking</footer>
 </body>
 </html>

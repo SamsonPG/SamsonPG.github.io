@@ -1,72 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="tryquickimg">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryQuickImg — compress images in your browser</title>
-  <meta name="description" content="Compress, convert, resize, and crop. No upload required for processing." />
+  <title>Compress &amp; Convert Images in Browser | TryQuickImg</title>
+  <meta name="description" content="TryQuickImg — free private image tools in your browser. Convert, compress, resize, and make QR codes with no upload and no signup." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">TryQuickImg</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Open tools</a>
-      </div>
-    </div>
-  </header>
-
+  <header class="top"><div class="top__inner">
+    <a class="logo" href="./"><img src="./assets/tryquickimg.svg" width="24" height="24" alt="" />TryQuickImg</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#top">Home</a><a href="#tool">Compress Image</a><a href="#popular">Resize Image</a><a href="#popular">All tools</a>
+    </nav>
+    <a class="btn btn--fill" href="#tool">Compress</a>
+  </div></header>
   <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">TryQuickImg</p>
-        <h1>Compress images to a KB target — private in your browser.</h1>
-        <p class="promise">Compress, convert, resize, and crop. No upload required for processing.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Open tools</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See product</a>
-        </div>
-        <p class="trust">tryquickimg.com</p>
-      </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">TryQuickImg — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="TryQuickImg homepage" width="1440" height="900" loading="eager">
+    <section class="wrap">
+      <p class="brandlock"><img src="./assets/tryquickimg.svg" width="28" height="28" alt="" />TryQuickImg</p>
+      <h1>Compress JPG, PNG &amp; WebP to a KB target — private in your browser.</h1>
+      <p class="lede">Drop a file, set a size, download — compression stays on your device. No signup, no watermark.</p>
+      <p class="badge">Private in your browser · No upload for processing</p>
+    </section>
+    <section class="embed" id="tool">
+      <h2>Try it — compress to ~100 KB here</h2>
+      <div class="drop">Drop an image here (offline demo UI)</div>
+      <div class="field" style="margin-top:.75rem"><label>Target size (KB)</label><input value="100" readonly /></div>
+      <div class="actions">
+        <a class="btn btn--fill" href="#tool">Compress</a>
+        <a class="btn btn--line" href="#popular">Open full Compress tool →</a>
       </div>
     </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>Local-first</h3><p>Images stay on your device.</p></li>
-<li><h3>KB targets</h3><p>Drop a file, set a size, download.</p></li>
-<li><h3>Convert & crop</h3><p>JPG, PNG, WebP without an account wall.</p></li>
-      </ul>
-    </section>
-
-    <section class="bleed" aria-label="More"><img src="./tryquickimg-cover.webp" alt="TryQuickImg" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Open tools</h2>
-      <p class="promise">Compress, convert, resize, and crop. No upload required for processing.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
+    <section class="section" id="popular">
+      <h2>Popular tools</h2>
+      <div class="tools">
+        <article class="tool"><h3>Compress image</h3><p>Any KB target in your browser.</p></article>
+        <article class="tool"><h3>HEIC to JPG</h3><p>Convert HEIC without uploading.</p></article>
+        <article class="tool"><h3>Resize image</h3><p>Exact pixel sizes for web and docs.</p></article>
+        <article class="tool"><h3>Compress to 100 KB</h3><p>Fast path for common limits.</p></article>
+        <article class="tool"><h3>Passport photo size</h3><p>Size &amp; KB cheat sheet.</p></article>
       </div>
     </section>
+    <figure class="shot"><img src="./shot.webp" alt="TryQuickImg" width="1440" height="900" loading="lazy"></figure>
   </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 TryQuickImg</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <footer class="foot">© 2026 TryQuickImg · An Acsaven product · Samson PG</footer>
 </body>
 </html>

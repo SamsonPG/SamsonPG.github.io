@@ -1,72 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="twentyx">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20X — healthcare staffing CRM</title>
-  <meta name="description" content="Recruitment, credentialing, compliance, and timesheets." />
+  <title>Healthcare Staffing CRM &amp; Nurse Scheduling Software | 20X</title>
+  <meta name="description" content="20X is the all-in-one healthcare staffing CRM and nurse scheduling software for agencies in the UK, US, and Canada." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
+    .top{
+      position:sticky;top:0;z-index:30;
+      display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+      padding:.7rem clamp(1rem,3vw,1.75rem);
+      background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.2rem;text-decoration:none;color:#0f172a}
+    .nav{display:none;gap:1rem;font-size:.88rem;font-weight:600;color:#64748b}
+    .nav a{text-decoration:none;color:inherit}
+    @media(min-width:900px){.nav{display:flex}}
+    .actions{display:flex;gap:.5rem;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;
+      font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;
+    }
+    .btn--fill{background:#2563eb;color:#fff}
+    .btn--line{background:#fff;border-color:#cbd5e1;color:#0f172a}
+    .page{width:100%;height:auto;display:block;vertical-align:top}
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">20X</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Get started</a>
-      </div>
+  <header class="top">
+    <a class="logo" href="./">20X</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#page">Home</a>
+      <a href="#page">Features</a>
+      <a href="#page">About</a>
+      <a href="#page">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn--line" href="#page">Explore 20X</a>
+      <a class="btn btn--fill" href="#page">Book a demo</a>
     </div>
   </header>
-
-  <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">20X</p>
-        <h1>Healthcare staffing CRM & nurse scheduling.</h1>
-        <p class="promise">Recruitment, credentialing, compliance, and timesheets.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Get started</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See product</a>
-        </div>
-        <p class="trust">20x.io</p>
-      </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">20X — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="20X homepage" width="1440" height="900" loading="eager">
-      </div>
-    </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>CRM</h3><p>Staffing workflows for healthcare.</p></li>
-<li><h3>Mobile</h3><p>Shifts, timesheets, documents.</p></li>
-<li><h3>Compliance</h3><p>Credentialing in one system.</p></li>
-      </ul>
-    </section>
-
-    <section class="bleed" aria-label="More"><img src="./20x-ui-dashboard.webp" alt="20X" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Get started</h2>
-      <p class="promise">Recruitment, credentialing, compliance, and timesheets.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 20X</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <img id="page" class="page" src="./home-full.webp" width="1440" height="7639" alt="20X — Healthcare Staffing CRM and Nurse Scheduling Software full homepage" loading="eager" decoding="async" />
 </body>
 </html>

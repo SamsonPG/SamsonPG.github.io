@@ -1,72 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="trycalculatingnow">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryCalculatingNow — GPA & finance calculators</title>
-  <meta name="description" content="GPA, grades, finance, and unit calculators — no signup wall." />
+  <title>Final Grade &amp; GPA Calculators | TryCalculatingNow</title>
+  <meta name="description" content="What grade do I need on my final? Enter current grade, final weight, and target — result updates live. No account." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">TryCalculatingNow</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Open calculators</a>
-      </div>
-    </div>
-  </header>
-
+  <header class="top"><div class="top__inner">
+    <a class="logo" href="./"><img src="./assets/trycalculatingnow.svg" width="24" height="24" alt="" />TryCalculatingNow</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#top">Home</a><a href="#tool">Final Grade</a><a href="#popular">GPA</a><a href="#popular">All tools</a>
+    </nav>
+    <a class="btn btn--fill" href="#tool">Calculate</a>
+  </div></header>
   <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">TryCalculatingNow</p>
-        <h1>What grade do I need on my final?</h1>
-        <p class="promise">GPA, grades, finance, and unit calculators — no signup wall.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Open calculators</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See product</a>
-        </div>
-        <p class="trust">trycalculatingnow.com</p>
-      </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">TryCalculatingNow — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="TryCalculatingNow homepage" width="1440" height="900" loading="eager">
+    <section class="wrap">
+      <p class="eyebrow" style="margin:0;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)">trycalculatingnow.com</p>
+      <p class="brandlock"><img src="./assets/trycalculatingnow.svg" width="28" height="28" alt="" />TryCalculatingNow</p>
+      <h1>What grade do I need on my final?</h1>
+      <p class="lede">Enter current grade, final weight, and target — result updates live. No account.</p>
+      <p class="badge">No signup · Live result</p>
+    </section>
+    <section class="embed" id="tool">
+      <h2>Try it — what do I need on my final?</h2>
+      <div class="field"><label>Current grade %</label><input value="85" readonly /></div>
+      <div class="field"><label>Final weight %</label><input value="20" readonly /></div>
+      <div class="field"><label>Target grade %</label><input value="90" readonly /></div>
+      <div class="actions">
+        <a class="btn btn--fill" href="#tool">Calculate</a>
+        <a class="btn btn--line" href="#popular">Open full calculator →</a>
       </div>
     </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>Grades</h3><p>Current grade, weight, target — live result.</p></li>
-<li><h3>Finance</h3><p>Everyday calculators, no account.</p></li>
-<li><h3>Fast</h3><p>Open and go.</p></li>
-      </ul>
-    </section>
-
-    <section class="bleed" aria-label="More"><img src="./trycalculatingnow-cover.webp" alt="TryCalculatingNow" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Open calculators</h2>
-      <p class="promise">GPA, grades, finance, and unit calculators — no signup wall.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
+    <section class="section" id="popular">
+      <h2>Popular calculators</h2>
+      <div class="tools">
+        <article class="tool"><h3>Final Grade Calculator</h3><p>What you need on the final.</p></article>
+        <article class="tool"><h3>GPA Calculator</h3><p>Weighted GPA fast.</p></article>
+        <article class="tool"><h3>Percentage Calculator</h3><p>Everyday percent math.</p></article>
       </div>
     </section>
+    <figure class="shot"><img src="./shot.webp" alt="TryCalculatingNow" width="1440" height="900" loading="lazy"></figure>
   </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 TryCalculatingNow</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <footer class="foot">© 2026 TryCalculatingNow · An Acsaven product · Samson PG</footer>
 </body>
 </html>

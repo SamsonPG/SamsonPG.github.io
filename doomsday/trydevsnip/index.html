@@ -1,72 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="trydevsnip">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryDevSnip — JSON, JWT, cron & timestamps</title>
-  <meta name="description" content="JSON, JWT, cron, timestamps — local-first developer utilities." />
+  <title>JSON Formatter &amp; Dev Tools in Browser | TryDevSnip</title>
+  <meta name="description" content="Format JSON privately in your browser. Paste JSON, hit Format — stays on your device. No upload, no signup." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">TryDevSnip</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Open tools</a>
-      </div>
-    </div>
-  </header>
-
+  <header class="top"><div class="top__inner">
+    <a class="logo" href="./"><img src="./assets/trydevsnip.svg" width="24" height="24" alt="" />TryDevSnip</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#top">Home</a><a href="#tool">JSON Formatter</a><a href="#popular">Cron Helper</a><a href="#popular">All tools</a>
+    </nav>
+    <a class="btn btn--fill" href="#tool">Format</a>
+  </div></header>
   <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">TryDevSnip</p>
-        <h1>Format JSON privately in your browser.</h1>
-        <p class="promise">JSON, JWT, cron, timestamps — local-first developer utilities.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Open tools</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See product</a>
-        </div>
-        <p class="trust">trydevsnip.com</p>
-      </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">TryDevSnip — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="TryDevSnip homepage" width="1440" height="900" loading="eager">
+    <section class="wrap">
+      <p class="brandlock"><img src="./assets/trydevsnip.svg" width="28" height="28" alt="" />TryDevSnip</p>
+      <h1>Format JSON privately in your browser.</h1>
+      <p class="lede">Paste JSON, hit Format — stays on your device. No upload, no signup.</p>
+      <p class="badge">Private in your browser · No upload</p>
+    </section>
+    <section class="embed" id="tool">
+      <h2>Try it — format JSON here</h2>
+      <div class="field"><label>Input</label><input value='{"hello":"world","ok":true}' readonly /></div>
+      <div class="field"><label>Output</label><input value='{ "hello": "world", "ok": true }' readonly /></div>
+      <div class="actions">
+        <a class="btn btn--fill" href="#tool">Format</a>
+        <a class="btn btn--line" href="#popular">Open full tool →</a>
       </div>
     </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>JSON</h3><p>Paste, format, stays on device.</p></li>
-<li><h3>JWT & cron</h3><p>Daily drivers in one tab.</p></li>
-<li><h3>Local-first</h3><p>No server for core tools.</p></li>
-      </ul>
-    </section>
-
-    <section class="bleed" aria-label="More"><img src="./trydevsnip-cover.webp" alt="TryDevSnip" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Open tools</h2>
-      <p class="promise">JSON, JWT, cron, timestamps — local-first developer utilities.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
+    <section class="section" id="popular">
+      <h2>Popular tools</h2>
+      <div class="tools">
+        <article class="tool"><h3>JSON Formatter</h3><p>Pretty-print privately.</p></article>
+        <article class="tool"><h3>JSON Diff</h3><p>Compare two payloads.</p></article>
+        <article class="tool"><h3>Timestamp Converter</h3><p>Unix ↔ human time.</p></article>
+        <article class="tool"><h3>Cron Helper</h3><p>Read and build cron expressions.</p></article>
       </div>
     </section>
+    <figure class="shot"><img src="./shot.webp" alt="TryDevSnip" width="1440" height="900" loading="lazy"></figure>
   </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 TryDevSnip</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <footer class="foot">© 2026 TryDevSnip · An Acsaven product · Samson PG</footer>
 </body>
 </html>

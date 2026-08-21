@@ -1,72 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="acsaven">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acsaven — tools that stay with you</title>
-  <meta name="description" content="Studio hub behind TryTokka and the free Try utilities." />
+  <title>Acsaven — private Try tools that stay with you</title>
+  <meta name="description" content="Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="../demo-site.css" />
+  <meta name="theme-color" content="#101216" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__inner">
-      <a class="logo" href="./">Acsaven</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#top">Home</a>
-        <a href="#features">Features</a>
-        <a href="#product">Product</a>
-        <a href="#get-started">Get started</a>
-      </nav>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="#get-started">Pick a tool</a>
-      </div>
-    </div>
-  </header>
-
+  <header class="top"><div class="top__inner">
+    <a class="logo" href="./"><img src="./assets/acsaven-mark.svg" width="24" height="24" alt="" />Acsaven</a>
+    <nav class="nav" aria-label="Primary"><a href="#top">Home</a><a href="#products">Products</a><a href="#about">About</a></nav>
+    <a class="btn btn--fill" href="#products">Pick a tool</a>
+  </div></header>
   <main id="top">
-    <section class="cinema">
-      <div class="cinema__copy">
-        <p class="kicker">Acsaven</p>
+    <section class="hero">
+      <img class="hero__veil" src="./assets/haven-veil-lcp.webp" alt="" width="960" height="540" />
+      <div class="hero__copy">
+        <p class="brand"><img src="./assets/acsaven-mark.svg" width="28" height="28" alt="" />Acsaven</p>
         <h1>Tools that stay with you.</h1>
-        <p class="promise">Studio hub behind TryTokka and the free Try utilities.</p>
-        <div class="cta">
-          <a class="btn btn--primary btn--lg" href="#get-started">Pick a tool</a>
-          <a class="btn btn--secondary btn--lg" href="#product">See products</a>
-        </div>
-        <p class="trust">acsaven.com</p>
+        <p class="lede">Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka. Three free browser tools that never upload your files — plus Scout emails when AI API spend crosses your limit.</p>
+        <div class="cta"><a class="btn btn--fill" href="#products">Pick a tool</a></div>
       </div>
-      <div class="stage" id="product">
-        <div class="stage__chrome">
-          <span class="stage__dots" aria-hidden="true"></span>
-          <span class="stage__title">Acsaven — demo</span>
-          <span class="stage__badge">● DEMO</span>
-        </div>
-        <img class="stage__img" src="./shot.webp" alt="Acsaven homepage" width="1440" height="900" loading="eager">
+      <div class="orbit"><img class="char" src="./assets/haven-character.svg" alt="" width="480" height="480" /></div>
+    </section>
+    <section class="section" id="products">
+      <h2>What do you need to do today?</h2>
+      <div class="grid">
+        <article class="card"><h3>TryQuickImg</h3><p>Compress &amp; convert images privately in your browser.</p></article>
+        <article class="card"><h3>TryDevSnip</h3><p>JSON, JWT, cron, timestamps — local-first.</p></article>
+        <article class="card"><h3>TryCalculatingNow</h3><p>GPA, grades, finance calculators.</p></article>
+        <article class="card"><h3>TryTokka</h3><p>AI API spend monitor — Scout emails after sync.</p></article>
       </div>
     </section>
-
-    <section class="chapter" id="features">
-      <h2>Built for the job</h2>
-      <ul class="steps">
-<li><h3>Studio</h3><p>Parent home for the Try family.</p></li>
-<li><h3>Products</h3><p>TryTokka and free utilities.</p></li>
-<li><h3>Founder-built</h3><p>Independent studio by Samson P G.</p></li>
-      </ul>
+    <section class="section" id="about">
+      <h2>Built for people who just need the job done.</h2>
+      <p class="lede" style="text-align:center;margin:0 auto;max-width:44ch;color:var(--muted)">Four products. Equal care. An independent studio by Samson PG.</p>
     </section>
-
-    <section class="bleed" aria-label="More"><img src="./acsaven-cover.webp" alt="Acsaven" width="1440" height="900" loading="lazy"></section>
-
-    <section class="chapter" id="get-started">
-      <h2>Pick a tool</h2>
-      <p class="promise">Studio hub behind TryTokka and the free Try utilities.</p>
-      <div class="cta">
-        <a class="btn btn--primary btn--lg" href="#product">Open product</a>
-        <a class="btn btn--secondary btn--lg" href="#features">Features</a>
-      </div>
-    </section>
+    <figure class="shot"><img src="./shot.webp" alt="Acsaven" width="1440" height="900" loading="lazy" /></figure>
   </main>
-
-  <footer class="foot"><div class="foot-inner"><span>© 2026 Acsaven</span><span>An Acsaven / Samson PG product</span></div></footer>
+  <footer class="foot">© 2026 Acsaven · Samson PG</footer>
 </body>
 </html>

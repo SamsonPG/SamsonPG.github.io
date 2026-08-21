@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="portfolio">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doomsday demos</title>
+  <title>Doomsday — product homepage demos</title>
   <meta name="robots" content="noindex,follow" />
-  <link rel="stylesheet" href="./demo-site.css" />
+  <style>
+    body{margin:0;font-family:system-ui,sans-serif;background:#eef2ef;color:#0e1612;line-height:1.5}
+    .wrap{width:min(100% - 2rem,72rem);margin:0 auto;padding:2rem 0 3rem}
+    h1{margin:0;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.04em}
+    p{color:#5a6b62;max-width:48ch}
+    .grid{display:grid;gap:.85rem;margin-top:1.5rem}@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+    a.card{display:block;padding:1rem;border-radius:1rem;border:1px solid rgba(14,22,18,.12);background:#f7faf8;text-decoration:none;color:inherit}
+    a.card strong{display:block;font-size:1.05rem}a.card span{color:#5a6b62;font-size:.88rem}
+  </style>
 </head>
 <body>
-  <header class="nav"><div class="nav__inner"><a class="logo" href="./">Doomsday</a><div class="nav__actions"><a class="btn btn--primary" href="https://samsonpg.github.io/">Portfolio</a></div></div></header>
-  <main class="cinema">
-    <div class="cinema__copy">
-      <p class="kicker">Live demos</p>
-      <h1>Full product homepages.</h1>
-      <p class="promise">Each link opens a complete dummy site — full width, like a theme Live Demo. Use when a domain is blocked.</p>
+  <div class="wrap">
+    <h1>Product homepage demos</h1>
+    <p>Full responsive dummy sites cloned from each product landing. Open when a live domain is blocked.</p>
+    <div class="grid">
+      <a class="card" href="./trytokka/"><strong>TryTokka</strong><span>Cinema landing clone</span></a>
+      <a class="card" href="./tryquickimg/"><strong>TryQuickImg</strong><span>Compress embed landing</span></a>
+      <a class="card" href="./trydevsnip/"><strong>TryDevSnip</strong><span>JSON embed landing</span></a>
+      <a class="card" href="./trycalculatingnow/"><strong>TryCalculatingNow</strong><span>Grade calculator landing</span></a>
+      <a class="card" href="./acsaven/"><strong>Acsaven</strong><span>Dark studio hub</span></a>
+      <a class="card" href="./soundshoppie/"><strong>SoundShoppie</strong><span>Ecommerce revival</span></a>
+      <a class="card" href="./20x/"><strong>20X</strong><span>Full live-page capture</span></a>
+      <a class="card" href="./portfolio/"><strong>Portfolio</strong><span>Persona landing</span></a>
     </div>
-  </main>
-  <section class="chapter">
-    <div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))">
-      <li><h3><a href="./trytokka/">TryTokka</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./tryquickimg/">TryQuickImg</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./trydevsnip/">TryDevSnip</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./trycalculatingnow/">TryCalculatingNow</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./acsaven/">Acsaven</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./soundshoppie/">SoundShoppie</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./20x/">20X</a></h3><p>Full homepage demo</p></li>
-      <li><h3><a href="./portfolio/">Portfolio</a></h3><p>Full homepage demo</p></li>
-    </div>
-  </section>
-  <footer class="foot"><div class="foot-inner"><span>© 2026 Samson P G</span></div></footer>
+  </div>
 </body>
 </html>
