@@ -693,12 +693,9 @@ html[data-theme="dark"] .tag { color: #0c1210; }
 
 .creative {
   background: color-mix(in srgb, var(--paper-2) 55%, transparent);
-  margin-left: calc(-1 * var(--stage-pad));
-  margin-right: calc(-1 * var(--stage-pad));
-  padding-left: var(--stage-pad);
-  padding-right: var(--stage-pad);
-  padding-top: 0.25rem;
-  padding-bottom: 0.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.75rem 0 1rem;
   border-radius: 1rem;
 }
 .mosaic {
