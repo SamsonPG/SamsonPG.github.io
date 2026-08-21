@@ -174,12 +174,66 @@
           font-size: clamp(1.35rem, 6vw, 2rem);
         }
       }
-      .product-card .card-img-top {
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .product-card .offer-slot {
+        min-height: 2.35rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.35rem 0.65rem 0.15rem;
+        box-sizing: border-box;
+      }
+      .product-card .offer-slot .badge-notification {
+        position: static !important;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        min-width: 3.1rem;
+        min-height: 2.1rem;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px !important;
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1.05;
+        background: #dc3545 !important;
+        color: #fff !important;
+        box-shadow: 0 2px 6px rgba(220, 53, 69, 0.35);
+      }
+      .product-card .offer-slot .badge-notification .m-1 {
+        margin: 0 !important;
+      }
+      .product-card .image-container {
+        position: relative;
         width: 100%;
-        height: 200px;
-        object-fit: contain;
-        background: #f7f7f7;
-        padding: 0.85rem;
+        height: 220px;
+        background: #fff;
+        border-radius: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .product-card .card-img-top {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center;
+        background: #fff;
+        padding: 0.65rem;
+        display: block;
+      }
+      .product-card .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-card .card-details-btn {
+        margin-top: auto;
       }
       /* Our Brands — constant logo height, no edge crop */
       .customer-logos.slider {
@@ -404,8 +458,9 @@
 
     <section>
       <div class="container">
-        <div class="card-deck d-flex justify-content-center align-items-center flex-wrap">
+        <div class="card-deck d-flex justify-content-center align-items-stretch flex-wrap">
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/wh-1000xm.jpg" alt="Sony WH-1000XM4" />
             </div>
@@ -421,6 +476,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/qc45.jpg" alt="Bose QuietComfort 45" />
             </div>
@@ -436,6 +492,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/ie-600.jpg" alt="Sennheiser IE 600" />
             </div>
@@ -451,6 +508,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/ath-m50.jpg" alt="Audio-Technica ATH-M50x" />
             </div>
@@ -466,6 +524,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/tune-760.jpg" alt="JBL Tune 760NC" />
             </div>
@@ -481,10 +540,12 @@
             </div>
           </div>
           <div class="product-card m-2">
-            <div class="image-container">
+            <div class="offer-slot">
               <span class="badge rounded-pill badge-notification bg-danger">
                 <div><div class="m-1">15 %</div><div class="m-1">off</div></div>
               </span>
+            </div>
+            <div class="image-container">
               <img class="card-img-top" src="./products/wf-1000.jpg" alt="Sony WF-1000XM4" />
             </div>
             <div class="card-body">
@@ -500,6 +561,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <img class="card-img-top" src="./products/t5-ii.jpg" alt="Klipsch T5 II" />
             </div>
@@ -515,6 +577,7 @@
             </div>
           </div>
           <div class="product-card m-2">
+            <div class="offer-slot" aria-hidden="true"></div>
             <div class="image-container">
               <div class="overlay"><p class="overlay-text">Out of Stock</p></div>
               <img class="card-img-top" src="./products/hd-660.jpg" alt="Sennheiser HD 660S2" />
