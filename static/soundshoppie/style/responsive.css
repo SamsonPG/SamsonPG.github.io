@@ -120,21 +120,33 @@ html {
     margin-bottom: 0 !important;
   }
 
-  /* 2-up cards on phone — keep card proportions, wrap instead of crushing */
+  /* Product grid: full-width 2-up, never left-stuck 250px cards */
+  section > .container > .card-deck.d-flex,
   .card-deck.d-flex {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.75rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: stretch !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
   }
 
   .card-deck .product-card,
-  .card-deck .product-card.m-2 {
-    flex: 0 0 calc(50% - 0.75rem) !important;
-    width: calc(50% - 0.75rem) !important;
+  .card-deck .product-card.m-2,
+  .card-deck > .product-card {
+    flex: none !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+    flex-basis: auto !important;
+    width: 100% !important;
     min-width: 0 !important;
-    max-width: calc(50% - 0.75rem) !important;
+    max-width: none !important;
     margin: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .product-card .card-title {
@@ -173,13 +185,19 @@ html {
   }
 }
 
-/* Very narrow: stack to 1 column so cards stay readable */
+/* Very narrow: one centered column, full usable width */
 @media (max-width: 379.98px) {
+  .card-deck.d-flex,
+  section > .container > .card-deck.d-flex {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
   .card-deck .product-card,
-  .card-deck .product-card.m-2 {
-    flex: 0 0 100% !important;
+  .card-deck .product-card.m-2,
+  .card-deck > .product-card {
     width: 100% !important;
-    max-width: 280px !important;
+    max-width: 100% !important;
   }
 }
 
