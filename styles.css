@@ -213,18 +213,37 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 
 /* Persona — compact, content-rich, not photo-dominated */
 .persona {
-  padding: 1.15rem 1.15rem 1.5rem;
   border-bottom: 1px solid var(--line);
   background: linear-gradient(180deg, var(--surface), var(--paper-2));
+}
+.persona__inner {
+  padding: 1.15rem 1.15rem 1.5rem;
 }
 @media (min-width: 960px) {
   .persona {
     position: sticky; top: var(--top);
     height: calc(100vh - var(--top));
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     border-bottom: 0;
     border-right: 1px solid var(--line);
-    padding: 1.35rem 1.1rem 1.75rem;
+    scrollbar-gutter: auto;
+    scrollbar-width: thin;
+  }
+  .persona__inner {
+    padding: 1.35rem 0.85rem 1.75rem 1.1rem;
+  }
+  .persona::-webkit-scrollbar {
+    width: 8px;
+  }
+  .persona::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .persona::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--ink) 22%, transparent);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
   }
 }
 
