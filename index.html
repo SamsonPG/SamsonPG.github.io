@@ -3,201 +3,577 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Samson P G — Full-Stack Engineer</title>
-<meta name="description" content="Full-stack engineer working in TypeScript, Next.js and PostgreSQL. Six products in production, a published npm package and a VS Code extension, built and operated solo at Acsaven.">
+<title>Samson P G — Full-Stack Engineer &amp; Acsaven Founder</title>
+<meta name="description" content="Samson P G is a full-stack engineer and Acsaven founder. Builds TryTokka (AI API spend monitoring), privacy-first Try tools, astro-ops, and Scout. Open to full-stack &amp; backend roles.">
+<meta name="author" content="Samson P G">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://samsonpg.github.io/">
-<meta name="theme-color" content="#080C0B">
+<meta name="theme-color" content="#eef2ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c1210" media="(prefers-color-scheme: dark)">
+<link rel="alternate" type="text/plain" href="https://samsonpg.github.io/llms.txt" title="LLM summary">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Samson P G — Full-Stack Engineer">
-<meta property="og:description" content="TypeScript, Next.js, PostgreSQL. Six products in production, a published npm package and a VS Code extension — built and operated solo.">
+<meta property="og:site_name" content="Samson P G">
+<meta property="og:title" content="Samson P G — Full-Stack Engineer &amp; Acsaven Founder">
+<meta property="og:description" content="Production software first: TryTokka, privacy-first tools, ops gates. Craft &amp; media roots below.">
 <meta property="og:url" content="https://samsonpg.github.io/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://samsonpg.github.io/media/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="profile:first_name" content="Samson">
+<meta property="profile:last_name" content="P G">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080C0B'/><text y='68' x='50' font-size='58' text-anchor='middle' fill='%2334E89A' font-family='system-ui' font-weight='700'>S</text></svg>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Samson P G — Full-Stack Engineer &amp; Acsaven Founder">
+<meta name="twitter:description" content="Production software first: TryTokka, privacy-first tools, ops gates.">
+<meta name="twitter:image" content="https://samsonpg.github.io/media/og-default.jpg">
+
+<link rel="icon" href="./media/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="./media/favicon-180.png">
+
+<script>
+(function () {
+  try {
+    var k = 'samsonpg-theme';
+    var s = localStorage.getItem(k);
+    var theme = (s === 'light' || s === 'dark')
+      ? s
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Samson P G",
-  "jobTitle": "Full-Stack Engineer",
-  "url": "https://samsonpg.github.io/",
-  "address": { "@type": "PostalAddress", "addressLocality": "Kochi", "addressRegion": "Kerala", "addressCountry": "IN" },
-  "worksFor": { "@type": "Organization", "name": "Acsaven", "url": "https://acsaven.com" },
-  "knowsAbout": ["TypeScript", "Next.js", "React", "Node.js", "PostgreSQL", "Astro", "Cloudflare Workers"],
-  "sameAs": [
-    "https://github.com/SamsonPG",
-    "https://github.com/acsavenhq",
-    "https://www.linkedin.com/in/samson-p-g-335964133",
-    "https://www.npmjs.com/package/@acsaven/astro-ops",
-    "https://acsaven.com"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://samsonpg.github.io/#website",
+      "url": "https://samsonpg.github.io/",
+      "name": "Samson P G",
+      "description": "Portfolio of full-stack engineer and Acsaven founder Samson P G.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://samsonpg.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://samsonpg.github.io/#person",
+      "name": "Samson P G",
+      "jobTitle": "Full-Stack Engineer",
+      "url": "https://samsonpg.github.io/",
+      "image": "https://samsonpg.github.io/media/profile.webp",
+      "email": "mailto:samsonpg077@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Acsaven",
+        "url": "https://acsaven.com"
+      },
+      "sameAs": [
+        "https://github.com/SamsonPG",
+        "https://www.linkedin.com/in/samson-p-g-335964133",
+        "https://www.youtube.com/@samsonpg",
+        "https://acsaven.com",
+        "https://trytokka.com"
+      ],
+      "knowsAbout": [
+        "TypeScript", "Next.js", "React", "Node.js", "PostgreSQL", "Supabase",
+        "Astro", "Cloudflare", "Playwright", "AI API spend monitoring"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://samsonpg.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Software", "item": "https://samsonpg.github.io/#software" },
+        { "@type": "ListItem", "position": 3, "name": "Path", "item": "https://samsonpg.github.io/#path" },
+        { "@type": "ListItem", "position": 4, "name": "Creative", "item": "https://samsonpg.github.io/#creative" }
+      ]
+    }
   ]
 }
 </script>
 
+<link rel="preload" href="./fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./media/profile-320.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="./styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="wrap head">
-  <div>
-    <h1>Samson&nbsp;P&nbsp;G</h1>
-    <p class="role">Full-Stack Engineer · TypeScript, Next.js, PostgreSQL</p>
+<header class="top">
+  <a class="top__name" href="#home">Samson&nbsp;P&nbsp;G</a>
+  <nav class="top__nav" aria-label="Primary">
+    <a href="#software" data-nav>Software</a>
+    <a href="#path" data-nav>Path</a>
+    <a href="#creative" data-nav>Creative</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <div class="top__end">
+    
+    <div
+      class="theme-switch theme-switch--compact theme-switch--pending"
+      role="group"
+      aria-label="Color theme"
+      data-theme-key="samsonpg-theme"
+      data-theme-light="#eef2ef"
+      data-theme-dark="#0c1210"
+    >
+      <button type="button" class="theme-switch-btn" data-theme-pref="light" title="Light" aria-label="Use light theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+      </button>
+      <button type="button" class="theme-switch-btn" data-theme-pref="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 14.5A8.5 8.5 0 1111.5 4a6.5 6.5 0 109.5 10.5z"></path></svg>
+      </button>
+      <button type="button" class="theme-switch-btn" data-theme-pref="system" title="System" aria-label="Use system theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path stroke-linecap="round" d="M8 19h8M12 17v2"></path></svg>
+      </button>
+    </div>
+    <a class="top__cta" href="mailto:samsonpg077@gmail.com">Email</a>
+    <button class="top__menu" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </button>
   </div>
-  <p class="loc">Kochi, Kerala, India<br><span>Open to full-stack &amp; backend roles — on-site, hybrid or remote</span></p>
 </header>
 
-<main id="main">
+<div class="drawer" id="mobile-drawer" hidden>
+  <nav aria-label="Mobile">
+    <a href="#software" data-nav data-drawer-link>Software</a>
+    <a href="#path" data-nav data-drawer-link>Path</a>
+    <a href="#creative" data-nav data-drawer-link>Creative</a>
+    <a href="#contact" data-nav data-drawer-link>Contact</a>
+    <a href="mailto:samsonpg077@gmail.com" data-drawer-link>Email</a>
+  </nav>
+  <div class="drawer__theme">
+    <p class="drawer__label">Theme</p>
+    
+    <div
+      class="theme-switch theme-switch--labeled theme-switch--pending"
+      role="group"
+      aria-label="Color theme"
+      data-theme-key="samsonpg-theme"
+      data-theme-light="#eef2ef"
+      data-theme-dark="#0c1210"
+    >
+      <button type="button" class="theme-switch-btn" data-theme-pref="light" title="Light" aria-label="Use light theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+      </button>
+      <button type="button" class="theme-switch-btn" data-theme-pref="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 14.5A8.5 8.5 0 1111.5 4a6.5 6.5 0 109.5 10.5z"></path></svg>
+      </button>
+      <button type="button" class="theme-switch-btn" data-theme-pref="system" title="System" aria-label="Use system theme" aria-pressed="false">
+        <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path stroke-linecap="round" d="M8 19h8M12 17v2"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
 
-  <section class="wrap intro">
-    <p>
-      I build and operate production systems solo at <a href="https://acsaven.com">Acsaven</a>, an
-      independent software studio. Six products, live, maintained by one person.
-    </p>
-    <p class="muted">
-      Most of my work is the part that shows up <em>after</em> launch — encryption for stored
-      credentials, permission checks where the UI and the server agree, webhooks that survive
-      retries, and CI that fails when those slip.
-    </p>
-  </section>
-
-  <section class="wrap">
-    <h2>Selected work</h2>
-
-    <article class="item">
-      <header>
-        <h3><a href="https://trytokka.com">TryTokka</a></h3>
-        <p class="stack">Next.js · TypeScript · Supabase/Postgres · Vercel</p>
-      </header>
-      <p>
-        AI API spend monitoring for developers and teams. Reads billing endpoints across eight
-        providers — never prompts or completions — and emails when spend crosses a limit you set.
-      </p>
-      <ul class="facts">
-        <li><b>96</b> API routes</li>
-        <li><b>69</b> database migrations</li>
-        <li><b>429</b> automated tests</li>
-        <li><b>3</b> live payment providers</li>
-      </ul>
-      <p class="note">
-        AES-256-GCM credential encryption, Row-Level Security, TOTP two-factor auth, and an admin
-        panel behind a second unlock gate. Payments run signature-verified idempotent webhooks with
-        a reconciliation ledger — and an alert if money is ever taken without being recorded.
-        The three credential-handling modules are
-        <a href="https://github.com/acsavenhq/trytokka-security">published for review</a>, because a
-        security claim you cannot check is just a claim.
-      </p>
-    </article>
-
-    <article class="item">
-      <header>
-        <h3>
-          <a href="https://tryquickimg.com">TryQuickImg</a> ·
-          <a href="https://trydevsnip.com">TryDevSnip</a> ·
-          <a href="https://trycalculatingnow.com">TryCalculatingNow</a>
-        </h3>
-        <p class="stack">Astro · Cloudflare Workers</p>
-      </header>
-      <p>
-        Three utility sites, ~700 pages combined. Image compression to an exact KB target, developer
-        tools for JSON, JWT and cron, and finance calculators.
-      </p>
-      <p class="note">
-        Everything runs in the browser. Files are processed on the visitor's own device and never
-        uploaded — that is the product, not a footnote, so the build fails if a third-party script
-        ever appears without someone deciding to add it.
-      </p>
-    </article>
-  </section>
-
-  <section class="wrap">
-    <h2>Published</h2>
-
-    <article class="item">
-      <header>
-        <h3><a href="https://www.npmjs.com/package/@acsaven/astro-ops">@acsaven/astro-ops</a></h3>
-        <p class="stack">npm · MIT · zero runtime dependencies</p>
-      </header>
-      <p>
-        Production build gates for Astro sites — seven checks that turn silent post-deploy failures
-        into build failures: content-hashed cache busting, link integrity, third-party asset
-        detection, freshness watchdogs, discovery wiring, Lighthouse budgets, and a source-integrity
-        gate that refuses to build when free disk is too low to write safely.
-      </p>
-      <p class="note">Each gate exists because the failure it prevents actually happened.</p>
-    </article>
-
-    <article class="item">
-      <header>
-        <h3><a href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker">Scout</a></h3>
-        <p class="stack">VS Code Marketplace · MIT</p>
-      </header>
-      <p>
-        Shows live AI API spend in the status bar via a read-only token. No proxy, no SDK, no changes
-        to the user's project. The panel is permissions-aware: on a shared workspace it never offers
-        a control the server would refuse.
-      </p>
-    </article>
-  </section>
-
-  <section class="wrap">
-    <h2>How I work</h2>
-    <div class="grid">
-      <div>
-        <h3>Gates, not good intentions</h3>
-        <p>CI fails on architecture violations, missing permission guards, undocumented modules, and public claims without evidence. Rules a person has to remember are rules that decay.</p>
-      </div>
-      <div>
-        <h3>Prove the check can fail</h3>
-        <p>Every gate I add, I break on purpose first and watch it go red. A check that cannot fail is worse than none, because it is believed.</p>
-      </div>
-      <div>
-        <h3>Say the uncomfortable part</h3>
-        <p>TryTokka's threat model states plainly what an attacker with the deployment key could do. Publishing the limits is what makes the rest credible.</p>
+<div class="shell" id="home">
+  <aside class="persona" aria-label="Profile">
+    <div class="persona__top">
+      <figure class="persona__photo">
+        <picture>
+          <source type="image/webp" srcset="./media/profile-160.webp 160w, ./media/profile-320.webp 320w" sizes="116px">
+          <img
+            src="./media/profile-320.jpg"
+            alt="Portrait of Samson P G, full-stack engineer"
+            width="320"
+            height="320"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </picture>
+      </figure>
+      <div class="persona__intro">
+        <h1 class="persona__name">Samson&nbsp;P&nbsp;G</h1>
+        <p class="persona__handle">Full-stack engineer · Founder @ Acsaven</p>
+        <p class="persona__status">Open to roles</p>
       </div>
     </div>
-  </section>
 
-  <section class="wrap">
-    <h2>Experience</h2>
-    <dl class="cv">
-      <dt>Founder &amp; Solo Engineer — Acsaven</dt>
-      <dd>Jun 2026 – present · self-employed. Six production products end-to-end: architecture, security, payments, testing, SEO and deployment.</dd>
+    <p class="persona__bio">
+      I ship production web systems — sync, alerts, payments, privacy-first tools —
+      and keep them online. Craft &amp; media is the foundation; software is the focus.
+    </p>
 
-      <dt>Software Developer — Benagon Technologies</dt>
-      <dd>Oct 2024 – May 2026 · Kochi. Production web applications in React and TypeScript. Joined Jul 2024 as a frontend intern.</dd>
+    <div class="persona__focus">
+      <p class="persona__focus-label">Focus</p>
+      <ul class="persona__chips">
+        <li>TypeScript</li>
+        <li>Next.js</li>
+        <li>React</li>
+        <li>Node</li>
+        <li>Postgres</li>
+      </ul>
+    </div>
 
-      <dt>MERN Stack Developer — Brototype</dt>
-      <dd>Dec 2022 – Oct 2023 · Kochi, internship.</dd>
+    <div class="persona__now">
+      <p class="persona__now-label">Now shipping</p>
+      <ul>
+        <li><a href="https://trytokka.com">TryTokka <span>SaaS</span></a></li>
+        <li><a href="https://acsaven.com">Acsaven <span>Studio</span></a></li>
+        <li><a href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">20X <span>Benagon</span></a></li>
+      </ul>
+    </div>
 
-      <dt>Before software</dt>
-      <dd>Four years in print production and sales in Bahrain, and an MSc in Electronics. That background is why I care about things working in the real world, not only on my machine.</dd>
-    </dl>
-  </section>
-
-  <section class="wrap">
-    <h2>Stack</h2>
-    <ul class="chips">
-      <li>TypeScript</li><li>Next.js</li><li>React</li><li>Node.js</li>
-      <li>PostgreSQL</li><li>Supabase</li><li>Astro</li><li>Cloudflare Workers</li>
-      <li>Vercel</li><li>Playwright</li><li>Vitest</li><li>Git</li>
+    <ul class="persona__meta">
+      <li><strong>Studio</strong> <a href="https://acsaven.com">Acsaven</a></li>
+      <li><strong>Based</strong> Kerala, India</li>
+      <li><strong>Email</strong> <a href="mailto:samsonpg077@gmail.com">samsonpg077@gmail.com</a></li>
+      <li><strong>Open to</strong> Full-stack &amp; backend</li>
     </ul>
-  </section>
 
-</main>
+    <div class="persona__actions">
+      <a class="btn btn--fill" href="#software">Software work</a>
+      <a class="btn btn--line" href="mailto:samsonpg077@gmail.com">Email me</a>
+    </div>
+    <nav class="persona__social" aria-label="Social">
+      <a href="https://github.com/SamsonPG" rel="me">GitHub</a>
+      <a href="https://www.linkedin.com/in/samson-p-g-335964133" rel="me">LinkedIn</a>
+      <a href="https://www.youtube.com/@samsonpg" rel="me">YouTube</a>
+      <a href="https://acsaven.com">Acsaven</a>
+    </nav>
+  </aside>
 
-<footer class="wrap foot">
-  <nav>
-    <a href="https://github.com/SamsonPG">GitHub</a>
-    <a href="https://github.com/acsavenhq">Acsaven org</a>
-    <a href="https://www.linkedin.com/in/samson-p-g-335964133">LinkedIn</a>
-    <a href="https://acsaven.com">acsaven.com</a>
-  </nav>
-  <p class="muted small">Built as static HTML. No framework, no build step, no tracking.</p>
-</footer>
+  <main id="main" class="main">
 
+    <!-- ========== SECTION 1: SOFTWARE ========== -->
+    <section class="hero" id="about">
+      <p class="eyebrow">Software first</p>
+      <h2 class="hero__title">
+        I build production web systems —
+        <em>multi-provider sync, alerts, payments, and privacy-first tools.</em>
+      </h2>
+      <p class="hero__lede">
+        Six live products under Acsaven. Dashboard UIs, CI gates, VS Code extension,
+        and demos you can watch. Creative / print work lives in the section below.
+      </p>
+      <div class="hero__ctas">
+        <a class="btn btn--fill" href="#software">Explore software</a>
+        <a class="btn btn--line" href="https://youtu.be/udJD-25mF10">Watch TryTokka demo →</a>
+      </div>
+    </section>
+
+    <section class="block" id="software">
+      <div class="block__head">
+        <p class="tag">01 · Software</p>
+        <h2>Selected products</h2>
+        <p class="block__sub">Live apps, real UI, published packages — the work I'm hiring for.</p>
+      </div>
+
+      <!-- Flagship -->
+      <article class="feature reveal">
+        <div class="feature__copy">
+          <p class="feature__kicker">Flagship · SaaS</p>
+          <h3><a href="https://trytokka.com">TryTokka</a></h3>
+          <p>
+            AI API spend monitoring for developers and teams. Syncs billing endpoints across
+            eight providers, alerts on threshold, dashboard + Scout.
+          </p>
+          <ul class="stats">
+            <li><b>96</b> API routes</li>
+            <li><b>69</b> migrations</li>
+            <li><b>429</b> tests</li>
+            <li><b>2</b> payment rails</li>
+          </ul>
+          <div class="feature__links">
+            <a class="btn btn--fill" href="https://trytokka.com">Open trytokka.com</a>
+            <a class="btn btn--line" href="https://youtu.be/udJD-25mF10">Demo video</a>
+          </div>
+        </div>
+        <div class="feature__media">
+          <a class="shot shot--main" href="https://trytokka.com">
+            <img src="./media/software/trytokka-dashboard.webp" alt="TryTokka dashboard UI" width="1600" height="900" loading="eager" decoding="async">
+          </a>
+          <div class="shot-row">
+            <a class="shot" href="https://trytokka.com">
+              <img src="./media/software/trytokka-ui-dashboard.webp" alt="TryTokka spend dashboard screenshot" loading="lazy">
+            </a>
+            <a class="shot" href="https://youtu.be/udJD-25mF10">
+              <img src="./media/software/trytokka-demo-poster.jpg" alt="TryTokka demo video poster" loading="lazy">
+              <span class="play">▶ Demo</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · Benagon / 20X -->
+      <article class="feature reveal" id="benagon">
+        <div class="feature__copy">
+          <p class="feature__kicker">04 · Benagon · Software developer</p>
+          <h3><a href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">20X</a></h3>
+          <p>
+            Healthcare staffing CRM &amp; nurse scheduling for care and medical agencies.
+            At Benagon in Kochi I shipped production React &amp; TypeScript on recruitment,
+            credentialing, compliance, and timesheets — the product live at
+            <a href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">20x.io</a>.
+          </p>
+          <ul class="stats">
+            <li><b>React</b> + TypeScript</li>
+            <li><b>CRM</b> staffing</li>
+            <li><b>Scheduling</b> nurses</li>
+            <li><b>Kochi</b> production</li>
+          </ul>
+          <div class="feature__links">
+            <a class="btn btn--fill" href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">Open 20x.io</a>
+          </div>
+        </div>
+        <div class="feature__media">
+          <a class="shot shot--main" href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">
+            <img src="./media/software/20x-home.webp" alt="20X healthcare staffing CRM homepage and product UI" width="1440" height="900" loading="lazy" decoding="async">
+          </a>
+          <div class="shot-row">
+            <a class="shot" href="https://www.20x.io/" rel="noopener noreferrer" target="_blank">
+              <img src="./media/software/20x-ui.webp" alt="20X product marketing UI with compliance dashboard preview" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 · SoundShoppie -->
+      <article class="feature feature--flip reveal" id="soundshoppie">
+        <div class="feature__copy">
+          <p class="feature__kicker">03 · Independent ecommerce</p>
+          <h3><a href="https://youtu.be/EKhRnjEeuRE" rel="noopener noreferrer" target="_blank">SoundShoppie</a></h3>
+          <p>
+            First full build with real payments — headphones ecommerce on Node, Express,
+            MongoDB, and EJS. OTP login, cart, admin dashboard, Razorpay / PayPal / COD,
+            hosted on AWS. Independent project before production roles.
+          </p>
+          <ul class="stats">
+            <li><b>MERN</b> stack</li>
+            <li><b>Payments</b> live</li>
+            <li><b>AWS</b> hosted</li>
+            <li><b>Admin</b> panel</li>
+          </ul>
+          <div class="feature__links">
+            <a class="btn btn--fill" href="https://youtu.be/EKhRnjEeuRE" rel="noopener noreferrer" target="_blank">Watch demo</a>
+            <a class="btn btn--line" href="https://github.com/SamsonPG/soundShoppie-2023" rel="noopener noreferrer" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="feature__media">
+          <a class="shot shot--main" href="https://youtu.be/EKhRnjEeuRE" rel="noopener noreferrer" target="_blank">
+            <img src="./media/software/soundshoppie-demo-poster.webp" alt="SoundShoppie ecommerce demo — storefront hero" width="1280" height="720" loading="lazy" decoding="async">
+            <span class="play play--lg">▶ Demo video</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 05 · Acsaven products -->
+      <p class="chapter-label">05 · Acsaven</p>
+      <div class="soft-grid" id="acsaven-products">
+        <a class="soft-card" href="https://tryquickimg.com">
+          <div class="soft-card__img">
+            <img src="./media/software/tryquickimg-cover.webp" alt="TryQuickImg product cover" loading="lazy">
+          </div>
+          <div class="soft-card__body">
+            <h3>TryQuickImg</h3>
+            <p>Browser image compress / convert — no upload for processing.</p>
+            <span class="soft-card__meta">Astro · YouTube demo</span>
+          </div>
+        </a>
+        <a class="soft-card" href="https://trydevsnip.com">
+          <div class="soft-card__img">
+            <img src="./media/software/trydevsnip-cover.webp" alt="TryDevSnip product cover" loading="lazy">
+          </div>
+          <div class="soft-card__body">
+            <h3>TryDevSnip</h3>
+            <p>JSON, cron, JWT, timestamps — local-first developer toolkit.</p>
+            <span class="soft-card__meta">Astro · Demo on YouTube</span>
+          </div>
+        </a>
+        <a class="soft-card" href="https://trycalculatingnow.com">
+          <div class="soft-card__img">
+            <img src="./media/software/trycalculatingnow-cover.webp" alt="TryCalculatingNow product cover" loading="lazy">
+          </div>
+          <div class="soft-card__body">
+            <h3>TryCalculatingNow</h3>
+            <p>95+ calculators. Grades, finance, tax. No signup wall.</p>
+            <span class="soft-card__meta">Astro · Demo on YouTube</span>
+          </div>
+        </a>
+        <a class="soft-card" href="https://acsaven.com">
+          <div class="soft-card__img">
+            <img src="./media/software/acsaven-cover.webp" alt="Acsaven studio cover" loading="lazy">
+          </div>
+          <div class="soft-card__body">
+            <h3>Acsaven</h3>
+            <p>Studio hub for the Try family + free Astro starter.</p>
+            <span class="soft-card__meta">acsaven.com</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Published + Scout -->
+      <div class="publish">
+        <a class="publish__card" href="https://www.npmjs.com/package/@acsaven/astro-ops">
+          <img src="./media/software/og-trytokka.webp" alt="" class="publish__bg" loading="lazy">
+          <div>
+            <span class="publish__label">npm · MIT</span>
+            <h3>@acsaven/astro-ops</h3>
+            <p>Production build gates for Astro — silent deploy failures become build failures.</p>
+          </div>
+        </a>
+        <a class="publish__card publish__card--scout" href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker">
+          <img src="./media/software/scout-vscode.webp" alt="Scout VS Code extension UI" loading="lazy">
+          <div>
+            <span class="publish__label">VS Code · MIT</span>
+            <h3>Scout</h3>
+            <p>Live AI spend in the status bar via read-only token.</p>
+          </div>
+        </a>
+      </div>
+
+      <figure class="banner">
+        <img src="./media/software/linkedin-banner.webp" alt="Samson P G LinkedIn / social banner for Acsaven products" loading="lazy">
+        <figcaption>
+          Social / LinkedIn presence —
+          <a href="https://www.linkedin.com/in/samson-p-g-335964133">linkedin.com/in/samson-p-g-335964133</a>
+        </figcaption>
+      </figure>
+
+      <div class="demos">
+        <p class="eyebrow">Demos</p>
+        <div class="demos__row">
+          <a href="https://youtu.be/udJD-25mF10">TryTokka →</a>
+          <a href="https://youtu.be/EKhRnjEeuRE">SoundShoppie →</a>
+          <a href="https://youtu.be/Ujlj5njII2c">TryQuickImg →</a>
+          <a href="https://youtu.be/_-QhhFYnoaY">TryDevSnip →</a>
+          <a href="https://youtu.be/Roh-MMkHqyI">TryCalculatingNow →</a>
+          <a href="https://youtu.be/tU_z1ib3yE4">Acsaven →</a>
+        </div>
+      </div>
+
+      <div class="skills skills--software">
+        <p class="eyebrow">Skills</p>
+        <h3 class="skills__title">Software stack</h3>
+        <ul class="skill-chips">
+          <li>TypeScript</li><li>Next.js</li><li>React</li><li>Node</li>
+          <li>PostgreSQL</li><li>Supabase</li><li>Astro</li><li>Cloudflare</li>
+          <li>Playwright</li><li>Vitest</li><li>Stripe / Razorpay</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block path" id="path">
+      <div class="block__head">
+        <p class="eyebrow">Growth</p>
+        <h2>Path into software</h2>
+        <p class="block__sub">Five steps from systems thinking to shipping a studio.</p>
+      </div>
+
+      <ol class="rail">
+        <li class="rail__step">
+          <span class="rail__num" aria-hidden="true">01</span>
+          <div class="rail__body">
+            <p class="rail__when">Foundation</p>
+            <h3>Electronics</h3>
+            <p class="rail__role">B.Sc. · M.Sc.</p>
+            <p class="rail__text">College first in M.Sc. — systems before software.</p>
+          </div>
+        </li>
+        <li class="rail__step">
+          <span class="rail__num" aria-hidden="true">02</span>
+          <div class="rail__body">
+            <p class="rail__when">Learn</p>
+            <h3>Brototype</h3>
+            <p class="rail__role">MERN internship</p>
+            <p class="rail__text">Auth, React, AWS — deliberate jump into code.</p>
+          </div>
+        </li>
+        <li class="rail__step">
+          <span class="rail__num" aria-hidden="true">03</span>
+          <div class="rail__body">
+            <p class="rail__when">Ship alone</p>
+            <h3><a href="#soundshoppie">SoundShoppie</a></h3>
+            <p class="rail__role">Independent ecommerce</p>
+            <p class="rail__text">First full build with real payments — <a href="#soundshoppie">demo &amp; story</a>.</p>
+          </div>
+        </li>
+        <li class="rail__step">
+          <span class="rail__num" aria-hidden="true">04</span>
+          <div class="rail__body">
+            <p class="rail__when">Production</p>
+            <h3><a href="#benagon">Benagon</a></h3>
+            <p class="rail__role">Software developer</p>
+            <p class="rail__text">
+              Production React &amp; TypeScript in Kochi on
+              <a href="#benagon">20X</a> — healthcare staffing CRM.
+            </p>
+          </div>
+        </li>
+        <li class="rail__step rail__step--now">
+          <span class="rail__num" aria-hidden="true">05</span>
+          <div class="rail__body">
+            <p class="rail__when">Now</p>
+            <h3><a href="#acsaven-products">Acsaven</a></h3>
+            <p class="rail__role">Founder · solo</p>
+            <p class="rail__text">Six live products. This is the software chapter.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ========== SECTION 2: CREATIVE MEDIA ========== -->
+    <section class="block creative" id="creative">
+      <div class="block__head">
+        <p class="tag tag--muted">02 · Creative media</p>
+        <h2>Earlier chapter — craft &amp; media</h2>
+        <p class="block__sub">
+          Design, branding, print, fabrication, and the bench in Bahrain.
+          The deadline discipline came from here — software is what I ship now.
+        </p>
+      </div>
+      <div class="mosaic">
+        <img src="./media/craft/design-1.webp" alt="Graphic design layout sample by Samson P G" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/branding-1.webp" alt="Branding design sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/print-1.webp" alt="Print production sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/acrylic-1.webp" alt="Acrylic fabrication sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/mdf-1.webp" alt="MDF fabrication sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/tshirt-1.webp" alt="Apparel print sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/design-2.webp" alt="Design layout sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/tech-1.webp" alt="Technician and production work sample" width="720" height="720" loading="lazy" decoding="async">
+        <img src="./media/craft/branding-2.webp" alt="Campaign branding sample" width="720" height="720" loading="lazy" decoding="async">
+      </div>
+      <p class="creative__note">
+        Roles included Production In-Charge &amp; designer (Actual Advertising, Bahrain),
+        graphic design, sales &amp; computer technician work.
+      </p>
+
+      <div class="skills skills--creative">
+        <p class="eyebrow">Skills</p>
+        <h3 class="skills__title">Creative stack</h3>
+        <ul class="skill-chips">
+          <li>Illustrator</li><li>Photoshop</li><li>Print production</li>
+          <li>Branding</li><li>Acrylic / MDF / laser</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block contact" id="contact">
+      <p class="eyebrow">Next</p>
+      <a class="mail" href="mailto:samsonpg077@gmail.com">samsonpg077@gmail.com</a>
+      <p class="contact__note">Open to full-stack &amp; backend roles — on-site, hybrid, or remote.</p>
+    </section>
+
+    <footer class="foot">
+      <p>© 2026 Samson P G · Static · No tracking</p>
+    </footer>
+  </main>
+</div>
+
+<script src="./theme.js" defer></script>
+<script src="./script.js" defer></script>
 </body>
 </html>
