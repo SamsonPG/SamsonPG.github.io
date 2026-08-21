@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samson P G — Full-Stack Engineer</title>
+<meta name="description" content="Full-stack engineer working in TypeScript, Next.js and PostgreSQL. Six products in production, a published npm package and a VS Code extension, built and operated solo at Acsaven.">
+<link rel="canonical" href="https://samsonpg.github.io/">
+<meta name="theme-color" content="#080C0B">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Samson P G — Full-Stack Engineer">
+<meta property="og:description" content="TypeScript, Next.js, PostgreSQL. Six products in production, a published npm package and a VS Code extension — built and operated solo.">
+<meta property="og:url" content="https://samsonpg.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080C0B'/><text y='68' x='50' font-size='58' text-anchor='middle' fill='%2334E89A' font-family='system-ui' font-weight='700'>S</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Samson P G",
+  "jobTitle": "Full-Stack Engineer",
+  "url": "https://samsonpg.github.io/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Kochi", "addressRegion": "Kerala", "addressCountry": "IN" },
+  "worksFor": { "@type": "Organization", "name": "Acsaven", "url": "https://acsaven.com" },
+  "knowsAbout": ["TypeScript", "Next.js", "React", "Node.js", "PostgreSQL", "Astro", "Cloudflare Workers"],
+  "sameAs": [
+    "https://github.com/SamsonPG",
+    "https://github.com/acsavenhq",
+    "https://www.linkedin.com/in/samson-p-g-335964133",
+    "https://www.npmjs.com/package/@acsaven/astro-ops",
+    "https://acsaven.com"
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap head">
+  <div>
+    <h1>Samson&nbsp;P&nbsp;G</h1>
+    <p class="role">Full-Stack Engineer · TypeScript, Next.js, PostgreSQL</p>
+  </div>
+  <p class="loc">Kochi, Kerala, India<br><span>Open to full-stack &amp; backend roles — on-site, hybrid or remote</span></p>
+</header>
+
+<main id="main">
+
+  <section class="wrap intro">
+    <p>
+      I build and operate production systems solo at <a href="https://acsaven.com">Acsaven</a>, an
+      independent software studio. Six products, live, maintained by one person.
+    </p>
+    <p class="muted">
+      Most of my work is the part that shows up <em>after</em> launch — encryption for stored
+      credentials, permission checks where the UI and the server agree, webhooks that survive
+      retries, and CI that fails when those slip.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <h2>Selected work</h2>
+
+    <article class="item">
+      <header>
+        <h3><a href="https://trytokka.com">TryTokka</a></h3>
+        <p class="stack">Next.js · TypeScript · Supabase/Postgres · Vercel</p>
+      </header>
+      <p>
+        AI API spend monitoring for developers and teams. Reads billing endpoints across eight
+        providers — never prompts or completions — and emails when spend crosses a limit you set.
+      </p>
+      <ul class="facts">
+        <li><b>96</b> API routes</li>
+        <li><b>69</b> database migrations</li>
+        <li><b>429</b> automated tests</li>
+        <li><b>3</b> live payment providers</li>
+      </ul>
+      <p class="note">
+        AES-256-GCM credential encryption, Row-Level Security, TOTP two-factor auth, and an admin
+        panel behind a second unlock gate. Payments run signature-verified idempotent webhooks with
+        a reconciliation ledger — and an alert if money is ever taken without being recorded.
+        The three credential-handling modules are
+        <a href="https://github.com/acsavenhq/trytokka-security">published for review</a>, because a
+        security claim you cannot check is just a claim.
+      </p>
+    </article>
+
+    <article class="item">
+      <header>
+        <h3>
+          <a href="https://tryquickimg.com">TryQuickImg</a> ·
+          <a href="https://trydevsnip.com">TryDevSnip</a> ·
+          <a href="https://trycalculatingnow.com">TryCalculatingNow</a>
+        </h3>
+        <p class="stack">Astro · Cloudflare Workers</p>
+      </header>
+      <p>
+        Three utility sites, ~700 pages combined. Image compression to an exact KB target, developer
+        tools for JSON, JWT and cron, and finance calculators.
+      </p>
+      <p class="note">
+        Everything runs in the browser. Files are processed on the visitor's own device and never
+        uploaded — that is the product, not a footnote, so the build fails if a third-party script
+        ever appears without someone deciding to add it.
+      </p>
+    </article>
+  </section>
+
+  <section class="wrap">
+    <h2>Published</h2>
+
+    <article class="item">
+      <header>
+        <h3><a href="https://www.npmjs.com/package/@acsaven/astro-ops">@acsaven/astro-ops</a></h3>
+        <p class="stack">npm · MIT · zero runtime dependencies</p>
+      </header>
+      <p>
+        Production build gates for Astro sites — seven checks that turn silent post-deploy failures
+        into build failures: content-hashed cache busting, link integrity, third-party asset
+        detection, freshness watchdogs, discovery wiring, Lighthouse budgets, and a source-integrity
+        gate that refuses to build when free disk is too low to write safely.
+      </p>
+      <p class="note">Each gate exists because the failure it prevents actually happened.</p>
+    </article>
+
+    <article class="item">
+      <header>
+        <h3><a href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker">Scout</a></h3>
+        <p class="stack">VS Code Marketplace · MIT</p>
+      </header>
+      <p>
+        Shows live AI API spend in the status bar via a read-only token. No proxy, no SDK, no changes
+        to the user's project. The panel is permissions-aware: on a shared workspace it never offers
+        a control the server would refuse.
+      </p>
+    </article>
+  </section>
+
+  <section class="wrap">
+    <h2>How I work</h2>
+    <div class="grid">
+      <div>
+        <h3>Gates, not good intentions</h3>
+        <p>CI fails on architecture violations, missing permission guards, undocumented modules, and public claims without evidence. Rules a person has to remember are rules that decay.</p>
+      </div>
+      <div>
+        <h3>Prove the check can fail</h3>
+        <p>Every gate I add, I break on purpose first and watch it go red. A check that cannot fail is worse than none, because it is believed.</p>
+      </div>
+      <div>
+        <h3>Say the uncomfortable part</h3>
+        <p>TryTokka's threat model states plainly what an attacker with the deployment key could do. Publishing the limits is what makes the rest credible.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Experience</h2>
+    <dl class="cv">
+      <dt>Founder &amp; Solo Engineer — Acsaven</dt>
+      <dd>Jun 2026 – present · self-employed. Six production products end-to-end: architecture, security, payments, testing, SEO and deployment.</dd>
+
+      <dt>Software Developer — Benagon Technologies</dt>
+      <dd>Oct 2024 – May 2026 · Kochi. Production web applications in React and TypeScript. Joined Jul 2024 as a frontend intern.</dd>
+
+      <dt>MERN Stack Developer — Brototype</dt>
+      <dd>Dec 2022 – Oct 2023 · Kochi, internship.</dd>
+
+      <dt>Before software</dt>
+      <dd>Four years in print production and sales in Bahrain, and an MSc in Electronics. That background is why I care about things working in the real world, not only on my machine.</dd>
+    </dl>
+  </section>
+
+  <section class="wrap">
+    <h2>Stack</h2>
+    <ul class="chips">
+      <li>TypeScript</li><li>Next.js</li><li>React</li><li>Node.js</li>
+      <li>PostgreSQL</li><li>Supabase</li><li>Astro</li><li>Cloudflare Workers</li>
+      <li>Vercel</li><li>Playwright</li><li>Vitest</li><li>Git</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <nav>
+    <a href="https://github.com/SamsonPG">GitHub</a>
+    <a href="https://github.com/acsavenhq">Acsaven org</a>
+    <a href="https://www.linkedin.com/in/samson-p-g-335964133">LinkedIn</a>
+    <a href="https://acsaven.com">acsaven.com</a>
+  </nav>
+  <p class="muted small">Built as static HTML. No framework, no build step, no tracking.</p>
+</footer>
+
+</body>
+</html>
