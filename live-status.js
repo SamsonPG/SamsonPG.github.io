@@ -1,6 +1,6 @@
 /**
- * Show "Offline demo" only when the live product origin is unreachable.
- * Live CTAs stay as-is. Uses no-cors probes (opaque OK = reachable).
+ * Per-product live swap: show Open live when reachable; otherwise show Offline demo
+ * in the same primary slot. No hub / global Offline button.
  */
 (function () {
   var TIMEOUT_MS = 4500
@@ -21,7 +21,6 @@
       })
       .catch(function () {
         clearTimeout(timer)
-        // Fallback: image ping (some networks block fetch oddly)
         return new Promise(function (resolve) {
           var img = new Image()
           var done = false
@@ -60,41 +59,31 @@
     }
   }
 
-  var demos = document.querySelectorAll('[data-live-check]')
-  var hub = document.querySelectorAll('[data-offline-hub]')
-  if (!demos.length) return
+  function applyPair(liveBtn, demoBtn, up) {
+    setVisible(liveBtn, up)
+    setVisible(demoBtn, !up)
+  }
 
-  // Hide until we know a site is down (avoid flashing when everything is up)
-  demos.forEach(function (el) {
-    setVisible(el, false)
-  })
-  hub.forEach(function (el) {
-    setVisible(el, false)
-  })
+  var pairs = document.querySelectorAll('[data-live-open][data-live-check]')
+  if (!pairs.length) return
 
-  var pending = demos.length
-  var anyDown = false
+  pairs.forEach(function (liveBtn) {
+    var demoBtn = liveBtn.parentElement
+      ? liveBtn.parentElement.querySelector('[data-demo-open]')
+      : null
+    if (!demoBtn) return
 
-  demos.forEach(function (el) {
-    var live = el.getAttribute('data-live-check')
+    // Default: live visible, demo hidden (until probe says otherwise)
+    applyPair(liveBtn, demoBtn, true)
+
+    var live = liveBtn.getAttribute('data-live-check')
     if (!live) {
-      setVisible(el, true)
-      pending -= 1
+      applyPair(liveBtn, demoBtn, false)
       return
     }
+
     probe(live).then(function (up) {
-      if (!up) {
-        anyDown = true
-        setVisible(el, true)
-      } else {
-        setVisible(el, false)
-      }
-      pending -= 1
-      if (pending <= 0) {
-        hub.forEach(function (h) {
-          setVisible(h, anyDown)
-        })
-      }
+      applyPair(liveBtn, demoBtn, up)
     })
   })
 })()
