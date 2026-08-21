@@ -27,7 +27,7 @@
         display: flex; justify-content: center; align-items: center;
       }
       .overlay-text { font-size: 18px; font-weight: bold; color: #333; }
-      /* Hero: logo upper-center, rainbow equalizer mid — match original SoundShoppie */
+      /* Hero: rainbow ABOVE logo; logo top sits where rainbow bottom used to be (~52%) */
       .cursoul .carousel { position: relative; }
       .cursoul .carousel-inner { position: relative; overflow: hidden; min-height: 78vh; }
       .cursoul .carousel-item { min-height: 78vh; }
@@ -40,31 +40,44 @@
       }
       .cursoul .loader-container {
         position: absolute;
-        inset: 0;
+        left: 50%;
+        top: 52%;
+        transform: translateX(-50%);
         z-index: 40;
         pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        max-width: 92vw;
       }
-      /* Rainbow equalizer bars — center of hero */
+      /* Constant-height rainbow bars, stacked above the logo */
       .cursoul .loader {
-        display: block !important;
-        position: absolute;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 0 0.65rem;
+        /* pull bars fully above the 52% line so logo top lands there */
+        margin-top: calc(-1 * (72px + 0.65rem));
         z-index: 42;
-        white-space: nowrap;
         line-height: 0;
+        height: 72px;
       }
       .cursoul .loader .bar {
         width: 14px;
-        height: 120px;
+        height: 72px !important;
+        min-height: 72px;
+        max-height: 72px;
         display: inline-block;
         margin: 0 3px;
-        transform-origin: bottom center;
-        border-top-right-radius: 12px;
-        border-top-left-radius: 12px;
-        animation: loader8913 1.2s linear infinite;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        transform: none !important;
+        animation: ss-bar-glow 1.2s ease-in-out infinite;
       }
       .cursoul .loader .bar1 { background: #ff1744; animation-delay: 0.1s; }
       .cursoul .loader .bar2 { background: #ff9100; animation-delay: 0.2s; }
@@ -73,12 +86,15 @@
       .cursoul .loader .bar5 { background: #00b0ff; animation-delay: 0.5s; }
       .cursoul .loader .bar6 { background: #651fff; animation-delay: 0.6s; }
       .cursoul .loader .bar7 { background: #d500f9; animation-delay: 0.7s; }
-      /* Logo sits above the rainbow bars */
+      @keyframes ss-bar-glow {
+        0%, 100% { opacity: 0.75; filter: brightness(0.95); }
+        50% { opacity: 1; filter: brightness(1.15); }
+      }
       .cursoul .carousel-caption {
-        position: absolute !important;
-        top: 18% !important;
-        left: 0;
-        right: 0;
+        position: relative !important;
+        top: auto !important;
+        left: auto;
+        right: auto;
         bottom: auto !important;
         transform: none !important;
         padding: 0;
@@ -114,14 +130,51 @@
         background: #f7f7f7;
         padding: 0.85rem;
       }
+      /* Our Brands — constant logo height, no edge crop */
+      .customer-logos.slider {
+        padding: 0.5rem 1.25rem 1rem;
+      }
+      .customer-logos .slick-list {
+        overflow: hidden;
+        margin: 0 0.25rem;
+        padding: 0.75rem 0 !important;
+      }
+      .customer-logos .slick-track {
+        display: flex !important;
+        align-items: center;
+      }
+      .customer-logos .slick-slide {
+        margin: 0 18px;
+        height: 56px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+      }
+      .customer-logos .slick-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+      }
+      .customer-logos .slick-slide img {
+        width: auto !important;
+        max-width: 140px;
+        height: 40px !important;
+        max-height: 40px !important;
+        object-fit: contain;
+        object-position: center;
+      }
       @media (max-width: 767.98px) {
         .navbar .d-flex.justify-content-start.align-items-center,
         .navbar .d-flex.justify-content-end.align-items-center { justify-content: center; }
         .navbar .d-flex.align-items-center form { margin-left: auto; margin-right: auto; }
         .cursoul .carousel-fade-image { height: 62vh; min-height: 360px; }
-        .cursoul .loader .bar { width: 10px; height: 88px; margin: 0 2px; }
-        .cursoul .carousel-caption { top: 14% !important; }
+        .cursoul .loader { height: 56px; margin-top: calc(-1 * (56px + 0.65rem)); }
+        .cursoul .loader .bar { width: 10px; height: 56px !important; min-height: 56px; max-height: 56px; margin: 0 2px; }
         .cursoul .shadowed-image { max-width: min(220px, 62vw); }
+        .customer-logos .slick-slide { height: 48px; margin: 0 12px; }
+        .customer-logos .slick-slide > div { height: 48px; }
+        .customer-logos .slick-slide img { height: 32px !important; max-height: 32px !important; max-width: 110px; }
       }
     </style>
     <script>
