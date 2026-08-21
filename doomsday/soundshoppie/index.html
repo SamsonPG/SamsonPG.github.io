@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -184,15 +184,17 @@
         flex-shrink: 0;
       }
       .product-card .image-container > img.card-img-top {
-        position: relative !important;
+        position: absolute !important;
+        inset: 0 !important;
         z-index: 1 !important;
         width: 100% !important;
         height: 100% !important;
         max-width: none !important;
-        object-fit: contain !important;
+        max-height: none !important;
+        object-fit: cover !important; /* fill box, keep proportions â€” no stretch */
         object-position: center center !important;
         background: #fff !important;
-        padding: 0.4rem !important;
+        padding: 0 !important;
         margin: 0 !important;
         display: block !important;
         visibility: visible !important;
@@ -234,7 +236,7 @@
       .product-card .card-details-btn {
         margin-top: auto;
       }
-      /* Our Brands — constant logo height, no edge crop */
+      /* Our Brands â€” constant logo height, no edge crop */
       .customer-logos.slider {
         padding: 0.5rem 1.25rem 1rem;
       }
@@ -409,7 +411,7 @@
       </div>
       <!-- Premium tagline below the carousel, then Feel the Sound -->
       <p class="running-text">
-        <span class="train-running2">Premium headphones · IEMs · earphones — curated for audio lovers</span>
+        <span class="train-running2">Premium headphones Â· IEMs Â· earphones â€” curated for audio lovers</span>
       </p>
       <div class="container d-flex justify-content-center feel-sound">
         <h1><span class="train-running1">Feel the Sound</span></h1>
@@ -460,76 +462,76 @@
         <div class="card-deck d-flex justify-content-center align-items-stretch flex-wrap">
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/wh-1000xm.jpg" alt="Sony WH-1000XM4" />
+              <img class="card-img-top" src="./products/wh-1000xm.jpg?v=3" alt="Sony WH-1000XM4" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">WH-1000…</h5>
+              <h5 class="card-title">WH-1000â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Headphones</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹24990</div>
+              <div class="card-price">â‚¹24990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/qc45.jpg" alt="Bose QuietComfort 45" />
+              <img class="card-img-top" src="./products/qc45.jpg?v=3" alt="Bose QuietComfort 45" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">QC45…</h5>
+              <h5 class="card-title">QC45â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Headphones</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star"></span>
               </div>
-              <div class="card-price">₹28990</div>
+              <div class="card-price">â‚¹28990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/ie-600.jpg" alt="Sennheiser IE 600" />
+              <img class="card-img-top" src="./products/ie-600.jpg?v=3" alt="Sennheiser IE 600" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">IE 600…</h5>
+              <h5 class="card-title">IE 600â€¦</h5>
               <div class="card-price"><span class="category-name truncate">IEMs</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹54990</div>
+              <div class="card-price">â‚¹54990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/ath-m50.jpg" alt="Audio-Technica ATH-M50x" />
+              <img class="card-img-top" src="./products/ath-m50.jpg?v=3" alt="Audio-Technica ATH-M50x" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">ATH-M50…</h5>
+              <h5 class="card-title">ATH-M50â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Studio</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹14990</div>
+              <div class="card-price">â‚¹14990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/tune-760.jpg" alt="JBL Tune 760NC" />
+              <img class="card-img-top" src="./products/tune-760.jpg?v=3" alt="JBL Tune 760NC" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">Tune 760…</h5>
+              <h5 class="card-title">Tune 760â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Wireless</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹7990</div>
+              <div class="card-price">â‚¹7990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
@@ -538,48 +540,48 @@
               <span class="badge rounded-pill badge-notification bg-danger">
                 <div><div class="m-1">15 %</div><div class="m-1">off</div></div>
               </span>
-              <img class="card-img-top" src="./products/wf-1000.jpg?v=2" alt="Sony WF-1000XM4" width="800" height="800" />
+              <img class="card-img-top" src="./products/wf-1000.jpg?v=3" alt="Sony WF-1000XM4" width="800" height="800" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">WF-1000…</h5>
+              <h5 class="card-title">WF-1000â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Earbuds</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹16990</div>
-              <del>₹19990</del>
+              <div class="card-price">â‚¹16990</div>
+              <del>â‚¹19990</del>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/t5-ii.jpg" alt="Klipsch T5 II" />
+              <img class="card-img-top" src="./products/t5-ii.jpg?v=3" alt="Klipsch T5 II" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">T5 II…</h5>
+              <h5 class="card-title">T5 IIâ€¦</h5>
               <div class="card-price"><span class="category-name truncate">True wireless</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star-o"></span>
               </div>
-              <div class="card-price">₹12990</div>
+              <div class="card-price">â‚¹12990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
           <div class="product-card m-2">
             <div class="image-container">
               <div class="overlay"><p class="overlay-text">Out of Stock</p></div>
-              <img class="card-img-top" src="./products/hd-660.jpg" alt="Sennheiser HD 660S2" />
+              <img class="card-img-top" src="./products/hd-660.jpg?v=3" alt="Sennheiser HD 660S2" />
             </div>
             <div class="card-body">
-              <h5 class="card-title">HD 660…</h5>
+              <h5 class="card-title">HD 660â€¦</h5>
               <div class="card-price"><span class="category-name truncate">Open-back</span></div>
               <div class="card-rating">
                 <span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
                 <span class="fa fa-star"></span><span class="fa fa-star"></span>
               </div>
-              <div class="card-price">₹39990</div>
+              <div class="card-price">â‚¹39990</div>
               <a href="#products" class="card-details-btn">Product Details</a>
             </div>
           </div>
@@ -631,7 +633,7 @@
           </section>
         </div>
         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2023 Copyright:
+          Â© 2023 Copyright:
           <a href="./" class="ms-md-2">
             <img src="./images/logo-black.png" height="35" alt="soundShoppie" />
           </a>
