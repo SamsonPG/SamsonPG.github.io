@@ -121,18 +121,24 @@
         transform: translateX(-50%);
         z-index: 45;
       }
-      /* Premium line sits BELOW the carousel (not over it), with top gap */
+      /* Premium line below carousel — keep original black→fade shadow */
       .cursoul .carousel {
         margin-bottom: 0;
       }
       .cursoul .running-text {
         position: relative;
-        z-index: 2;
-        margin: 1.35rem 0 0;
-        padding: 1.1rem 1rem 1.35rem;
+        z-index: 6;
+        margin: 0;
+        padding: 1.35rem 1rem 2.75rem;
         text-align: center;
-        color: #111;
-        background: transparent;
+        color: #fff;
+        background: linear-gradient(
+          to bottom,
+          rgb(0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.88) 35%,
+          rgba(40, 40, 40, 0.35) 70%,
+          rgba(228, 228, 228, 0) 100%
+        );
       }
       .cursoul .running-text .train-running2 {
         display: inline-block;
@@ -140,14 +146,14 @@
         font-weight: 700;
         font-size: clamp(1rem, 2.4vw, 1.65rem);
         letter-spacing: 0.01em;
-        color: #111;
-        text-shadow: none;
+        color: #fff;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
       }
       .cursoul .feel-sound {
         position: relative;
-        z-index: 2;
-        margin-top: 0.15rem;
-        padding: 0.25rem 0 0.75rem;
+        z-index: 5;
+        margin-top: -0.35rem;
+        padding: 0.35rem 0 0.75rem;
       }
       .cursoul .feel-sound h1 {
         margin: 0;
@@ -157,8 +163,8 @@
           bottom: 3.75rem;
         }
         .cursoul .running-text {
-          margin-top: 1rem;
-          padding: 0.85rem 0.75rem 1.1rem;
+          margin-top: 0;
+          padding: 1.1rem 0.75rem 2.1rem;
         }
         .cursoul .running-text .train-running2,
         .cursoul .feel-sound .train-running1 {
