@@ -1,6 +1,7 @@
 # Doomsday — offline product homepage archive
 
-Visual-only backups of Samson P G / Acsaven product landings, hosted free on GitHub Pages.
+Visual-only backups of Samson P G / Acsaven product landings, hosted free on GitHub Pages
+(under this user site at `/doomsday/`).
 
 **Live museum:** https://samsonpg.github.io/doomsday/
 
