@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acsaven Haven Aura v6 — artistic field</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/brand/acsaven-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body { margin: 0; }
+      .wrap { max-width: 52rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+      .preview { height: 18rem; border-radius: 1rem; overflow: hidden; position: relative; border: 1px solid var(--rim); }
+      .preview .acsaven-haven-mesh { position: absolute; inset: 0; }
+      .preview .cinema-hero-veil, .preview .cinema-hero-stars, .preview .cinema-hero-grain { position: absolute; inset: 0; }
+      .preview .cinema-hero-veil img, .preview .cinema-hero-stars img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .grid { display: grid; gap: 1rem; }
+      @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+      .label { font-size: 0.8rem; color: var(--muted); margin: 0 0 0.5rem; }
+      .panel { border: 1px solid var(--rim); background: var(--panel); border-radius: 1rem; padding: 1rem; margin-bottom: 1rem; }
+      h1 { margin: 0 0 0.35rem; letter-spacing: -0.03em; }
+      .lead { color: var(--muted); }
+      a { color: var(--accent); }
+      ul { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p><a href="/">Acsaven</a> · Haven Aura v6</p>
+      <h1>Artistic painterly field</h1>
+      <p class="lead">Visible azure / peach / cyan / gold mesh + abstract rings &amp; petals. No muddy mountains. Same-origin only.</p>
+      <div class="grid">
+        <div class="panel">
+          <p class="label">Dark</p>
+          <div class="preview" data-theme="dark">
+            <div class="acsaven-haven-mesh"></div>
+            <div class="cinema-hero-veil"><img class="veil-dark" src="/brand/haven-veil.svg" alt="" style="display:block" /></div>
+            <div class="cinema-hero-stars" style="opacity:0.55;mix-blend-mode:screen"><img class="stars-dark" src="/brand/haven-stars.svg" alt="" style="display:block" /></div>
+            <div class="cinema-hero-grain"></div>
+          </div>
+        </div>
+        <div class="panel">
+          <p class="label">Light (force tokens via inline)</p>
+          <div class="preview">
+            <div class="acsaven-haven-mesh" style="--hm-void:#e8f0fa;--hm-ink:#f8fafc;--hm-azure:#2563eb;--hm-sky:#0ea5e9;--hm-cyan:#06b6d4;--hm-peach:#f97316;--hm-rose:#ec4899;--hm-gold:#f59e0b;--hm-silver:#fff;background-blend-mode:multiply,multiply,soft-light,multiply,multiply,soft-light,soft-light,soft-light,soft-light,soft-light,normal"></div>
+            <div class="cinema-hero-veil"><img src="/brand/haven-veil-light.svg" alt="" style="display:block" /></div>
+            <div class="cinema-hero-stars" style="opacity:0.35;mix-blend-mode:multiply"><img src="/brand/haven-stars-light.svg" alt="" style="display:block" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <ul>
+          <li>Painterly CSS mesh (visible color, not grey smear)</li>
+          <li>Abstract veil: concentric rings + mirrored petals</li>
+          <li>Stars + grain for craft</li>
+          <li>Zero CDN / external runtime requests</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

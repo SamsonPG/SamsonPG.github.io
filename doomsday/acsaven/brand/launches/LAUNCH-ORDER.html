@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Acsaven — Same-day launch order</title>
+  <style>
+    @page { size: A4; margin: 18mm 16mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: #121014;
+      font-size: 11pt;
+      line-height: 1.45;
+      margin: 0;
+    }
+    h1 {
+      font-size: 18pt;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: #475569;
+      font-size: 10pt;
+      margin: 0 0 16px;
+    }
+    h2 {
+      font-size: 12pt;
+      margin: 18px 0 8px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.5pt;
+      margin: 0 0 8px;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+    td.num { width: 28px; text-align: center; font-weight: 600; }
+    a { color: #0369a1; text-decoration: none; word-break: break-all; }
+    ol.products { margin: 4px 0 8px 18px; padding: 0; }
+    ol.products li { margin: 3px 0; }
+    .rule {
+      background: #f8fafc;
+      border-left: 3px solid #34d399;
+      padding: 8px 12px;
+      margin: 12px 0;
+      font-size: 10pt;
+    }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 10px 12px;
+      font-size: 8.5pt;
+      line-height: 1.5;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .foot {
+      margin-top: 16px;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Acsaven — Same-day launch order</h1>
+  <p class="sub">Batch marketing for Product Hunt, directories, and maker platforms. No multi-day wait. Captions: brand/launches/{product}.md</p>
+
+  <h2>1. Platform order + URLs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Platform</th>
+        <th>URL</th>
+        <th>Tip</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">1</td>
+        <td><strong>GitHub</strong></td>
+        <td><a href="https://github.com/acsavenhq">https://github.com/acsavenhq</a></td>
+        <td>README / Discussion first — you control it</td>
+      </tr>
+      <tr>
+        <td class="num">2</td>
+        <td><strong>AlternativeTo</strong></td>
+        <td><a href="https://alternativeto.net/software/new/">https://alternativeto.net/software/new/</a></td>
+        <td>Batch all free tools</td>
+      </tr>
+      <tr>
+        <td class="num">3</td>
+        <td><strong>SaaSHub</strong></td>
+        <td><a href="https://www.saashub.com/submit">https://www.saashub.com/submit</a></td>
+        <td>Same batch</td>
+      </tr>
+      <tr>
+        <td class="num">4</td>
+        <td><strong>Uneed</strong></td>
+        <td><a href="https://www.uneed.best/submit-a-tool">https://www.uneed.best/submit-a-tool</a></td>
+        <td>Same batch</td>
+      </tr>
+      <tr>
+        <td class="num">5</td>
+        <td><strong>BetaList</strong></td>
+        <td><a href="https://betalist.com/submit">https://betalist.com/submit</a></td>
+        <td>May review — submit early</td>
+      </tr>
+      <tr>
+        <td class="num">6</td>
+        <td><strong>Peerlist</strong></td>
+        <td><a href="https://peerlist.io/launch">https://peerlist.io/launch</a></td>
+        <td>Project launches</td>
+      </tr>
+      <tr>
+        <td class="num">7</td>
+        <td><strong>Indie Hackers</strong></td>
+        <td><a href="https://www.indiehackers.com/products/new">https://www.indiehackers.com/products/new</a></td>
+        <td>Product pages</td>
+      </tr>
+      <tr>
+        <td class="num">8</td>
+        <td><strong>Dev.to</strong></td>
+        <td><a href="https://dev.to/new">https://dev.to/new</a></td>
+        <td>Paste from each product .md Dev.to body</td>
+      </tr>
+      <tr>
+        <td class="num">9</td>
+        <td><strong>Product Hunt</strong></td>
+        <td><a href="https://www.producthunt.com/posts/new">https://www.producthunt.com/posts/new</a></td>
+        <td>Prefer schedule 12:01 AM PT; TryTokka first if only one PH today</td>
+      </tr>
+      <tr>
+        <td class="num">10</td>
+        <td><strong>Hacker News</strong></td>
+        <td><a href="https://news.ycombinator.com/submit">https://news.ycombinator.com/submit</a></td>
+        <td>Title must start Show HN: — after PH or for a different product</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="sub">Full checklist: <a href="https://acsaven.com/brand/launches/CHECKLIST.md">https://acsaven.com/brand/launches/CHECKLIST.md</a></p>
+
+  <h2>2. Product order (same day)</h2>
+  <ol class="products">
+    <li><strong>TryQuickImg</strong> — <a href="https://tryquickimg.com/">https://tryquickimg.com/</a></li>
+    <li><strong>TryDevSnip</strong> — <a href="https://trydevsnip.com/">https://trydevsnip.com/</a></li>
+    <li><strong>TryCalculatingNow</strong> — <a href="https://trycalculatingnow.com/">https://trycalculatingnow.com/</a></li>
+    <li><strong>TryTokka</strong> — <a href="https://trytokka.com/">https://trytokka.com/</a> (PH + Indie Hackers priority)</li>
+    <li><strong>Acsaven</strong> (soft) — <a href="https://acsaven.com/">https://acsaven.com/</a></li>
+  </ol>
+
+  <h2>3. Bookmark strip</h2>
+  <pre>https://github.com/acsavenhq
+https://alternativeto.net/software/new/
+https://www.saashub.com/submit
+https://www.uneed.best/submit-a-tool
+https://betalist.com/submit
+https://peerlist.io/launch
+https://www.indiehackers.com/products/new
+https://dev.to/new
+https://www.producthunt.com/posts/new
+https://news.ycombinator.com/submit</pre>
+
+  <div class="rule">
+    <strong>Only hard rule today:</strong> don’t put TryTokka on Product Hunt and Show HN in the same hour — Product Hunt first, Hacker News later (or Show HN for TryDevSnip instead).
+  </div>
+
+  <p class="foot">Acsaven · hello.acsaven@gmail.com · Captions &amp; gallery: brand/launches/</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" width="1600" height="480" preserveAspectRatio="xMidYMax slice" role="img" aria-hidden="true">
+  <title>Acsaven dunes — dark balanced</title>
+  <desc>Soft twin ridges, equal height, heavy blur blend — no hard left crest.</desc>
+  <defs>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3548" stop-opacity="0.4" />
+      <stop offset="45%" stop-color="#161d28" stop-opacity="0.78" />
+      <stop offset="100%" stop-color="#0a0e14" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="lip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce6f0" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#2a3548" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+      <stop offset="40%" stop-color="#fff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+    </linearGradient>
+    <mask id="topSoft">
+      <rect width="1600" height="480" fill="url(#fade)" />
+    </mask>
+    <filter id="blend" x="-10%" y="-25%" width="120%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="11" />
+    </filter>
+    <filter id="softLip" x="-5%" y="-40%" width="110%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+  <g mask="url(#topSoft)">
+    <!-- One continuous soft silhouette — mirrored twin peaks, gentle center -->
+    <path filter="url(#blend)" fill="url(#fill)"
+      d="M-100 480
+         L-100 340
+         C60 318 200 305 360 312
+         C520 320 640 338 800 345
+         C960 338 1080 320 1240 312
+         C1400 305 1540 318 1700 340
+         L1700 480 Z" />
+    <path filter="url(#softLip)" fill="url(#lip)" opacity="0.65"
+      d="M80 325 C200 312 300 312 400 320 C300 318 200 320 80 325 Z" />
+    <path filter="url(#softLip)" fill="url(#lip)" opacity="0.65"
+      d="M1520 325 C1400 312 1300 312 1200 320 C1300 318 1400 320 1520 325 Z" />
+  </g>
+</svg>

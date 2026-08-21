@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TryTokka — AI API Invoice Monitor for OpenAI & Anthropic</title>
-  <meta name="description" content="One dashboard for OpenAI, Anthropic & Gemini API invoices. Scout emails after daily sync." />
+  <meta name="description" content="One dashboard for OpenAI, Anthropic & Gemini API invoices." />
   <meta name="robots" content="noindex,follow" />
+  <link rel="icon" href="./assets/trytokka.svg" />
   <style>
     *,*::before,*::after{box-sizing:border-box}
     html{-webkit-text-size-adjust:100%}
     body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
     .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
-    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
+    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.5rem}
+    .logo img{width:28px;height:28px;object-fit:contain}
     .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
     @media(min-width:640px){.domain{display:inline}}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#047857;color:#fff}
@@ -20,7 +22,7 @@
 </head>
 <body>
   <header class="top">
-    <a class="logo" href="./">TryTokka <span class="domain">trytokka.com</span></a>
+    <a class="logo" href="./"><img src="./assets/trytokka.svg" alt="" width="28" height="28" />TryTokka <span class="domain">trytokka.com</span></a>
     <a class="btn" href="#page">Start free trial</a>
   </header>
   <img id="page" class="page" src="./home-full.webp" width="1440" alt="TryTokka homepage" loading="eager" decoding="async" />

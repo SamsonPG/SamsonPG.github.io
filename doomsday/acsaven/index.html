@@ -1,28 +1,1251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acsaven — private Try tools that stay with you</title>
-  <meta name="description" content="Tools that stay with you. Parent studio behind the Try family." />
-  <meta name="robots" content="noindex,follow" />
-  <style>
-    *,*::before,*::after{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%}
-    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#0f172a}
-    .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.7rem clamp(1rem,3vw,1.75rem);background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
-    .logo{font-weight:800;letter-spacing:-.05em;font-size:1.1rem;text-decoration:none;color:#0f172a;display:inline-flex;align-items:center;gap:.4rem}
-    .domain{display:none;font-size:.78rem;font-weight:650;color:#64748b}
-    @media(min-width:640px){.domain{display:inline}}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.65rem;font-weight:750;font-size:.9rem;text-decoration:none;border:1px solid transparent;background:#334155;color:#fff}
-    .page{width:100%;height:auto;display:block}
-  </style>
-</head>
-<body>
-  <header class="top">
-    <a class="logo" href="./">Acsaven <span class="domain">acsaven.com</span></a>
-    <a class="btn" href="#page">Pick a tool</a>
-  </header>
-  <img id="page" class="page" src="./home-full.webp" width="1440" alt="Acsaven homepage" loading="eager" decoding="async" />
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acsaven — private Try tools that stay with you</title>
+    <meta name="description" content="Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka." />
+    <link rel="canonical" href="https://acsaven.com/" />
+    <link rel="alternate" hreflang="en" href="https://acsaven.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://acsaven.com/" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="https://acsaven.com/llms.txt" />
+    <link rel="author" href="https://acsaven.com/founder/" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="./brand/acsaven-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="./icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="./icon-512.png" type="image/png" sizes="512x512" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="author" content="Samson PG" />
+    <meta property="og:site_name" content="Acsaven" />
+    <meta property="og:title" content="Acsaven — private Try tools that stay with you" />
+    <meta property="og:description" content="Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka." />
+    <meta property="og:url" content="https://acsaven.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="./brand/lockup-preview.png" />
+    <meta property="og:image:alt" content="Acsaven — Tools that stay with you." />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@acsavenhq" />
+    <meta name="twitter:creator" content="@acsavenhq" />
+    <meta name="twitter:title" content="Acsaven — private Try tools that stay with you" />
+    <meta name="twitter:description" content="Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka." />
+    <meta name="twitter:image" content="./brand/lockup-preview.png" />
+    <meta name="twitter:image:alt" content="Acsaven — Tools that stay with you." />
+    <meta name="theme-color" content="#101216" />
+    <link rel="preload" as="image" href="./brand/haven-veil-lcp.webp" imagesrcset="./brand/haven-veil-lcp-800.webp 640w, ./brand/haven-veil-lcp.webp 960w" imagesizes="100vw" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="./brand/fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      (function () {
+        try {
+          var k = 'acsaven-theme';
+          var s = localStorage.getItem(k);
+          var p = s === 'light' || s === 'dark' ? s : 'system';
+          var t =
+            p === 'system'
+              ? window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+              : p;
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.style.colorScheme = t;
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', t === 'dark' ? '#101216' : '#f3f4f6');
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=b8640f495a" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://acsaven.com/#organization",
+      "name": "Acsaven",
+      "alternateName": [
+        "acsaven.com",
+        "Acsaven HQ",
+        "Aksaven",
+        "Acsavan",
+        "Acsavin",
+        "Acsavon",
+        "Casaven",
+        "AcsavenHQ"
+      ],
+      "url": "https://acsaven.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://acsaven.com/brand/acsaven-mark-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://acsaven.com/brand/lockup-preview.png",
+      "email": "hello.acsaven@gmail.com",
+      "description": "Independent software studio. Tools that stay with you — parent of the Try family.",
+      "disambiguatingDescription": "Acsaven (A-c-s-a-v-e-n) is the parent studio of the Try family, founded by Samson PG. Searches for Aksaven, Acsavan, Acsavin, Acsavon, or Casaven are this studio — misspellings, not a different company. It is not ACS, not ACS Asset Management, and not a financial-services or asset-management firm.",
+      "slogan": "Tools that stay with you.",
+      "foundingDate": "2025",
+      "founder": {
+        "@id": "https://acsaven.com/#founder"
+      },
+      "areaServed": "Worldwide",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello.acsaven@gmail.com",
+        "availableLanguage": "English"
+      },
+      "knowsAbout": [
+        "privacy-first browser tools",
+        "client-side image conversion",
+        "developer utilities",
+        "AI API spend monitoring"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "Acsaven"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Try family",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "position": 1,
+            "name": "TryQuickImg",
+            "url": "https://tryquickimg.com/"
+          },
+          {
+            "@type": "OfferCatalog",
+            "position": 2,
+            "name": "TryDevSnip",
+            "url": "https://trydevsnip.com/"
+          },
+          {
+            "@type": "OfferCatalog",
+            "position": 3,
+            "name": "TryCalculatingNow",
+            "url": "https://trycalculatingnow.com/"
+          },
+          {
+            "@type": "OfferCatalog",
+            "position": 4,
+            "name": "TryTokka",
+            "url": "https://trytokka.com/"
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.crunchbase.com/organization/acsaven",
+        "https://wellfound.com/company/acsaven/",
+        "https://www.youtube.com/@acsavenhq",
+        "https://x.com/acsavenhq",
+        "https://www.instagram.com/acsavenhq/",
+        "https://www.threads.net/@acsavenhq",
+        "https://www.linkedin.com/company/acsavenhq",
+        "https://github.com/acsavenhq",
+        "https://github.com/acsavenhq/tryquickimg",
+        "https://github.com/acsavenhq/trydevsnip",
+        "https://github.com/acsavenhq/trycalculatingnow",
+        "https://github.com/acsavenhq/trytokka",
+        "https://github.com/trytokka/trytokka",
+        "https://www.reddit.com/user/acsavenhq"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://acsaven.com/#founder",
+      "name": "Samson PG",
+      "url": "https://acsaven.com/founder/",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "sameAs": [
+        "https://news.ycombinator.com/user?id=samsonpg"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://acsaven.com/#website",
+      "name": "Acsaven",
+      "alternateName": [
+        "acsaven.com",
+        "Aksaven",
+        "Acsavan",
+        "Acsavin",
+        "Casaven"
+      ],
+      "url": "https://acsaven.com/",
+      "description": "Parent hub for Acsaven — Tools that stay with you. Try family brand context.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://acsaven.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://acsaven.com/#webpage",
+      "url": "https://acsaven.com/",
+      "name": "Acsaven — private Try tools that stay with you",
+      "description": "Acsaven — Tools that stay with you. Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka.",
+      "isPartOf": {
+        "@id": "https://acsaven.com/#website"
+      },
+      "about": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "dateModified": "2026-08-17",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "hasPart": {
+        "@id": "https://acsaven.com/#faq"
+      },
+      "mainEntity": {
+        "@id": "https://acsaven.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://acsaven.com/brand/lockup-preview.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://acsaven.com/#try-family",
+      "name": "Try family products",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TryQuickImg",
+          "item": "https://tryquickimg.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TryDevSnip",
+          "item": "https://trydevsnip.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TryCalculatingNow",
+          "item": "https://trycalculatingnow.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "TryTokka",
+          "item": "https://trytokka.com/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://acsaven.com/#faq",
+      "url": "https://acsaven.com/#faq",
+      "isPartOf": {
+        "@id": "https://acsaven.com/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Acsaven?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acsaven is an independent software studio founded by Samson PG. Spell it A-c-s-a-v-e-n. Searches for Aksaven, Acsavan, Acsavin, Acsavon, or Casaven are this studio — those are misspellings, not a different company. It is not ACS, not ACS Asset Management (acsasset.com.au), and not a financial-services or asset-management firm. It is the parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka. acsaven.com is brand context; the tools themselves run on each product’s official .com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Aksaven or Acsavan a different company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Aksaven, Acsavan, Acsavin, Acsavon, and Casaven are misspellings of Acsaven — the same independent studio founded by Samson PG. Official spelling is A-c-s-a-v-e-n at acsaven.com. Write Acsaven, not ACSaven. It is not ACS and not a wealth or investment firm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Acsaven a financial services or asset management company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Acsaven is an independent software studio. It is not ACS, not ACS Asset Management (acsasset.com.au), and not a regulated investment or wealth firm. It does not offer portfolios, AUM, or financial advice. Browser finance calculators live on trycalculatingnow.com — they are math tools, not investment products."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the free Try tools upload my files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. After the page loads, image work, JSON/JWT/cron helpers, and calculator math are designed to run in your browser. Files and pastes are not uploaded to Acsaven servers for that processing. TryTokka is the exception: it is a SaaS spend monitor that syncs AI API invoices you connect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Acsaven sell anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — TryTokka, on trytokka.com. Solo is $9/month and Team is $29/month, with a 7-day free trial and no card to start. acsaven.com has no checkout. The Astro Production Starter, the AI spend spreadsheet, and the three browser Try apps stay free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is TryTokka TikTok?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. TryTokka is an AI API spend dashboard with Scout threshold emails. It is unrelated to short-video apps, unrelated to ToreTokka (toretokka.com), a Bangladeshi news-aggregator app, and unrelated to Tokka Labs (tokkalabs.com), a crypto proprietary-trading firm. It is not a cryptocurrency exchange or wallet. Searches for Tryakka or tryakka are the same product — a misspelling of TryTokka. A search for trytokka means this spend dashboard. Open it at trytokka.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the Try tools the same as Quinn, DevSnips, CalcNest, or Tokka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Official product sites are tryquickimg.com, trydevsnip.com, trycalculatingnow.com, and trytokka.com. TryQuickImg is not Quinn / TryQuinn (tryquinn.com). TryDevSnip is not DevSnips or DevSnip Pro. TryCalculatingNow is not CalcNest (calcnest.com), not Calculators Nest, and not calculatesnow.com. TryTokka is not TikTok, not ToreTokka, not the Tokka video-chat app, and not Tokka Labs. Those lookalikes are unrelated brands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which site should I open for a tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Images → tryquickimg.com. Developer pastes → trydevsnip.com. Grades and finance math → trycalculatingnow.com. AI API spend → trytokka.com. Use acsaven.com when the question is who builds these products."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    
+  </head>
+  <body class="page-home">
+    <noscript>
+      <div class="noscript-notice" role="alert">
+        <div class="noscript-notice__panel">
+          <span class="noscript-notice__accent" aria-hidden="true"></span>
+          <p class="noscript-notice__title">JavaScript is required</p>
+          <p class="noscript-notice__body">
+            Enable JavaScript for the best experience on Acsaven (navigation, search, and product pages), then reload this page.
+          </p>
+        </div>
+      </div>
+    </noscript>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button
+          type="button"
+          id="site-nav-open"
+          class="site-nav-toggle"
+          aria-haspopup="dialog"
+          aria-controls="site-nav-dialog"
+          aria-expanded="false"
+          aria-label="Open menu"
+          title="Menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <dialog id="site-nav-dialog" class="site-nav-dialog" aria-labelledby="site-nav-dialog-title">
+          <div class="site-nav-dialog-panel">
+            <div class="site-nav-dialog-head">
+              <p class="site-nav-dialog-title" id="site-nav-dialog-title">Menu</p>
+              <button type="button" id="site-nav-close" class="site-nav-dialog-close" aria-label="Close menu">Close</button>
+            </div>
+            <nav class="site-nav-dialog-nav" aria-label="Mobile">
+              <p class="site-nav-section-label" id="nav-home-label">Start here</p>
+              <ul class="site-nav-dialog-list" aria-labelledby="nav-home-label">
+                <li><a class="site-nav-dialog-link is-active" href="./" aria-current="page"><span class="site-nav-dialog-link-title">Home</span><span class="site-nav-dialog-link-desc">Acsaven hub &amp; Try family</span></a></li>
+              </ul>
+              <p class="site-nav-section-label" id="nav-open-label-m">Open the app</p>
+              <p class="site-nav-section-note">Each tool lives on its own site.</p>
+              <ul class="site-nav-dialog-list" aria-labelledby="nav-open-label-m">
+                <li><a class="site-nav-dialog-link" href="https://tryquickimg.com/" rel="noopener noreferrer"><span class="site-nav-dialog-link-title">TryQuickImg <span class="nav-products-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Compress, convert, resize &amp; crop</span></a></li>
+                <li><a class="site-nav-dialog-link" href="https://trydevsnip.com/" rel="noopener noreferrer"><span class="site-nav-dialog-link-title">TryDevSnip <span class="nav-products-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">JSON, cron, timestamps &amp; utilities</span></a></li>
+                <li><a class="site-nav-dialog-link" href="https://trycalculatingnow.com/" rel="noopener noreferrer"><span class="site-nav-dialog-link-title">TryCalculatingNow <span class="nav-products-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">GPA, grades, finance &amp; units</span></a></li>
+                <li><a class="site-nav-dialog-link" href="https://trytokka.com/" rel="noopener noreferrer"><span class="site-nav-dialog-link-title">TryTokka <span class="nav-products-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">AI API spend alerts</span></a></li>
+              </ul>
+              <p class="site-nav-section-label" id="nav-learn-label-m">Learn on Acsaven</p>
+              <p class="site-nav-section-note">Read about a tool without leaving this site.</p>
+              <ul class="site-nav-dialog-list" aria-labelledby="nav-learn-label-m">
+                <li><a class="site-nav-dialog-link" href="../tryquickimg/"><span class="site-nav-dialog-link-title">TryQuickImg</span><span class="site-nav-dialog-link-desc">Studio page on Acsaven</span></a></li>
+                <li><a class="site-nav-dialog-link" href="../trydevsnip/"><span class="site-nav-dialog-link-title">TryDevSnip</span><span class="site-nav-dialog-link-desc">Studio page on Acsaven</span></a></li>
+                <li><a class="site-nav-dialog-link" href="../trycalculatingnow/"><span class="site-nav-dialog-link-title">TryCalculatingNow</span><span class="site-nav-dialog-link-desc">Studio page on Acsaven</span></a></li>
+                <li><a class="site-nav-dialog-link" href="../trytokka/"><span class="site-nav-dialog-link-title">TryTokka</span><span class="site-nav-dialog-link-desc">Studio page on Acsaven</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./tools/"><span class="site-nav-dialog-link-title">All tools</span><span class="site-nav-dialog-link-desc">Every capability, by product</span></a></li>
+              </ul>
+              <p class="site-nav-section-label" id="nav-studio-label">Studio</p>
+              <ul class="site-nav-dialog-list site-nav-dialog-list--compact" aria-labelledby="nav-studio-label">
+                <li><a class="site-nav-dialog-link" href="./store/"><span class="site-nav-dialog-link-title">Store</span><span class="site-nav-dialog-link-desc">TryTokka, starter, spreadsheet</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./about/"><span class="site-nav-dialog-link-title">About</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./status/"><span class="site-nav-dialog-link-title">Status</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./blog/"><span class="site-nav-dialog-link-title">Blog</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./developers/"><span class="site-nav-dialog-link-title">Developers</span></a></li>
+              </ul>
+              <p class="site-nav-section-label" id="nav-more-label">More</p>
+              <ul class="site-nav-dialog-list site-nav-dialog-list--compact" aria-labelledby="nav-more-label">
+                <li><a class="site-nav-dialog-link" href="./love/"><span class="site-nav-dialog-link-title">Love</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./privacy/"><span class="site-nav-dialog-link-title">Privacy</span></a></li>
+                <li><a class="site-nav-dialog-link" href="./privacy-first/"><span class="site-nav-dialog-link-title">Privacy-first</span></a></li>
+                <li><a class="site-nav-dialog-link" href="mailto:hello.acsaven@gmail.com"><span class="site-nav-dialog-link-title">Contact</span></a></li>
+              </ul>
+              <div class="site-nav-dialog-theme">
+                <p class="site-nav-section-label" id="nav-theme-label">Theme</p>
+                <div
+          class="theme-switch theme-switch--compact theme-switch--pending"
+          role="group"
+          aria-label="Theme"
+          data-theme-key="acsaven-theme"
+          data-theme-light="#f3f4f6"
+          data-theme-dark="#101216"
+        >
+          <button type="button" class="theme-switch-btn" data-theme-pref="light" title="Light" aria-label="Use light theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 14.5A8.5 8.5 0 1111.5 4a6.5 6.5 0 109.5 10.5z"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="system" title="System" aria-label="Use system theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path stroke-linecap="round" d="M8 19h8M12 17v2"></path></svg>
+          </button>
+        </div>
+              </div>
+            </nav>
+          </div>
+        </dialog>
+        <a class="brand-lockup" href="./">
+          <svg class="brand-logo-mark" width="32" height="29" viewBox="0 0 232.7 209.2" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M232.7,140.5v-13.1H223c-0.2,0.3-0.4,0.6-0.5,1c-3.9,7.1-7.7,14.2-11.6,21.3l-6.3-12.2l-5.2-10.1 c-3.9-6.9-7.8-13.7-11.7-20.6c-6-10.6-12.1-21.3-18.1-31.9c-2.8-5-5.7-10.1-8.5-15.1c-7.9-13.9-15.7-27.7-23.6-41.6 c-1.7-2.9-3.3-5.8-5-8.8c-3.4-6-8.9-9.3-15.5-9.4h-0.2c-6.6,0-12.2,3.4-15.6,9.3c-2.8,4.9-5.6,9.9-8.4,14.8 c-2.8,4.9-5.6,9.9-8.4,14.8l-5.1,9c-0.9,1.6-1.9,3.3-2.8,5c-11.6,20.3-23.1,40.7-34.7,61c-6.5,11.5-13.1,23.1-19.7,34.6 c-2.9,5-5.8,10.1-8.6,15.1c-0.4,0.7-0.8,1.4-1.2,2C9,171.3,5.6,177.2,2.3,183c-1.4,2.5-2.2,5.3-2.3,8.1c0,0.2,0,0.4,0,0.6 c0,0.2,0,0.4,0,0.7c0,1.2,0.2,2.4,0.5,3.6l0.1,0.3c0,0,0,0,0,0.1l0,0c2,7.4,8.3,12.6,15.8,12.9h0.4c0.2,0,1.4,0,3.4,0h1.1 c4,0,10.5,0,18.8,0c4,0,8.4,0,13.1,0h23l29.6-20.9l44.9-31.7c0,0.3,0.1,0.6,0.1,0.9c0,3,0,5.9,0,8.8v42.8c4.5,0,8.9,0,13.2,0l0,0 h11.2l2.6-5l5.2-10.1l6.3-12.2c3.9,7.1,7.8,14.2,11.6,21.3c0.3,0.5,0.5,1,0.8,1.4c1.1,0.6,2.1,1.2,3.1,1.8 c2.3,1.4,4.9,2.3,7.6,2.6h0.1c0.1,0,0.3,0,0.4,0c0.3,0,0.5,0,0.7,0c0.3,0,0.6,0,0.9,0c0.2,0,0.3,0,0.5,0c3-0.1,5.9-0.8,8.4-2.2 c0.6-0.3,1.1-0.7,1.7-1c0.2-0.1,0.4-0.3,0.6-0.4c0.2-0.1,0.4-0.3,0.5-0.4c0.1-0.1,0.2-0.2,0.4-0.3c0.1-0.1,0.3-0.3,0.4-0.4 c0.2-0.2,0.4-0.3,0.5-0.5c0.2-0.2,0.3-0.3,0.5-0.5c0.4-0.4,0.7-0.8,1-1.2c0.1-0.2,0.3-0.4,0.4-0.5c1.4-2,2.3-4.3,2.8-6.8h0.4 L232.7,140.5L232.7,140.5z M69.1,132.6c0.4-0.8,1.4-1.7,2.2-1.6c0.7,0,1.7,1,2.1,1.7c1.3,2.3,2.3,4.9,3.6,7.2 c0.5,0.9,1.5,1.9,2.4,2c0.7,0.1,1.9-0.9,2.3-1.7c0.5-0.9,1-1.8,1.5-2.7c5-8.6,9.8-17.3,14.7-25.9c2.9-5.2,5.8-10.4,8.7-15.5 c1.5-2.7,3.1-5.4,4.6-8.1c1-1.7,1.9-3.5,2.9-5.2c1.4-2.5,3.5-2.5,4.9,0c0.1,0.2,0.2,0.4,0.3,0.6c3,5.3,6,10.7,9,16 c2.5,4.4,4.9,8.8,7.4,13.1c2.2,3.9,4.4,7.9,6.7,11.8c-1.8,0.2-3.9,0.3-6.5,0.3c-3.1,0-6.7,1.2-9.1,2.6 c-7.3,4.4-14.3,9.1-21.3,13.8c-2.5,1.6-4.9,3.3-7.3,5c-8.4,5.8-16.7,11.6-24.9,17.6c-12,8.8-23.6,17.8-34.9,27.1 c-0.1,0.1-0.2,0.2-0.3,0.3c0.1-0.1,0.1-0.2,0.1-0.3c3.4-6.5,6.9-13,10.3-19.5c1.3-2.5,2.7-5.1,4-7.6 C58.2,153.3,63.6,142.9,69.1,132.6z"/>
+        </svg>
+          <span>Acsaven</span>
+        </a>
+        <div class="header-end">
+          <nav class="site-nav" aria-label="Site">
+            <a href="./" aria-current="page">Home</a>
+            <details class="nav-products">
+              <summary class="nav-products-summary">Products</summary>
+              <div class="nav-products-panel">
+                <p class="nav-products-group-label" id="nav-open-label">Open the app</p>
+                <div class="nav-products-group" role="group" aria-labelledby="nav-open-label">
+                  <a class="nav-products-link" href="https://tryquickimg.com/" rel="noopener noreferrer"><span class="nav-products-link-title">TryQuickImg <span class="nav-products-meta">Open ↗</span></span><span class="nav-products-link-desc">Compress, convert, resize &amp; crop</span></a>
+                  <a class="nav-products-link" href="https://trydevsnip.com/" rel="noopener noreferrer"><span class="nav-products-link-title">TryDevSnip <span class="nav-products-meta">Open ↗</span></span><span class="nav-products-link-desc">JSON, cron, timestamps &amp; utilities</span></a>
+                  <a class="nav-products-link" href="https://trycalculatingnow.com/" rel="noopener noreferrer"><span class="nav-products-link-title">TryCalculatingNow <span class="nav-products-meta">Open ↗</span></span><span class="nav-products-link-desc">GPA, grades, finance &amp; units</span></a>
+                  <a class="nav-products-link" href="https://trytokka.com/" rel="noopener noreferrer"><span class="nav-products-link-title">TryTokka <span class="nav-products-meta">Open ↗</span></span><span class="nav-products-link-desc">AI API spend alerts</span></a>
+                </div>
+                <p class="nav-products-group-label" id="nav-learn-label">Learn on Acsaven</p>
+                <div class="nav-products-group" role="group" aria-labelledby="nav-learn-label">
+                  <a class="nav-products-link nav-products-link--learn" href="../tryquickimg/"><span class="nav-products-link-title">TryQuickImg</span><span class="nav-products-link-desc">Studio page on Acsaven</span></a>
+                  <a class="nav-products-link nav-products-link--learn" href="../trydevsnip/"><span class="nav-products-link-title">TryDevSnip</span><span class="nav-products-link-desc">Studio page on Acsaven</span></a>
+                  <a class="nav-products-link nav-products-link--learn" href="../trycalculatingnow/"><span class="nav-products-link-title">TryCalculatingNow</span><span class="nav-products-link-desc">Studio page on Acsaven</span></a>
+                  <a class="nav-products-link nav-products-link--learn" href="../trytokka/"><span class="nav-products-link-title">TryTokka</span><span class="nav-products-link-desc">Studio page on Acsaven</span></a>
+                </div>
+                <p class="nav-products-group-label" id="nav-directory-label">Directory</p>
+                <div class="nav-products-group" role="group" aria-labelledby="nav-directory-label">
+                  <a class="nav-products-link nav-products-link--learn" href="./tools/"><span class="nav-products-link-title">All tools</span><span class="nav-products-link-desc">Every capability, by product</span></a>
+                </div>
+              </div>
+            </details>
+            <span class="nav-sep" aria-hidden="true"></span>
+            <a href="./store/">Store</a>
+            <a href="./about/">About</a>
+            <a href="./blog/">Blog</a>
+          </nav>
+          <div class="site-header-actions">
+            <button type="button" class="site-search-btn" id="site-search-open" aria-label="Search Acsaven (press /)" aria-haspopup="dialog" title="Search  ·  press /" aria-keyshortcuts="/">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </button>
+            <div
+          class="theme-switch theme-switch--compact theme-switch--pending"
+          role="group"
+          aria-label="Theme"
+          data-theme-key="acsaven-theme"
+          data-theme-light="#f3f4f6"
+          data-theme-dark="#101216"
+        >
+          <button type="button" class="theme-switch-btn" data-theme-pref="light" title="Light" aria-label="Use light theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 14.5A8.5 8.5 0 1111.5 4a6.5 6.5 0 109.5 10.5z"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="system" title="System" aria-label="Use system theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path stroke-linecap="round" d="M8 19h8M12 17v2"></path></svg>
+          </button>
+        </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap wrap--home">
+      <main id="main" tabindex="-1">
+
+        <section class="cinema-hero cinema-hero--with-picker" aria-labelledby="brand-heading">
+          <div class="cinema-hero-atmosphere" aria-hidden="true">
+            <div class="cinema-hero-wash acsaven-haven-mesh"></div>
+            <div class="cinema-hero-veil">
+              <img
+                class="veil-dark"
+                src="./brand/haven-veil-lcp.webp"
+                srcset="./brand/haven-veil-lcp-800.webp 640w, ./brand/haven-veil-lcp.webp 960w"
+                sizes="100vw"
+                alt=""
+                width="960"
+                height="540"
+                decoding="sync"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="cinema-hero-stars">
+              <!-- Decorative only. Re-traced 2026-08-03 at 390x844 and 1440x900 (Slow 4G, 4x CPU):
+                   the LCP element is IMG.veil-dark above, on BOTH viewports — not this. An earlier
+                   note here claimed the opposite and set fetchpriority=high, which put this SVG in
+                   contention with the preloaded veil. Keep it low so the real LCP image wins. -->
+              <img class="stars-dark" src="./brand/haven-stars.svg" alt="" width="1600" height="900" decoding="async" loading="lazy" fetchpriority="low" />
+            </div>
+            <div class="cinema-hero-grain"></div>
+            <div class="cinema-hero-beam" aria-hidden="true"></div>
+            <div class="cinema-hero-drift"></div>
+          </div>
+          <div class="cinema-hero-content cinema-hero-content--split stage">
+            <div class="cinema-hero-copy">
+            <h1 id="brand-heading" class="cinema-brand">
+              <span class="cinema-brand-lockup">
+                <img class="cinema-hero-logo" src="./brand/acsaven-mark.svg" alt="" width="56" height="50" decoding="async" fetchpriority="low" aria-hidden="true" />
+                <span class="cinema-brand-name">Acsaven</span>
+              </span>
+              <span class="cinema-brand-rest">Tools that stay with you.</span>
+            </h1>
+            <p class="cinema-promise">Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka. Three free browser tools that never upload your files — plus Scout emails when AI API spend crosses your limit.</p>
+            <div class="cinema-cta">
+              <a class="btn btn-lg cinema-cta-punch" href="#quick-start">Pick a tool</a>
+            </div>
+            <ul class="cinema-trust">
+              <li>Free tools never upload your files</li>
+              <li>No signup to start</li>
+              <li>Independent studio by Samson PG</li>
+            </ul>
+            </div>
+            <div class="cinema-hero-cast">
+              <span class="cinema-orbit-ring cinema-orbit-ring--a" aria-hidden="true"></span>
+              <span class="cinema-orbit-ring cinema-orbit-ring--b" aria-hidden="true"></span>
+              <span class="cinema-orbit-glow" aria-hidden="true"></span>
+              <ul class="family-orbit" aria-hidden="true">
+    <li class="family-orbit-tile family-orbit--a"><img src="./brand/products/tryquickimg.svg?v=violet" alt="" width="40" height="40" decoding="async" loading="lazy" /></li>
+    <li class="family-orbit-tile family-orbit--b"><img src="./brand/products/trydevsnip.svg" alt="" width="40" height="40" decoding="async" loading="lazy" /></li>
+    <li class="family-orbit-tile family-orbit--c"><img src="./brand/products/trycalculatingnow.svg" alt="" width="40" height="40" decoding="async" loading="lazy" /></li>
+    <li class="family-orbit-tile family-orbit--d"><img src="./brand/products/trytokka.svg" alt="" width="40" height="40" decoding="async" loading="lazy" /></li>
+  </ul>
+              <img class="cinema-hero-character" src="./brand/haven-character.svg?v=mountain-a-clean" alt="Acsaven mark" width="180" height="180" decoding="async" fetchpriority="low" />
+            </div>
+          </div>
+
+          <div class="tool-picker tool-picker--on-hero" id="quick-start" aria-labelledby="picker-heading" data-reveal>
+            <div class="stage">
+              <p class="eyebrow">Quick start</p>
+              <h2 id="picker-heading" class="home-display home-display--sm">What do you need to do today?</h2>
+              <p class="tool-picker-lead">Tap a product — opens its official .com workshop.</p>
+              <ul class="tool-picker-grid">
+              <li>
+                <a class="tool-picker-card tool-picker-card--tryquickimg" href="https://tryquickimg.com/" rel="noopener noreferrer">
+                  <span class="tool-picker-icon-wrap" aria-hidden="true">
+                    <img class="tool-picker-icon" src="./brand/products/tryquickimg.svg?v=violet" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="tool-picker-body">
+                    <h3>TryQuickImg</h3>
+                    <span class="tool-picker-desc">Compress a photo to a KB target — private on-device.</span>
+                    <span class="tool-picker-meta">
+                      <span class="tool-picker-go">Visit</span>
+                      <span class="tool-picker-dest">tryquickimg.com</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="tool-picker-card tool-picker-card--trydevsnip" href="https://trydevsnip.com/" rel="noopener noreferrer">
+                  <span class="tool-picker-icon-wrap" aria-hidden="true">
+                    <img class="tool-picker-icon" src="./brand/products/trydevsnip.svg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="tool-picker-body">
+                    <h3>TryDevSnip</h3>
+                    <span class="tool-picker-desc">Format JSON / decode JWT — paste stays in your tab.</span>
+                    <span class="tool-picker-meta">
+                      <span class="tool-picker-go">Visit</span>
+                      <span class="tool-picker-dest">trydevsnip.com</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="tool-picker-card tool-picker-card--trycalculatingnow" href="https://trycalculatingnow.com/" rel="noopener noreferrer">
+                  <span class="tool-picker-icon-wrap" aria-hidden="true">
+                    <img class="tool-picker-icon" src="./brand/products/trycalculatingnow.svg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="tool-picker-body">
+                    <h3>TryCalculatingNow</h3>
+                    <span class="tool-picker-desc">What grade do I need on my final? — live math, no account.</span>
+                    <span class="tool-picker-meta">
+                      <span class="tool-picker-go">Visit</span>
+                      <span class="tool-picker-dest">trycalculatingnow.com</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="tool-picker-card tool-picker-card--trytokka" href="https://trytokka.com/" rel="noopener noreferrer">
+                  <span class="tool-picker-icon-wrap" aria-hidden="true">
+                    <img class="tool-picker-icon" src="./brand/products/trytokka.svg" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="tool-picker-body">
+                    <h3>TryTokka</h3>
+                    <span class="tool-picker-desc">Email when API spend crosses your limit — after daily sync.</span>
+                    <span class="tool-picker-meta">
+                      <span class="tool-picker-go">Visit</span>
+                      <span class="tool-picker-dest">trytokka.com</span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-credo" aria-labelledby="credo-heading" data-reveal>
+          <div class="stage">
+            <h2 id="credo-heading" class="home-display">Built for people who just need the job done.</h2>
+            <ul class="credo-list">
+              <li>
+                <h3>Nothing uploaded</h3>
+                <span>Free Try utilities process on your device — photos, pastes, and numbers stay with you. Acsaven does not ask this hub to collect files for conversion or calculation; the official .com tools are built the same way.</span>
+              </li>
+              <li>
+                <h3>No dark patterns</h3>
+                <span>No fake timers, no email walls for basic work, and no premium nags dressed up as urgency. Finish the job and leave in peace — that is the product promise, not a marketing slogan.</span>
+              </li>
+              <li>
+                <h3>A human studio</h3>
+                <span>Independent, founded by Samson PG. Acsaven is the parent studio behind the Try family — not a faceless marketplace bundling random gadgets under one logo.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!--
+          Placed above the product chapters on purpose. This page is the only real
+          distribution the free download has, and a footer-only link is how /social/
+          ended up orphaned once already. It sits after the credo rather than inside the
+          Quick start grid because that grid promises "opens its official .com workshop",
+          which a CSV does not.
+        -->
+        <div class="home-studio-offers">
+          <div class="stage home-studio-offers-grid">
+        <section class="home-free-card home-free-card--tracker" aria-labelledby="free-download-heading" data-reveal>
+              <div class="home-free-copy">
+                <p class="eyebrow">Free download</p>
+                <h2 id="free-download-heading" class="home-display home-display--sm">AI API spend tracker</h2>
+                <p class="home-free-lead">
+                  A spreadsheet for logging what you spend on AI APIs — per provider, model and project, with a
+                  30-day projection. No signup, nothing to install.
+                </p>
+                <div class="home-free-actions">
+                  <a class="btn btn-primary" href="./free/ai-spend-tracker/">Get the tracker</a>
+                  <span class="home-free-aside">The manual version of what <a href="../trytokka/">TryTokka</a> automates.</span>
+                </div>
+              </div>
+              <div class="home-free-visual">
+              <div class="sheet-preview" role="img" aria-label="Preview of the tracker: rows of API calls with provider, model, token counts and a calculated cost, ending in a total.">
+                <div class="sheet-preview-bar">
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-name">acsaven-ai-spend-tracker.csv</span>
+                </div>
+                <div class="sheet-preview-scroll">
+                  <table>
+                    <thead>
+                      <tr><th>Provider</th><th>Model</th><th class="num">In</th><th class="num">Out</th><th class="num">Cost</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>OpenAI</td><td>gpt-4o</td><td class="num">120k</td><td class="num">45k</td><td class="num cost">$0.75</td></tr>
+                      <tr><td>Anthropic</td><td>claude-sonnet</td><td class="num">340k</td><td class="num">90k</td><td class="num cost">$2.37</td></tr>
+                      <tr><td>OpenAI</td><td>gpt-4o-mini</td><td class="num">1.25M</td><td class="num">210k</td><td class="num cost">$0.31</td></tr>
+                      <tr class="sheet-preview-total"><td colspan="4">Total spend</td><td class="num">$3.43</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              </div>
+        </section>
+
+        <!--
+          Placed right after the free tracker, because both answer the same question — what
+          the studio makes that is NOT one of the four Try tools — and a reader who scrolled
+          past the tracker is already in that frame.
+
+          Deliberately not in the "Four products" grid below: that grid promises "opens its
+          official .com workshop", and this is a repo and a page, not a workshop. The same
+          reasoning already keeps the CSV out of it.
+
+          It leads with the free engine rather than the unfinished starter, because the
+          engine is the part somebody can actually use today. Selling the unbuilt half from
+          a homepage would be the "coming soon" pattern the store page was written to avoid.
+        -->
+        
+        <section class="home-free-card home-free-card--starter" aria-labelledby="home-starter-heading" data-reveal>
+              <div class="home-free-copy">
+                <p class="eyebrow">From the studio</p>
+                <h2 id="home-starter-heading" class="home-display home-display--sm">Astro Production Starter</h2>
+                <p class="home-free-lead">
+                  The operational layer under these four sites — content-hashed build ids, freshness watchdogs that
+                  fail CI on an expired claim, performance budgets that block a merge, a tripwire for
+                  third-party assets, and a links gate. Free and open source. The engine is live; the template in the
+                  starter repo is a working Astro site with all six gates wired.
+                </p>
+                <div class="home-free-actions">
+                  <a class="btn btn-primary" href="./astro-production-starter/">What it does</a>
+                  <span class="home-free-aside">Everything the studio offers is in the <a href="./store/">store</a>.</span>
+                </div>
+              </div>
+              
+              <div class="home-free-visual">
+              <div class="cli-preview" role="img" aria-label="Terminal output: astro-ops check reporting six passing gates — build id, external assets, freshness, discovery, links and budgets.">
+                <div class="sheet-preview-bar">
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-dot"></span>
+                  <span class="sheet-preview-name">npm run check</span>
+                </div>
+                <div class="cli-preview-body">
+                  <p><span class="cli-ok">✓</span> build-id 2cf30bea matches deployed content</p>
+                  <p><span class="cli-ok">✓</span> no third-party assets <span class="cli-dim">(492 HTML, 1 CSS)</span></p>
+                  <p><span class="cli-ok">✓</span> freshness OK <span class="cli-dim">(0 overdue)</span></p>
+                  <p><span class="cli-ok">✓</span> discovery OK <span class="cli-dim">(492 pages, 255 sitemap URLs)</span></p>
+                  <p><span class="cli-ok">✓</span> links OK <span class="cli-dim">(0 broken)</span></p>
+                  <p><span class="cli-ok">✓</span> budgets OK <span class="cli-dim">(a11y 100, blocking)</span></p>
+                  <p class="cli-total">astro-ops check OK — 6 gates passed</p>
+                </div>
+              </div>
+              </div>
+        </section>
+          </div>
+        </div>
+
+        <section class="family-section" id="family" aria-labelledby="family-heading">
+          <div class="stage family-intro-inner" data-reveal>
+            <p class="eyebrow">Try family</p>
+            <h2 id="family-heading" class="home-display">Four products. Equal care.</h2>
+            <p class="family-intro-lead">Same studio. Same respect for your data. Four clear jobs — images, developer paste tools, calculators, and AI spend alerts — and none is the “main” one. Use this hub to understand who builds them; run the tools on their official .com sites.</p>
+          </div>
+        </section>
+
+        <section class="product-chapter product-chapter--tryquickimg" id="chapter-tryquickimg" aria-labelledby="chapter-tryquickimg-heading" data-reveal>
+          <div class="product-chapter-visual" aria-hidden="true">
+            <span class="product-chapter-wash"></span>
+            <span class="product-chapter-wash product-chapter-wash--2"></span>
+          </div>
+          <div class="product-chapter-stage stage">
+            <div class="product-chapter-copy">
+              <img class="product-chapter-icon" src="./brand/products/tryquickimg.svg?v=violet" alt="" width="120" height="120" loading="lazy" decoding="async" />
+              <p class="product-chapter-lane">Images</p>
+              <h2 id="chapter-tryquickimg-heading" class="product-chapter-name">TryQuickImg</h2>
+              <p class="product-chapter-line">HEIC, compress, resize — tool processing stays in your browser.</p>
+              <p class="product-chapter-rating" data-rating-badge="tryquickimg"><span class="product-chapter-rating-star">★</span> <span data-rating-badge-text><strong>5★</strong> average from 6 ratings for TryQuickImg.</span></p>
+              <div class="product-chapter-actions">
+                <a class="btn btn-primary" href="https://tryquickimg.com/" rel="noopener noreferrer" title="Opens tryquickimg.com/">Open TryQuickImg <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-ghost" href="../tryquickimg/">Learn on Acsaven</a>
+              </div>
+            </div>
+            <figure class="workshop-peek workshop-peek--app workshop-peek--tryquickimg" aria-hidden="true">
+            <div class="workshop-peek-chrome">
+              <span class="workshop-peek-dots"></span>
+              <span class="workshop-peek-url">tryquickimg.com</span>
+            </div>
+            <div class="workshop-peek-body">
+            <div class="workshop-appbar" aria-hidden="true">
+              <span class="is-on">Compress</span><span>HEIC → JPG</span><span>Resize</span>
+            </div>
+            <div class="workshop-drop">
+              <span class="workshop-drop-mark"></span>
+              <span class="workshop-drop-title">Drop a photo</span>
+              <span class="workshop-drop-meta">HEIC · JPG · PNG — stays in this tab</span>
+            </div>
+            <div class="workshop-slider">
+              <span>KB target</span>
+              <span class="workshop-slider-track"><span class="workshop-slider-thumb"></span></span>
+              <span>email-ready</span>
+            </div>
+            </div>
+          </figure>
+          </div>
+        </section>
+
+        <section class="product-chapter product-chapter--trydevsnip" id="chapter-trydevsnip" aria-labelledby="chapter-trydevsnip-heading" data-reveal>
+          <div class="product-chapter-visual" aria-hidden="true">
+            <span class="product-chapter-wash"></span>
+            <span class="product-chapter-wash product-chapter-wash--2"></span>
+          </div>
+          <div class="product-chapter-stage stage">
+            <div class="product-chapter-copy">
+              <img class="product-chapter-icon" src="./brand/products/trydevsnip.svg" alt="" width="120" height="120" loading="lazy" decoding="async" />
+              <p class="product-chapter-lane">Developer tools</p>
+              <h2 id="chapter-trydevsnip-heading" class="product-chapter-name">TryDevSnip</h2>
+              <p class="product-chapter-line">Paste JSON, JWT, or cron — without handing secrets to a stranger’s server.</p>
+              <p class="product-chapter-rating" data-rating-badge="trydevsnip"><span class="product-chapter-rating-star">★</span> <span data-rating-badge-text><strong>5★</strong> average from 5 ratings for TryDevSnip.</span></p>
+              <div class="product-chapter-actions">
+                <a class="btn btn-primary" href="https://trydevsnip.com/" rel="noopener noreferrer" title="Opens trydevsnip.com/">Open TryDevSnip <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-ghost" href="../trydevsnip/">Learn on Acsaven</a>
+              </div>
+            </div>
+            <figure class="workshop-peek workshop-peek--app workshop-peek--trydevsnip" aria-hidden="true">
+            <div class="workshop-peek-chrome">
+              <span class="workshop-peek-dots"></span>
+              <span class="workshop-peek-url">trydevsnip.com</span>
+            </div>
+            <div class="workshop-peek-body">
+            <div class="workshop-appbar" aria-hidden="true">
+              <span class="is-on">JSON</span><span>JWT</span><span>cron</span>
+            </div>
+            <div class="workshop-split">
+              <pre class="workshop-code">{"ok":true}</pre>
+              <pre class="workshop-code workshop-code--out">{
+  "ok": true,
+  "local": true
+}</pre>
+            </div>
+            <p class="workshop-chips"><span>Pretty-print</span><span>Paste stays here</span></p>
+            </div>
+          </figure>
+          </div>
+        </section>
+
+        <section class="product-chapter product-chapter--trycalculatingnow" id="chapter-trycalculatingnow" aria-labelledby="chapter-trycalculatingnow-heading" data-reveal>
+          <div class="product-chapter-visual" aria-hidden="true">
+            <span class="product-chapter-wash"></span>
+            <span class="product-chapter-wash product-chapter-wash--2"></span>
+          </div>
+          <div class="product-chapter-stage stage">
+            <div class="product-chapter-copy">
+              <img class="product-chapter-icon" src="./brand/products/trycalculatingnow.svg" alt="" width="120" height="120" loading="lazy" decoding="async" />
+              <p class="product-chapter-lane">Calculators</p>
+              <h2 id="chapter-trycalculatingnow-heading" class="product-chapter-name">TryCalculatingNow</h2>
+              <p class="product-chapter-line">Grades, GPA, and money math with no signup wall for basic jobs.</p>
+              <p class="product-chapter-rating" data-rating-badge="trycalculatingnow" hidden><span class="product-chapter-rating-star">★</span> <span data-rating-badge-text></span></p>
+              <div class="product-chapter-actions">
+                <a class="btn btn-primary" href="https://trycalculatingnow.com/" rel="noopener noreferrer" title="Opens trycalculatingnow.com/">Open TryCalculatingNow <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-ghost" href="../trycalculatingnow/">Learn on Acsaven</a>
+              </div>
+            </div>
+            <figure class="workshop-peek workshop-peek--app workshop-peek--trycalculatingnow" aria-hidden="true">
+            <div class="workshop-peek-chrome">
+              <span class="workshop-peek-dots"></span>
+              <span class="workshop-peek-url">trycalculatingnow.com</span>
+            </div>
+            <div class="workshop-peek-body">
+            <div class="workshop-appbar" aria-hidden="true">
+              <span class="is-on">Final grade</span><span>GPA</span><span>SIP</span>
+            </div>
+            <div class="workshop-fields">
+              <label>Current <span>88</span></label>
+              <label>Target <span>B</span></label>
+              <label>Final weight <span>40%</span></label>
+            </div>
+            <p class="workshop-calc-kicker">Need on the final</p>
+            <p class="workshop-calc-value">95</p>
+            <p class="workshop-calc-meta">Worked example — your numbers stay in this tab</p>
+            </div>
+          </figure>
+          </div>
+        </section>
+
+        <section class="product-chapter product-chapter--trytokka" id="chapter-trytokka" aria-labelledby="chapter-trytokka-heading" data-reveal>
+          <div class="product-chapter-visual" aria-hidden="true">
+            <span class="product-chapter-wash"></span>
+            <span class="product-chapter-wash product-chapter-wash--2"></span>
+          </div>
+          <div class="product-chapter-stage stage">
+            <div class="product-chapter-copy">
+              <img class="product-chapter-icon" src="./brand/products/trytokka.svg" alt="" width="120" height="120" loading="lazy" decoding="async" />
+              <p class="product-chapter-lane">AI spend</p>
+              <h2 id="chapter-trytokka-heading" class="product-chapter-name">TryTokka</h2>
+              <p class="product-chapter-line">Scout emails after daily sync when spend crosses the limit you set.</p>
+              <p class="product-chapter-rating" data-rating-badge="trytokka"><span class="product-chapter-rating-star">★</span> <span data-rating-badge-text><strong>5★</strong> average from 5 ratings for TryTokka.</span></p>
+              <div class="product-chapter-actions">
+                <a class="btn btn-primary" href="https://trytokka.com/" rel="noopener noreferrer" title="Opens trytokka.com/">Open TryTokka <span aria-hidden="true">↗</span></a>
+                <a class="btn btn-ghost" href="../trytokka/">Learn on Acsaven</a>
+              </div>
+            </div>
+            <figure class="workshop-peek workshop-peek--app workshop-peek--trytokka" aria-hidden="true">
+            <div class="workshop-peek-chrome">
+              <span class="workshop-peek-dots"></span>
+              <span class="workshop-peek-url">trytokka.com</span>
+            </div>
+            <div class="workshop-peek-body">
+            <div class="workshop-appbar" aria-hidden="true">
+              <span class="is-on">Spend</span><span>Scout</span><span>Sync now</span>
+            </div>
+            <div class="workshop-dash-head">
+              <p class="workshop-scout-kicker">Scout</p>
+              <p class="workshop-dash-status">Under the limit you set</p>
+            </div>
+            <div class="workshop-bar"><span class="workshop-bar-fill"></span></div>
+            <ul class="workshop-providers">
+              <li><span>OpenAI</span><span class="workshop-bar workshop-bar--sm"><span class="workshop-bar-fill workshop-bar-fill--a"></span></span></li>
+              <li><span>Anthropic</span><span class="workshop-bar workshop-bar--sm"><span class="workshop-bar-fill workshop-bar-fill--b"></span></span></li>
+              <li><span>Gemini</span><span class="workshop-bar workshop-bar--sm"><span class="workshop-bar-fill workshop-bar-fill--c"></span></span></li>
+            </ul>
+            <p class="workshop-scout-meta">Example layout · after daily sync · set the limit on trytokka.com</p>
+            </div>
+          </figure>
+          </div>
+        </section>
+
+        <section class="home-hub-note" aria-labelledby="hub-note-heading" data-reveal>
+          <div class="stage home-hub-inner">
+            <p class="eyebrow">One studio · four product URLs</p>
+            <h2 id="hub-note-heading" class="home-display home-display--sm">How this hub fits the Try family</h2>
+            <p class="home-hub-note-lead">
+              Tools that stay with you run on their own .com sites. This hub is the studio story — not the workshop.
+            </p>
+            <p class="home-hub-hubline">
+              <span class="home-hub-label">Hub</span>
+              <span class="home-hub-hubline-body"><strong>acsaven.com</strong> for brand context and parent citations</span>
+            </p>
+            <ul class="home-hub-domains" aria-label="Official Try product sites">
+              <li><a href="https://tryquickimg.com/" rel="noopener noreferrer">tryquickimg.com</a></li>
+              <li><a href="https://trydevsnip.com/" rel="noopener noreferrer">trydevsnip.com</a></li>
+              <li><a href="https://trycalculatingnow.com/" rel="noopener noreferrer">trycalculatingnow.com</a></li>
+              <li><a href="https://trytokka.com/" rel="noopener noreferrer">trytokka.com</a></li>
+            </ul>
+            <p class="home-hub-cite">
+              Parent citation: <a href="./cite/">How to cite</a> · <a href="./llms.txt">llms.txt</a> · <a href="./about/">About</a>
+            </p>
+            <!--
+              A claim about reliability is only worth something if the visitor can check it
+              somewhere we cannot edit. The board is hosted by the monitor, not by us — that
+              is the entire point of mentioning it, so do not replace this with a
+              self-reported uptime figure or a badge we render ourselves.
+            -->
+            <p class="home-hub-cite">
+              All five sites are probed every 5 minutes by an independent monitor —
+              <a href="https://stats.uptimerobot.com/Wxm89SOBUN" rel="noopener noreferrer">see the live board</a>
+              (hosted by them, not us) · <a href="./status/">Status</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="home-video-section" aria-labelledby="video-heading" data-reveal>
+          <div class="stage">
+            <h2 id="video-heading" class="home-display home-display--sm">Watch the Try family in 30 seconds</h2>
+            <p class="tool-picker-lead" style="max-width:36rem;margin-inline:auto;text-align:center">
+              Short walkthrough of the Try workshops. Opens on its own page so this hub stays fast.
+            </p>
+            <p style="text-align:center;margin-top:1rem">
+              <a class="btn btn-primary btn-lg" href="./watch/intro/">Open tour →</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="home-notes" id="notes" aria-labelledby="notes-heading" data-reveal>
+          <div class="stage">
+            <header class="home-notes-intro">
+              <p class="eyebrow">Blog</p>
+              <h2 id="notes-heading" class="home-display">Notes from the studio</h2>
+              <p class="home-notes-lead">Short reads on privacy and how the Try family fits together — useful when you want the studio story without opening every product site. Domain rules live in <a href="./llms.txt">llms.txt</a>.</p>
+            </header>
+            <ul class="home-notes-grid">
+              <li class="home-note-card">
+                <a href="./blog/astro-production-starter-is-free/">
+                  <time class="home-note-date" datetime="2026-08-17">2026-08-17</time>
+                  <h3 class="home-note-title">The Astro Production Starter is free</h3>
+                  <span class="home-note-summary">v1 shipped 17 August 2026: an Astro starter plus the @acsaven/astro-ops engine, MIT, on GitHub. Not a purchase.</span>
+                  <span class="home-note-cta">Read note</span>
+                </a>
+              </li>
+              <li class="home-note-card">
+                <a href="./blog/what-acsaven-sells/">
+                  <time class="home-note-date" datetime="2026-08-17">2026-08-17</time>
+                  <h3 class="home-note-title">What Acsaven sells (and what stays free)</h3>
+                  <span class="home-note-summary">The studio sells TryTokka on trytokka.com. The Astro starter, the AI spend spreadsheet, and the three browser Try apps stay free.</span>
+                  <span class="home-note-cta">Read note</span>
+                </a>
+              </li>
+              <li class="home-note-card">
+                <a href="./blog/which-try-tool-should-i-open/">
+                  <time class="home-note-date" datetime="2026-08-17">2026-08-17</time>
+                  <h3 class="home-note-title">Which Try tool should I open?</h3>
+                  <span class="home-note-summary">Images, developer pastes, grade or finance math, or AI API spend — pick the official .com. Acsaven is the studio, not the workshop.</span>
+                  <span class="home-note-cta">Read note</span>
+                </a>
+              </li>
+            </ul>
+            <p class="home-notes-more">
+              <a class="btn btn-ghost" href="./blog/">Browse all posts</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="home-notes" id="faq" aria-labelledby="home-faq-heading" data-reveal>
+          <div class="stage">
+            <header class="home-notes-intro">
+              <p class="eyebrow">FAQ</p>
+              <h2 id="home-faq-heading" class="home-display">Common questions</h2>
+              <p class="home-notes-lead">Short answers for people and answer engines. Product how-tos live on each .com; this hub answers who builds the tools.</p>
+            </header>
+            <dl class="faq-list">
+              <div class="faq-item">
+                <dt>What is Acsaven?</dt>
+                <dd>Acsaven is an independent software studio founded by Samson PG. Spell it A-c-s-a-v-e-n. Searches for Aksaven, Acsavan, Acsavin, Acsavon, or Casaven are this studio — those are misspellings, not a different company. It is not ACS, not ACS Asset Management (acsasset.com.au), and not a financial-services or asset-management firm. It is the parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka. acsaven.com is brand context; the tools themselves run on each product’s official .com.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Is Aksaven or Acsavan a different company?</dt>
+                <dd>No. Aksaven, Acsavan, Acsavin, Acsavon, and Casaven are misspellings of Acsaven — the same independent studio founded by Samson PG. Official spelling is A-c-s-a-v-e-n at acsaven.com. Write Acsaven, not ACSaven. It is not ACS and not a wealth or investment firm.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Is Acsaven a financial services or asset management company?</dt>
+                <dd>No. Acsaven is an independent software studio. It is not ACS, not ACS Asset Management (acsasset.com.au), and not a regulated investment or wealth firm. It does not offer portfolios, AUM, or financial advice. Browser finance calculators live on trycalculatingnow.com — they are math tools, not investment products.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Do the free Try tools upload my files?</dt>
+                <dd>No. After the page loads, image work, JSON/JWT/cron helpers, and calculator math are designed to run in your browser. Files and pastes are not uploaded to Acsaven servers for that processing. TryTokka is the exception: it is a SaaS spend monitor that syncs AI API invoices you connect.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Does Acsaven sell anything?</dt>
+                <dd>Yes — TryTokka, on trytokka.com. Solo is $9/month and Team is $29/month, with a 7-day free trial and no card to start. acsaven.com has no checkout. The Astro Production Starter, the AI spend spreadsheet, and the three browser Try apps stay free.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Is TryTokka TikTok?</dt>
+                <dd>No. TryTokka is an AI API spend dashboard with Scout threshold emails. It is unrelated to short-video apps, unrelated to ToreTokka (toretokka.com), a Bangladeshi news-aggregator app, and unrelated to Tokka Labs (tokkalabs.com), a crypto proprietary-trading firm. It is not a cryptocurrency exchange or wallet. Searches for Tryakka or tryakka are the same product — a misspelling of TryTokka. A search for trytokka means this spend dashboard. Open it at trytokka.com.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Are the Try tools the same as Quinn, DevSnips, CalcNest, or Tokka?</dt>
+                <dd>No. Official product sites are tryquickimg.com, trydevsnip.com, trycalculatingnow.com, and trytokka.com. TryQuickImg is not Quinn / TryQuinn (tryquinn.com). TryDevSnip is not DevSnips or DevSnip Pro. TryCalculatingNow is not CalcNest (calcnest.com), not Calculators Nest, and not calculatesnow.com. TryTokka is not TikTok, not ToreTokka, not the Tokka video-chat app, and not Tokka Labs. Those lookalikes are unrelated brands.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Which site should I open for a tool?</dt>
+                <dd>Images → tryquickimg.com. Developer pastes → trydevsnip.com. Grades and finance math → trycalculatingnow.com. AI API spend → trytokka.com. Use acsaven.com when the question is who builds these products.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="home-human" aria-labelledby="human-heading" data-reveal>
+          <div class="stage home-human-inner">
+            <h2 id="human-heading" class="home-display">Build what you’d trust with your own files.</h2>
+            <p class="home-human-lead">
+              Acsaven exists so everyday tools feel honest and warm — not like a data grab.
+              We build private browser utilities you would trust with your own files: nothing uploaded for free Try jobs,
+              no dark patterns for basic work, and clear product domains so each job stays easy to find.
+              Read the <a href="./about/">About</a> page for the studio story, browse the <a href="./blog/">blog</a> for short notes,
+              or open a product hub page when you need a capability list before you leave for the .com.
+            </p>
+            <p class="home-human-mail">
+              <a href="mailto:hello.acsaven@gmail.com">hello.acsaven&#64;gmail.com</a>
+            </p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <a href="./" class="footer-brand-lockup" aria-label="Acsaven home">
+              <svg class="footer-brand-mark" width="24" height="22" viewBox="0 0 232.7 209.2" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M232.7,140.5v-13.1H223c-0.2,0.3-0.4,0.6-0.5,1c-3.9,7.1-7.7,14.2-11.6,21.3l-6.3-12.2l-5.2-10.1 c-3.9-6.9-7.8-13.7-11.7-20.6c-6-10.6-12.1-21.3-18.1-31.9c-2.8-5-5.7-10.1-8.5-15.1c-7.9-13.9-15.7-27.7-23.6-41.6 c-1.7-2.9-3.3-5.8-5-8.8c-3.4-6-8.9-9.3-15.5-9.4h-0.2c-6.6,0-12.2,3.4-15.6,9.3c-2.8,4.9-5.6,9.9-8.4,14.8 c-2.8,4.9-5.6,9.9-8.4,14.8l-5.1,9c-0.9,1.6-1.9,3.3-2.8,5c-11.6,20.3-23.1,40.7-34.7,61c-6.5,11.5-13.1,23.1-19.7,34.6 c-2.9,5-5.8,10.1-8.6,15.1c-0.4,0.7-0.8,1.4-1.2,2C9,171.3,5.6,177.2,2.3,183c-1.4,2.5-2.2,5.3-2.3,8.1c0,0.2,0,0.4,0,0.6 c0,0.2,0,0.4,0,0.7c0,1.2,0.2,2.4,0.5,3.6l0.1,0.3c0,0,0,0,0,0.1l0,0c2,7.4,8.3,12.6,15.8,12.9h0.4c0.2,0,1.4,0,3.4,0h1.1 c4,0,10.5,0,18.8,0c4,0,8.4,0,13.1,0h23l29.6-20.9l44.9-31.7c0,0.3,0.1,0.6,0.1,0.9c0,3,0,5.9,0,8.8v42.8c4.5,0,8.9,0,13.2,0l0,0 h11.2l2.6-5l5.2-10.1l6.3-12.2c3.9,7.1,7.8,14.2,11.6,21.3c0.3,0.5,0.5,1,0.8,1.4c1.1,0.6,2.1,1.2,3.1,1.8 c2.3,1.4,4.9,2.3,7.6,2.6h0.1c0.1,0,0.3,0,0.4,0c0.3,0,0.5,0,0.7,0c0.3,0,0.6,0,0.9,0c0.2,0,0.3,0,0.5,0c3-0.1,5.9-0.8,8.4-2.2 c0.6-0.3,1.1-0.7,1.7-1c0.2-0.1,0.4-0.3,0.6-0.4c0.2-0.1,0.4-0.3,0.5-0.4c0.1-0.1,0.2-0.2,0.4-0.3c0.1-0.1,0.3-0.3,0.4-0.4 c0.2-0.2,0.4-0.3,0.5-0.5c0.2-0.2,0.3-0.3,0.5-0.5c0.4-0.4,0.7-0.8,1-1.2c0.1-0.2,0.3-0.4,0.4-0.5c1.4-2,2.3-4.3,2.8-6.8h0.4 L232.7,140.5L232.7,140.5z M69.1,132.6c0.4-0.8,1.4-1.7,2.2-1.6c0.7,0,1.7,1,2.1,1.7c1.3,2.3,2.3,4.9,3.6,7.2 c0.5,0.9,1.5,1.9,2.4,2c0.7,0.1,1.9-0.9,2.3-1.7c0.5-0.9,1-1.8,1.5-2.7c5-8.6,9.8-17.3,14.7-25.9c2.9-5.2,5.8-10.4,8.7-15.5 c1.5-2.7,3.1-5.4,4.6-8.1c1-1.7,1.9-3.5,2.9-5.2c1.4-2.5,3.5-2.5,4.9,0c0.1,0.2,0.2,0.4,0.3,0.6c3,5.3,6,10.7,9,16 c2.5,4.4,4.9,8.8,7.4,13.1c2.2,3.9,4.4,7.9,6.7,11.8c-1.8,0.2-3.9,0.3-6.5,0.3c-3.1,0-6.7,1.2-9.1,2.6 c-7.3,4.4-14.3,9.1-21.3,13.8c-2.5,1.6-4.9,3.3-7.3,5c-8.4,5.8-16.7,11.6-24.9,17.6c-12,8.8-23.6,17.8-34.9,27.1 c-0.1,0.1-0.2,0.2-0.3,0.3c0.1-0.1,0.1-0.2,0.1-0.3c3.4-6.5,6.9-13,10.3-19.5c1.3-2.5,2.7-5.1,4-7.6 C58.2,153.3,63.6,142.9,69.1,132.6z"/>
+          </svg>
+              <span class="footer-brand-wordmark">Acsaven</span>
+            </a>
+            <p class="footer-brand-tagline">
+              <span class="footer-brand-tagline-head">Tools that stay with you.</span>
+              <span class="footer-brand-tagline-sub">Parent studio behind TryQuickImg, TryDevSnip, TryCalculatingNow, and TryTokka.</span>
+            </p>
+            <p class="footer-brand-meta">
+              <a class="footer-link" href="mailto:hello.acsaven@gmail.com">Contact</a>
+            </p>
+            <p class="footer-brand-parent">Founded by <strong>Samson PG</strong></p>
+            
+          <div class="footer-social" aria-label="Acsaven on social media">
+            <a class="footer-social-link" href="https://www.youtube.com/@acsavenhq?sub_confirmation=1" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a class="footer-social-link" href="https://x.com/acsavenhq" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a class="footer-social-link" href="https://www.instagram.com/acsavenhq/" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a class="footer-social-link" href="https://www.threads.net/@acsavenhq" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on Threads"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.295 1.33-3.105.703-.627 1.942-1.165 3.71-1.081.76.033 1.5.118 2.185.222.244.036.47.072.677.107v-.623c0-1.4-.065-2.43-.965-3.11-.72-.553-1.75-.655-2.694-.655h-.205c-.85.012-2.363.236-2.694 1.655l-1.993-.437c.417-1.892 1.957-2.955 4.634-3.023h.242c1.283 0 2.935.163 4.018 1.024 1.287 1.013 1.38 2.541 1.38 4.22v.63c.413.072.818.148 1.193.222 2.114.411 3.553 1.44 4.163 2.944.795 1.953.66 4.865-1.707 7.258-1.83 1.839-4.123 2.617-7.342 2.641zm-.67-9.26c-1.396 0-2.497.35-3.263.98-.733.599-1.084 1.406-1.04 2.279.064 1.21 1.052 1.928 2.72 1.835 1.161-.065 2.055-.454 2.657-1.155.556-.646.86-1.557.968-2.746-.69-.15-1.413-.242-2.042-.194z"/></svg></a>
+            <a class="footer-social-link" href="https://www.linkedin.com/company/acsavenhq" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a class="footer-social-link" href="https://github.com/acsavenhq" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a class="footer-social-link" href="https://www.reddit.com/user/acsavenhq" rel="me noopener noreferrer" target="_blank" aria-label="Acsaven on Reddit"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
+          </div>
+          </div>
+          <nav aria-label="Footer products">
+            <p class="footer-heading">Products</p>
+            <ul class="footer-list">
+              <li><a class="footer-link footer-link-strong" href="./#family">Product hub</a></li>
+              <li><a class="footer-link" href="../tryquickimg/">TryQuickImg</a></li>
+              <li><a class="footer-link" href="../trydevsnip/">TryDevSnip</a></li>
+              <li><a class="footer-link" href="../trycalculatingnow/">TryCalculatingNow</a></li>
+              <li><a class="footer-link" href="../trytokka/">TryTokka</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Footer explore">
+            <p class="footer-heading">Studio</p>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="./tools/">All tools</a></li>
+              <li><a class="footer-link" href="./free/ai-spend-tracker/">Free AI spend tracker</a></li>
+              <li><a class="footer-link" href="./store/">Store</a></li>
+              <!--
+                /data/ is prioritised 0.8 in the sitemap with the note that the datasets
+                are the studio's most linkable asset — but it had ZERO inbound internal
+                links, so nothing on the site led anyone to it. Linked here on every page.
+              -->
+              <li><a class="footer-link" href="./data/">Datasets</a></li>
+              <li><a class="footer-link" href="./try-family/">Try family</a></li>
+              <li><a class="footer-link" href="./about/">About</a></li>
+              <li><a class="footer-link" href="./status/">Status</a></li>
+              <li><a class="footer-link" href="./blog/">Blog</a></li>
+              <li><a class="footer-link" href="./developers/">Developers</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Footer legal">
+            <p class="footer-heading">Trust</p>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="./privacy/">Privacy</a></li>
+              <!-- Standalone DPDP notice. In the footer as well as at both signup forms,
+                   because Rule 3(a) wants it reachable on its own rather than only as a
+                   step inside a flow someone may never start. -->
+              <li><a class="footer-link" href="./data-notice/">Data notice</a></li>
+              <li><a class="footer-link" href="./terms/">Terms</a></li>
+              <li><a class="footer-link" href="./status/">Status</a></li>
+              <li><a class="footer-link" href="./privacy-first/">Privacy-first tools</a></li>
+              <li><a class="footer-link" href="./.well-known/security.txt">security.txt</a></li>
+              <li><a class="footer-link" href="./ai.txt">ai.txt</a></li>
+              <li><a class="footer-link" href="mailto:hello.acsaven@gmail.com">hello.acsaven&#64;gmail.com</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Footer more">
+            <p class="footer-heading">More</p>
+            <ul class="footer-list">
+              <li><a class="footer-link" href="./founder/">Founder</a></li>
+              <li><a class="footer-link" href="./social/">Latest posts</a></li>
+              <li><a class="footer-link" href="./cite/">How to cite</a></li>
+              <li><a class="footer-link" href="./love/">Love</a></li>
+              <li><a class="footer-link" href="./llms.txt">llms.txt</a></li>
+              <li><a class="footer-link" href="./sitemap.xml">Sitemap</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-footer-family">
+          <div class="site-footer-family-copy">
+            <p class="footer-heading">Try family</p>
+            <p class="footer-family-note">Open each product on its official <strong>.com</strong> site — same pattern as the sister footers. Hub pages under Products stay here for brand context.</p>
+          </div>
+          <ul class="footer-family-list">
+            <li><a class="footer-family-card" href="https://tryquickimg.com/" rel="noopener noreferrer"><img class="footer-family-icon" src="./brand/products/tryquickimg.svg?v=violet" alt="" width="28" height="28" loading="lazy" decoding="async" /><span class="footer-family-name">TryQuickImg</span><span class="footer-family-blurb">Compress, convert, resize &amp; crop — in your browser.</span><span class="footer-family-dest">tryquickimg.com</span></a></li>
+            <li><a class="footer-family-card" href="https://trydevsnip.com/" rel="noopener noreferrer"><img class="footer-family-icon" src="./brand/products/trydevsnip.svg" alt="" width="28" height="28" loading="lazy" decoding="async" /><span class="footer-family-name">TryDevSnip</span><span class="footer-family-blurb">JSON, cron, timestamps &amp; developer utilities.</span><span class="footer-family-dest">trydevsnip.com</span></a></li>
+            <li><a class="footer-family-card" href="https://trycalculatingnow.com/" rel="noopener noreferrer"><img class="footer-family-icon" src="./brand/products/trycalculatingnow.svg" alt="" width="28" height="28" loading="lazy" decoding="async" /><span class="footer-family-name">TryCalculatingNow</span><span class="footer-family-blurb">GPA, grades, finance &amp; unit calculators.</span><span class="footer-family-dest">trycalculatingnow.com</span></a></li>
+            <li><a class="footer-family-card" href="https://trytokka.com/" rel="noopener noreferrer"><img class="footer-family-icon" src="./brand/products/trytokka.svg" alt="" width="28" height="28" loading="lazy" decoding="async" /><span class="footer-family-name">TryTokka</span><span class="footer-family-blurb">AI API spend alerts after daily sync.</span><span class="footer-family-dest">trytokka.com</span></a></li>
+          </ul>
+        </div>
+        <div class="site-footer-bar">
+          <p>© <span id="year"></span> Acsaven · Founded by Samson PG</p>
+          <p class="site-footer-bar-note">Tools that stay with you · <a class="footer-link" href="./privacy/">Privacy</a> · <a class="footer-link" href="./terms/">Terms</a> · <a class="footer-link" href="./blog/">Blog</a></p>
+        </div>
+
+        <!-- Peerlist live upvote + PostYourStartup live badge + self-hosted PH / SaaSHub.
+             Imgs load last: lazy + async + fetchpriority=low.
+
+             ⚠️ Do NOT conclude the Peerlist embed is broken from curl or a headless
+             browser. Peerlist sits behind Cloudflare bot mitigation: a plain request gets
+             403 with Content-Type text/html AND a Cross-Origin-Resource-Policy:
+             same-origin header on that error page, which in headless Chromium surfaces as
+             ERR_BLOCKED_BY_RESPONSE.NotSameOrigin and a 0x0 image. It looks exactly like a
+             hard cross-origin block and is not one. With a real browser User-Agent the
+             same URL returns 200 image/svg+xml with no CORP header, and the badge renders
+             at 296x72 — verified on live tryquickimg.com 2026-08-13. This badge was
+             removed once on that false reading and had to be restored; re-verify with a
+             real UA before touching it. -->
+        <div class="site-footer-badges">
+          <a href="https://peerlist.io/samsonpg/project/acsaven" rel="noopener noreferrer" target="_blank"><img class="badge-peerlist badge-theme badge-theme--on-light" src="https://peerlist.io/api/v1/projects/embed/PRJH7B87LLKRNDDJ8C699E67JARBAJ?showUpvote=true&theme=light" alt="Upvote Acsaven on Peerlist" width="296" height="72" style="width:auto;height:40px;max-height:40px;object-fit:contain" loading="lazy" decoding="async" fetchpriority="low" /><img class="badge-peerlist badge-theme badge-theme--on-dark" src="https://peerlist.io/api/v1/projects/embed/PRJH7B87LLKRNDDJ8C699E67JARBAJ?showUpvote=true&theme=dark" alt="" aria-hidden="true" width="296" height="72" style="width:auto;height:40px;max-height:40px;object-fit:contain" loading="lazy" decoding="async" fetchpriority="low" /></a>
+          <!-- nofollow, deliberately. Verified 2026-08-13: the Post Your Startup listing
+               carries our URL as PLAIN TEXT — zero anchor elements back to us, checked in
+               a real browser after hydration, on all five of our listings. It was a
+               one-way sitewide dofollow from every page we own to an indexable
+               third-party page, for nothing back. Peerlist keeps its dofollow because
+               Peerlist does link back (four anchors, rel="noreferrer nofollow ugc"). The
+               badge stays — social proof for a human, which nofollow does not affect. -->
+          <a href="https://postyourstartup.co/startup/acsaven-1?ref=badge" rel="noopener noreferrer nofollow" target="_blank"><img class="badge-pys badge-theme badge-theme--on-light" src="https://postyourstartup.co/api/badge/acsaven-1?theme=light" alt="Featured on PostYourStartup" width="212" height="55" style="width:auto;height:40px;max-height:40px;object-fit:contain" loading="lazy" decoding="async" fetchpriority="low" /><img class="badge-pys badge-theme badge-theme--on-dark" src="https://postyourstartup.co/api/badge/acsaven-1?theme=dark" alt="Featured on PostYourStartup" width="212" height="55" style="width:auto;height:40px;max-height:40px;object-fit:contain" loading="lazy" decoding="async" fetchpriority="low" /></a>
+          <span class="badge-ph-wrap"><img class="badge-ph badge-theme badge-theme--on-light" src="./badges/producthunt-featured.svg" alt="" width="200" height="54" loading="lazy" decoding="async" fetchpriority="low" /><img class="badge-ph badge-theme badge-theme--on-dark" src="./badges/producthunt-featured-dark.svg" alt="" aria-hidden="true" width="200" height="54" loading="lazy" decoding="async" fetchpriority="low" /></span>
+          <span class="badge-saashub-wrap"><img class="badge-saashub badge-theme badge-theme--on-light" src="./badges/saashub-approved.png" alt="" width="112" height="40" loading="lazy" decoding="async" fetchpriority="low" /><img class="badge-saashub badge-theme badge-theme--on-dark" src="./badges/saashub-approved-dark.png" alt="" aria-hidden="true" width="112" height="40" loading="lazy" decoding="async" fetchpriority="low" /></span>
+        </div>
+        <div class="site-footer-directory-notes">
+          <p class="site-footer-badges-note"><span class="site-footer-badges-note-label">Our tools on Product Hunt:</span>
+            <a class="footer-link" href="https://www.producthunt.com/products/tryquickimg" rel="noopener noreferrer" target="_blank">TryQuickImg</a> ·
+            <a class="footer-link" href="https://www.producthunt.com/products/trycalculatingnow" rel="noopener noreferrer" target="_blank">TryCalculatingNow</a> ·
+            <a class="footer-link" href="https://www.producthunt.com/products/trydevsnip" rel="noopener noreferrer" target="_blank">TryDevSnip</a> ·
+            <a class="footer-link" href="https://www.producthunt.com/products/trytokka" rel="noopener noreferrer" target="_blank">TryTokka</a>
+          </p>
+          <p class="site-footer-badges-note"><span class="site-footer-badges-note-label">Our tools on SaaSHub:</span>
+            <a class="footer-link" href="https://www.saashub.com/tryquickimg" rel="noopener noreferrer" target="_blank">TryQuickImg</a> ·
+            <a class="footer-link" href="https://www.saashub.com/trycalculatingnow" rel="noopener noreferrer" target="_blank">TryCalculatingNow</a> ·
+            <a class="footer-link" href="https://www.saashub.com/trydevsnip" rel="noopener noreferrer" target="_blank">TryDevSnip</a> ·
+            <a class="footer-link" href="https://www.saashub.com/trytokka" rel="noopener noreferrer" target="_blank">TryTokka</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button
+      type="button"
+      id="scroll-to-top"
+      class="scroll-to-top scroll-to-top--hidden"
+      aria-label="Back to top"
+      title="Back to top"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+    <script src="./theme.js?v=b32bf578bd" defer></script>
+    <script src="./search.js?v=5e697dc7e1" defer></script>
+    <script src="./motion.js?v=8b0f54b813" defer></script>
+    <script src="./scroll-to-top.js?v=66e22520f0" defer></script>
+    <script src="./nav-products.js?v=f7e6a372b0" defer></script>
+    <script src="./mobile-nav.js?v=5ec1948c9f" defer></script>
+    <script src="./confirm-dialog.js?v=4f37deb2b2" defer></script>
+    <script src="./standalone-window-center.js?v=22d7088728" defer></script>
+    <script>
+      document.getElementById('year').textContent = String(new Date().getFullYear());
+    </script>
+  </body>
 </html>
