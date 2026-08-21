@@ -127,39 +127,123 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 .top__cta:hover { filter: brightness(1.05); color: inherit; }
 @media (min-width: 520px) { .top__cta { display: inline-flex; } }
 
-.top__menu {
+/* Hamburger — Acsaven / Try family level */
+.site-nav-toggle {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; border-radius: 0.55rem;
-  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-  cursor: pointer;
+  width: 2.75rem; height: 2.75rem; min-width: 2.75rem; min-height: 2.75rem;
+  border-radius: 0.65rem; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); cursor: pointer; flex-shrink: 0;
 }
-@media (min-width: 860px) { .top__menu { display: none; } }
-.top__menu svg { width: 1.25rem; height: 1.25rem; }
+.site-nav-toggle:hover { border-color: var(--green); color: var(--green-deep); }
+.site-nav-toggle svg { width: 1.25rem; height: 1.25rem; }
+@media (min-width: 860px) { .site-nav-toggle { display: none; } }
+@media (max-width: 420px) { .top__theme { display: none; } }
 
-.drawer {
+.site-nav-dialog {
+  margin: 0; margin-right: auto; padding: 0;
+  width: min(22rem, 100vw); max-width: 100vw;
+  height: 100%; max-height: 100%;
+  border: none; border-right: 1px solid var(--line);
+  background: transparent; color: var(--ink);
+}
+.site-nav-dialog::backdrop {
+  background: color-mix(in srgb, var(--ink) 45%, transparent);
+  backdrop-filter: blur(2px);
+}
+.site-nav-dialog-panel {
+  display: flex; flex-direction: column; height: 100%;
+  background: var(--card); color: var(--ink);
+  box-shadow: 12px 0 40px rgba(0, 0, 0, 0.28);
+}
+.site-nav-dialog-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem 1.1rem; border-bottom: 1px solid var(--line);
+}
+.site-nav-dialog-title {
+  margin: 0; font-size: 1rem; font-weight: 800; letter-spacing: -0.02em;
+}
+.site-nav-dialog-close {
+  min-height: 2.75rem; min-width: 2.75rem; padding: 0.45rem 0.75rem;
+  border-radius: 0.5rem; border: 1px solid var(--line);
+  background: var(--surface); color: var(--muted);
+  font-size: 0.75rem; font-weight: 700; cursor: pointer;
+}
+.site-nav-dialog-close:hover { color: var(--ink); border-color: var(--green); }
+.site-nav-dialog-nav {
+  overflow: auto; padding: 0.75rem 0.85rem 1.5rem; overscroll-behavior: contain;
+}
+.site-nav-section-label {
+  margin: 0.85rem 0.35rem 0.4rem;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.site-nav-dialog-list {
+  list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem;
+}
+.site-nav-dialog-link {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  min-height: 2.75rem; padding: 0.65rem 0.75rem; border-radius: 0.75rem;
+  text-decoration: none; color: inherit; border: 1px solid transparent;
+}
+.site-nav-dialog-link:hover {
+  background: var(--green-soft);
+  border-color: color-mix(in srgb, var(--green) 25%, transparent);
+}
+.site-nav-dialog-link.is-active {
+  background: var(--green-soft);
+  border-color: color-mix(in srgb, var(--green) 35%, transparent);
+}
+.site-nav-dialog-link-title {
+  font-weight: 750; font-size: 0.95rem; color: var(--ink);
+}
+.site-nav-dialog-link-desc {
+  font-size: 0.78rem; color: var(--muted); line-height: 1.35;
+}
+.nav-meta {
+  font-size: 0.72rem; font-weight: 700; color: var(--green); letter-spacing: 0.02em;
+}
+.site-nav-dialog-list--compact .site-nav-dialog-link { padding: 0.55rem 0.75rem; }
+.site-nav-dialog-theme {
+  margin: 1rem 0.35rem 0; padding-top: 0.85rem; border-top: 1px solid var(--line);
+}
+.site-nav-dialog-theme .theme-switch { width: 100%; margin-top: 0.35rem; }
+
+/* TryTokka-style mobile bottom dock */
+.dock {
   display: none;
-  position: fixed; inset: var(--top) 0 auto 0; z-index: 35;
-  padding: 1rem 1.1rem 1.25rem;
-  background: var(--card);
-  border-bottom: 1px solid var(--line);
-  box-shadow: var(--shadow);
 }
-.drawer.is-open,
-.drawer:not([hidden]) {
-  display: block;
+@media (max-width: 859px) {
+  .dock {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: fixed; bottom: 0; inset-inline: 0; z-index: 45;
+    border-top: 1px solid var(--line);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(12px);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  body {
+    padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+  }
 }
-.drawer[hidden] { display: none !important; }
-.drawer nav { display: grid; gap: 0.15rem; }
-.drawer a {
-  display: flex; align-items: center; min-height: 44px;
-  padding: 0 0.75rem; border-radius: 0.55rem;
-  text-decoration: none; color: var(--ink); font-weight: 650;
+.dock__item {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.2rem; min-height: 3.25rem; padding: 0.45rem 0.2rem 0.4rem;
+  border: 0; border-top: 2px solid transparent;
+  background: transparent; color: var(--muted);
+  text-decoration: none; font: inherit; cursor: pointer;
 }
-.drawer a:hover, .drawer a.is-active { background: var(--green-soft); color: var(--green-deep); }
-.drawer__theme { margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--line); }
-.drawer__label {
-  margin: 0 0 0.45rem;
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+.dock__item svg { width: 1.2rem; height: 1.2rem; }
+.dock__item span {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.01em;
+  max-width: 4.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.dock__item:hover { color: var(--ink); }
+.dock__item.is-active {
+  color: var(--green-deep);
+  border-top-color: var(--green);
+  background: color-mix(in srgb, var(--green-soft) 70%, transparent);
+  font-weight: 800;
 }
 
 /* Theme switch — same interaction model as Acsaven / TryTokka */
