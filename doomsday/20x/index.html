@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="twentyx">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20X — homepage archive</title>
-  <meta name="description" content="Original homepage visual archive of 20X." />
+  <title>20X — homepage demo (offline)</title>
+  <meta name="description" content="Static homepage design demo of 20X. Use when the live domain is blocked or down." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="banner">Homepage clone / visual archive of <strong>20X</strong> — local screenshot of the live site. <a href="../">Museum</a></div>
+  <div class="offline-strip">
+    Offline homepage demo — if <strong>20x.io</strong> is blocked or down, this is the design backup.
+    <a href="../">Museum</a>
+  </div>
   <div class="wrap">
-    <header class="top">
-      <a class="brand" href="../">Doomsday · Samson P G</a>
-      <nav class="nav-links" aria-label="Archive">
-        <a href="../">All archives</a>
+    <header class="site-top">
+      <a class="wordmark" href="./">20X</a>
+      <nav class="nav-mini" aria-label="Demo">
+        <a href="https://www.20x.io/" target="_blank" rel="noopener noreferrer">Live site</a>
+        <a href="../">All demos</a>
         <a href="https://samsonpg.github.io/">Portfolio</a>
       </nav>
     </header>
 
-    <div class="clone-bar">
-      <div>
-        <p class="pill">Original homepage capture</p>
-        <h1>20X</h1>
-        <p class="lede">Healthcare staffing CRM — Benagon React/TypeScript.</p>
-      </div>
+    <section class="hero">
+      <p class="eyebrow">Theme demo · static</p>
+      <h1>Healthcare staffing CRM & nurse scheduling.</h1>
+      <p class="lede">Recruitment, credentialing, compliance, and timesheets — Benagon production React / TypeScript.</p>
       <div class="actions">
-        <a class="btn btn--fill" href="https://www.20x.io/" target="_blank" rel="noopener noreferrer">Open live</a>
-        <a class="btn btn--line" href="../">Museum hub</a>
-      </div>
-    </div>
-
-    <figure class="clone-frame">
-      <img src="./shot.webp" alt="20X original homepage" width="1440" height="900" loading="eager">
-    </figure>
-    <p class="clone-caption">Desktop capture of the live homepage (1440px). Scales to any screen — this is the offline original look.</p>
-
-    <div class="features" style="margin-top:1.35rem">
-<div class="feature"><h3>Recruitment</h3><p>CRM for healthcare staffing.</p></div>
-<div class="feature"><h3>Worker mobile</h3><p>Shifts, timesheets, documents.</p></div>
-<div class="feature"><h3>UK + clients</h3><p>Shipped for international teams.</p></div>
-    </div>
-
-    <section class="extras" aria-labelledby="extras-20x">
-      <h2 id="extras-20x">More visuals</h2>
-      <div class="extras-grid">
-<figure class="shot"><img src="./20x-ui-dashboard.webp" alt="20X extra" width="1200" height="750" loading="lazy"></figure>
-<figure class="shot"><img src="./20x-home.webp" alt="20X extra" width="1200" height="750" loading="lazy"></figure>
-<figure class="shot"><img src="./20x-ui-mobile.webp" alt="20X extra" width="1200" height="750" loading="lazy"></figure>
+        <a class="btn btn--fill" href="https://www.20x.io/" target="_blank" rel="noopener noreferrer">Open live 20x.io</a>
+        <a class="btn btn--ghost" href="../">All demos</a>
       </div>
     </section>
 
-    <p class="note">Fallback for when the live domain is down. Not a working app — the screenshot is the truth.</p>
-    <p class="foot">© 2026 Samson P G · Homepage archive</p>
+    <section class="preview" aria-label="20X homepage preview">
+      <div class="preview__chrome" aria-hidden="true">
+        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
+        <span class="preview__url">20x.io</span>
+      </div>
+      <figure class="preview__frame">
+        <img src="./shot.webp" alt="20X homepage design" width="1440" height="900" loading="eager">
+      </figure>
+    </section>
+
+    <div class="sections">
+<article class="section-card"><h2>CRM</h2><p>Staffing workflows for healthcare teams.</p></article>
+<article class="section-card"><h2>Mobile</h2><p>Worker app for shifts, timesheets, documents.</p></article>
+<article class="section-card"><h2>Clients</h2><p>Shipped for UK and international teams.</p></article>
+    </div>
+
+<section class="more" aria-labelledby="more-20x">
+  <h2 id="more-20x">More of the design</h2>
+  <div class="more-grid"><figure><img src="./20x-ui-dashboard.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure>
+<figure><img src="./20x-home.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure>
+<figure><img src="./20x-ui-mobile.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure></div>
+</section>
+
+    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
   </div>
 </body>
 </html>

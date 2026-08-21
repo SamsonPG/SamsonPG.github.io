@@ -1,56 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="tryquickimg">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryQuickImg — homepage archive</title>
-  <meta name="description" content="Original homepage visual archive of TryQuickImg." />
+  <title>TryQuickImg — homepage demo (offline)</title>
+  <meta name="description" content="Static homepage design demo of TryQuickImg. Use when the live domain is blocked or down." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="banner">Homepage clone / visual archive of <strong>TryQuickImg</strong> — local screenshot of the live site. <a href="../">Museum</a></div>
+  <div class="offline-strip">
+    Offline homepage demo — if <strong>tryquickimg.com</strong> is blocked or down, this is the design backup.
+    <a href="../">Museum</a>
+  </div>
   <div class="wrap">
-    <header class="top">
-      <a class="brand" href="../">Doomsday · Samson P G</a>
-      <nav class="nav-links" aria-label="Archive">
-        <a href="../">All archives</a>
+    <header class="site-top">
+      <a class="wordmark" href="./">TryQuickImg</a>
+      <nav class="nav-mini" aria-label="Demo">
+        <a href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer">Live site</a>
+        <a href="../">All demos</a>
         <a href="https://samsonpg.github.io/">Portfolio</a>
       </nav>
     </header>
 
-    <div class="clone-bar">
-      <div>
-        <p class="pill">Original homepage capture</p>
-        <h1>TryQuickImg</h1>
-        <p class="lede">Compress, convert, resize, crop — in the browser.</p>
-      </div>
+    <section class="hero">
+      <p class="eyebrow">Theme demo · static</p>
+      <h1>Compress images to a KB target — private in your browser.</h1>
+      <p class="lede">Compress, convert, resize, and crop. No upload required for processing.</p>
       <div class="actions">
-        <a class="btn btn--fill" href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer">Open live</a>
-        <a class="btn btn--line" href="../">Museum hub</a>
-      </div>
-    </div>
-
-    <figure class="clone-frame">
-      <img src="./shot.webp" alt="TryQuickImg original homepage" width="1440" height="900" loading="eager">
-    </figure>
-    <p class="clone-caption">Desktop capture of the live homepage (1440px). Scales to any screen — this is the offline original look.</p>
-
-    <div class="features" style="margin-top:1.35rem">
-<div class="feature"><h3>Local-first</h3><p>Images stay on device.</p></div>
-<div class="feature"><h3>Fast tools</h3><p>No signup wall for core tools.</p></div>
-<div class="feature"><h3>Try family</h3><p>Acsaven studio utility.</p></div>
-    </div>
-
-    <section class="extras" aria-labelledby="extras-tryquickimg">
-      <h2 id="extras-tryquickimg">More visuals</h2>
-      <div class="extras-grid">
-<figure class="shot"><img src="./tryquickimg-cover.webp" alt="TryQuickImg extra" width="1200" height="750" loading="lazy"></figure>
+        <a class="btn btn--fill" href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer">Open live TryQuickImg</a>
+        <a class="btn btn--ghost" href="../">All demos</a>
       </div>
     </section>
 
-    <p class="note">Fallback for when the live domain is down. Not a working app — the screenshot is the truth.</p>
-    <p class="foot">© 2026 Samson P G · Homepage archive</p>
+    <section class="preview" aria-label="TryQuickImg homepage preview">
+      <div class="preview__chrome" aria-hidden="true">
+        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
+        <span class="preview__url">tryquickimg.com</span>
+      </div>
+      <figure class="preview__frame">
+        <img src="./shot.webp" alt="TryQuickImg homepage design" width="1440" height="900" loading="eager">
+      </figure>
+    </section>
+
+    <div class="sections">
+<article class="section-card"><h2>Local-first</h2><p>Images stay on your device while tools run in-browser.</p></article>
+<article class="section-card"><h2>Fast tools</h2><p>Drop a file, set a size, download.</p></article>
+<article class="section-card"><h2>Try family</h2><p>Part of the Acsaven studio of free utilities.</p></article>
+    </div>
+
+<section class="more" aria-labelledby="more-tryquickimg">
+  <h2 id="more-tryquickimg">More of the design</h2>
+  <div class="more-grid"><figure><img src="./tryquickimg-cover.webp" alt="TryQuickImg UI" width="1200" height="750" loading="lazy"></figure></div>
+</section>
+
+    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
   </div>
 </body>
 </html>

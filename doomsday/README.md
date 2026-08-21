@@ -1,42 +1,23 @@
-# Doomsday — offline product homepage archive
+# Doomsday — homepage design demos
 
-Visual-only backups of Samson P G / Acsaven product landings, hosted free on GitHub Pages
-(under the user site at `/doomsday/`).
+Static **theme / dummy homepage** clones of Samson P G products.
 
-**Live museum:** https://samsonpg.github.io/doomsday/
+**Live:** https://samsonpg.github.io/doomsday/
 
-## Why
+## Core idea
 
-If paid domains or hosting run out, recruiters can still open dummy/static homepage visuals here. Not full apps — faces for the work.
+If a paid domain is blocked or down, Portfolio / QR **Offline** links open these demos so a recruiter still sees the product look (brand + hero + original homepage capture).
 
-## Contents
+Not full apps — design showcases only.
 
-| Path | Product |
-|------|---------|
-| `/trytokka/` | TryTokka |
-| `/tryquickimg/` | TryQuickImg |
-| `/trydevsnip/` | TryDevSnip |
-| `/trycalculatingnow/` | TryCalculatingNow |
-| `/acsaven/` | Acsaven |
-| `/soundshoppie/` | SoundShoppie (revived landing) |
-| `/20x/` | 20X (Benagon) |
-| `/portfolio/` | Portfolio snapshot |
+## Products
 
-Each product folder has:
+trytokka, tryquickimg, trydevsnip, trycalculatingnow, acsaven, soundshoppie, 20x, portfolio
 
-- `index.html` — lightweight static shell
-- `shot.webp` — primary homepage / product visual
-- Extra local UI shots where available
+Each folder: themed index.html + shot.webp (live homepage capture).
 
-## Refresh screenshots
+## Refresh a shot
 
-1. Capture a desktop homepage screenshot of the live site (1440×900 viewport is fine).
-2. Convert to WebP and replace `shot.webp` in that product folder (keep extras as needed).
-3. Commit and push `main` on `SamsonPG.github.io` — Pages updates automatically.
-
-Optional helper (local): `doomsday/_shots/capture.cjs` with Playwright.
-
-## Related
-
-- Portfolio: https://samsonpg.github.io/
-- QR card: https://samsonpg.github.io/QR-Code/
+1. Capture desktop homepage (1440×900).
+2. Convert to WebP → replace shot.webp.
+3. Push SamsonPG.github.io main.

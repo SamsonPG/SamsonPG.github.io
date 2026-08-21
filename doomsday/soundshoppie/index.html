@@ -1,55 +1,51 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="soundshoppie">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SoundShoppie — revived homepage archive</title>
-  <meta name="description" content="Static visual revival of SoundShoppie homepage — headphones ecommerce, MERN, payments, AWS." />
+  <title>SoundShoppie — homepage demo (offline)</title>
+  <meta name="description" content="Static homepage design revival of SoundShoppie ecommerce." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="banner">
-    Revived homepage look — SoundShoppie shop may be offline.
+  <div class="offline-strip">
+    Offline homepage demo — original shop may be gone. This is the design backup.
     <a href="../">Museum</a>
   </div>
   <div class="wrap">
-    <header class="top">
-      <a class="brand" href="../">Doomsday · Samson P G</a>
-      <nav class="nav-links" aria-label="Archive">
-        <a href="../">All archives</a>
-        <a href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">Demo</a>
+    <header class="site-top">
+      <a class="wordmark" href="./">SoundShoppie</a>
+      <nav class="nav-mini" aria-label="Demo">
+        <a href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">Demo video</a>
         <a href="https://github.com/SamsonPG/soundShoppie-2023" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="../">All demos</a>
       </nav>
     </header>
-
-    <div class="clone-bar">
-      <div>
-        <p class="pill">Revived · 2023</p>
-        <h1>SoundShoppie</h1>
-        <p class="lede">
-          First full build with real payments — headphones ecommerce on Node, Express,
-          MongoDB, and EJS. OTP login, cart, admin, Razorpay / PayPal / COD on AWS.
-        </p>
-      </div>
+    <section class="hero">
+      <p class="eyebrow">Revived theme demo · 2023</p>
+      <h1>Headphones ecommerce with real payments.</h1>
+      <p class="lede">Node, Express, MongoDB, EJS — OTP login, cart, admin, Razorpay / PayPal / COD on AWS.</p>
       <div class="actions">
         <a class="btn btn--fill" href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">Watch demo</a>
-        <a class="btn btn--line" href="https://github.com/SamsonPG/soundShoppie-2023" target="_blank" rel="noopener noreferrer">Source</a>
+        <a class="btn btn--ghost" href="https://github.com/SamsonPG/soundShoppie-2023" target="_blank" rel="noopener noreferrer">Source</a>
       </div>
+    </section>
+    <section class="preview" aria-label="SoundShoppie preview">
+      <div class="preview__chrome" aria-hidden="true">
+        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
+        <span class="preview__url">soundshoppie (archive)</span>
+      </div>
+      <figure class="preview__frame">
+        <img src="./shot.webp" alt="SoundShoppie homepage / demo visual" width="1280" height="720" loading="eager">
+      </figure>
+    </section>
+    <div class="sections">
+      <article class="section-card"><h2>Stack</h2><p>MERN-style storefront and admin on AWS.</p></article>
+      <article class="section-card"><h2>Payments</h2><p>Razorpay, PayPal, and COD — real checkout.</p></article>
+      <article class="section-card"><h2>Why it matters</h2><p>First production-shaped ship before Benagon and Acsaven.</p></article>
     </div>
-
-    <a class="video-link" href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">
-      <img src="./shot.webp" alt="SoundShoppie demo / homepage visual" width="1280" height="720" loading="eager">
-    </a>
-    <p class="clone-caption">Visual archive when the live shop is gone — demo video remains ground truth.</p>
-
-    <div class="features" style="margin-top:1.35rem">
-      <div class="feature"><h3>Stack</h3><p>Node + Express + MongoDB + EJS storefront and admin.</p></div>
-      <div class="feature"><h3>Payments</h3><p>Razorpay, PayPal, and COD on AWS.</p></div>
-      <div class="feature"><h3>Why it matters</h3><p>First production-shaped ship before Benagon and Acsaven.</p></div>
-    </div>
-
-    <p class="foot">© 2026 Samson P G · SoundShoppie archive</p>
+    <p class="foot">Static design clone for doomsday — not a live shop. © 2026 Samson P G</p>
   </div>
 </body>
 </html>
