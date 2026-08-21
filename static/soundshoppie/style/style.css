@@ -43,7 +43,7 @@ body {
   position: relative;
   width: 100%;
   max-width: 250px;
-  min-width: 250px;
+  min-width: 0;
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-radius: 20px;
@@ -51,6 +51,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .product-card:hover {
@@ -570,9 +571,10 @@ body {
 .product-page {
   position: relative;
   width: 100%;
-  margin: 30px;
+  max-width: 100%;
+  margin: 30px auto;
   padding-bottom: 30px;
-  /* margin-bottom: 30px; */
+  box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1485,7 +1487,7 @@ button.switch-month:hover {
   color: black;
 }
 
-/* Mobile Styles */
+/* Mobile Styles — layout only; visibility handled in responsive.css */
 @media (max-width: 767px) {
   .cursoul .carousel-inner .carousel-item {
     display: flex;
@@ -1501,34 +1503,16 @@ button.switch-month:hover {
   .shadowed-image {
     max-width: 300px;
   }
-  .downArrow {
-    bottom: 400px;
-  }
   .carousel-fade-image {
-    height: 100vh;
     width: 100%;
     object-fit: cover;
-  }
-  .train-running2 {
-    display: none;
-  }
-  .train-running1 {
-    display: none;
   }
 }
 
 @media (max-width: 1000px) {
   .carousel-fade-image {
-    /* height: 100vh; */
     width: 100%;
     object-fit: cover;
-  }
-  .train-running1 {
-    display: none;
-  }
-
-  .train-running2 {
-    display: none;
   }
 }
 .shadowed-image {
@@ -1580,16 +1564,20 @@ button.switch-month:hover {
 /* Adjust the width of items based on the number of columns you want */
 .product-item {
   width: calc(25% - 14px); /* Display 4 items per row by default */
-  /* Add margin to create the gap between items */
   margin: 7px;
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    width: calc(33.33% - 14px); /* Display 3 items per row */
-  }
+  min-width: 0;
+  box-sizing: border-box;
+}
 
-  /* Media query for even smaller screens */
-  @media (max-width: 576px) {
-    width: calc(50% - 14px); /* Display 2 items per row */
+@media (max-width: 768px) {
+  .product-item {
+    width: calc(50% - 14px);
+  }
+}
+
+@media (max-width: 420px) {
+  .product-item {
+    width: 100%;
   }
 }
 

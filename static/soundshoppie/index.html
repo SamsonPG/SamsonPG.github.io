@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./vendor/fontawesome.min.css" />
     <link rel="stylesheet" href="./vendor/slick.css" />
     <link href="./style/style.css" rel="stylesheet" />
+    <link href="./style/responsive.css" rel="stylesheet" />
     <style>
       .nav-link.dropdown-toggle { display: flex; align-items: center; }
       .dropdown-menu .dropdown-item { white-space: nowrap; }
@@ -702,8 +703,10 @@
           dots: false,
           pauseOnHover: false,
           responsive: [
+            { breakpoint: 992, settings: { slidesToShow: 5 } },
             { breakpoint: 768, settings: { slidesToShow: 4 } },
-            { breakpoint: 520, settings: { slidesToShow: 3 } }
+            { breakpoint: 520, settings: { slidesToShow: 3 } },
+            { breakpoint: 400, settings: { slidesToShow: 2 } }
           ]
         });
         var btn = $("#btn-back-to-top");

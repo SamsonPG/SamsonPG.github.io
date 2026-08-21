@@ -1,8 +1,8 @@
-# Doomsday — homepage design demos
+# static — homepage design demos
 
 Static **theme / dummy homepage** clones of Samson P G products.
 
-**Live:** https://samsonpg.github.io/doomsday/
+**Live:** https://samsonpg.github.io/static/
 
 ## Core idea
 

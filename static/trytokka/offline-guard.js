@@ -1,12 +1,12 @@
 /**
- * Doomsday offline guard — no outside network for rendering.
+ * static offline guard — no outside network for rendering.
  * Same-origin (this Pages folder) only. Blocks fetch/XHR/beacons and
  * strips dynamically injected external <script>/<link>.
  */
 (function () {
   'use strict'
-  if (window.__DOOMSDAY_OFFLINE__) return
-  window.__DOOMSDAY_OFFLINE__ = true
+  if (window.__static_OFFLINE__) return
+  window.__static_OFFLINE__ = true
 
   function isExternal(url) {
     if (!url || typeof url !== 'string') return false
