@@ -27,10 +27,68 @@
         display: flex; justify-content: center; align-items: center;
       }
       .overlay-text { font-size: 18px; font-weight: bold; color: #333; }
+      /* Hero logo: center over carousel (repo CSS left it above the fold) */
+      .cursoul .carousel { position: relative; }
+      .cursoul .carousel-inner { position: relative; overflow: hidden; min-height: 70vh; }
+      .cursoul .carousel-item { min-height: 70vh; }
+      .cursoul .carousel-fade-image {
+        width: 100%;
+        height: 70vh;
+        min-height: 420px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .cursoul .loader-container {
+        position: absolute;
+        inset: 0;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+      .cursoul .carousel-caption {
+        position: static !important;
+        top: auto !important;
+        transform: none !important;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      .cursoul .carousel-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 !important;
+      }
+      .cursoul .shadowed-image {
+        max-width: min(340px, 72vw);
+        width: 100%;
+        height: auto;
+        margin: 0 !important;
+        filter: drop-shadow(0 0 10px rgba(167, 154, 49, 0.95));
+      }
+      .cursoul .loader { display: none; }
+      .cursoul .downArrow {
+        position: absolute;
+        left: 50%;
+        bottom: 1.25rem;
+        top: auto;
+        transform: translateX(-50%);
+        z-index: 45;
+      }
+      .product-card .card-img-top {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        background: #f7f7f7;
+        padding: 0.75rem;
+      }
       @media (max-width: 767.98px) {
         .navbar .d-flex.justify-content-start.align-items-center,
         .navbar .d-flex.justify-content-end.align-items-center { justify-content: center; }
         .navbar .d-flex.align-items-center form { margin-left: auto; margin-right: auto; }
+        .cursoul .carousel-fade-image { height: 60vh; min-height: 320px; }
       }
     </style>
     <script>
@@ -40,7 +98,7 @@
   </head>
   <body>
     <div id="loading-spinner" class="spinner-container">
-      <img class="spinner-image" src="./images/SOUNDSHOPPIE%20LOGO%20BLACK.png" alt="soundShoppie Loading..." />
+      <img class="spinner-image" src="./images/logo-black.png" alt="soundShoppie Loading..." />
     </div>
     <script>
       window.addEventListener("load", function () {
@@ -55,7 +113,7 @@
           <button type="button" class="btn btn-warning" onClick="previous()" id="backward"
             style="background-color: #c9bc43; border: none; font-size: 20px">&#10094;</button>
           <a class="navbar-brand" href="./">
-            <img src="./images/SOUNDSHOPPIE%20LOGO%20BLACK.png" height="35" alt="Logo" />
+            <img src="./images/logo-black.png" height="35" alt="Logo" />
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,31 +172,31 @@
           <div class="carousel-overlay"></div>
           <div class="carousel-item active" data-interval="3000">
             <div class="carousel-image-wrapper">
-              <img class="d-block w-100 carousel-fade-image" src="./carousel/1688977704415-thumbnail.jpg" alt="Slide 1" />
+              <img class="d-block w-100 carousel-fade-image" src="./carousel/1689003134362-thumbnail.jpg" alt="Slide 1" />
             </div>
           </div>
           <div class="carousel-item" data-interval="3000">
             <div class="carousel-image-wrapper">
-              <img class="d-block w-100 carousel-fade-image" src="./carousel/1688977858627-thumbnail.jpg" alt="Slide 2" />
+              <img class="d-block w-100 carousel-fade-image" src="./carousel/hero-extra.jpg" alt="Slide 2" />
             </div>
           </div>
           <div class="carousel-item" data-interval="3000">
             <div class="carousel-image-wrapper">
-              <img class="d-block w-100 carousel-fade-image" src="./carousel/1688979234584-thumbnail.jpg" alt="Slide 3" />
+              <img class="d-block w-100 carousel-fade-image" src="./carousel/hero-zx700.jpg" alt="Slide 3" />
             </div>
           </div>
           <div class="carousel-item" data-interval="3000">
             <div class="carousel-image-wrapper">
-              <img class="d-block w-100 carousel-fade-image" src="./carousel/1688980117201-thumbnail.jpg" alt="Slide 4" />
+              <img class="d-block w-100 carousel-fade-image" src="./carousel/1689003771046-thumbnail.jpg" alt="Slide 4" />
             </div>
           </div>
           <div class="carousel-item" data-interval="3000">
             <div class="carousel-image-wrapper">
-              <img class="d-block w-100 carousel-fade-image" src="./carousel/1689003134362-thumbnail.jpg" alt="Slide 5" />
+              <img class="d-block w-100 carousel-fade-image" src="./carousel/1688983843757-thumbnail.jpg" alt="Slide 5" />
             </div>
           </div>
           <div class="loader-container">
-            <div class="loader">
+            <div class="loader" aria-hidden="true">
               <div class="bar bar1"></div>
               <div class="bar bar2"></div>
               <div class="bar bar3"></div>
@@ -148,8 +206,8 @@
               <div class="bar bar7"></div>
             </div>
             <div class="carousel-caption">
-              <a class="carousel-brand mb-5" href="./">
-                <img class="mb-5 shadowed-image" src="./images/SOUNDSHOPPIE%20LOGO.png" alt="Logo" id="logo-image" />
+              <a class="carousel-brand" href="./">
+                <img class="shadowed-image" src="./images/logo-white.png" alt="soundShoppie" id="logo-image" />
               </a>
             </div>
           </div>
@@ -211,7 +269,7 @@
         <div class="card-deck d-flex justify-content-center align-items-center flex-wrap">
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685301981132-thumbnail.jpeg" alt="WH-1000XM" />
+              <img class="card-img-top" src="./products/product-1.jpg" alt="WH-1000XM" />
             </div>
             <div class="card-body">
               <h5 class="card-title">WH-1000…</h5>
@@ -226,7 +284,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685302220200-thumbnail.jpeg" alt="QuietComfort" />
+              <img class="card-img-top" src="./products/product-2.jpg" alt="QuietComfort" />
             </div>
             <div class="card-body">
               <h5 class="card-title">QC45…</h5>
@@ -241,7 +299,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685302888589-thumbnail.jpg" alt="IEM" />
+              <img class="card-img-top" src="./products/product-3.jpg" alt="IEM" />
             </div>
             <div class="card-body">
               <h5 class="card-title">IE 600…</h5>
@@ -256,7 +314,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685303450925-thumbnail.jpeg" alt="AirPods Max" />
+              <img class="card-img-top" src="./products/product-4.jpeg" alt="AirPods Max" />
             </div>
             <div class="card-body">
               <h5 class="card-title">ATH-M50…</h5>
@@ -271,7 +329,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685303691565-thumbnail.jpeg" alt="JBL" />
+              <img class="card-img-top" src="./products/product-5.jpeg" alt="JBL" />
             </div>
             <div class="card-body">
               <h5 class="card-title">Tune 760…</h5>
@@ -289,7 +347,7 @@
               <span class="badge rounded-pill badge-notification bg-danger">
                 <div><div class="m-1">15 %</div><div class="m-1">off</div></div>
               </span>
-              <img class="card-img-top" src="./products/1685304003261-thumbnail.jpeg" alt="Sony" />
+              <img class="card-img-top" src="./products/product-6.jpeg" alt="Sony" />
             </div>
             <div class="card-body">
               <h5 class="card-title">WF-1000…</h5>
@@ -305,7 +363,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/1685302220224-thumbnail.jpg" alt="Klipsch" />
+              <img class="card-img-top" src="./products/product-7.jpeg" alt="Klipsch" />
             </div>
             <div class="card-body">
               <h5 class="card-title">T5 II…</h5>
@@ -321,7 +379,7 @@
           <div class="product-card m-2">
             <div class="image-container">
               <div class="overlay"><p class="overlay-text">Out of Stock</p></div>
-              <img class="card-img-top" src="./products/1685303450948-thumbnail.jpg" alt="Sold out" />
+              <img class="card-img-top" src="./products/product-8.jpeg" alt="Sold out" />
             </div>
             <div class="card-body">
               <h5 class="card-title">HD 660…</h5>
@@ -384,7 +442,7 @@
         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
           © 2023 Copyright:
           <a href="./" class="ms-md-2">
-            <img src="./images/SOUNDSHOPPIE%20LOGO%20BLACK.png" height="35" alt="soundShoppie" />
+            <img src="./images/logo-black.png" height="35" alt="soundShoppie" />
           </a>
           <div><p>Designed &amp; Developed by Samson P G</p></div>
           <div>
