@@ -840,6 +840,7 @@ html[data-theme="dark"] .tag { color: #0c1210; }
   transition: transform 0.4s var(--ease), filter 0.4s var(--ease);
 }
 .mosaic img:hover { transform: scale(1.02); filter: saturate(1.05); }
+.creative__note { margin: 1rem 0 0; color: var(--muted); font-size: 0.92rem; max-width: 52ch; }
 
 .skills {
   margin-top: 1.75rem; padding-top: 1.35rem; border-top: 1px dashed var(--line);
