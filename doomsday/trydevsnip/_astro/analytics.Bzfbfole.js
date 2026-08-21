@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime.QTnfLwEv.js";var t=e({trackEvent:()=>n});function n(e,t){try{if(typeof window>`u`)return;t?window.umami?.track(e,t):window.umami?.track(e)}catch{}}export{n,t};

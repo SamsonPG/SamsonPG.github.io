@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_astro/analytics.CdmYNqL-.js","_astro/jspdf.es.min.Xmh7VF1a.js","_astro/preload-helper.CxFQXtKk.js","_astro/typeof.B5XbjTb1.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper.CxFQXtKk.js";document.querySelectorAll(`[data-affiliate]`).forEach(t=>{t.addEventListener(`click`,()=>{e(()=>import(`./analytics.CdmYNqL-.js`).then(e=>e.n).then(e=>e.trackEvent(`affiliate_click`)),__vite__mapDeps([0,1,2,3])).catch(()=>{})})});

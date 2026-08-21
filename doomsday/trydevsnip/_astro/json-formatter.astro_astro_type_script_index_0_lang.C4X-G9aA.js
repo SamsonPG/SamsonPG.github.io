@@ -1,0 +1,1 @@
+import"./json-formatter.DNtk5HcC.js";document.querySelectorAll(`[data-mirror-click]`).forEach(e=>{let t=e.dataset.mirrorClick;t&&e.addEventListener(`click`,()=>document.getElementById(t)?.click())});

@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["_astro/analytics.Bzfbfole.js","_astro/rolldown-runtime.QTnfLwEv.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./preload-helper.CxFQXtKk.js";document.querySelectorAll(`[data-tokka-cta]`).forEach(t=>{t.addEventListener(`click`,()=>{e(()=>import(`./analytics.Bzfbfole.js`).then(e=>e.t).then(e=>e.trackEvent(`tokka_cta_click`)),__vite__mapDeps([0,1])).catch(()=>{})})});

@@ -1,0 +1,1 @@
+import{a as e,i as t,r as n}from"./currency.CnBZ8GH2.js";var r=document.getElementById(`try-currency-select`);r&&(r.value=n(),r.addEventListener(`change`,()=>{let n=r.value;t(n)&&e(n)}));
