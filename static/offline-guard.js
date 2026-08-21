@@ -129,4 +129,15 @@
     }
     window.Image.prototype = _Image.prototype
   }
+
+  // Neutralize any external <img>/<script>/<link>/<iframe> already in the document
+  function scrubDocument() {
+    var nodes = document.querySelectorAll('img[src],script[src],iframe[src],link[href]')
+    for (var i = 0; i < nodes.length; i++) scrubNode(nodes[i])
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrubDocument)
+  } else {
+    scrubDocument()
+  }
 })()
