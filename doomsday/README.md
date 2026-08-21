@@ -1,7 +1,7 @@
 # Doomsday — offline product homepage archive
 
 Visual-only backups of Samson P G / Acsaven product landings, hosted free on GitHub Pages
-(under this user site at `/doomsday/`).
+(under the user site at `/doomsday/`).
 
 **Live museum:** https://samsonpg.github.io/doomsday/
 
@@ -22,11 +22,19 @@ If paid domains or hosting run out, recruiters can still open dummy/static homep
 | `/20x/` | 20X (Benagon) |
 | `/portfolio/` | Portfolio snapshot |
 
+Each product folder has:
+
+- `index.html` — lightweight static shell
+- `shot.webp` — primary homepage / product visual
+- Extra local UI shots where available
+
 ## Refresh screenshots
 
-1. Capture a desktop homepage screenshot of the live site.
-2. Convert to WebP and replace the shot file(s) in that product folder.
-3. Commit and push to `main` (Pages updates automatically).
+1. Capture a desktop homepage screenshot of the live site (1440×900 viewport is fine).
+2. Convert to WebP and replace `shot.webp` in that product folder (keep extras as needed).
+3. Commit and push `main` on `SamsonPG.github.io` — Pages updates automatically.
+
+Optional helper (local): `doomsday/_shots/capture.cjs` with Playwright.
 
 ## Related
 
