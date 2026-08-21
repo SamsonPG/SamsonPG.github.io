@@ -885,7 +885,40 @@ html[data-theme="dark"] .tag { color: #0c1210; }
   transition: transform 0.4s var(--ease), filter 0.4s var(--ease);
 }
 .mosaic img:hover { transform: scale(1.02); filter: saturate(1.05); }
-.creative__note { margin: 1rem 0 0; color: var(--muted); font-size: 0.92rem; max-width: 52ch; }
+.creative__note { margin: 0; color: var(--muted); font-size: 0.92rem; max-width: 52ch; }
+.creative__aside {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 7.5rem) minmax(0, 1fr);
+  gap: 0.85rem 1rem;
+  align-items: center;
+  margin-top: 1.15rem;
+}
+.creative__aside-shot {
+  margin: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 1;
+  background: var(--surface-2);
+}
+.creative__aside-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.creative__aside-copy { min-width: 0; }
+.creative__credit {
+  margin: 0.45rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.creative__credit a {
+  color: var(--green-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 .skills {
   margin-top: 1.75rem; padding-top: 1.35rem; border-top: 1px dashed var(--line);
