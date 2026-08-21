@@ -27,33 +27,64 @@
         display: flex; justify-content: center; align-items: center;
       }
       .overlay-text { font-size: 18px; font-weight: bold; color: #333; }
-      /* Hero logo: center over carousel (repo CSS left it above the fold) */
+      /* Hero: logo upper-center, rainbow equalizer mid — match original SoundShoppie */
       .cursoul .carousel { position: relative; }
-      .cursoul .carousel-inner { position: relative; overflow: hidden; min-height: 70vh; }
-      .cursoul .carousel-item { min-height: 70vh; }
+      .cursoul .carousel-inner { position: relative; overflow: hidden; min-height: 78vh; }
+      .cursoul .carousel-item { min-height: 78vh; }
       .cursoul .carousel-fade-image {
         width: 100%;
-        height: 70vh;
-        min-height: 420px;
+        height: 78vh;
+        min-height: 480px;
         object-fit: cover;
-        object-position: center;
+        object-position: center top;
       }
       .cursoul .loader-container {
         position: absolute;
         inset: 0;
         z-index: 40;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         pointer-events: none;
       }
+      /* Rainbow equalizer bars — center of hero */
+      .cursoul .loader {
+        display: block !important;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        z-index: 42;
+        white-space: nowrap;
+        line-height: 0;
+      }
+      .cursoul .loader .bar {
+        width: 14px;
+        height: 120px;
+        display: inline-block;
+        margin: 0 3px;
+        transform-origin: bottom center;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        animation: loader8913 1.2s linear infinite;
+      }
+      .cursoul .loader .bar1 { background: #ff1744; animation-delay: 0.1s; }
+      .cursoul .loader .bar2 { background: #ff9100; animation-delay: 0.2s; }
+      .cursoul .loader .bar3 { background: #ffea00; animation-delay: 0.3s; }
+      .cursoul .loader .bar4 { background: #00e676; animation-delay: 0.4s; }
+      .cursoul .loader .bar5 { background: #00b0ff; animation-delay: 0.5s; }
+      .cursoul .loader .bar6 { background: #651fff; animation-delay: 0.6s; }
+      .cursoul .loader .bar7 { background: #d500f9; animation-delay: 0.7s; }
+      /* Logo sits above the rainbow bars */
       .cursoul .carousel-caption {
-        position: static !important;
-        top: auto !important;
+        position: absolute !important;
+        top: 18% !important;
+        left: 0;
+        right: 0;
+        bottom: auto !important;
         transform: none !important;
         padding: 0;
         margin: 0;
         text-align: center;
+        z-index: 43;
       }
       .cursoul .carousel-brand {
         display: flex;
@@ -62,13 +93,12 @@
         margin: 0 !important;
       }
       .cursoul .shadowed-image {
-        max-width: min(340px, 72vw);
+        max-width: min(280px, 58vw);
         width: 100%;
         height: auto;
         margin: 0 !important;
-        filter: drop-shadow(0 0 10px rgba(167, 154, 49, 0.95));
+        filter: drop-shadow(0 0 12px rgba(167, 154, 49, 1));
       }
-      .cursoul .loader { display: none; }
       .cursoul .downArrow {
         position: absolute;
         left: 50%;
@@ -79,16 +109,19 @@
       }
       .product-card .card-img-top {
         width: 100%;
-        height: 180px;
+        height: 200px;
         object-fit: contain;
         background: #f7f7f7;
-        padding: 0.75rem;
+        padding: 0.85rem;
       }
       @media (max-width: 767.98px) {
         .navbar .d-flex.justify-content-start.align-items-center,
         .navbar .d-flex.justify-content-end.align-items-center { justify-content: center; }
         .navbar .d-flex.align-items-center form { margin-left: auto; margin-right: auto; }
-        .cursoul .carousel-fade-image { height: 60vh; min-height: 320px; }
+        .cursoul .carousel-fade-image { height: 62vh; min-height: 360px; }
+        .cursoul .loader .bar { width: 10px; height: 88px; margin: 0 2px; }
+        .cursoul .carousel-caption { top: 14% !important; }
+        .cursoul .shadowed-image { max-width: min(220px, 62vw); }
       }
     </style>
     <script>
@@ -269,7 +302,7 @@
         <div class="card-deck d-flex justify-content-center align-items-center flex-wrap">
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-1.jpg" alt="WH-1000XM" />
+              <img class="card-img-top" src="./products/wh-1000xm.jpg" alt="Sony WH-1000XM4" />
             </div>
             <div class="card-body">
               <h5 class="card-title">WH-1000…</h5>
@@ -284,7 +317,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-2.jpg" alt="QuietComfort" />
+              <img class="card-img-top" src="./products/qc45.jpg" alt="Bose QuietComfort 45" />
             </div>
             <div class="card-body">
               <h5 class="card-title">QC45…</h5>
@@ -299,7 +332,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-3.jpg" alt="IEM" />
+              <img class="card-img-top" src="./products/ie-600.jpg" alt="Sennheiser IE 600" />
             </div>
             <div class="card-body">
               <h5 class="card-title">IE 600…</h5>
@@ -314,7 +347,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-4.jpeg" alt="AirPods Max" />
+              <img class="card-img-top" src="./products/ath-m50.jpg" alt="Audio-Technica ATH-M50x" />
             </div>
             <div class="card-body">
               <h5 class="card-title">ATH-M50…</h5>
@@ -329,7 +362,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-5.jpeg" alt="JBL" />
+              <img class="card-img-top" src="./products/tune-760.jpg" alt="JBL Tune 760NC" />
             </div>
             <div class="card-body">
               <h5 class="card-title">Tune 760…</h5>
@@ -347,7 +380,7 @@
               <span class="badge rounded-pill badge-notification bg-danger">
                 <div><div class="m-1">15 %</div><div class="m-1">off</div></div>
               </span>
-              <img class="card-img-top" src="./products/product-6.jpeg" alt="Sony" />
+              <img class="card-img-top" src="./products/wf-1000.jpg" alt="Sony WF-1000XM4" />
             </div>
             <div class="card-body">
               <h5 class="card-title">WF-1000…</h5>
@@ -363,7 +396,7 @@
           </div>
           <div class="product-card m-2">
             <div class="image-container">
-              <img class="card-img-top" src="./products/product-7.jpeg" alt="Klipsch" />
+              <img class="card-img-top" src="./products/t5-ii.jpg" alt="Klipsch T5 II" />
             </div>
             <div class="card-body">
               <h5 class="card-title">T5 II…</h5>
@@ -379,7 +412,7 @@
           <div class="product-card m-2">
             <div class="image-container">
               <div class="overlay"><p class="overlay-text">Out of Stock</p></div>
-              <img class="card-img-top" src="./products/product-8.jpeg" alt="Sold out" />
+              <img class="card-img-top" src="./products/hd-660.jpg" alt="Sennheiser HD 660S2" />
             </div>
             <div class="card-body">
               <h5 class="card-title">HD 660…</h5>
