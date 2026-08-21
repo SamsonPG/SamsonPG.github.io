@@ -3,58 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryCalculatingNow — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of TryCalculatingNow. Use when the live domain is blocked or down." />
+  <title>TryCalculatingNow — GPA & finance calculators</title>
+  <meta name="description" content="GPA, grades, finance, and unit calculators — no signup wall." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>trycalculatingnow.com</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">TryCalculatingNow</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">TryCalculatingNow</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Open calculators</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>What grade do I need on my final?</h1>
-      <p class="lede">GPA, grades, finance, and unit calculators — no signup wall.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer">Open live calculators</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">TryCalculatingNow</p>
+          <h1>What grade do I need on my final?</h1>
+          <p class="lede">GPA, grades, finance, and unit calculators — no signup wall.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Open calculators</a>
+            <a class="btn btn--ghost" href="#product">See product</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="TryCalculatingNow product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="TryCalculatingNow homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">trycalculatingnow.com</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>Grades</h3><p>Current grade, final weight, target — result updates live.</p></article>
+<article class="card"><h3>Finance</h3><p>Everyday calculators without an account.</p></article>
+<article class="card"><h3>Fast UI</h3><p>Open a calculator and go.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="TryCalculatingNow homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="TryCalculatingNow homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>Grades</h2><p>Enter current grade, final weight, and target — result updates live.</p></article>
-<article class="section-card"><h2>Finance</h2><p>Everyday calculators without an account.</p></article>
-<article class="section-card"><h2>Try family</h2><p>Built under the Acsaven studio.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./trycalculatingnow-cover.webp" alt="TryCalculatingNow" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-trycalculatingnow">
-  <h2 id="more-trycalculatingnow">More of the design</h2>
-  <div class="more-grid"><figure><img src="./trycalculatingnow-cover.webp" alt="TryCalculatingNow UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Run a calculator</h2>
+          <p>Grades, GPA, finance — ready when you are.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 TryCalculatingNow</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>

@@ -3,49 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SoundShoppie — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design revival of SoundShoppie ecommerce." />
+  <title>SoundShoppie — headphones ecommerce</title>
+  <meta name="description" content="Headphones ecommerce with real payments — Node, Express, MongoDB, EJS." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — original shop may be gone. This is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">SoundShoppie</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">Demo video</a>
-        <a href="https://github.com/SamsonPG/soundShoppie-2023" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="../">All demos</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">SoundShoppie</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Shop</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Shop now</a>
       </nav>
-    </header>
-    <section class="hero">
-      <p class="eyebrow">Revived theme demo · 2023</p>
-      <h1>Headphones ecommerce with real payments.</h1>
-      <p class="lede">Node, Express, MongoDB, EJS — OTP login, cart, admin, Razorpay / PayPal / COD on AWS.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://youtu.be/EKhRnjEeuRE" target="_blank" rel="noopener noreferrer">Watch demo</a>
-        <a class="btn btn--ghost" href="https://github.com/SamsonPG/soundShoppie-2023" target="_blank" rel="noopener noreferrer">Source</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">SoundShoppie</p>
+          <h1>Headphones ecommerce with real payments.</h1>
+          <p class="lede">OTP login, cart, admin dashboard, Razorpay / PayPal / COD — hosted on AWS.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Shop now</a>
+            <a class="btn btn--ghost" href="#product">See store</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="SoundShoppie" width="1280" height="720" loading="eager">
+        </figure>
       </div>
     </section>
-    <section class="preview" aria-label="SoundShoppie preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">soundshoppie (archive)</span>
+    <section class="band site" id="features">
+      <h2>Built for checkout</h2>
+      <div class="cards">
+        <article class="card"><h3>Stack</h3><p>Node, Express, MongoDB, EJS storefront and admin.</p></article>
+        <article class="card"><h3>Payments</h3><p>Razorpay, PayPal, and COD on AWS.</p></article>
+        <article class="card"><h3>Admin</h3><p>OTP login, cart, and dashboard.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="SoundShoppie homepage / demo visual" width="1280" height="720" loading="eager">
+    </section>
+    <section class="band site" id="product">
+      <h2>Storefront</h2>
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="SoundShoppie storefront" width="1280" height="720" loading="lazy">
       </figure>
     </section>
-    <div class="sections">
-      <article class="section-card"><h2>Stack</h2><p>MERN-style storefront and admin on AWS.</p></article>
-      <article class="section-card"><h2>Payments</h2><p>Razorpay, PayPal, and COD — real checkout.</p></article>
-      <article class="section-card"><h2>Why it matters</h2><p>First production-shaped ship before Benagon and Acsaven.</p></article>
-    </div>
-    <p class="foot">Static design clone for doomsday — not a live shop. © 2026 Samson P G</p>
-  </div>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Ready to browse</h2>
+          <p>Headphones ecommerce — payments included.</p>
+        </div>
+        <a class="btn btn--fill" href="#product">See storefront</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site site-foot">
+    <span>© 2026 SoundShoppie</span>
+    <span><a href="#features">Features</a> · <a href="#product">Shop</a></span>
+  </footer>
 </body>
 </html>

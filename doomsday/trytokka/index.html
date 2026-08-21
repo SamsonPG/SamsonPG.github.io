@@ -3,59 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryTokka — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of TryTokka. Use when the live domain is blocked or down." />
+  <title>TryTokka — AI API spend monitoring</title>
+  <meta name="description" content="Sync providers, set budgets, and catch overruns before the bill lands." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>trytokka.com</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">TryTokka</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://trytokka.com" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">TryTokka</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Start free</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>Know your API invoice before finance asks.</h1>
-      <p class="lede">AI API spend monitoring — sync providers, set budgets, catch overruns.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://trytokka.com" target="_blank" rel="noopener noreferrer">Open live TryTokka</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">TryTokka</p>
+          <h1>Know your API invoice before finance asks.</h1>
+          <p class="lede">Sync providers, set budgets, and catch overruns before the bill lands.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Start free</a>
+            <a class="btn btn--ghost" href="#product">See product</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="TryTokka product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="TryTokka homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">trytokka.com</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>Multi-provider sync</h3><p>Pull usage from the AI APIs you already pay for.</p></article>
+<article class="card"><h3>Budgets & alerts</h3><p>Know when spend drifts — before finance asks.</p></article>
+<article class="card"><h3>Read-only keys</h3><p>Paste a read-only key. No proxy, no SDK required to start.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="TryTokka homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="TryTokka homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>Sync</h2><p>Pull usage from the AI APIs you already pay for.</p></article>
-<article class="section-card"><h2>Budgets</h2><p>Alerts when spend drifts before the invoice lands.</p></article>
-<article class="section-card"><h2>Privacy</h2><p>Focused SaaS — paste a read-only key, no proxy required.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./trytokka-dashboard.webp" alt="TryTokka" width="1200" height="750" loading="lazy"></figure>
+<figure><img src="./trytokka-ui-dashboard.webp" alt="TryTokka" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-trytokka">
-  <h2 id="more-trytokka">More of the design</h2>
-  <div class="more-grid"><figure><img src="./trytokka-dashboard.webp" alt="TryTokka UI" width="1200" height="750" loading="lazy"></figure>
-<figure><img src="./trytokka-ui-dashboard.webp" alt="TryTokka UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Start tracking spend</h2>
+          <p>Budgets, alerts, and provider sync in one place.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 TryTokka</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>

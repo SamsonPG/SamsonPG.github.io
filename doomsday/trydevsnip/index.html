@@ -3,58 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryDevSnip — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of TryDevSnip. Use when the live domain is blocked or down." />
+  <title>TryDevSnip — JSON, JWT, cron & timestamps</title>
+  <meta name="description" content="JSON, JWT, cron, timestamps — local-first developer utilities." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>trydevsnip.com</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">TryDevSnip</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">TryDevSnip</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Open tools</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>Format JSON privately in your browser.</h1>
-      <p class="lede">JSON, JWT, cron, timestamps — local-first developer utilities.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer">Open live TryDevSnip</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">TryDevSnip</p>
+          <h1>Format JSON privately in your browser.</h1>
+          <p class="lede">JSON, JWT, cron, timestamps — local-first developer utilities.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Open tools</a>
+            <a class="btn btn--ghost" href="#product">See product</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="TryDevSnip product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="TryDevSnip homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">trydevsnip.com</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>JSON tools</h3><p>Paste JSON, hit Format — stays on your device.</p></article>
+<article class="card"><h3>Dev daily drivers</h3><p>JWT, cron, timestamps without leaving the tab.</p></article>
+<article class="card"><h3>Local-first</h3><p>No server round-trip for the core utilities.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="TryDevSnip homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="TryDevSnip homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>In-browser</h2><p>Paste JSON, hit Format — stays on your device.</p></article>
-<article class="section-card"><h2>Daily drivers</h2><p>Encode, decode, and inspect without leaving the tab.</p></article>
-<article class="section-card"><h2>Try family</h2><p>Sibling to TryQuickImg and TryCalculatingNow.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./trydevsnip-cover.webp" alt="TryDevSnip" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-trydevsnip">
-  <h2 id="more-trydevsnip">More of the design</h2>
-  <div class="more-grid"><figure><img src="./trydevsnip-cover.webp" alt="TryDevSnip UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Open the toolkit</h2>
+          <p>Format, decode, and inspect — privately.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 TryDevSnip</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>

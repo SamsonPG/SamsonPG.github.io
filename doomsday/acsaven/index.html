@@ -3,58 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Acsaven — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of Acsaven. Use when the live domain is blocked or down." />
+  <title>Acsaven — tools that stay with you</title>
+  <meta name="description" content="Studio hub behind TryTokka and the free Try utilities." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>acsaven.com</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">Acsaven</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://acsaven.com" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">Acsaven</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Pick a tool</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>Tools that stay with you.</h1>
-      <p class="lede">Studio hub behind TryTokka and the free Try utilities.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://acsaven.com" target="_blank" rel="noopener noreferrer">Open live Acsaven</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">Acsaven</p>
+          <h1>Tools that stay with you.</h1>
+          <p class="lede">Studio hub behind TryTokka and the free Try utilities.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Pick a tool</a>
+            <a class="btn btn--ghost" href="#product">See products</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="Acsaven product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="Acsaven homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">acsaven.com</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>Studio</h3><p>Parent home for the Try family.</p></article>
+<article class="card"><h3>Products</h3><p>TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow.</p></article>
+<article class="card"><h3>Founder-built</h3><p>Independent studio by Samson P G.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="Acsaven homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="Acsaven homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>Studio</h2><p>Parent home for the Try family.</p></article>
-<article class="section-card"><h2>Products</h2><p>Find what shipped and what is live.</p></article>
-<article class="section-card"><h2>Founder-built</h2><p>Independent studio by Samson P G.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./acsaven-cover.webp" alt="Acsaven" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-acsaven">
-  <h2 id="more-acsaven">More of the design</h2>
-  <div class="more-grid"><figure><img src="./acsaven-cover.webp" alt="Acsaven UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Explore the studio</h2>
+          <p>Find the tool that fits the job.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 Acsaven</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>

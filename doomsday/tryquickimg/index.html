@@ -3,58 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TryQuickImg — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of TryQuickImg. Use when the live domain is blocked or down." />
+  <title>TryQuickImg — compress images in your browser</title>
+  <meta name="description" content="Compress, convert, resize, and crop. No upload required for processing." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>tryquickimg.com</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">TryQuickImg</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">TryQuickImg</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Open tools</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>Compress images to a KB target — private in your browser.</h1>
-      <p class="lede">Compress, convert, resize, and crop. No upload required for processing.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer">Open live TryQuickImg</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">TryQuickImg</p>
+          <h1>Compress images to a KB target — private in your browser.</h1>
+          <p class="lede">Compress, convert, resize, and crop. No upload required for processing.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Open tools</a>
+            <a class="btn btn--ghost" href="#product">See product</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="TryQuickImg product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="TryQuickImg homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">tryquickimg.com</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>Local-first</h3><p>Images stay on your device while tools run in-browser.</p></article>
+<article class="card"><h3>KB targets</h3><p>Drop a file, set a size, download.</p></article>
+<article class="card"><h3>Convert & crop</h3><p>JPG, PNG, WebP — fast utilities without an account wall.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="TryQuickImg homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="TryQuickImg homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>Local-first</h2><p>Images stay on your device while tools run in-browser.</p></article>
-<article class="section-card"><h2>Fast tools</h2><p>Drop a file, set a size, download.</p></article>
-<article class="section-card"><h2>Try family</h2><p>Part of the Acsaven studio of free utilities.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./tryquickimg-cover.webp" alt="TryQuickImg" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-tryquickimg">
-  <h2 id="more-tryquickimg">More of the design</h2>
-  <div class="more-grid"><figure><img src="./tryquickimg-cover.webp" alt="TryQuickImg UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>Try the image tools</h2>
+          <p>Private compress, convert, resize, and crop.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 TryQuickImg</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>

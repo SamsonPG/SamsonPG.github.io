@@ -3,60 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20X — homepage demo (offline)</title>
-  <meta name="description" content="Static homepage design demo of 20X. Use when the live domain is blocked or down." />
+  <title>20X — healthcare staffing CRM</title>
+  <meta name="description" content="Recruitment, credentialing, compliance, and timesheets." />
   <meta name="robots" content="noindex,follow" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="offline-strip">
-    Offline homepage demo — if <strong>20x.io</strong> is blocked or down, this is the design backup.
-    <a href="../">Museum</a>
-  </div>
-  <div class="wrap">
-    <header class="site-top">
-      <a class="wordmark" href="./">20X</a>
-      <nav class="nav-mini" aria-label="Demo">
-        <a href="https://www.20x.io/" target="_blank" rel="noopener noreferrer">Live site</a>
-        <a href="../">All demos</a>
-        <a href="https://samsonpg.github.io/">Portfolio</a>
+  <header class="top">
+    <div class="top__inner">
+      <a class="logo" href="./">20X</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#product">Product</a>
+        <a class="btn btn--fill btn--sm" href="#get-started">Get started</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <p class="eyebrow">Theme demo · static</p>
-      <h1>Healthcare staffing CRM & nurse scheduling.</h1>
-      <p class="lede">Recruitment, credentialing, compliance, and timesheets — Benagon production React / TypeScript.</p>
-      <div class="actions">
-        <a class="btn btn--fill" href="https://www.20x.io/" target="_blank" rel="noopener noreferrer">Open live 20x.io</a>
-        <a class="btn btn--ghost" href="../">All demos</a>
+  <main>
+    <section class="hero site">
+      <div class="hero__grid">
+        <div>
+          <p class="kicker">20X</p>
+          <h1>Healthcare staffing CRM & nurse scheduling.</h1>
+          <p class="lede">Recruitment, credentialing, compliance, and timesheets.</p>
+          <div class="actions">
+            <a class="btn btn--fill" href="#get-started">Get started</a>
+            <a class="btn btn--ghost" href="#product">See product</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="./shot.webp" alt="20X product" width="1440" height="900" loading="eager">
+        </figure>
       </div>
     </section>
 
-    <section class="preview" aria-label="20X homepage preview">
-      <div class="preview__chrome" aria-hidden="true">
-        <span class="preview__dot"></span><span class="preview__dot"></span><span class="preview__dot"></span>
-        <span class="preview__url">20x.io</span>
+    <section class="band site" id="features">
+      <h2>Built for how you work</h2>
+      
+      <div class="cards">
+<article class="card"><h3>Recruitment</h3><p>CRM workflows for healthcare staffing.</p></article>
+<article class="card"><h3>Worker mobile</h3><p>Shifts, timesheets, and documents on the go.</p></article>
+<article class="card"><h3>Compliance</h3><p>Credentialing and timesheets in one system.</p></article>
       </div>
-      <figure class="preview__frame">
-        <img src="./shot.webp" alt="20X homepage design" width="1440" height="900" loading="eager">
+    </section>
+
+    <section class="band site" id="product">
+      <h2>See the product</h2>
+      
+      <figure class="stage" style="margin-top:1rem">
+        <img src="./shot.webp" alt="20X homepage" width="1440" height="900" loading="lazy">
       </figure>
     </section>
 
-    <div class="sections">
-<article class="section-card"><h2>CRM</h2><p>Staffing workflows for healthcare teams.</p></article>
-<article class="section-card"><h2>Mobile</h2><p>Worker app for shifts, timesheets, documents.</p></article>
-<article class="section-card"><h2>Clients</h2><p>Shipped for UK and international teams.</p></article>
-    </div>
+    <section class="band site" id="gallery">
+      <h2>Product</h2>
+      <div class="gallery"><figure><img src="./20x-ui-dashboard.webp" alt="20X" width="1200" height="750" loading="lazy"></figure>
+<figure><img src="./20x-home.webp" alt="20X" width="1200" height="750" loading="lazy"></figure>
+<figure><img src="./20x-ui-mobile.webp" alt="20X" width="1200" height="750" loading="lazy"></figure></div>
+    </section>
 
-<section class="more" aria-labelledby="more-20x">
-  <h2 id="more-20x">More of the design</h2>
-  <div class="more-grid"><figure><img src="./20x-ui-dashboard.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure>
-<figure><img src="./20x-home.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure>
-<figure><img src="./20x-ui-mobile.webp" alt="20X UI" width="1200" height="750" loading="lazy"></figure></div>
-</section>
+    <section class="site" id="get-started">
+      <div class="cta-band">
+        <div>
+          <h2>See 20X in action</h2>
+          <p>Staffing CRM built for healthcare teams.</p>
+        </div>
+        <div class="actions" style="margin:0">
+          <a class="btn btn--fill" href="#product">Explore product</a>
+          <a class="btn btn--ghost" href="#features">Features</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="foot">Static design clone for doomsday — not the live app. © 2026 Samson P G</p>
-  </div>
+  <footer class="site site-foot">
+    <span>© 2026 20X</span>
+    <span><a href="#features">Features</a> · <a href="#product">Product</a></span>
+  </footer>
 </body>
 </html>
