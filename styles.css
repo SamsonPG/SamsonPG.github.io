@@ -13,21 +13,21 @@
   font-display: swap;
 }
 
-/* Light — personal gold (#c9bc43) for site chrome; product accents stay per-brand below */
+/* Light — Backwater teal (personal Samson P G chrome). SoundShoppie keeps #c9bc43 on its cards/demo only. */
 html[data-theme="light"],
 :root {
   color-scheme: light;
-  --paper: #faf8f2;
-  --paper-2: #f3efe3;
+  --paper: #f5f9fa;
+  --paper-2: #e8f2f4;
   --ink: #1c1917;
-  --muted: #78716c;
+  --muted: #64748b;
   --line: rgba(28, 25, 23, 0.12);
-  --green: #c9bc43;
-  --green-soft: #f5f0d4;
-  --green-deep: #7a6f18;
-  --card: #fffcf5;
+  --green: #18656f;
+  --green-soft: #d9eef1;
+  --green-deep: #0e4a52;
+  --card: #fbfdfe;
   --surface: #ffffff;
-  --surface-2: #faf8f2;
+  --surface-2: #f5f9fa;
   --shadow: 0 14px 32px -22px rgba(28, 25, 23, 0.38);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --top: 3.85rem;
@@ -53,9 +53,9 @@ html[data-theme="dark"] {
   --ink: #fafaf9;
   --muted: #a8a29e;
   --line: rgba(250, 250, 249, 0.12);
-  --green: #d4c95a;
-  --green-soft: rgba(201, 188, 67, 0.16);
-  --green-deep: #e8dc82;
+  --green: #52b8c7;
+  --green-soft: rgba(82, 184, 199, 0.15);
+  --green-deep: #8ad4df;
   --card: #1c1917;
   --surface: #292524;
   --surface-2: #44403c;
@@ -77,9 +77,9 @@ html[data-theme="light"] {
   --brand-acsaven-dim: #334155;
   --brand-20x: #1d4ed8;
   --brand-20x-dim: #1e3a8a;
-  /* Bronze on cards — not #c9bc43 chrome gold (SoundShoppie demo keeps its own navbar) */
-  --brand-soundshoppie: #a16207;
-  --brand-soundshoppie-dim: #854d0e;
+  /* SoundShoppie demo gold — only on product cards, not site chrome */
+  --brand-soundshoppie: #c9bc43;
+  --brand-soundshoppie-dim: #9a8f2e;
   --brand-scout: #047857;
   --brand-scout-dim: #065f46;
   --brand-astro-ops: #c12127;
@@ -98,8 +98,8 @@ html[data-theme="dark"] {
   --brand-acsaven-dim: #64748b;
   --brand-20x: #60a5fa;
   --brand-20x-dim: #3b82f6;
-  --brand-soundshoppie: #ca8a04;
-  --brand-soundshoppie-dim: #a16207;
+  --brand-soundshoppie: #d4c95a;
+  --brand-soundshoppie-dim: #b8a832;
   --brand-scout: #34d399;
   --brand-scout-dim: #10b981;
   --brand-astro-ops: #f87171;
