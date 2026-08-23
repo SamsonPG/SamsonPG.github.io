@@ -722,16 +722,27 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   justify-content: center;
   text-align: left;
 }
-@media (max-width: 959px) {
+/* Persona — centered on phone & tablet (stacked shell or narrow sidebar) */
+@media (max-width: 1199px) {
   .persona__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   .persona__top {
     grid-template-columns: 1fr;
     justify-items: center;
+    width: 100%;
+    max-width: 28rem;
+    margin-inline: auto;
   }
   .persona__intro {
     align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .persona__handle {
     text-align: center;
   }
   .persona__bio,
@@ -739,13 +750,16 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   .persona__products,
   .persona__meta,
   .persona__actions,
-  .persona__social {
-    max-width: 34rem;
-    margin-left: auto;
-    margin-right: auto;
+  .persona__social,
+  .persona__social-more {
+    width: 100%;
+    max-width: 28rem;
+    margin-inline: auto;
   }
   .persona__bio {
+    margin-inline: auto;
     text-align: center;
+    max-width: min(38ch, 100%);
   }
   .persona__focus-label,
   .persona__products-label {
@@ -766,6 +780,29 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   }
   .persona__status {
     margin-inline: auto;
+  }
+  .persona__social-more__summary {
+    justify-content: center;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  .persona__top {
+    max-width: 100%;
+  }
+  .persona__photo {
+    max-width: 6.5rem;
+  }
+  .persona__bio,
+  .persona__focus,
+  .persona__products,
+  .persona__meta,
+  .persona__actions,
+  .persona__social,
+  .persona__social-more {
+    max-width: 100%;
+  }
+  .persona__bio {
+    max-width: 100%;
   }
 }
 .persona__name {
@@ -796,8 +833,14 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
 .persona__bio {
   margin: 1rem 0 0;
   font-size: 0.9rem;
+  line-height: 1.55;
   color: var(--muted);
   max-width: 36ch;
+}
+@media (min-width: 1200px) {
+  .persona__bio {
+    text-align: left;
+  }
 }
 
 .persona__focus { margin: 1rem 0 0; }
