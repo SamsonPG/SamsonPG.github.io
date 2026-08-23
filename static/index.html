@@ -7,38 +7,92 @@
   <title>Product homepage demos</title>
   <meta name="description" content="Exact offline homepage captures for Samson P G products when a live domain is blocked." />
   <meta name="robots" content="noindex,follow" />
-  <style>
-    :root{--paper:#faf7f5;--ink:#1c1917;--muted:#78716c;--green:#e11d48;--card:#fffbfa;--line:rgba(28,25,23,.12);--pad:clamp(1rem,4vw,1.75rem)}
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
-    a{color:inherit;text-decoration:none}img{max-width:100%;display:block;height:auto}
-    .wrap{width:min(100% - 2*var(--pad),72rem);margin:0 auto;padding:1.5rem 0 3rem}
-    h1{margin:0;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.04em}
-    .lede{margin:.75rem 0 0;color:var(--muted);max-width:50ch}
-    .grid{display:grid;gap:.85rem;margin-top:1.5rem;grid-template-columns:1fr}
-    @media(min-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{border:1px solid var(--line);border-radius:1rem;overflow:hidden;background:var(--card);display:flex;flex-direction:column;min-height:100%}
-    .card:hover{border-color:color-mix(in srgb,var(--green) 40%,var(--line))}
-    .card__img{aspect-ratio:16/10;overflow:hidden;background:#fff}.card__img img{width:100%;height:100%;object-fit:cover;object-position:top}
-    .card__body{padding:1rem}.card__body h2{margin:0;font-size:1.05rem}.card__body p{margin:.35rem 0 0;color:var(--muted);font-size:.88rem}
-    .meta{display:inline-block;margin-top:.5rem;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
-    .foot{margin-top:2rem;font-size:.78rem;color:var(--muted);text-align:center}
-  </style>
+  <meta name="theme-color" content="#faf7f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0a09" media="(prefers-color-scheme: dark)" />
+  <script>
+    (function () {
+      try {
+        var k = 'samsonpg-theme';
+        var s = localStorage.getItem(k);
+        var theme = (s === 'light' || s === 'dark')
+          ? s
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="./hub.css" />
 </head>
 <body>
-  <div class="wrap">
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__start">
+        <a class="topbar__name" href="../">Samson&nbsp;P&nbsp;G</a>
+        <span class="topbar__tag">Offline demos</span>
+      </div>
+      <div class="topbar__end">
+        <a class="topbar__link" href="../">Portfolio</a>
+        <div
+          class="theme-switch theme-switch--compact theme-switch--pending"
+          role="group"
+          aria-label="Color theme"
+          data-theme-key="samsonpg-theme"
+          data-theme-light="#faf7f5"
+          data-theme-dark="#0c0a09"
+        >
+          <button type="button" class="theme-switch-btn" data-theme-pref="light" title="Light" aria-label="Use light theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="dark" title="Dark" aria-label="Use dark theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 14.5A8.5 8.5 0 1111.5 4a6.5 6.5 0 109.5 10.5z"></path></svg>
+          </button>
+          <button type="button" class="theme-switch-btn" data-theme-pref="system" title="System" aria-label="Use system theme" aria-pressed="false">
+            <svg class="theme-switch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path stroke-linecap="round" d="M8 19h8M12 17v2"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
     <h1>Product homepage dummies</h1>
     <p class="lede">Self-contained offline homepage demos. Icons, images, and CSS live in this folder. Portfolio stays on GitHub Pages.</p>
     <div class="grid">
-      <a class="card" href="./trytokka/"><div class="card__img"><img src="./trytokka/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>TryTokka</h2><p>trytokka.com</p><span class="meta">Full static site</span></div></a>
-      <a class="card" href="./tryquickimg/"><div class="card__img"><img src="./tryquickimg/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>TryQuickImg</h2><p>tryquickimg.com</p><span class="meta">Static site · no ads</span></div></a>
-      <a class="card" href="./trydevsnip/"><div class="card__img"><img src="./trydevsnip/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>TryDevSnip</h2><p>trydevsnip.com</p><span class="meta">Static site · no ads</span></div></a>
-      <a class="card" href="./trycalculatingnow/"><div class="card__img"><img src="./trycalculatingnow/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>TryCalculatingNow</h2><p>trycalculatingnow.com</p><span class="meta">Static site · no ads</span></div></a>
-      <a class="card" href="./acsaven/"><div class="card__img"><img src="./acsaven/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>Acsaven</h2><p>acsaven.com</p><span class="meta">Full static site</span></div></a>
-      <a class="card" href="./soundshoppie/"><div class="card__img"><img src="./soundshoppie/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>SoundShoppie</h2><p>From soundShoppie-2023 repo</p><span class="meta">Exact repo landing</span></div></a>
-      <a class="card" href="./20x/"><div class="card__img"><img src="./20x/shot.webp" alt="" loading="lazy"></div><div class="card__body"><h2>20X</h2><p>20x.io</p><span class="meta">Exact homepage</span></div></a>
+      <a class="card" href="./trytokka/" data-product="trytokka">
+        <div class="card__img"><img src="./trytokka/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>TryTokka</h2><p>trytokka.com</p><span class="meta">Full static site</span></div>
+      </a>
+      <a class="card" href="./tryquickimg/" data-product="tryquickimg">
+        <div class="card__img"><img src="./tryquickimg/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>TryQuickImg</h2><p>tryquickimg.com</p><span class="meta">Static site · no ads</span></div>
+      </a>
+      <a class="card" href="./trydevsnip/" data-product="trydevsnip">
+        <div class="card__img"><img src="./trydevsnip/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>TryDevSnip</h2><p>trydevsnip.com</p><span class="meta">Static site · no ads</span></div>
+      </a>
+      <a class="card" href="./trycalculatingnow/" data-product="trycalculatingnow">
+        <div class="card__img"><img src="./trycalculatingnow/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>TryCalculatingNow</h2><p>trycalculatingnow.com</p><span class="meta">Static site · no ads</span></div>
+      </a>
+      <a class="card" href="./acsaven/" data-product="acsaven">
+        <div class="card__img"><img src="./acsaven/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>Acsaven</h2><p>acsaven.com</p><span class="meta">Full static site</span></div>
+      </a>
+      <a class="card" href="./soundshoppie/" data-product="soundshoppie">
+        <div class="card__img"><img src="./soundshoppie/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>SoundShoppie</h2><p>From soundShoppie-2023 repo</p><span class="meta">Exact repo landing</span></div>
+      </a>
+      <a class="card" href="./20x/" data-product="20x">
+        <div class="card__img"><img src="./20x/shot.webp" alt="" loading="lazy" decoding="async"></div>
+        <div class="card__body"><h2>20X</h2><p>20x.io</p><span class="meta">Exact homepage</span></div>
+      </a>
     </div>
-    <p class="foot">Â© 2026 Samson P G Â· Static Â· No tracking</p>
-  </div>
+    <p class="foot">© 2026 Samson P G · Static · No tracking</p>
+  </main>
+
+  <script src="../theme.js" defer></script>
 </body>
 </html>
