@@ -11,23 +11,52 @@
     { id: 'contact', el: document.getElementById('contact') }
   ];
 
-  function setActive() {
-    var y = window.scrollY + 130;
-    var current = 'home';
-    sections.forEach(function (s) {
-      if (!s.el) return;
-      var top = s.el.getBoundingClientRect().top + window.scrollY;
-      if (top <= y) current = s.id;
-    });
+  function sectionTop(el) {
+    return el.getBoundingClientRect().top + window.scrollY;
+  }
+
+  function markNavActive(id) {
     links.forEach(function (a) {
-      var match = a.getAttribute('href') === '#' + current;
+      var match = a.getAttribute('href') === '#' + id;
       a.classList.toggle('is-active', match);
       if (match) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
   }
+
+  function setActive() {
+    var y = window.scrollY + 130;
+    var current = sections[0] ? sections[0].id : 'home';
+
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      if (!s.el) continue;
+      var top = sectionTop(s.el);
+      var nextTop = Infinity;
+      if (i + 1 < sections.length && sections[i + 1].el) {
+        nextTop = sectionTop(sections[i + 1].el);
+      }
+      if (y >= top && y < nextTop) {
+        current = s.id;
+        break;
+      }
+    }
+
+    markNavActive(current);
+  }
+
   window.addEventListener('scroll', setActive, { passive: true });
   setActive();
+
+  links.forEach(function (a) {
+    a.addEventListener('click', function () {
+      var href = a.getAttribute('href');
+      if (!href || href.charAt(0) !== '#') return;
+      markNavActive(href.slice(1));
+      window.requestAnimationFrame(setActive);
+      window.setTimeout(setActive, 450);
+    });
+  });
 
   /* Acsaven-style dialog drawer */
   var dialog = document.getElementById('site-nav-dialog');
@@ -88,5 +117,8 @@
     if (window.location.hash === '#creative') creativeAccordion.open = true;
   }
   openCreativeIfTargeted();
-  window.addEventListener('hashchange', openCreativeIfTargeted);
+  window.addEventListener('hashchange', function () {
+    setActive();
+    openCreativeIfTargeted();
+  });
 })();
