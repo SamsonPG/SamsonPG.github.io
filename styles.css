@@ -155,35 +155,40 @@ html[data-theme="dark"] body {
   inset: 0;
 }
 .pg-haven__wash {
-  /* Light: normal blend (screen washes plum away on paper — same fix as TryTokka light mesh) */
+  /* Light: normal blend + stronger Ink Plum so paper doesn’t flatten vs dark */
   background-color: var(--paper);
   background-image:
-    radial-gradient(ellipse 110% 90% at 0% 0%, color-mix(in srgb, var(--paper-2, #efeaf4) 85%, var(--paper)) 0%, transparent 78%),
-    radial-gradient(ellipse 110% 90% at 100% 100%, color-mix(in srgb, var(--green-soft) 90%, var(--paper)) 0%, transparent 78%),
+    radial-gradient(ellipse 110% 90% at 0% 0%, color-mix(in srgb, var(--paper-2, #efeaf4) 78%, var(--paper)) 0%, transparent 76%),
+    radial-gradient(ellipse 110% 90% at 100% 100%, color-mix(in srgb, var(--green-soft) 82%, var(--paper)) 0%, transparent 76%),
     radial-gradient(
       ellipse 78% 62% at 50% 32%,
-      color-mix(in srgb, var(--green) 30%, transparent) 0%,
-      color-mix(in srgb, var(--green) 16%, transparent) 26%,
+      color-mix(in srgb, var(--green) 42%, transparent) 0%,
+      color-mix(in srgb, var(--green) 22%, transparent) 28%,
       transparent 88%
     ),
     radial-gradient(
       ellipse 82% 72% at 12% 28%,
-      color-mix(in srgb, var(--green) 24%, transparent) 0%,
-      color-mix(in srgb, var(--green-soft) 80%, transparent) 45%,
+      color-mix(in srgb, var(--green) 34%, transparent) 0%,
+      color-mix(in srgb, var(--green-soft) 72%, transparent) 44%,
       transparent 88%
     ),
     radial-gradient(
       ellipse 80% 68% at 90% 22%,
-      color-mix(in srgb, var(--green-deep) 20%, transparent) 0%,
-      color-mix(in srgb, var(--green) 10%, transparent) 44%,
+      color-mix(in srgb, var(--green-deep) 28%, transparent) 0%,
+      color-mix(in srgb, var(--green) 14%, transparent) 44%,
       transparent 88%
     ),
     radial-gradient(
       ellipse 68% 58% at 28% 78%,
-      color-mix(in srgb, var(--green) 16%, transparent) 0%,
+      color-mix(in srgb, var(--green) 24%, transparent) 0%,
       transparent 80%
     ),
-    linear-gradient(180deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, var(--green-soft)) 100%);
+    radial-gradient(
+      ellipse 60% 50% at 78% 70%,
+      color-mix(in srgb, var(--green) 14%, transparent) 0%,
+      transparent 78%
+    ),
+    linear-gradient(180deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 72%, var(--green-soft)) 100%);
   background-blend-mode: normal;
 }
 html[data-theme="dark"] .pg-haven__wash {
@@ -226,13 +231,13 @@ html[data-theme="dark"] .pg-haven__wash {
 }
 .pg-haven__grid {
   background-image:
-    linear-gradient(color-mix(in srgb, var(--green) 12%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--green) 12%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--green) 16%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 16%, transparent) 1px, transparent 1px);
   background-size: 3rem 3rem;
   background-position: center;
   -webkit-mask-image: radial-gradient(ellipse 72% 64% at 50% 42%, transparent 18%, #000 78%);
   mask-image: radial-gradient(ellipse 72% 64% at 50% 42%, transparent 18%, #000 78%);
-  opacity: 0.32;
+  opacity: 0.44;
 }
 html[data-theme="dark"] .pg-haven__grid { opacity: 0.14; }
 .pg-haven__orb {
@@ -244,21 +249,58 @@ html[data-theme="dark"] .pg-haven__grid { opacity: 0.14; }
   height: min(52vw, 24rem);
   top: -10%;
   left: -12%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--green) 28%, transparent) 0%, transparent 68%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 40%, transparent) 0%, transparent 68%);
 }
 .pg-haven__orb--b {
   width: min(48vw, 22rem);
   height: min(48vw, 22rem);
   right: -12%;
   top: 10%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 26%, transparent) 0%, transparent 70%);
+}
+html[data-theme="dark"] .pg-haven__orb--a {
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 28%, transparent) 0%, transparent 68%);
+}
+html[data-theme="dark"] .pg-haven__orb--b {
   background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 18%, transparent) 0%, transparent 70%);
 }
 .pg-haven__vignette {
+  /* Light: softer edge so mesh reads; dark keeps more paper falloff */
+  background: radial-gradient(
+    ellipse 62% 56% at 50% 40%,
+    transparent 52%,
+    color-mix(in srgb, var(--paper) 28%, transparent) 100%
+  );
+}
+html[data-theme="dark"] .pg-haven__vignette {
   background: radial-gradient(
     ellipse 58% 52% at 50% 42%,
     transparent 42%,
     color-mix(in srgb, var(--paper) 42%, transparent) 100%
   );
+}
+
+/* Signature: Ink Plum reading rail — transform-only, no blur */
+.ink-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  z-index: 55;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.ink-progress__bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top center;
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ink-progress { display: none; }
 }
 
 .skip,
@@ -1087,12 +1129,16 @@ html[data-theme="dark"] .hero__mesh {
   font-size: clamp(3.4rem, 12vw, 6.5rem);
   line-height: 0.88;
   letter-spacing: -0.07em;
-  color: color-mix(in srgb, var(--green) 40%, transparent);
+  color: color-mix(in srgb, var(--green) 52%, transparent);
   user-select: none;
   pointer-events: none;
+  transform: translate3d(0, calc(var(--hero-drift, 0) * -16px), 0);
 }
 html[data-theme="dark"] .hero__hello {
   color: color-mix(in srgb, var(--green) 28%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__hello { transform: none; }
 }
 .hero__brand {
   display: flex;
@@ -1174,6 +1220,10 @@ html[data-theme="dark"] .hero__hello {
   width: 100%;
   aspect-ratio: 5 / 3.6;
   min-height: 14rem;
+  transform: translate3d(0, calc(var(--hero-drift, 0) * 22px), 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__collage { transform: none; }
 }
 .hero__tile {
   position: absolute;

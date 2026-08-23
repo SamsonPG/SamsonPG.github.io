@@ -124,6 +124,35 @@
     if (e.key === 'Escape') closeNav();
   });
 
+  /* Signature: Ink Plum progress rail + hero parallax (transform-only) */
+  var inkBar = document.querySelector('.ink-progress__bar');
+  var heroEl = document.getElementById('home');
+  var collage = document.querySelector('.hero__collage');
+  var hello = document.querySelector('.hero__hello');
+  var sigTick = false;
+  function updateSignature() {
+    sigTick = false;
+    var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    var p = Math.min(1, Math.max(0, window.scrollY / max));
+    if (inkBar) inkBar.style.transform = 'scaleY(' + p + ')';
+    if (!reduce && heroEl) {
+      var h = heroEl.offsetHeight || 1;
+      var local = Math.min(1, Math.max(0, (window.innerHeight * 0.4 - heroEl.getBoundingClientRect().top) / h));
+      var drift = String(local);
+      if (collage) collage.style.setProperty('--hero-drift', drift);
+      if (hello) hello.style.setProperty('--hero-drift', drift);
+    }
+  }
+  function onSignatureScroll() {
+    if (sigTick) return;
+    sigTick = true;
+    window.requestAnimationFrame(updateSignature);
+  }
+  if (inkBar || collage) {
+    window.addEventListener('scroll', onSignatureScroll, { passive: true });
+    updateSignature();
+  }
+
   /* Lightweight reveal */
   if (!reduce && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
