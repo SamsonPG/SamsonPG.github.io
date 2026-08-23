@@ -546,15 +546,20 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
 @media (max-width: 859px) {
   .dock {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     position: fixed; bottom: 0; inset-inline: 0; z-index: 45;
     border-top: 1px solid var(--line);
     background: color-mix(in srgb, var(--paper) 92%, transparent);
     backdrop-filter: blur(12px);
     padding-bottom: env(safe-area-inset-bottom);
   }
+  .dock__item svg { width: 1.1rem; height: 1.1rem; }
+  .dock__item span {
+    font-size: 0.58rem;
+    max-width: 3.35rem;
+  }
   body {
-    padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(3.85rem + env(safe-area-inset-bottom));
   }
 }
 .dock__item {
@@ -2206,7 +2211,9 @@ html[data-theme="dark"] .faq-item__q::after {
 }
 @media (max-width: 859px) {
   .scroll-to-top {
-    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    left: max(1rem, env(safe-area-inset-left));
+    right: auto;
+    bottom: calc(4.35rem + env(safe-area-inset-bottom));
   }
 }
 .scroll-to-top--visible {
