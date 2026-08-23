@@ -56,7 +56,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 TypeScript, Next.js, React, Node.js, PostgreSQL, Supabase, Astro, Cloudflare, Playwright, Vitest, Stripe, Razorpay
 
 ## Key pages
-- [Home / portfolio](https://samsonpg.github.io/)
+- [Home / hero](https://samsonpg.github.io/#home)
 - [Software section](https://samsonpg.github.io/#software)
 - [Career path](https://samsonpg.github.io/#path)
 - [FAQ](https://samsonpg.github.io/#faq)

@@ -719,6 +719,7 @@ html[data-theme="dark"] .tag { color: #0c1210; }
 .hero {
   position: relative;
   isolation: isolate;
+  scroll-margin-top: calc(var(--top) + 0.5rem);
   margin: calc(-1 * clamp(1.25rem, 3vw, 2rem)) calc(-1 * var(--stage-pad)) 0;
   padding: clamp(1.35rem, 3vw, 2rem) var(--stage-pad) clamp(1.5rem, 3vw, 2.25rem);
   min-height: 0;

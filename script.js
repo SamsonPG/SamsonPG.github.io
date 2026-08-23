@@ -3,6 +3,7 @@
 
   var links = document.querySelectorAll('[data-nav]');
   var sections = [
+    { id: 'home', el: document.getElementById('home') },
     { id: 'software', el: document.getElementById('software') },
     { id: 'path', el: document.getElementById('path') },
     { id: 'creative', el: document.getElementById('creative') },
@@ -12,7 +13,7 @@
 
   function setActive() {
     var y = window.scrollY + 130;
-    var current = 'software';
+    var current = 'home';
     sections.forEach(function (s) {
       if (!s.el) return;
       var top = s.el.getBoundingClientRect().top + window.scrollY;
