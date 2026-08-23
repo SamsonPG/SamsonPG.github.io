@@ -64,9 +64,9 @@ html {
 
   .cursoul .carousel-fade-image {
     width: 100% !important;
-    height: 58vh !important;
-    min-height: 300px !important;
-    max-height: 560px;
+    height: 52vh !important;
+    min-height: 280px !important;
+    max-height: 480px;
     object-fit: cover !important;
     object-position: center top !important;
   }
@@ -97,15 +97,14 @@ html {
     line-height: 1.35;
   }
 
-  #welcometoSoundShoppie > .mt-5.pt-5 {
-    margin-top: 1.25rem !important;
-    padding-top: 0.5rem !important;
+  #welcometoSoundShoppie h1 {
+    margin: 0.5rem 0.75rem 0.65rem !important;
+    font-size: clamp(1.35rem, 6vw, 1.85rem);
+    line-height: 1.2;
   }
 
-  #welcometoSoundShoppie h1 {
-    margin: 1.25rem 0.75rem !important;
-    font-size: clamp(1.45rem, 6.5vw, 1.9rem);
-    line-height: 1.25;
+  #welcometoSoundShoppie .ourTeam-hedding {
+    padding-top: 0.25rem !important;
   }
 
   #products .d-flex {

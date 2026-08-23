@@ -10,6 +10,7 @@ html[data-theme="light"] {
   --green-deep: #9f1239;
   --card: #fffbfa;
   --surface: #ffffff;
+  --shadow: 0 14px 32px -22px rgba(28, 25, 23, 0.38);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --pad: clamp(1rem, 4vw, 1.75rem);
   --max: 72rem;
@@ -34,6 +35,7 @@ html[data-theme="dark"] {
   --green-deep: #fda4af;
   --card: #1c1917;
   --surface: #292524;
+  --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.65);
   --brand-trytokka: #34d399;
   --brand-tryquickimg: #a78bfa;
   --brand-trydevsnip: #38bdf8;
@@ -345,10 +347,92 @@ h1 {
   text-align: center;
 }
 
+.scroll-to-top {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background-color: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.92);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    visibility 0.25s,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+  pointer-events: none;
+  touch-action: manipulation;
+}
+
+.scroll-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.scroll-to-top--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.92);
+  pointer-events: none;
+}
+
+.scroll-to-top:hover {
+  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  color: var(--green-deep);
+  background-color: var(--card);
+}
+
+.scroll-to-top:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.scroll-to-top--scrolling {
+  color: var(--green-deep);
+  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  pointer-events: none;
+}
+
+.scroll-to-top--scrolling svg {
+  animation: scroll-to-top-launch 1.1s ease-out infinite;
+}
+
+@keyframes scroll-to-top-launch {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-4px); opacity: 0.9; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card,
   .topbar__link,
-  .theme-switch-btn {
+  .theme-switch-btn,
+  .scroll-to-top,
+  .scroll-to-top--scrolling svg {
     transition: none;
+    animation: none;
+  }
+}
+
+@media print {
+  .scroll-to-top,
+  #scroll-to-top {
+    display: none !important;
   }
 }
