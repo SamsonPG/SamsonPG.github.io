@@ -6,6 +6,7 @@
     { id: 'software', el: document.getElementById('software') },
     { id: 'path', el: document.getElementById('path') },
     { id: 'creative', el: document.getElementById('creative') },
+    { id: 'faq', el: document.getElementById('faq') },
     { id: 'contact', el: document.getElementById('contact') }
   ];
 
