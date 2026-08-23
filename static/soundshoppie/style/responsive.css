@@ -64,9 +64,9 @@ html {
 
   .cursoul .carousel-fade-image {
     width: 100% !important;
-    height: 52vh !important;
-    min-height: 280px !important;
-    max-height: 480px;
+    height: min(44vh, 380px) !important;
+    min-height: 240px !important;
+    max-height: 380px !important;
     object-fit: cover !important;
     object-position: center top !important;
   }
@@ -88,8 +88,14 @@ html {
   }
 
   .cursoul .running-text {
-    margin-top: -1.75rem !important;
-    padding: 1.75rem 0.85rem 1.5rem !important;
+    margin-top: -1.25rem !important;
+    padding: 1rem 0.85rem 0.15rem !important;
+  }
+
+  .cursoul__welcome {
+    margin: 0 0.75rem 0.35rem !important;
+    font-size: clamp(1.3rem, 6vw, 1.75rem);
+    line-height: 1.15;
   }
 
   .cursoul .running-text .train-running2 {
@@ -97,13 +103,8 @@ html {
     line-height: 1.35;
   }
 
-  #welcometoSoundShoppie h1 {
-    margin: 0.5rem 0.75rem 0.65rem !important;
-    font-size: clamp(1.35rem, 6vw, 1.85rem);
-    line-height: 1.2;
-  }
-
-  #welcometoSoundShoppie .ourTeam-hedding {
+  #welcometoSoundShoppie .ourTeam-hedding,
+  .welcome-body .ourTeam-hedding {
     padding-top: 0.25rem !important;
   }
 
