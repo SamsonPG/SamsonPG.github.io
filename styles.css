@@ -123,19 +123,32 @@ html {
 }
 body {
   margin: 0;
-  background: var(--paper);
+  /* Layered wash — processing fluency + ambient brand without flat “template” paper */
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 58%),
+    radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 70%, transparent), transparent 52%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--paper-2) 80%, transparent), transparent 55%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+  background-attachment: fixed;
   color: var(--ink);
   font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+html[data-theme="dark"] body {
+  background-image:
+    radial-gradient(ellipse 85% 50% at 15% -10%, color-mix(in srgb, var(--green) 18%, transparent), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 90% 0%, color-mix(in srgb, var(--green) 10%, transparent), transparent 50%),
+    linear-gradient(180deg, var(--paper) 0%, #09080c 100%);
+}
 img, picture { max-width: 100%; height: auto; }
 img { display: block; }
 
 .skip {
   position: absolute; left: -9999px; z-index: 100;
-  background: var(--green); color: #0c0a09; padding: .65rem 1rem; font-weight: 700;
+  background: var(--green); color: #fff; padding: .65rem 1rem; font-weight: 700;
 }
 .skip:focus { left: 0; top: 0; }
 a { color: var(--green-deep); }
@@ -569,16 +582,24 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
 .persona__status {
   display: inline-flex; align-items: center; gap: 0.4rem;
   margin-top: 0.55rem;
-  padding: 0.28rem 0.65rem;
+  padding: 0.35rem 0.75rem;
+  min-height: 2rem;
   border-radius: 999px;
   background: var(--green-soft);
   color: var(--green-deep);
   font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
-  border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+  border: 1px solid color-mix(in srgb, var(--green) 35%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green-soft) 80%, transparent);
 }
 .persona__status::before {
-  content: ""; width: 0.45rem; height: 0.45rem; border-radius: 50%;
-  background: var(--green); box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent);
+  content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 28%, transparent);
+  animation: status-pulse 2.4s ease-in-out infinite;
+}
+@keyframes status-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent); opacity: 1; }
+  50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--green) 0%, transparent); opacity: 0.85; }
 }
 
 .persona__bio {
@@ -664,8 +685,24 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   transition: transform 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
 }
 .btn:active { transform: scale(0.98); }
-.btn--fill { background: var(--ink); color: var(--paper); }
-.btn--fill:hover { transform: translateY(-1px); color: var(--paper); }
+.btn--fill {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--green) 70%, transparent);
+}
+.btn--fill:hover {
+  transform: translateY(-1px);
+  color: #fff;
+  background: var(--green-deep);
+}
+html[data-theme="dark"] .btn--fill {
+  color: #0c0a09;
+  background: var(--green);
+}
+html[data-theme="dark"] .btn--fill:hover {
+  color: #0c0a09;
+  background: var(--green-deep);
+}
 .btn--line { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
 .btn--line:hover { background: var(--ink); color: var(--paper); }
 
@@ -805,7 +842,7 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
 html[data-theme="dark"] .tag { color: #0c0a09; }
 .tag--muted { background: color-mix(in srgb, var(--muted) 75%, var(--ink)); color: #fff; }
 
-/* Hero — full-viewport atmosphere; persona rail markup unchanged */
+/* Hero — full-viewport atmosphere; first-impression focus (aesthetic-usability + gaze) */
 .hero {
   position: relative;
   isolation: isolate;
@@ -819,12 +856,23 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   border-bottom: 1px solid var(--line);
   box-sizing: border-box;
   background:
+    radial-gradient(ellipse 70% 60% at 78% 35%, color-mix(in srgb, var(--green) 16%, transparent), transparent 62%),
+    radial-gradient(ellipse 55% 50% at 12% 80%, color-mix(in srgb, var(--green-soft) 90%, transparent), transparent 58%),
     linear-gradient(
       165deg,
-      color-mix(in srgb, var(--green-soft) 55%, var(--paper)) 0%,
-      var(--paper) 42%,
+      color-mix(in srgb, var(--green-soft) 70%, var(--paper)) 0%,
+      var(--paper) 45%,
       var(--paper-2) 100%
     );
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* Soft vignette — pulls attention to brand + collage (foveal bias) */
+  background: radial-gradient(ellipse 75% 70% at 42% 45%, transparent 35%, color-mix(in srgb, var(--ink) 6%, transparent) 100%);
 }
 /* Full viewport bleed: cancel persona (20vw) + main gutter (12vw = 15% of 80%) */
 @media (min-width: 960px) {
@@ -849,8 +897,8 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
 .hero__glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(48px);
-  opacity: 0.55;
+  filter: blur(52px);
+  opacity: 0.6;
   will-change: transform;
 }
 .hero__glow--a {
@@ -858,7 +906,7 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   height: min(52vw, 28rem);
   right: -8%;
   top: 8%;
-  background: color-mix(in srgb, var(--green) 42%, transparent);
+  background: color-mix(in srgb, var(--green) 48%, transparent);
   animation: hero-glow-a 12s var(--ease) infinite alternate;
 }
 .hero__glow--b {
@@ -866,36 +914,40 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   height: min(40vw, 20rem);
   left: 6%;
   bottom: -12%;
-  background: color-mix(in srgb, var(--green-deep) 28%, transparent);
+  background: color-mix(in srgb, var(--green-deep) 32%, transparent);
   animation: hero-glow-b 14s var(--ease) infinite alternate;
 }
 .hero__mesh {
   position: absolute;
   inset: -20%;
   background-image:
-    linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--ink) 5.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 5.5%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, #000 25%, transparent 78%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, #000 25%, transparent 78%);
-  opacity: 0.7;
+  opacity: 0.65;
   animation: hero-mesh 28s linear infinite;
 }
 html[data-theme="dark"] .hero {
   background:
+    radial-gradient(ellipse 70% 55% at 80% 30%, color-mix(in srgb, var(--green) 22%, transparent), transparent 60%),
     linear-gradient(
       165deg,
-      color-mix(in srgb, var(--green) 12%, #070c0a) 0%,
+      color-mix(in srgb, var(--green) 14%, #0a0810) 0%,
       var(--paper) 48%,
-      #080e0c 100%
+      #09080c 100%
     );
 }
-html[data-theme="dark"] .hero__glow--a { opacity: 0.35; }
-html[data-theme="dark"] .hero__glow--b { opacity: 0.28; }
+html[data-theme="dark"] .hero::after {
+  background: radial-gradient(ellipse 75% 70% at 42% 45%, transparent 40%, rgba(0, 0, 0, 0.35) 100%);
+}
+html[data-theme="dark"] .hero__glow--a { opacity: 0.4; }
+html[data-theme="dark"] .hero__glow--b { opacity: 0.32; }
 html[data-theme="dark"] .hero__mesh {
   background-image:
-    linear-gradient(color-mix(in srgb, var(--green) 14%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--green) 14%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--green) 16%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 16%, transparent) 1px, transparent 1px);
 }
 
 .hero__stage {
@@ -928,6 +980,7 @@ html[data-theme="dark"] .hero__mesh {
   letter-spacing: -0.045em;
   line-height: 1;
   color: var(--ink);
+  text-wrap: balance;
 }
 .hero__brand-sep {
   width: 0.45rem;
@@ -954,6 +1007,7 @@ html[data-theme="dark"] .hero__mesh {
   line-height: 1.1;
   letter-spacing: -0.035em;
   max-width: 18ch;
+  text-wrap: balance;
 }
 .hero__title em {
   font-style: normal;
@@ -974,7 +1028,12 @@ html[data-theme="dark"] .hero__mesh {
   gap: 0.65rem;
   margin-top: 1.65rem;
 }
-.hero__ctas .btn { min-width: 10.5rem; }
+.hero__ctas .btn {
+  min-width: 11.5rem;
+  min-height: 2.85rem;
+  font-size: 0.92rem;
+  padding: 0 1.25rem;
+}
 
 /* Product mix collage */
 .hero__visual {
@@ -1542,7 +1601,8 @@ html[data-theme="dark"] .hero__mesh {
   .rail__step:nth-child(n) { transform: none !important; }
   .hero__glow,
   .hero__mesh,
-  .hero__caption-dot { animation: none !important; }
+  .hero__caption-dot,
+  .persona__status::before { animation: none !important; }
   .js .hero__brand,
   .js .hero__copy .eyebrow,
   .js .hero__title,
@@ -1738,15 +1798,17 @@ html[data-theme="dark"] .hero__mesh {
 }
 
 .contact--peak {
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-  border-radius: 1rem;
-  border: 1px solid color-mix(in srgb, var(--green) 22%, var(--line));
+  padding: clamp(1.35rem, 3.2vw, 2rem);
+  border-radius: 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--green) 28%, var(--line));
   background:
+    radial-gradient(ellipse 80% 70% at 0% 0%, color-mix(in srgb, var(--green) 12%, transparent), transparent 55%),
     linear-gradient(
       155deg,
-      color-mix(in srgb, var(--green-soft) 55%, var(--card)) 0%,
+      color-mix(in srgb, var(--green-soft) 70%, var(--card)) 0%,
       var(--card) 62%
     );
+  box-shadow: 0 18px 40px -28px color-mix(in srgb, var(--green) 45%, transparent);
 }
 .contact__peak { display: grid; gap: 0.85rem; }
 .contact .mail {
