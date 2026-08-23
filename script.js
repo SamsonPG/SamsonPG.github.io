@@ -22,8 +22,23 @@
     });
   }
 
+  function flashSectionTitle(id) {
+    var section = document.getElementById(id);
+    if (!section) return;
+    var title = section.querySelector('[data-section-title]');
+    if (!title) return;
+    title.classList.remove('is-nav-flash');
+    // Force reflow so re-clicking the same nav item replays the animation
+    void title.offsetWidth;
+    title.classList.add('is-nav-flash');
+    window.setTimeout(function () {
+      title.classList.remove('is-nav-flash');
+    }, 1200);
+  }
+
   function lockNav(id, ms) {
     markNavActive(id);
+    flashSectionTitle(id);
     navLockUntil = Date.now() + (ms || 700);
   }
 

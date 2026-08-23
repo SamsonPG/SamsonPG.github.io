@@ -1085,10 +1085,59 @@ html[data-theme="dark"] .hero__mesh {
 }
 
 .block { margin-top: clamp(3rem, 7vw, 5rem); scroll-margin-top: calc(var(--top) + 0.5rem); }
-.block__head h2 {
+.block__head h2,
+.block__head .section-title {
   margin: 0;
   font-family: "Inter Display", sans-serif;
   font-size: clamp(1.45rem, 3vw, 1.9rem); letter-spacing: -0.03em;
+}
+.section-title {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.5px;
+  border-radius: 999px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  pointer-events: none;
+}
+.section-title.is-nav-flash::after {
+  animation: section-title-underline 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.section-title.is-nav-flash {
+  animation: section-title-pulse 1.15s ease both;
+}
+@keyframes section-title-underline {
+  0% { transform: scaleX(0); opacity: 0; }
+  18% { transform: scaleX(1); opacity: 1; }
+  70% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0); opacity: 0; transform-origin: right center; }
+}
+@keyframes section-title-pulse {
+  0% { color: var(--ink); }
+  20% { color: var(--green-deep); }
+  100% { color: var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-title.is-nav-flash,
+  .section-title.is-nav-flash::after {
+    animation: none;
+  }
+  .section-title.is-nav-flash {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+    border-radius: 0.25rem;
+  }
 }
 .block__sub { margin: 0.6rem 0 0; max-width: 46ch; color: var(--muted); }
 
@@ -1558,13 +1607,12 @@ html[data-theme="dark"] .hero__mesh {
 }
 
 .contact .mail {
-  display: inline-block; margin-top: 0.35rem;
+  display: inline-block; margin-top: 0.85rem;
   font-family: "Inter Display", sans-serif; font-weight: 800;
   font-size: clamp(1.25rem, 3.5vw, 2rem); letter-spacing: -0.03em;
   color: var(--ink); text-decoration: none; word-break: break-all;
 }
 .contact .mail:hover { color: var(--green-deep); }
-.contact__note { margin: 0.75rem 0 0; color: var(--muted); }
 
 .faq-list {
   margin: clamp(1.25rem, 3vw, 2rem) 0 0;
