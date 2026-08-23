@@ -293,6 +293,7 @@
     <nav class="site-nav-dialog-nav" aria-label="Mobile">
       <p class="site-nav-section-label">On this page</p>
       <ul class="site-nav-dialog-list">
+        <li><a class="site-nav-dialog-link" href="#me" data-nav data-drawer-link><span class="site-nav-dialog-link-title">Me</span><span class="site-nav-dialog-link-desc">Profile · focus &amp; links</span></a></li>
         <li><a class="site-nav-dialog-link" href="#home" data-nav data-drawer-link><span class="site-nav-dialog-link-title">Home</span><span class="site-nav-dialog-link-desc">Hero · clickable proof</span></a></li>
         <li><a class="site-nav-dialog-link" href="#software" data-nav data-drawer-link><span class="site-nav-dialog-link-title">Software</span><span class="site-nav-dialog-link-desc">Products, demos &amp; stack</span></a></li>
         <li><a class="site-nav-dialog-link" href="#path" data-nav data-drawer-link><span class="site-nav-dialog-link-title">Path</span><span class="site-nav-dialog-link-desc">Growth into software</span></a></li>
@@ -366,9 +367,9 @@
 </dialog>
 
 <nav class="dock" aria-label="Mobile sections" data-dock>
-  <a class="dock__item" href="#home" data-nav data-dock-link>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg>
-    <span>Home</span>
+  <a class="dock__item" href="#me" data-nav data-dock-link>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <span>Me</span>
   </a>
   <a class="dock__item" href="#software" data-nav data-dock-link>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5M13 5l-2 14"/></svg>
@@ -393,7 +394,7 @@
 </nav>
 
 <div class="shell">
-  <aside class="persona" aria-label="Profile">
+  <aside class="persona" id="me" aria-label="Profile">
     <div class="persona__inner">
     <div class="persona__top">
       <figure class="persona__photo">
@@ -410,7 +411,7 @@
         </picture>
       </figure>
       <div class="persona__intro">
-        <h1 class="persona__name">Samson&nbsp;P&nbsp;G</h1>
+        <h1 class="persona__name" data-section-title>Samson&nbsp;P&nbsp;G</h1>
         <p class="persona__handle">Full-stack engineer · Founder @ Acsaven</p>
         <p class="persona__status">Open to roles</p>
       </div>

@@ -3,6 +3,7 @@
 
   var links = document.querySelectorAll('[data-nav]');
   var sections = [
+    { id: 'me', el: document.getElementById('me') },
     { id: 'home', el: document.getElementById('home') },
     { id: 'software', el: document.getElementById('software') },
     { id: 'path', el: document.getElementById('path') },
