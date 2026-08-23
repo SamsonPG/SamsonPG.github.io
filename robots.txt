@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
+Disallow: /static/
 
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: Google-Extended
@@ -18,5 +22,17 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Discovery: llms.txt, llms-full.txt, ai.txt, humans.txt, cite/ are public.
+# Offline demos under /static/ are noindex mirrors — disallowed here to save crawl budget.
 
 Sitemap: https://samsonpg.github.io/sitemap.xml

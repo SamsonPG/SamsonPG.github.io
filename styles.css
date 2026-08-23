@@ -1455,11 +1455,112 @@ html[data-theme="dark"] .hero__mesh {
 .contact .mail:hover { color: var(--green-deep); }
 .contact__note { margin: 0.75rem 0 0; color: var(--muted); }
 
+.faq-list {
+  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: var(--card);
+}
+.faq-item {
+  padding: clamp(0.85rem, 2vw, 1.1rem) clamp(1rem, 2.5vw, 1.25rem);
+  border-bottom: 1px solid var(--line);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item dt {
+  margin: 0 0 0.45rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.faq-item dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  max-width: 62ch;
+}
+.faq-item dd a {
+  color: var(--green-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .foot {
   margin-top: 3rem; padding-top: 1.25rem;
   border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem;
 }
 .foot p { margin: 0; }
+.foot__discover {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.65rem;
+  font-size: 0.72rem;
+}
+.foot__discover a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.foot__discover a:hover {
+  color: var(--green-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cite-page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem) var(--pad) 3rem;
+}
+.cite-page h1 {
+  margin: 0.35rem 0 0;
+  font-family: "Inter Display", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: -0.04em;
+}
+.cite-page__lede {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  max-width: 48ch;
+}
+.cite-block {
+  margin-top: clamp(1.5rem, 4vw, 2rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+.cite-block h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.cite-block p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.cite-example {
+  margin-top: 0.5rem !important;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem !important;
+  color: var(--ink) !important;
+}
+.cite-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.cite-list a { color: var(--green-deep); }
+.cite-page__foot { margin-top: 2.5rem; }
 
 /* Reveal without GSAP */
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.55s var(--ease), transform 0.55s var(--ease); }

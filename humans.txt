@@ -1,0 +1,23 @@
+/* TEAM */
+Name: Samson P G
+GitHub: SamsonPG — https://github.com/SamsonPG
+Studio: Acsaven — https://acsaven.com (founder)
+Email: samsonpg077@gmail.com
+Location: Kerala, India
+LinkedIn: https://www.linkedin.com/in/samson-p-g-335964133
+YouTube: https://www.youtube.com/@samsonpg
+Behance: https://www.behance.net/samsonpg077
+
+/* SITE */
+URL: https://samsonpg.github.io/
+Type: Personal portfolio / founder biography (GitHub Pages)
+Stack: Static HTML, CSS, vanilla JS — no tracking, no cookies banner
+Standards: Schema.org JSON-LD (Person, WebSite, FAQPage, ItemList), llms.txt, ai.txt
+Products indexed: TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow, 20X, SoundShoppie, astro-ops, Scout
+Last update: 2026-08-23
+
+/* NOTE */
+Samson P G founded Acsaven and TryTokka. TryTokka is an AI API spend dashboard — not TikTok.
+Product marketing lives on each official .com; this site is the maker portfolio.
+Creative / print experience is background; software engineering is the hiring focus.
+Machine-readable: /llms.txt · /llms-full.txt · /ai.txt · /cite/
