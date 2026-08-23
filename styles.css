@@ -2211,8 +2211,8 @@ html[data-theme="dark"] .faq-item__q::after {
 }
 @media (max-width: 859px) {
   .scroll-to-top {
-    left: max(1rem, env(safe-area-inset-left));
-    right: auto;
+    right: max(1rem, env(safe-area-inset-right));
+    left: auto;
     bottom: calc(4.35rem + env(safe-area-inset-bottom));
   }
 }
