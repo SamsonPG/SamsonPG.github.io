@@ -13,7 +13,7 @@
   font-display: swap;
 }
 
-/* Light — personal gold (SoundShoppie #c9bc43; Try family greens/violets/sky/amber/slate stay on products) */
+/* Light — personal gold (#c9bc43) for site chrome; product accents stay per-brand below */
 html[data-theme="light"],
 :root {
   color-scheme: light;
@@ -77,8 +77,9 @@ html[data-theme="light"] {
   --brand-acsaven-dim: #334155;
   --brand-20x: #1d4ed8;
   --brand-20x-dim: #1e3a8a;
-  --brand-soundshoppie: #c9bc43;
-  --brand-soundshoppie-dim: #9a8f2e;
+  /* Bronze on cards — not #c9bc43 chrome gold (SoundShoppie demo keeps its own navbar) */
+  --brand-soundshoppie: #a16207;
+  --brand-soundshoppie-dim: #854d0e;
   --brand-scout: #047857;
   --brand-scout-dim: #065f46;
   --brand-astro-ops: #c12127;
@@ -97,8 +98,8 @@ html[data-theme="dark"] {
   --brand-acsaven-dim: #64748b;
   --brand-20x: #60a5fa;
   --brand-20x-dim: #3b82f6;
-  --brand-soundshoppie: #d4c95a;
-  --brand-soundshoppie-dim: #b8a832;
+  --brand-soundshoppie: #ca8a04;
+  --brand-soundshoppie-dim: #a16207;
   --brand-scout: #34d399;
   --brand-scout-dim: #10b981;
   --brand-astro-ops: #f87171;
