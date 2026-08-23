@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /static/
 
 User-agent: GPTBot
 Allow: /
@@ -33,6 +32,6 @@ User-agent: Bytespider
 Allow: /
 
 # Discovery: llms.txt, llms-full.txt, ai.txt, humans.txt, cite/ are public.
-# Offline demos under /static/ are noindex mirrors — disallowed here to save crawl budget.
+# /static/ hub is indexable; individual demo pages keep their own noindex meta.
 
 Sitemap: https://samsonpg.github.io/sitemap.xml

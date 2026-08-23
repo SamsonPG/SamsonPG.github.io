@@ -138,7 +138,7 @@ html[data-theme="dark"] body {
   background-color: var(--paper);
 }
 
-/* Page-level haven — aligns with QR/static; static (no infinite motion) for Lighthouse */
+/* Page-level haven — creative + Lighthouse-safe: CSS only, no motion, no blur filters */
 .pg-haven {
   position: fixed;
   inset: 0;
@@ -149,35 +149,55 @@ html[data-theme="dark"] body {
 }
 .pg-haven__wash,
 .pg-haven__grid,
+.pg-haven__ripple,
 .pg-haven__orb,
+.pg-haven__nodes,
 .pg-haven__vignette {
   position: absolute;
   inset: 0;
 }
 .pg-haven__wash {
   background:
-    radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 58%),
-    radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 70%, transparent), transparent 52%),
+    radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 16%, transparent), transparent 58%),
+    radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 75%, transparent), transparent 52%),
+    radial-gradient(ellipse 55% 40% at 78% 70%, color-mix(in srgb, var(--green) 8%, transparent), transparent 60%),
     radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--paper-2) 80%, transparent), transparent 55%),
     linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
 }
 html[data-theme="dark"] .pg-haven__wash {
   background:
-    radial-gradient(ellipse 85% 50% at 15% -10%, color-mix(in srgb, var(--green) 18%, transparent), transparent 55%),
-    radial-gradient(ellipse 55% 40% at 90% 0%, color-mix(in srgb, var(--green) 10%, transparent), transparent 50%),
+    radial-gradient(ellipse 85% 50% at 15% -10%, color-mix(in srgb, var(--green) 20%, transparent), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 90% 0%, color-mix(in srgb, var(--green) 12%, transparent), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 70% 75%, color-mix(in srgb, var(--green) 8%, transparent), transparent 58%),
     linear-gradient(180deg, var(--paper) 0%, #09080c 100%);
 }
 .pg-haven__grid {
   background-image:
-    linear-gradient(color-mix(in srgb, var(--green) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--green) 7%, transparent) 1px, transparent 1px);
-  background-size: 3rem 3rem;
+    linear-gradient(color-mix(in srgb, var(--green) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 9%, transparent) 1px, transparent 1px);
+  background-size: 2.85rem 2.85rem;
   background-position: center;
-  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, transparent 22%, #000 85%);
-  mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, transparent 22%, #000 85%);
-  opacity: 0.14;
+  -webkit-mask-image: radial-gradient(ellipse 82% 72% at 50% 36%, transparent 18%, #000 82%);
+  mask-image: radial-gradient(ellipse 82% 72% at 50% 36%, transparent 18%, #000 82%);
+  opacity: 0.22;
 }
-html[data-theme="dark"] .pg-haven__grid { opacity: 0.1; }
+html[data-theme="dark"] .pg-haven__grid { opacity: 0.16; }
+/* Static radar rings — auth motif without animation cost */
+.pg-haven__ripple {
+  left: 50%;
+  top: 38%;
+  right: auto;
+  bottom: auto;
+  width: min(92vw, 36rem);
+  height: min(92vw, 36rem);
+  translate: -50% -50%;
+  border-radius: 50%;
+  opacity: 0.45;
+  background:
+    radial-gradient(circle, transparent 0%, transparent 42%, color-mix(in srgb, var(--green) 14%, transparent) 43%, transparent 44%),
+    radial-gradient(circle, transparent 0%, transparent 58%, color-mix(in srgb, var(--green) 10%, transparent) 59%, transparent 60%),
+    radial-gradient(circle, transparent 0%, transparent 74%, color-mix(in srgb, var(--green) 7%, transparent) 75%, transparent 76%);
+}
 .pg-haven__orb {
   inset: auto;
   border-radius: 50%;
@@ -187,20 +207,33 @@ html[data-theme="dark"] .pg-haven__grid { opacity: 0.1; }
   height: min(50vw, 24rem);
   top: -8%;
   right: -6%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--green) 14%, transparent) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 18%, transparent) 0%, transparent 70%);
 }
 .pg-haven__orb--b {
   width: min(42vw, 18rem);
   height: min(42vw, 18rem);
   left: -8%;
   bottom: 18%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 9%, transparent) 0%, transparent 72%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 12%, transparent) 0%, transparent 72%);
 }
+.pg-haven__nodes {
+  opacity: 0.32;
+  background-image:
+    radial-gradient(1.2px 1.2px at 10% 16%, color-mix(in srgb, var(--green) 65%, transparent), transparent),
+    radial-gradient(1px 1px at 26% 8%, color-mix(in srgb, var(--ink) 30%, transparent), transparent),
+    radial-gradient(1.3px 1.3px at 74% 12%, color-mix(in srgb, var(--green) 60%, transparent), transparent),
+    radial-gradient(1px 1px at 90% 26%, color-mix(in srgb, var(--ink) 28%, transparent), transparent),
+    radial-gradient(1.1px 1.1px at 6% 58%, color-mix(in srgb, var(--green) 50%, transparent), transparent),
+    radial-gradient(1.2px 1.2px at 52% 82%, color-mix(in srgb, var(--ink) 24%, transparent), transparent),
+    radial-gradient(1px 1px at 84% 68%, color-mix(in srgb, var(--green) 48%, transparent), transparent),
+    radial-gradient(0.9px 0.9px at 38% 44%, color-mix(in srgb, var(--ink) 22%, transparent), transparent);
+}
+html[data-theme="dark"] .pg-haven__nodes { opacity: 0.4; }
 .pg-haven__vignette {
   background: radial-gradient(
-    ellipse 75% 70% at 45% 30%,
-    transparent 50%,
-    color-mix(in srgb, var(--paper) 35%, transparent) 100%
+    ellipse 72% 68% at 45% 32%,
+    transparent 46%,
+    color-mix(in srgb, var(--paper) 38%, transparent) 100%
   );
 }
 
@@ -2095,18 +2128,9 @@ html[data-theme="dark"] .faq-item__q::after {
   border-color: color-mix(in srgb, var(--green) 35%, var(--line));
   pointer-events: none;
 }
-.scroll-to-top--scrolling svg {
-  animation: scroll-to-top-launch 1.1s ease-out infinite;
-}
-@keyframes scroll-to-top-launch {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(-4px); opacity: 0.9; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .scroll-to-top,
-  .scroll-to-top--scrolling svg {
+  .scroll-to-top {
     transition: none;
-    animation: none;
   }
 }
 @media print {
