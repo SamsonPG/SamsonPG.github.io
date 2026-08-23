@@ -123,14 +123,13 @@ html {
 }
 body {
   margin: 0;
-  /* Layered wash — processing fluency + ambient brand without flat “template” paper */
+  /* Layered wash — no background-attachment:fixed (expensive paint on scroll / TBT) */
   background-color: var(--paper);
   background-image:
     radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 58%),
     radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 70%, transparent), transparent 52%),
     radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--paper-2) 80%, transparent), transparent 55%),
     linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
-  background-attachment: fixed;
   color: var(--ink);
   font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -897,9 +896,8 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
 .hero__glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(52px);
-  opacity: 0.6;
-  will-change: transform;
+  filter: blur(40px);
+  opacity: 0.45;
 }
 .hero__glow--a {
   width: min(52vw, 28rem);
@@ -907,7 +905,6 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   right: -8%;
   top: 8%;
   background: color-mix(in srgb, var(--green) 48%, transparent);
-  animation: hero-glow-a 12s var(--ease) infinite alternate;
 }
 .hero__glow--b {
   width: min(40vw, 20rem);
@@ -915,7 +912,6 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   left: 6%;
   bottom: -12%;
   background: color-mix(in srgb, var(--green-deep) 32%, transparent);
-  animation: hero-glow-b 14s var(--ease) infinite alternate;
 }
 .hero__mesh {
   position: absolute;
@@ -926,8 +922,11 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, #000 25%, transparent 78%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, #000 25%, transparent 78%);
-  opacity: 0.65;
-  animation: hero-mesh 28s linear infinite;
+  opacity: 0.55;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero__glow--a { animation: hero-glow-a 12s var(--ease) infinite alternate; }
+  .hero__glow--b { animation: hero-glow-b 14s var(--ease) infinite alternate; }
 }
 html[data-theme="dark"] .hero {
   background:
@@ -1234,6 +1233,15 @@ html[data-theme="dark"] .hero__mesh {
 }
 
 .block { margin-top: clamp(3rem, 7vw, 5rem); scroll-margin-top: calc(var(--top) + 0.5rem); }
+
+/* Below-fold sections — skip layout/paint until near viewport (Lighthouse TBT / SI) */
+#path,
+#creative,
+#faq,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
 .block__head h2,
 .block__head .section-title {
   margin: 0;
@@ -1501,7 +1509,8 @@ html[data-theme="dark"] .hero__mesh {
 .rail__num {
   font-family: "Inter Display", sans-serif; font-weight: 800;
   font-size: 2.35rem; line-height: 1; letter-spacing: -0.06em;
-  color: color-mix(in srgb, var(--ink) 14%, transparent);
+  /* Solid muted — opacity would fail large-text AA contrast */
+  color: var(--muted);
   user-select: none; padding-top: 0.1rem;
 }
 .rail__when {
@@ -1542,7 +1551,7 @@ html[data-theme="dark"] .hero__mesh {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--green) 18%, transparent);
 }
 .rail__step--now .rail__num {
-  color: color-mix(in srgb, var(--green) 55%, transparent);
+  color: var(--green-deep);
   font-size: 2.6rem;
 }
 .rail__step--now .rail__when { color: var(--green-deep); }
@@ -1553,7 +1562,7 @@ html[data-theme="dark"] .hero__mesh {
   background: color-mix(in srgb, var(--surface) 92%, var(--paper));
 }
 .rail__step:nth-child(n+5) .rail__num {
-  opacity: 0.72;
+  color: color-mix(in srgb, var(--muted) 82%, var(--ink));
 }
 
 @media (min-width: 720px) {

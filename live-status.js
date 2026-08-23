@@ -1,6 +1,7 @@
 /**
  * Per-product live swap: show Open live when reachable; otherwise show Offline demo
- * in the same primary slot. No hub / global Offline button.
+ * in the same primary slot. No hub / global offline button.
+ * Probes start after load + idle so they do not inflate Lighthouse TBT.
  */
 (function () {
   var TIMEOUT_MS = 4500
@@ -68,26 +69,38 @@
     setVisible(demoBtn, !up)
   }
 
-  var pairs = document.querySelectorAll('[data-live-open][data-live-check]')
-  if (!pairs.length) return
+  function runProbes() {
+    var pairs = document.querySelectorAll('[data-live-open][data-live-check]')
+    if (!pairs.length) return
 
-  pairs.forEach(function (liveBtn) {
-    var demoBtn = liveBtn.parentElement
-      ? liveBtn.parentElement.querySelector('[data-demo-open]')
-      : null
-    if (!demoBtn) return
+    pairs.forEach(function (liveBtn) {
+      var demoBtn = liveBtn.parentElement
+        ? liveBtn.parentElement.querySelector('[data-demo-open]')
+        : null
+      if (!demoBtn) return
 
-    // Default: live visible, demo hidden (until probe says otherwise)
-    applyPair(liveBtn, demoBtn, true)
+      applyPair(liveBtn, demoBtn, true)
 
-    var live = liveBtn.getAttribute('data-live-check')
-    if (!live) {
-      applyPair(liveBtn, demoBtn, false)
-      return
-    }
+      var live = liveBtn.getAttribute('data-live-check')
+      if (!live) {
+        applyPair(liveBtn, demoBtn, false)
+        return
+      }
 
-    probe(live).then(function (up) {
-      applyPair(liveBtn, demoBtn, up)
+      probe(live).then(function (up) {
+        applyPair(liveBtn, demoBtn, up)
+      })
     })
-  })
+  }
+
+  function schedule() {
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(runProbes, { timeout: 2500 })
+    } else {
+      setTimeout(runProbes, 1)
+    }
+  }
+
+  if (document.readyState === 'complete') schedule()
+  else window.addEventListener('load', schedule)
 })()
