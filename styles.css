@@ -1367,11 +1367,18 @@ html[data-theme="dark"] .hero__hello {
 
 .block { margin-top: clamp(3rem, 7vw, 5rem); scroll-margin-top: calc(var(--top) + 0.5rem); }
 
-/* Below-fold sections — skip layout/paint until near viewport (Lighthouse TBT / SI) */
-#path,
-#creative,
-#faq,
-#contact {
+/* Suppress browser :target ring on sections — we flash the title instead */
+section.block:target {
+  outline: none;
+}
+
+.block__head {
+  overflow: visible;
+  padding-inline: 0.15rem;
+}
+
+/* Below-fold bodies — skip layout/paint until near viewport (Lighthouse TBT / SI) */
+.block__defer {
   content-visibility: auto;
   contain-intrinsic-size: auto 720px;
 }
@@ -1406,6 +1413,11 @@ html[data-theme="dark"] .hero__hello {
 }
 .section-title.is-nav-flash {
   animation: section-title-pulse 1.15s ease both;
+  /* Inset highlight — external outline + content-visibility used to clip the box */
+  background: color-mix(in srgb, var(--green) 14%, transparent);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--green) 55%, var(--line));
+  border-radius: 0.4rem;
+  padding: 0.22rem 0.55rem 0.3rem;
 }
 @keyframes section-title-underline {
   0% { transform: scaleX(0); opacity: 0; }
@@ -1424,9 +1436,10 @@ html[data-theme="dark"] .hero__hello {
     animation: none;
   }
   .section-title.is-nav-flash {
-    outline: 2px solid var(--green);
-    outline-offset: 4px;
-    border-radius: 0.25rem;
+    background: color-mix(in srgb, var(--green) 14%, transparent);
+    box-shadow: inset 0 0 0 2px var(--green);
+    border-radius: 0.4rem;
+    padding: 0.22rem 0.55rem 0.3rem;
   }
 }
 .block__sub { margin: 0.6rem 0 0; max-width: 46ch; color: var(--muted); }
