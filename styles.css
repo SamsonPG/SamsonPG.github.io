@@ -254,7 +254,40 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 .site-nav-dialog-link-desc {
   font-size: 0.78rem; color: var(--muted); line-height: 1.35;
 }
-.nav-meta {
+.site-nav-dialog-link--icon {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
+}
+.site-nav-dialog-link--icon > span:not(.site-nav-dialog-link-title):not(.site-nav-dialog-link-desc) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.site-nav-dialog-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  border-radius: 0.35rem;
+  object-fit: contain;
+}
+.site-nav-dialog-icon--behance,
+.persona__social-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  border-radius: 0.35rem;
+  background: #1769ff;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
   font-size: 0.72rem; font-weight: 700; color: var(--green); letter-spacing: 0.02em;
 }
 .site-nav-dialog-list--compact .site-nav-dialog-link { padding: 0.55rem 0.75rem; }
@@ -451,7 +484,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
   }
   .persona__bio,
   .persona__focus,
-  .persona__now,
+  .persona__products,
   .persona__meta,
   .persona__actions,
   .persona__social {
@@ -461,8 +494,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
   }
   .persona__chips,
   .persona__actions,
-  .persona__social,
-  .persona__now ul {
+  .persona__social {
     justify-content: center;
   }
   .persona__meta {
@@ -503,7 +535,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 
 .persona__focus { margin: 1rem 0 0; }
 .persona__focus-label,
-.persona__now-label {
+.persona__products-label {
   margin: 0 0 0.4rem;
   font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
 }
@@ -518,25 +550,31 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
   border: 1px solid var(--line);
   color: var(--muted);
 }
-
-.persona__now {
+.persona__products {
   margin: 1rem 0 0;
   padding: 0.75rem 0.8rem;
   border-radius: 0.85rem;
   background: var(--surface);
   border: 1px solid var(--line);
 }
-.persona__now ul {
+.persona__products ul {
   list-style: none; margin: 0; padding: 0;
   display: grid; gap: 0.35rem;
 }
-.persona__now a {
-  display: flex; align-items: center; justify-content: space-between;
+.persona__products a {
+  display: flex; align-items: center; gap: 0.55rem;
   min-height: 36px; text-decoration: none; color: var(--ink);
-  font-size: 0.86rem; font-weight: 650;
+  font-size: 0.84rem; font-weight: 650;
 }
-.persona__now a span { color: var(--muted); font-size: 0.75rem; font-weight: 600; }
-.persona__now a:hover { color: var(--green-deep); }
+.persona__product-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  border-radius: 0.35rem;
+  object-fit: contain;
+}
+.persona__products a span { margin-left: auto; color: var(--muted); font-size: 0.72rem; font-weight: 600; }
+.persona__products a:hover { color: var(--green-deep); }
 
 .persona__meta {
   list-style: none; margin: 1rem 0 0; padding: 0; font-size: 0.84rem;
@@ -577,13 +615,38 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
 }
 
 .persona__social {
-  display: flex; flex-wrap: wrap; gap: 0.25rem 0.85rem; margin-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem;
 }
 .persona__social a {
-  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
-  text-decoration: none; color: var(--muted); min-height: 40px; display: inline-flex; align-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease), transform 0.2s var(--ease);
 }
-.persona__social a:hover { color: var(--green-deep); }
+.persona__social a:hover {
+  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  background: var(--green-soft);
+  transform: translateY(-1px);
+}
+.persona__social img {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: block;
+  object-fit: contain;
+}
+.persona__social-mark {
+  width: 1.125rem;
+  height: 1.125rem;
+  font-size: 0.52rem;
+}
 
 /* Main — on wide screens, content is 70% of the 80% column (15% gutters each side) */
 .main {
