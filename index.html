@@ -226,11 +226,18 @@
 
 <link rel="preload" href="./fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="./media/profile-320.webp" as="image" type="image/webp">
-<link rel="preload" href="./media/software/trytokka-dashboard.webp" as="image" type="image/webp">
 <link rel="stylesheet" href="./styles.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+<div class="pg-haven pg-haven--folio" aria-hidden="true">
+  <div class="pg-haven__wash"></div>
+  <div class="pg-haven__grid"></div>
+  <div class="pg-haven__orb pg-haven__orb--a"></div>
+  <div class="pg-haven__orb pg-haven__orb--b"></div>
+  <div class="pg-haven__vignette"></div>
+</div>
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -295,39 +302,39 @@
 
       <p class="site-nav-section-label">Try family</p>
       <ul class="site-nav-dialog-list">
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trytokka.com" target="_blank" rel="noopener noreferrer" data-product="trytokka"><img class="site-nav-dialog-icon" src="./icons/trytokka.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">TryTokka <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">AI API spend monitoring</span></span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer" data-product="tryquickimg"><img class="site-nav-dialog-icon" src="./icons/tryquickimg.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">TryQuickImg <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Compress &amp; convert photos</span></span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer" data-product="trydevsnip"><img class="site-nav-dialog-icon" src="./icons/trydevsnip.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">TryDevSnip <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Local-first utilities</span></span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer" data-product="trycalculatingnow"><img class="site-nav-dialog-icon" src="./icons/trycalculatingnow.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">TryCalculatingNow <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">GPA &amp; finance calculators</span></span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://acsaven.com" target="_blank" rel="noopener noreferrer" data-product="acsaven"><img class="site-nav-dialog-icon" src="./icons/acsaven.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">Acsaven <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Studio hub</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trytokka.com" target="_blank" rel="noopener noreferrer" data-product="trytokka"><img class="site-nav-dialog-icon" src="./icons/trytokka.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">TryTokka <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">AI API spend monitoring</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer" data-product="tryquickimg"><img class="site-nav-dialog-icon" src="./icons/tryquickimg.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">TryQuickImg <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Compress &amp; convert photos</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer" data-product="trydevsnip"><img class="site-nav-dialog-icon" src="./icons/trydevsnip.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">TryDevSnip <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Local-first utilities</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer" data-product="trycalculatingnow"><img class="site-nav-dialog-icon" src="./icons/trycalculatingnow.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">TryCalculatingNow <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">GPA &amp; finance calculators</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://acsaven.com" target="_blank" rel="noopener noreferrer" data-product="acsaven"><img class="site-nav-dialog-icon" src="./icons/acsaven.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">Acsaven <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Studio hub</span></span></a></li>
       </ul>
       <p class="site-nav-section-label">Other work</p>
       <ul class="site-nav-dialog-list">
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.20x.io/" target="_blank" rel="noopener noreferrer" data-product="20x"><img class="site-nav-dialog-icon" src="./icons/20x.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">20X <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Healthcare staffing CRM</span></span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://samsonpg.github.io/static/soundshoppie/" target="_blank" rel="noopener noreferrer" data-product="soundshoppie"><img class="site-nav-dialog-icon" src="./icons/soundshoppie.png" width="20" height="20" alt="" decoding="async"><span><span class="site-nav-dialog-link-title">SoundShoppie <span class="nav-meta">Demo ↗</span></span><span class="site-nav-dialog-link-desc">Headphones ecommerce</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.20x.io/" target="_blank" rel="noopener noreferrer" data-product="20x"><img class="site-nav-dialog-icon" src="./icons/20x.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">20X <span class="nav-meta">Open ↗</span></span><span class="site-nav-dialog-link-desc">Healthcare staffing CRM</span></span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://samsonpg.github.io/static/soundshoppie/" target="_blank" rel="noopener noreferrer" data-product="soundshoppie"><img class="site-nav-dialog-icon" src="./icons/soundshoppie.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span><span class="site-nav-dialog-link-title">SoundShoppie <span class="nav-meta">Demo ↗</span></span><span class="site-nav-dialog-link-desc">Headphones ecommerce</span></span></a></li>
       </ul>
 
       <p class="site-nav-section-label">Published</p>
       <ul class="site-nav-dialog-list site-nav-dialog-list--compact">
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.npmjs.com/package/@acsaven/astro-ops" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/npmjs.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">npm · @acsaven/astro-ops</span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/vscode.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">VS Code · Scout</span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.npmjs.com/package/@acsaven/astro-ops" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/npmjs.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">npm · @acsaven/astro-ops</span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/vscode.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">VS Code · Scout</span></a></li>
       </ul>
 
       <p class="site-nav-section-label">Connect</p>
       <ul class="site-nav-dialog-list">
         <li><a class="site-nav-dialog-link site-nav-dialog-link--icon site-nav-dialog-link--priority" href="mailto:samsonpg077@gmail.com" target="_blank" rel="noopener noreferrer" data-drawer-link><span class="site-nav-dialog-link-title">Email</span><span class="site-nav-dialog-link-desc">samsonpg077@gmail.com</span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.linkedin.com/in/samson-p-g-335964133" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/linkedin.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">LinkedIn</span></a></li>
-        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://github.com/SamsonPG" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/github.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">GitHub</span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.linkedin.com/in/samson-p-g-335964133" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/linkedin.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">LinkedIn</span></a></li>
+        <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://github.com/SamsonPG" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/github.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">GitHub</span></a></li>
       </ul>
       <details class="site-nav-connect-more">
         <summary class="site-nav-connect-more__summary">More profiles</summary>
         <ul class="site-nav-dialog-list site-nav-dialog-list--compact">
-          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://peerlist.io/samsonpg" target="_blank" rel="me noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/peerlist.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">Peerlist</span></a></li>
-          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://dev.to/samsonpg" target="_blank" rel="me noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/devto.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">Dev.to</span></a></li>
-          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://github.com/acsavenhq" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/acsaven.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">Acsaven on GitHub</span></a></li>
-          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.youtube.com/@samsonpg" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/youtube.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">YouTube</span></a></li>
+          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://peerlist.io/samsonpg" target="_blank" rel="me noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/peerlist.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">Peerlist</span></a></li>
+          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://dev.to/samsonpg" target="_blank" rel="me noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/devto.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">Dev.to</span></a></li>
+          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://github.com/acsavenhq" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/acsaven.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">Acsaven on GitHub</span></a></li>
+          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.youtube.com/@samsonpg" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/youtube.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">YouTube</span></a></li>
           <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.behance.net/samsonpg077" target="_blank" rel="noopener noreferrer"><span class="site-nav-dialog-icon site-nav-dialog-icon--behance" aria-hidden="true">Be</span><span class="site-nav-dialog-link-title">Behance</span></a></li>
-          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.instagram.com/acsavenhq/" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/instagram.png" width="20" height="20" alt="" decoding="async"><span class="site-nav-dialog-link-title">Acsaven on Instagram</span></a></li>
+          <li><a class="site-nav-dialog-link site-nav-dialog-link--icon" href="https://www.instagram.com/acsavenhq/" target="_blank" rel="noopener noreferrer"><img class="site-nav-dialog-icon" src="./icons/instagram.png" width="20" height="20" alt="" loading="lazy" decoding="async"><span class="site-nav-dialog-link-title">Acsaven on Instagram</span></a></li>
           <li><a class="site-nav-dialog-link" href="https://samsonpg.github.io/QR-Code/" target="_blank" rel="noopener noreferrer"><span class="site-nav-dialog-link-title">Mobile link hub</span></a></li>
         </ul>
       </details>
@@ -427,16 +434,16 @@
     <div class="persona__products">
       <p class="persona__products-label">Try family</p>
       <ul>
-        <li><a href="https://trytokka.com" target="_blank" rel="noopener noreferrer" data-product="trytokka"><img class="persona__product-icon" src="./icons/trytokka.png" width="20" height="20" alt="" decoding="async"> TryTokka <span>SaaS</span></a></li>
-        <li><a href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer" data-product="tryquickimg"><img class="persona__product-icon" src="./icons/tryquickimg.png" width="20" height="20" alt="" decoding="async"> TryQuickImg <span>Photos</span></a></li>
-        <li><a href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer" data-product="trydevsnip"><img class="persona__product-icon" src="./icons/trydevsnip.png" width="20" height="20" alt="" decoding="async"> TryDevSnip <span>Dev tools</span></a></li>
-        <li><a href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer" data-product="trycalculatingnow"><img class="persona__product-icon" src="./icons/trycalculatingnow.png" width="20" height="20" alt="" decoding="async"> TryCalculatingNow <span>Calc</span></a></li>
-        <li><a href="https://acsaven.com" target="_blank" rel="noopener noreferrer" data-product="acsaven"><img class="persona__product-icon" src="./icons/acsaven.png" width="20" height="20" alt="" decoding="async"> Acsaven <span>Studio</span></a></li>
+        <li><a href="https://trytokka.com" target="_blank" rel="noopener noreferrer" data-product="trytokka"><img class="persona__product-icon" src="./icons/trytokka.png" width="20" height="20" alt="" loading="lazy" decoding="async"> TryTokka <span>SaaS</span></a></li>
+        <li><a href="https://tryquickimg.com" target="_blank" rel="noopener noreferrer" data-product="tryquickimg"><img class="persona__product-icon" src="./icons/tryquickimg.png" width="20" height="20" alt="" loading="lazy" decoding="async"> TryQuickImg <span>Photos</span></a></li>
+        <li><a href="https://trydevsnip.com" target="_blank" rel="noopener noreferrer" data-product="trydevsnip"><img class="persona__product-icon" src="./icons/trydevsnip.png" width="20" height="20" alt="" loading="lazy" decoding="async"> TryDevSnip <span>Dev tools</span></a></li>
+        <li><a href="https://trycalculatingnow.com" target="_blank" rel="noopener noreferrer" data-product="trycalculatingnow"><img class="persona__product-icon" src="./icons/trycalculatingnow.png" width="20" height="20" alt="" loading="lazy" decoding="async"> TryCalculatingNow <span>Calc</span></a></li>
+        <li><a href="https://acsaven.com" target="_blank" rel="noopener noreferrer" data-product="acsaven"><img class="persona__product-icon" src="./icons/acsaven.png" width="20" height="20" alt="" loading="lazy" decoding="async"> Acsaven <span>Studio</span></a></li>
       </ul>
       <p class="persona__products-label persona__products-label--spaced">Other work</p>
       <ul>
-        <li><a href="https://www.20x.io/" target="_blank" rel="noopener noreferrer" data-product="20x"><img class="persona__product-icon" src="./icons/20x.png" width="20" height="20" alt="" decoding="async"> 20X <span>CRM</span></a></li>
-        <li><a href="https://samsonpg.github.io/static/soundshoppie/" target="_blank" rel="noopener noreferrer" data-product="soundshoppie"><img class="persona__product-icon" src="./icons/soundshoppie.png" width="20" height="20" alt="" decoding="async"> SoundShoppie <span>Demo</span></a></li>
+        <li><a href="https://www.20x.io/" target="_blank" rel="noopener noreferrer" data-product="20x"><img class="persona__product-icon" src="./icons/20x.png" width="20" height="20" alt="" loading="lazy" decoding="async"> 20X <span>CRM</span></a></li>
+        <li><a href="https://samsonpg.github.io/static/soundshoppie/" target="_blank" rel="noopener noreferrer" data-product="soundshoppie"><img class="persona__product-icon" src="./icons/soundshoppie.png" width="20" height="20" alt="" loading="lazy" decoding="async"> SoundShoppie <span>Demo</span></a></li>
       </ul>
     </div>
 
@@ -453,18 +460,18 @@
       <a class="btn btn--line" href="mailto:samsonpg077@gmail.com" target="_blank" rel="noopener noreferrer">Email me</a>
     </div>
     <nav class="persona__social" aria-label="Social">
-      <a href="https://github.com/SamsonPG" rel="me noopener noreferrer" target="_blank" aria-label="GitHub"><img src="./icons/github.png" width="18" height="18" alt="" decoding="async"></a>
-      <a href="https://www.linkedin.com/in/samson-p-g-335964133" rel="me noopener noreferrer" target="_blank" aria-label="LinkedIn"><img src="./icons/linkedin.png" width="18" height="18" alt="" decoding="async"></a>
-      <a href="https://www.youtube.com/@samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="YouTube"><img src="./icons/youtube.png" width="18" height="18" alt="" decoding="async"></a>
+      <a href="https://github.com/SamsonPG" rel="me noopener noreferrer" target="_blank" aria-label="GitHub"><img src="./icons/github.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
+      <a href="https://www.linkedin.com/in/samson-p-g-335964133" rel="me noopener noreferrer" target="_blank" aria-label="LinkedIn"><img src="./icons/linkedin.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
+      <a href="https://www.youtube.com/@samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="YouTube"><img src="./icons/youtube.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
       <a href="https://www.behance.net/samsonpg077" rel="me noopener noreferrer" target="_blank" aria-label="Behance"><span class="persona__social-mark" aria-hidden="true">Be</span></a>
     </nav>
     <details class="persona__social-more">
       <summary class="persona__social-more__summary">More profiles</summary>
       <nav class="persona__social persona__social--more" aria-label="More profiles">
-        <a href="https://peerlist.io/samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="Peerlist"><img src="./icons/peerlist.png" width="18" height="18" alt="" decoding="async"></a>
-        <a href="https://dev.to/samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="Dev.to"><img src="./icons/devto.png" width="18" height="18" alt="" decoding="async"></a>
-        <a href="https://www.instagram.com/acsavenhq/" rel="noopener noreferrer" target="_blank" aria-label="Acsaven on Instagram"><img src="./icons/instagram.png" width="18" height="18" alt="" decoding="async"></a>
-        <a href="https://acsaven.com" target="_blank" rel="noopener noreferrer" aria-label="Acsaven"><img src="./icons/acsaven.png" width="18" height="18" alt="" decoding="async"></a>
+        <a href="https://peerlist.io/samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="Peerlist"><img src="./icons/peerlist.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://dev.to/samsonpg" rel="me noopener noreferrer" target="_blank" aria-label="Dev.to"><img src="./icons/devto.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://www.instagram.com/acsavenhq/" rel="noopener noreferrer" target="_blank" aria-label="Acsaven on Instagram"><img src="./icons/instagram.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
+        <a href="https://acsaven.com" target="_blank" rel="noopener noreferrer" aria-label="Acsaven"><img src="./icons/acsaven.png" width="18" height="18" alt="" loading="lazy" decoding="async"></a>
         <a href="https://samsonpg.github.io/QR-Code/" target="_blank" rel="noopener noreferrer" aria-label="Mobile link hub" class="persona__social-text">Hub</a>
       </nav>
     </details>
@@ -502,7 +509,7 @@
         <div class="hero__visual" aria-label="Product snapshots">
           <div class="hero__collage">
             <figure class="hero__tile hero__tile--a" data-product="trytokka">
-              <img src="./media/software/trytokka-dashboard.webp" alt="TryTokka dashboard" width="800" height="500" fetchpriority="high" decoding="async">
+              <img src="./media/software/trytokka-dashboard.webp" alt="TryTokka dashboard" width="800" height="500" loading="lazy" decoding="async">
               <figcaption>TryTokka</figcaption>
             </figure>
             <figure class="hero__tile hero__tile--b" data-product="20x">
@@ -568,7 +575,7 @@
         </div>
         <div class="feature__media">
           <a class="shot shot--main" href="https://trytokka.com" target="_blank" rel="noopener noreferrer">
-            <img src="./media/software/trytokka-dashboard.webp" alt="TryTokka dashboard UI" width="1600" height="900" loading="eager" decoding="async">
+            <img src="./media/software/trytokka-dashboard.webp" alt="TryTokka dashboard UI" width="1600" height="900" loading="lazy" decoding="async">
           </a>
           <div class="shot-row">
             <a class="shot" href="https://trytokka.com" target="_blank" rel="noopener noreferrer">

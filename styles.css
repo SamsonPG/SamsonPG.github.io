@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Inter Display";
   src: url("./fonts/Inter-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Inter Display";
-  src: url("./fonts/Inter-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("./fonts/Inter-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 /* Light — Ink Plum personal chrome (#5b3a6e). Product accents stay per-brand below. */
@@ -118,30 +118,101 @@ html[data-theme="dark"] {
 
 *, *::before, *::after { box-sizing: border-box; }
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: calc(var(--top) + 1rem);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
 body {
   margin: 0;
-  /* Layered wash — no background-attachment:fixed (expensive paint on scroll / TBT) */
+  /* Page wash lives in .pg-haven — keep body cheap for paint / Lighthouse */
   background-color: var(--paper);
-  background-image:
-    radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 58%),
-    radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 70%, transparent), transparent 52%),
-    radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--paper-2) 80%, transparent), transparent 55%),
-    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
   color: var(--ink);
   font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  isolation: isolate;
 }
 html[data-theme="dark"] body {
-  background-image:
+  background-color: var(--paper);
+}
+
+/* Page-level haven — aligns with QR/static; static (no infinite motion) for Lighthouse */
+.pg-haven {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: paint;
+}
+.pg-haven__wash,
+.pg-haven__grid,
+.pg-haven__orb,
+.pg-haven__vignette {
+  position: absolute;
+  inset: 0;
+}
+.pg-haven__wash {
+  background:
+    radial-gradient(ellipse 90% 55% at 12% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 58%),
+    radial-gradient(ellipse 70% 45% at 92% 8%, color-mix(in srgb, var(--green-soft) 70%, transparent), transparent 52%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--paper-2) 80%, transparent), transparent 55%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+}
+html[data-theme="dark"] .pg-haven__wash {
+  background:
     radial-gradient(ellipse 85% 50% at 15% -10%, color-mix(in srgb, var(--green) 18%, transparent), transparent 55%),
     radial-gradient(ellipse 55% 40% at 90% 0%, color-mix(in srgb, var(--green) 10%, transparent), transparent 50%),
     linear-gradient(180deg, var(--paper) 0%, #09080c 100%);
 }
+.pg-haven__grid {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--green) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 7%, transparent) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, transparent 22%, #000 85%);
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 35%, transparent 22%, #000 85%);
+  opacity: 0.14;
+}
+html[data-theme="dark"] .pg-haven__grid { opacity: 0.1; }
+.pg-haven__orb {
+  inset: auto;
+  border-radius: 50%;
+}
+.pg-haven__orb--a {
+  width: min(50vw, 24rem);
+  height: min(50vw, 24rem);
+  top: -8%;
+  right: -6%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 14%, transparent) 0%, transparent 70%);
+}
+.pg-haven__orb--b {
+  width: min(42vw, 18rem);
+  height: min(42vw, 18rem);
+  left: -8%;
+  bottom: 18%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 9%, transparent) 0%, transparent 72%);
+}
+.pg-haven__vignette {
+  background: radial-gradient(
+    ellipse 75% 70% at 45% 30%,
+    transparent 50%,
+    color-mix(in srgb, var(--paper) 35%, transparent) 100%
+  );
+}
+
+.skip,
+.shell {
+  position: relative;
+  z-index: 1;
+}
+.top { z-index: 40; }
+.dock { z-index: 35; }
+.site-nav-dialog { z-index: 60; }
+.scroll-to-top { z-index: 55; }
 img, picture { max-width: 100%; height: auto; }
 img { display: block; }
 
@@ -158,9 +229,8 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
   position: sticky; top: 0; z-index: 40;
   min-height: var(--top);
   margin: 0; padding: 0;
-  background: color-mix(in srgb, var(--paper) 72%, transparent);
-  backdrop-filter: saturate(1.4) blur(18px);
-  -webkit-backdrop-filter: saturate(1.4) blur(18px);
+  /* Solid bar — backdrop-filter blur is costly on main-thread paint / SI */
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
 }
 .top__inner {
@@ -594,11 +664,6 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
   background: var(--green);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 28%, transparent);
-  animation: status-pulse 2.4s ease-in-out infinite;
-}
-@keyframes status-pulse {
-  0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent); opacity: 1; }
-  50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--green) 0%, transparent); opacity: 0.85; }
 }
 
 .persona__bio {
@@ -896,22 +961,22 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
 .hero__glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.45;
+  /* Soft radial fills — avoid filter:blur (expensive continuous paint) */
+  opacity: 0.55;
 }
 .hero__glow--a {
   width: min(52vw, 28rem);
   height: min(52vw, 28rem);
   right: -8%;
   top: 8%;
-  background: color-mix(in srgb, var(--green) 48%, transparent);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 48%, transparent) 0%, transparent 70%);
 }
 .hero__glow--b {
   width: min(40vw, 20rem);
   height: min(40vw, 20rem);
   left: 6%;
   bottom: -12%;
-  background: color-mix(in srgb, var(--green-deep) 32%, transparent);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 32%, transparent) 0%, transparent 70%);
 }
 .hero__mesh {
   position: absolute;
@@ -924,10 +989,7 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 55% 45%, #000 25%, transparent 78%);
   opacity: 0.55;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .hero__glow--a { animation: hero-glow-a 12s var(--ease) infinite alternate; }
-  .hero__glow--b { animation: hero-glow-b 14s var(--ease) infinite alternate; }
-}
+/* Static glows only — infinite blur animation tanks Speed Index / TBT in Lighthouse. */
 html[data-theme="dark"] .hero {
   background:
     radial-gradient(ellipse 70% 55% at 80% 30%, color-mix(in srgb, var(--green) 22%, transparent), transparent 60%),
@@ -1076,9 +1138,7 @@ html[data-theme="dark"] .hero__mesh {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #e8f0eb;
-  background: rgba(8, 14, 12, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(8, 14, 12, 0.78);
 }
 .hero__tile--a {
   width: 58%;
@@ -1160,62 +1220,9 @@ html[data-theme="dark"] .hero__mesh {
   border-radius: 50%;
   background: var(--green);
   box-shadow: 0 0 0 3px var(--green-soft);
-  animation: hero-pulse 2.4s var(--ease) infinite;
 }
 
-@keyframes hero-glow-a {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(-6%, 8%, 0) scale(1.08); }
-}
-@keyframes hero-glow-b {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(10%, -6%, 0) scale(1.12); }
-}
-@keyframes hero-mesh {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(48px, 24px, 0); }
-}
-@keyframes hero-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 3px var(--green-soft); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 6px color-mix(in srgb, var(--green) 18%, transparent); }
-}
-@keyframes hero-rise {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: none; }
-}
-@keyframes hero-tile-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.js .hero__brand,
-.js .hero__copy .eyebrow,
-.js .hero__title,
-.js .hero__lede,
-.js .hero__ctas {
-  opacity: 0;
-  animation: hero-rise 0.7s var(--ease) forwards;
-}
-.js .hero__brand { animation-delay: 0.05s; }
-.js .hero__copy .eyebrow { animation-delay: 0.14s; }
-.js .hero__title { animation-delay: 0.22s; }
-.js .hero__lede { animation-delay: 0.32s; }
-.js .hero__ctas { animation-delay: 0.42s; }
-.js .hero__tile {
-  opacity: 0;
-  animation: hero-tile-in 0.7s var(--ease) forwards;
-}
-.js .hero__tile--a { animation-delay: 0.2s; }
-.js .hero__tile--b { animation-delay: 0.28s; }
-.js .hero__tile--c { animation-delay: 0.36s; }
-.js .hero__tile--d { animation-delay: 0.44s; }
-.js .hero__tile--e { animation-delay: 0.5s; }
-.js .hero__tile--f { animation-delay: 0.56s; }
-.js .hero__tile--g { animation-delay: 0.62s; }
-.js .hero__caption {
-  opacity: 0;
-  animation: hero-rise 0.6s var(--ease) 0.7s forwards;
-}
+/* No opacity:0 entrance on hero — delayed visibility destroys LCP + Speed Index. */
 
 @media (max-width: 899px) {
   .hero__collage {
@@ -1608,21 +1615,6 @@ html[data-theme="dark"] .hero__mesh {
 
 @media (prefers-reduced-motion: reduce) {
   .rail__step:nth-child(n) { transform: none !important; }
-  .hero__glow,
-  .hero__mesh,
-  .hero__caption-dot,
-  .persona__status::before { animation: none !important; }
-  .js .hero__brand,
-  .js .hero__copy .eyebrow,
-  .js .hero__title,
-  .js .hero__lede,
-  .js .hero__ctas,
-  .js .hero__tile,
-  .js .hero__caption {
-    opacity: 1 !important;
-    animation: none !important;
-    transform: none !important;
-  }
   .hero__tile:hover { transform: none !important; }
 }
 

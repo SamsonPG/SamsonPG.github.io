@@ -71,10 +71,81 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--ink);
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, color-mix(in srgb, var(--green) 14%, transparent), transparent 55%),
-    var(--paper);
+  background-color: var(--paper);
+  isolation: isolate;
 }
+
+/* Soft personal haven — demos stay primary; Ink Plum chrome only */
+.pg-haven {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  contain: paint;
+}
+.pg-haven__wash,
+.pg-haven__grid,
+.pg-haven__orb,
+.pg-haven__vignette {
+  position: absolute;
+  inset: 0;
+}
+.pg-haven__wash {
+  background:
+    radial-gradient(ellipse 88% 52% at 48% -6%, color-mix(in srgb, var(--green) 12%, transparent), transparent 58%),
+    radial-gradient(ellipse 48% 38% at 94% 12%, color-mix(in srgb, var(--green-soft) 65%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 92%, var(--green-soft)) 100%);
+}
+.pg-haven__grid {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--green) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 8%, transparent) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, transparent 20%, #000 82%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, transparent 20%, #000 82%);
+  opacity: 0.2;
+}
+.pg-haven--soft .pg-haven__grid { opacity: 0.16; }
+.pg-haven__orb {
+  inset: auto;
+  border-radius: 50%;
+}
+.pg-haven__orb--a {
+  width: min(48vw, 20rem);
+  height: min(48vw, 20rem);
+  top: -12%;
+  left: -10%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 16%, transparent) 0%, transparent 70%);
+}
+.pg-haven__orb--b {
+  width: min(42vw, 18rem);
+  height: min(42vw, 18rem);
+  right: -10%;
+  bottom: 8%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 10%, transparent) 0%, transparent 72%);
+}
+.pg-haven__vignette {
+  background: radial-gradient(
+    ellipse 70% 62% at 50% 38%,
+    transparent 48%,
+    color-mix(in srgb, var(--paper) 48%, transparent) 100%
+  );
+}
+html[data-theme="dark"] .pg-haven__wash {
+  background:
+    radial-gradient(ellipse 85% 48% at 50% -8%, color-mix(in srgb, var(--green) 14%, transparent), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 90% 18%, color-mix(in srgb, var(--green) 7%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--paper) 0%, #09080c 100%);
+}
+html[data-theme="dark"] .pg-haven__grid { opacity: 0.12; }
+
+.wrap {
+  position: relative;
+  z-index: 1;
+}
+.topbar { z-index: 40; }
 
 a {
   color: inherit;
