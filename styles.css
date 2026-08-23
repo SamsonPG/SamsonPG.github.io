@@ -288,6 +288,7 @@ html[data-theme="dark"] .top__cta { color: #0c1210; }
   letter-spacing: -0.02em;
   line-height: 1;
 }
+.nav-meta {
   font-size: 0.72rem; font-weight: 700; color: var(--green); letter-spacing: 0.02em;
 }
 .site-nav-dialog-list--compact .site-nav-dialog-link { padding: 0.55rem 0.75rem; }
