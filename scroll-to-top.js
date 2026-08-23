@@ -99,6 +99,9 @@
         scrolling = false;
         button.classList.remove('scroll-to-top--scrolling');
         setVisible(window.scrollY > SHOW_AFTER_PX);
+        if (location.hash && location.hash !== '#home') {
+          history.replaceState(null, '', location.pathname + location.search + '#home');
+        }
       });
     });
   }

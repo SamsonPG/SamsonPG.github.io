@@ -51,6 +51,14 @@
   }
 })();
 </script>
+<script>
+(function () {
+  /* Refresh on #software should land on hero — Software nav still works in-session. */
+  if (location.hash === '#software') {
+    history.replaceState(null, '', location.pathname + location.search + '#home');
+  }
+})();
+</script>
 
 <script type="application/ld+json">
 {
