@@ -80,4 +80,12 @@
       el.classList.add('is-in');
     });
   }
+
+  var creativeAccordion = document.querySelector('.creative-accordion');
+  function openCreativeIfTargeted() {
+    if (!creativeAccordion) return;
+    if (window.location.hash === '#creative') creativeAccordion.open = true;
+  }
+  openCreativeIfTargeted();
+  window.addEventListener('hashchange', openCreativeIfTargeted);
 })();
