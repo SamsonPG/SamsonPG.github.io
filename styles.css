@@ -1084,7 +1084,7 @@ html[data-theme="dark"] .hero__mesh {
   .hero__title { max-width: 22ch; }
 }
 
-.block { margin-top: clamp(3rem, 7vw, 5rem); }
+.block { margin-top: clamp(3rem, 7vw, 5rem); scroll-margin-top: calc(var(--top) + 0.5rem); }
 .block__head h2 {
   margin: 0;
   font-family: "Inter Display", sans-serif;

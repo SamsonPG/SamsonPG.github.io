@@ -11,9 +11,7 @@
     { id: 'contact', el: document.getElementById('contact') }
   ];
 
-  function sectionTop(el) {
-    return el.getBoundingClientRect().top + window.scrollY;
-  }
+  var navLockUntil = 0;
 
   function markNavActive(id) {
     links.forEach(function (a) {
@@ -24,19 +22,28 @@
     });
   }
 
-  function setActive() {
-    var y = window.scrollY + 130;
-    var current = sections[0] ? sections[0].id : 'home';
+  function lockNav(id, ms) {
+    markNavActive(id);
+    navLockUntil = Date.now() + (ms || 700);
+  }
 
-    for (var i = 0; i < sections.length; i++) {
+  function setActive() {
+    if (Date.now() < navLockUntil) return;
+
+    var offset = 130;
+    var current = sections[0] ? sections[0].id : 'home';
+    var maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+
+    if (window.scrollY >= maxScroll - 16) {
+      current = sections[sections.length - 1].id;
+      markNavActive(current);
+      return;
+    }
+
+    for (var i = sections.length - 1; i >= 0; i--) {
       var s = sections[i];
       if (!s.el) continue;
-      var top = sectionTop(s.el);
-      var nextTop = Infinity;
-      if (i + 1 < sections.length && sections[i + 1].el) {
-        nextTop = sectionTop(sections[i + 1].el);
-      }
-      if (y >= top && y < nextTop) {
+      if (s.el.getBoundingClientRect().top <= offset) {
         current = s.id;
         break;
       }
@@ -45,16 +52,27 @@
     markNavActive(current);
   }
 
+  function syncFromHash() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].id === id) {
+        lockNav(id, 800);
+        return;
+      }
+    }
+  }
+
   window.addEventListener('scroll', setActive, { passive: true });
+  syncFromHash();
   setActive();
 
   links.forEach(function (a) {
     a.addEventListener('click', function () {
       var href = a.getAttribute('href');
       if (!href || href.charAt(0) !== '#') return;
-      markNavActive(href.slice(1));
-      window.requestAnimationFrame(setActive);
-      window.setTimeout(setActive, 450);
+      lockNav(href.slice(1), 800);
+      window.setTimeout(setActive, 850);
     });
   });
 
@@ -118,7 +136,8 @@
   }
   openCreativeIfTargeted();
   window.addEventListener('hashchange', function () {
-    setActive();
+    syncFromHash();
+    window.setTimeout(setActive, 850);
     openCreativeIfTargeted();
   });
 })();
