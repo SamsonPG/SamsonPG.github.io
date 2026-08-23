@@ -84,6 +84,10 @@ html[data-theme="light"] {
   --brand-scout-dim: #065f46;
   --brand-astro-ops: #c12127;
   --brand-astro-ops-dim: #991b1b;
+  /* Availability badge — real green, not Ink Plum chrome */
+  --status-open: #047857;
+  --status-open-soft: #ecfdf5;
+  --status-open-deep: #065f46;
 }
 html[data-theme="dark"] {
   --brand-trytokka: #34d399;
@@ -104,6 +108,9 @@ html[data-theme="dark"] {
   --brand-scout-dim: #10b981;
   --brand-astro-ops: #f87171;
   --brand-astro-ops-dim: #ef4444;
+  --status-open: #34d399;
+  --status-open-soft: rgba(52, 211, 153, 0.14);
+  --status-open-deep: #a7f3d0;
 }
 
 [data-product="trytokka"] { --product-accent: var(--brand-trytokka); --product-accent-dim: var(--brand-trytokka-dim); }
@@ -637,7 +644,6 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   .persona {
     position: sticky; top: var(--top);
     height: calc(100vh - var(--top));
-    overflow-x: hidden;
     overflow-y: auto;
     border-bottom: 0;
     border-right: 1px solid var(--line);
@@ -645,7 +651,7 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
     scrollbar-width: thin;
   }
   .persona__inner {
-    padding: 1.35rem 0.85rem 1.75rem 1.1rem;
+    padding: 1.35rem 1rem 1.75rem 1.15rem;
   }
   .persona::-webkit-scrollbar {
     width: 8px;
@@ -753,16 +759,16 @@ html[data-theme="dark"] .top__cta { color: #0c0a09; }
   padding: 0.35rem 0.75rem;
   min-height: 2rem;
   border-radius: 999px;
-  background: var(--green-soft);
-  color: var(--green-deep);
+  background: var(--status-open-soft);
+  color: var(--status-open-deep);
   font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
-  border: 1px solid color-mix(in srgb, var(--green) 35%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green-soft) 80%, transparent);
+  border: 1px solid color-mix(in srgb, var(--status-open) 35%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--status-open-soft) 80%, transparent);
 }
 .persona__status::before {
   content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 28%, transparent);
+  background: var(--status-open);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--status-open) 28%, transparent);
 }
 
 .persona__bio {
@@ -1015,7 +1021,7 @@ html[data-theme="dark"] .tag { color: #0c0a09; }
   min-height: 0;
   display: flex;
   align-items: center;
-  overflow: clip;
+  overflow: visible;
   border-bottom: 1px solid var(--line);
   box-sizing: border-box;
   /* Transparent so fixed haven mesh reads through — local glow only */
@@ -1214,12 +1220,15 @@ html[data-theme="dark"] .hero__hello {
   margin: 0;
   min-width: 0;
   position: relative;
+  overflow: visible;
+  padding: 0.85rem 0.65rem 0.35rem;
 }
 .hero__collage {
   position: relative;
   width: 100%;
   aspect-ratio: 5 / 3.6;
   min-height: 14rem;
+  overflow: visible;
   transform: translate3d(0, calc(var(--hero-drift, 0) * 22px), 0);
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1260,24 +1269,24 @@ html[data-theme="dark"] .hero__hello {
 .hero__tile--a {
   width: 58%;
   height: 54%;
-  left: 2%;
-  top: 8%;
+  left: 4%;
+  top: 10%;
   z-index: 4;
   transform: rotate(-3.5deg);
 }
 .hero__tile--b {
   width: 48%;
   height: 42%;
-  right: 0;
-  top: 0;
+  right: 2%;
+  top: 3%;
   z-index: 5;
   transform: rotate(4deg);
 }
 .hero__tile--c {
   width: 36%;
   height: 32%;
-  left: 0;
-  bottom: 6%;
+  left: 2%;
+  bottom: 8%;
   z-index: 3;
   transform: rotate(2.5deg);
 }
@@ -1346,9 +1355,9 @@ html[data-theme="dark"] .hero__hello {
     aspect-ratio: 4 / 3.4;
     min-height: 18rem;
   }
-  .hero__tile--a { width: 62%; height: 48%; left: 0; top: 4%; }
-  .hero__tile--b { width: 52%; height: 40%; right: 0; top: 2%; }
-  .hero__tile--c { width: 40%; height: 30%; left: 2%; bottom: 8%; }
+  .hero__tile--a { width: 62%; height: 48%; left: 3%; top: 6%; }
+  .hero__tile--b { width: 52%; height: 40%; right: 3%; top: 4%; }
+  .hero__tile--c { width: 40%; height: 30%; left: 4%; bottom: 10%; }
   .hero__tile--d { width: 38%; height: 28%; left: 36%; bottom: 4%; }
   .hero__tile--e { width: 34%; height: 26%; right: 2%; bottom: 22%; }
   .hero__tile--f,
