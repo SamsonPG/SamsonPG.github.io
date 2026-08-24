@@ -181,6 +181,37 @@ if (missing.length) {
 }
 
 /*
+  3. The links must actually be clickable.
+
+  Every URL on this CV was plain text until someone asked why the phone number was not
+  tappable. It looked completely finished — the addresses were all printed correctly —
+  and not one of them could be followed. A "Selected Work" section nobody can click is
+  decoration.
+
+  These are link annotations, a different layer from the text an ATS reads, so nothing
+  here overlaps with the extraction check above: the text can be perfect while every
+  link is missing, which is exactly the state this file shipped in.
+*/
+const MUST_LINK = [
+  'tel:+917994577229',
+  'mailto:samsonpg077@gmail.com',
+  'https://samsonpg.github.io',
+  'https://www.linkedin.com/in/samson-p-g-335964133',
+  'https://github.com/SamsonPG',
+  'https://trytokka.com',
+  'https://www.npmjs.com/package/@acsaven/astro-ops',
+  'https://github.com/acsavenhq/trytokka-security',
+];
+const raw = readFileSync(out, 'latin1');
+const deadLinks = MUST_LINK.filter((u) => !raw.includes(u));
+if (deadLinks.length) {
+  console.error(`  FAIL: not clickable in the PDF: ${deadLinks.join(', ')}`);
+  failed = true;
+} else {
+  console.log(`  links OK - ${MUST_LINK.length} clickable annotations present`);
+}
+
+/*
   Copy only a PDF that passed.
 
   The first version copied before evaluating `failed`, so a rejected three-page draft was
