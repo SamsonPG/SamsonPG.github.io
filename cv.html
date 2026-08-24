@@ -179,8 +179,19 @@
       web copy of this page working too, since both read the same file.
     -->
     <figure class="qr">
-      <img src="./cv-qr.svg" alt="QR code linking to samsonpg.github.io/QR-Code — a hub of live projects, code and contact links">
-      <figcaption>Scan for live<br>projects &amp; code</figcaption>
+      <!--
+        The QR is a link as well as a symbol.
+
+        Most CVs are read on a screen now, and a QR code on a screen is dead weight —
+        nobody holds a phone up to their own monitor. Printed, it still scans. Wrapping
+        it in an anchor makes the same square work in both situations instead of only
+        the one where the reader has paper in their hand. The caption says so, because
+        an image that happens to be clickable is not discoverable otherwise.
+      -->
+      <a href="https://samsonpg.github.io/QR-Code/">
+        <img src="./cv-qr.svg" alt="Scan or click: link hub at samsonpg.github.io/QR-Code with live projects, code and contact links">
+      </a>
+      <figcaption>Scan or click —<br>live projects &amp; code</figcaption>
     </figure>
   </header>
 

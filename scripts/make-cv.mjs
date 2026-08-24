@@ -201,6 +201,8 @@ const MUST_LINK = [
   'https://trytokka.com',
   'https://www.npmjs.com/package/@acsaven/astro-ops',
   'https://github.com/acsavenhq/trytokka-security',
+  // The QR square itself, so it works on a screen and not only on paper.
+  'https://samsonpg.github.io/QR-Code/',
 ];
 const raw = readFileSync(out, 'latin1');
 const deadLinks = MUST_LINK.filter((u) => !raw.includes(u));
