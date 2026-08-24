@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samson P G — Full-Stack Engineer — CV</title>
+<meta name="description" content="CV of Samson P G, full-stack software engineer working in TypeScript, Next.js, Node.js and PostgreSQL.">
+<link rel="canonical" href="https://samsonpg.github.io/cv.html">
+
+<!--
+  Printed to PDF by scripts/make-cv.mjs.
+
+  BUILT FOR A MACHINE TO READ FIRST. Most applications are ranked by software before a
+  person opens them, so every choice here favours clean text extraction over decoration:
+
+    - one column, in reading order. Two-column CVs interleave into nonsense when a parser
+      pulls the text out line by line.
+    - conventional section headings ("Professional Experience", "Technical Skills",
+      "Education"). Parsers match on these exact words; "What I've Been Up To" scores zero.
+    - no text inside images, headers, footers, or text boxes. Many parsers discard all
+      four, which is where CVs mysteriously lose their phone number.
+    - real bullet lists and real dates in a consistent Mon YYYY format.
+    - system fonts only, no icon fonts. An icon font extracts as a random glyph.
+
+  The QR code is a bonus for humans holding a printout. A parser cannot read it, so every
+  URL it leads to is also written out as selectable text — the QR adds a path, it never
+  carries information on its own.
+-->
+<style>
+  :root {
+    --ink: #14181a;
+    --soft: #454f54;
+    --faint: #667176;
+    --rule: #ccd3d6;
+    --accent: #0d5c3e;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font: 10pt/1.4 "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1.4rem 2rem; }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  /* Header ---------------------------------------------------------------- */
+
+  header {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: .55rem;
+    margin-bottom: .85rem;
+  }
+
+  h1 { margin: 0; font-size: 20pt; line-height: 1.04; letter-spacing: -.02em; font-weight: 700; }
+
+  .title { margin: .16rem 0 0; font-size: 10.6pt; font-weight: 600; color: var(--accent); }
+
+  /* Contact details as plain text on their own lines — never in a header/footer. */
+  .contact { margin: .4rem 0 0; font-size: 8.8pt; color: var(--soft); line-height: 1.5; }
+  .contact span { white-space: nowrap; }
+
+  .qr { text-align: center; flex: 0 0 auto; }
+  .qr svg, .qr img { width: 62px; height: 62px; display: block; }
+  .qr figcaption {
+    margin-top: .18rem;
+    font-size: 6.2pt;
+    color: var(--faint);
+    letter-spacing: .02em;
+    line-height: 1.25;
+  }
+
+  /* Sections -------------------------------------------------------------- */
+
+  h2 {
+    margin: .95rem 0 .45rem;
+    font-size: 8.7pt;
+    font-weight: 700;
+    /*
+      No letter-spacing here, however much better it looks.
+
+      Chrome positions each glyph individually when letters are tracked apart, and every
+      PDF text extractor then reads the heading as "E D U C AT I O N". Section headings
+      are exactly what an applicant tracking system uses to segment a CV, so a heading it
+      cannot match is a CV it cannot file. Verified by extraction in scripts/make-cv.mjs,
+      which fails the build if the headings stop coming out as whole words.
+    */
+    text-transform: uppercase;
+    color: var(--faint);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: .18rem;
+  }
+
+  p { margin: 0; }
+
+  .summary { color: var(--soft); }
+
+  /* Roles ----------------------------------------------------------------- */
+
+  .role { margin-top: .72rem; break-inside: avoid; }
+  .role:first-of-type { margin-top: 0; }
+
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .9rem;
+    flex-wrap: wrap;
+  }
+
+  .role-title { font-size: 10.5pt; font-weight: 700; }
+  .role-when { font-size: 8.8pt; color: var(--faint); white-space: nowrap; }
+  .role-note { margin-top: .1rem; font-size: 9.1pt; color: var(--soft); }
+
+  ul { margin: .3rem 0 0; padding-left: 1rem; }
+  li { margin-bottom: .22rem; }
+  li::marker { color: var(--faint); }
+
+  b { font-weight: 650; }
+
+  /* Skills ---------------------------------------------------------------- */
+
+  .skills div { margin-bottom: .22rem; }
+  .skills dt { display: inline; font-weight: 700; font-size: 9.1pt; }
+  .skills dd { display: inline; margin: 0 0 0 .28rem; color: var(--soft); font-size: 9.4pt; }
+
+  .links { color: var(--soft); font-size: 9.3pt; }
+  .links div { margin-bottom: .13rem; }
+
+  /* Print ----------------------------------------------------------------- */
+
+  @page { size: A4; margin: 11mm 12mm; }
+
+  @media print {
+    .sheet { max-width: none; padding: 0; }
+    a { color: var(--ink); }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <header>
+    <div>
+      <h1>Samson P G</h1>
+      <p class="title">Full-Stack Software Engineer — TypeScript, Next.js, Node.js, PostgreSQL</p>
+      <p class="contact">
+        <span>Kochi, Kerala, India</span> · <span>samsonpg077@gmail.com</span><br>
+        <span>Portfolio: samsonpg.github.io</span> ·
+        <span>LinkedIn: linkedin.com/in/samson-p-g-335964133</span> ·
+        <span>GitHub: github.com/SamsonPG</span>
+      </p>
+    </div>
+    <!--
+      Replaced at print time by scripts/make-cv.mjs writing cv-qr.svg. The <img> keeps the
+      web copy of this page working too, since both read the same file.
+    -->
+    <figure class="qr">
+      <img src="./cv-qr.svg" alt="QR code linking to samsonpg.github.io/QR-Code — a hub of live projects, code and contact links">
+      <figcaption>Scan for live<br>projects &amp; code</figcaption>
+    </figure>
+  </header>
+
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Full-stack software engineer with two years of professional experience, currently
+    designing, building and operating six products in production single-handedly. Strongest
+    in <b>TypeScript, Next.js, Node.js and PostgreSQL</b>, with real ownership of the work
+    that appears after launch: authentication and authorisation, data encryption, payment
+    webhooks, automated testing and CI. Comfortable owning a feature from database schema
+    through API to interface, and equally comfortable being the person on call when it
+    breaks. Seeking full-stack or backend engineering roles in Kochi, Bengaluru or remote.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <dl class="skills">
+    <div><dt>Languages</dt><dd>TypeScript, JavaScript (ES6+), SQL, HTML5, CSS3</dd></div>
+    <div><dt>Frontend</dt><dd>React, Next.js (App Router), Astro, responsive design, WCAG accessibility</dd></div>
+    <div><dt>Backend</dt><dd>Node.js, Express, REST APIs, serverless functions, webhooks, authentication &amp; authorisation (RBAC, OAuth, TOTP 2FA)</dd></div>
+    <div><dt>Databases</dt><dd>PostgreSQL, Supabase, MongoDB; schema design, migrations, Row-Level Security, query optimisation</dd></div>
+    <div><dt>Cloud &amp; DevOps</dt><dd>Vercel, Cloudflare Workers, Git, GitHub Actions, CI/CD pipelines</dd></div>
+    <div><dt>Testing &amp; QA</dt><dd>Vitest, Playwright, unit, integration and end-to-end testing, automated quality gates</dd></div>
+    <div><dt>Security</dt><dd>AES-256-GCM encryption at rest, secrets management, idempotent webhook verification, threat modelling</dd></div>
+    <div><dt>Practices</dt><dd>Agile delivery, code review, technical documentation, performance optimisation, technical SEO</dd></div>
+  </dl>
+
+  <h2>Professional Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Founder &amp; Full-Stack Engineer — Acsaven (Self-Employed)</p>
+      <span class="role-when">Jun 2026 – Present · Kochi, India</span>
+    </div>
+    <p class="role-note">
+      Independent software studio. Six products live, taken end to end alone: architecture,
+      database design, security, payments, testing, accessibility, SEO and deployment.
+    </p>
+    <ul>
+      <li>
+        Architected and shipped <b>TryTokka</b>, a multi-tenant SaaS for AI API spend
+        monitoring, on <b>Next.js, TypeScript and PostgreSQL (Supabase)</b> deployed to
+        Vercel — <b>97 REST API routes, 69 database migrations, 446 automated tests and 22 end-to-end Playwright suites</b>.
+      </li>
+      <li>
+        Built an <b>eight-provider integration layer</b> reading billing and usage endpoints
+        from OpenAI, Anthropic, Google, Azure, AWS Bedrock and others, with per-provider
+        rate-limit handling, retries and normalisation into a single reporting schema.
+      </li>
+      <li>
+        Implemented credential security to a publicly auditable standard: <b>AES-256-GCM</b>
+        encryption of stored provider API keys, PostgreSQL <b>Row-Level Security</b> for
+        tenant isolation, and <b>TOTP two-factor authentication</b>. Published the three
+        credential-handling modules as open source so the claims can be independently verified.
+      </li>
+      <li>
+        Integrated <b>three payment providers</b> (Razorpay, Dodo, Stripe) with
+        signature-verified, <b>idempotent webhooks</b> and a reconciliation ledger that raises
+        an alert when a payment is captured but not recorded — closing a class of silent
+        revenue loss.
+      </li>
+      <li>
+        Designed <b>role-based access control</b> (owner / member / viewer) enforced
+        server-side, and identified and fixed a <b>privilege-escalation defect</b> in which
+        three separate code paths compared roles by equality instead of exclusion, granting
+        read-only users write access.
+      </li>
+      <li>
+        Delivered three high-traffic static products — <b>TryQuickImg, TryDevSnip and
+        TryCalculatingNow</b> — on <b>Astro and Cloudflare Workers</b>, ~700 pages combined,
+        with all file processing performed client-side so no user data leaves the browser.
+      </li>
+      <li>
+        Published two developer tools: <b>@acsaven/astro-ops</b> on npm (MIT, zero runtime
+        dependencies) — seven automated build gates converting silent post-deployment
+        failures into build failures — and <b>Scout</b>, a <b>VS Code Marketplace
+        extension</b> showing live API spend in the editor via a read-only token.
+      </li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Software Developer — Benagon Technologies</p>
+      <span class="role-when">Oct 2024 – May 2026 · Kochi, India</span>
+    </div>
+    <ul>
+      <li>
+        Developed and maintained <b>production web applications in React and TypeScript</b>,
+        contributing across feature delivery, defect triage, code review and release.
+      </li>
+      <li>
+        Translated design specifications into responsive, accessible interfaces and integrated
+        them with backend REST APIs.
+      </li>
+      <li>
+        Joined July 2024 as a frontend intern and was promoted to a full-time developer role.
+      </li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">MERN Stack Developer, Intern — Brototype</p>
+      <span class="role-when">Dec 2022 – Oct 2023 · Kochi, India</span>
+    </div>
+    <ul>
+      <li>
+        Intensive full-stack JavaScript programme building projects across <b>MongoDB,
+        Express, React and Node.js</b>, covering REST API design, authentication and
+        deployment.
+      </li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <ul>
+    <li><b>MSc, Electronics.</b></li>
+    <li>
+      <b>Earlier career:</b> four years in print production and sales in Bahrain —
+      client-facing delivery under hard deadlines, where a job only counted as done when it
+      worked for the person receiving it.
+    </li>
+  </ul>
+
+  <h2>Selected Work</h2>
+  <div class="links">
+    <div><b>Portfolio</b> — samsonpg.github.io</div>
+    <div><b>TryTokka (SaaS)</b> — trytokka.com</div>
+    <div><b>npm package</b> — npmjs.com/package/@acsaven/astro-ops</div>
+    <div><b>Open-source security modules</b> — github.com/acsavenhq/trytokka-security</div>
+    <div><b>VS Code extension</b> — marketplace.visualstudio.com (search "Scout AI Spend Tracker")</div>
+  </div>
+
+</div>
+
+</body>
+</html>
