@@ -93,7 +93,7 @@
   /* Sections -------------------------------------------------------------- */
 
   h2 {
-    margin: .95rem 0 .45rem;
+    margin: .78rem 0 .4rem;
     font-size: 8.7pt;
     font-weight: 700;
     /*
@@ -117,7 +117,7 @@
 
   /* Roles ----------------------------------------------------------------- */
 
-  .role { margin-top: .72rem; break-inside: avoid; }
+  .role { margin-top: .58rem; break-inside: avoid; }
   .role:first-of-type { margin-top: 0; }
 
   .role-head {
@@ -132,15 +132,25 @@
   .role-when { font-size: 8.8pt; color: var(--faint); white-space: nowrap; }
   .role-note { margin-top: .1rem; font-size: 9.1pt; color: var(--soft); }
 
-  ul { margin: .3rem 0 0; padding-left: 1rem; }
-  li { margin-bottom: .22rem; }
+  /*
+    Spacing tightened rather than content cut.
+
+    Adding the AI project pushed the CV to three pages and the build refused to publish it.
+    The first instinct was to delete bullets, but the material earning the interview is the
+    measured work, not the whitespace. Reclaiming a few tenths of a rem per list item and
+    per section heading recovered the page while leaving the type at 10pt, which is still
+    comfortably readable in print. Cutting below that would trade legibility for content,
+    and at that point the honest move is to cut content.
+  */
+  ul { margin: .25rem 0 0; padding-left: 1rem; }
+  li { margin-bottom: .14rem; }
   li::marker { color: var(--faint); }
 
   b { font-weight: 650; }
 
   /* Skills ---------------------------------------------------------------- */
 
-  .skills div { margin-bottom: .22rem; }
+  .skills div { margin-bottom: .15rem; }
   .skills dt { display: inline; font-weight: 700; font-size: 9.1pt; }
   .skills dd { display: inline; margin: 0 0 0 .28rem; color: var(--soft); font-size: 9.4pt; }
 
@@ -222,6 +232,7 @@
     <div><dt>Backend</dt><dd>Node.js, Express, REST APIs, serverless functions, webhooks, authentication &amp; authorisation (RBAC, OAuth, TOTP 2FA)</dd></div>
     <div><dt>Databases</dt><dd>PostgreSQL, Supabase, MongoDB; schema design, migrations, Row-Level Security, query optimisation</dd></div>
     <div><dt>Cloud &amp; DevOps</dt><dd>Vercel, Cloudflare Workers, Git, GitHub Actions, CI/CD pipelines</dd></div>
+    <div><dt>AI / LLM</dt><dd>RAG, embeddings, vector databases (Vectorize), prompt engineering, LLM evaluation, prompt-injection defence, tool-calling agents</dd></div>
     <div><dt>Testing &amp; QA</dt><dd>Vitest, Playwright, unit, integration and end-to-end testing, automated quality gates</dd></div>
     <div><dt>Security</dt><dd>AES-256-GCM encryption at rest, secrets management, idempotent webhook verification, threat modelling</dd></div>
     <div><dt>Practices</dt><dd>Agile delivery, code review, technical documentation, performance optimisation, technical SEO</dd></div>
@@ -252,9 +263,9 @@
       </li>
       <li>
         Implemented credential security to a publicly auditable standard: <b>AES-256-GCM</b>
-        encryption of stored provider API keys, PostgreSQL <b>Row-Level Security</b> for
-        tenant isolation, and <b>TOTP two-factor authentication</b>. Published the three
-        credential-handling modules as open source so the claims can be independently verified.
+        encryption of stored API keys, PostgreSQL <b>Row-Level Security</b>, and <b>TOTP
+        two-factor auth</b>. The three credential modules are open source so the claims can
+        be checked.
       </li>
       <li>
         Integrated <b>three payment providers</b> (Razorpay, Dodo, Stripe) with
@@ -263,15 +274,22 @@
         revenue loss.
       </li>
       <li>
-        Designed <b>role-based access control</b> (owner / member / viewer) enforced
-        server-side, and identified and fixed a <b>privilege-escalation defect</b> in which
-        three separate code paths compared roles by equality instead of exclusion, granting
-        read-only users write access.
+        Designed server-side <b>role-based access control</b> and found a
+        <b>privilege-escalation defect</b> where three code paths compared roles by equality
+        instead of exclusion, granting read-only users write access.
       </li>
       <li>
         Delivered three high-traffic static products — <b>TryQuickImg, TryDevSnip and
         TryCalculatingNow</b> — on <b>Astro and Cloudflare Workers</b>, ~700 pages combined,
         with all file processing performed client-side so no user data leaves the browser.
+      </li>
+      <li>
+        Built <b>llm-docs-lab</b>, a retrieval system over LLM provider pricing docs on
+        <b>Cloudflare Workers AI and Vectorize</b>: content-aware chunking, embeddings,
+        cited answers, and a tool-calling agent with step and cost ceilings. Measured rather
+        than asserted — <b>100% recall@6</b> on a 20-question golden set, a three-model
+        quality/cost comparison, and <b>0/10 prompt-injection attacks</b> landing against
+        poisoned documents and hostile queries.
       </li>
       <li>
         Published two developer tools: <b>@acsaven/astro-ops</b> on npm (MIT, zero runtime
@@ -294,10 +312,6 @@
       <li>
         Developed and maintained <b>production web applications in React and TypeScript</b>,
         contributing across feature delivery, defect triage, code review and release.
-      </li>
-      <li>
-        Translated design specifications into responsive, accessible interfaces and integrated
-        them with backend REST APIs.
       </li>
       <li>
         Promoted from frontend developer to full-stack software developer within four months.
@@ -331,12 +345,9 @@
   <h2>Earlier Career</h2>
   <ul>
     <li>
-      <b>Designer / Printer &amp; Production In-Charge — Al Shayeb Advertising &amp;
-      Designing</b>, Riffa, Bahrain (Jun 2019 – Nov 2022). Ran production end to end for
-      client work under hard deadlines.
-    </li>
-    <li>
-      <b>Sales Executive — DotLine Computers</b>, Manama, Bahrain (Jun 2018 – Jun 2019).
+      <b>Designer / Production In-Charge — Al Shayeb Advertising</b>, Bahrain (Jun 2019 – Nov
+      2022) · <b>Sales Executive — DotLine Computers</b>, Bahrain (Jun 2018 – Jun 2019).
+      Client-facing delivery under hard deadlines.
     </li>
   </ul>
 
@@ -346,6 +357,7 @@
     <div><b>TryTokka (SaaS)</b> — <a href="https://trytokka.com">trytokka.com</a></div>
     <div><b>npm package</b> — <a href="https://www.npmjs.com/package/@acsaven/astro-ops">npmjs.com/package/@acsaven/astro-ops</a></div>
     <div><b>Open-source security modules</b> — <a href="https://github.com/acsavenhq/trytokka-security">github.com/acsavenhq/trytokka-security</a></div>
+    <div><b>RAG + evals + agent</b> — <a href="https://llmdocs.acsaven.com">llmdocs.acsaven.com</a> · <a href="https://github.com/SamsonPG/llm-docs-lab">github.com/SamsonPG/llm-docs-lab</a></div>
     <div><b>VS Code extension</b> — <a href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker">marketplace.visualstudio.com</a> (search "Scout AI Spend Tracker")</div>
   </div>
 
