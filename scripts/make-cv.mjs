@@ -87,6 +87,25 @@ if (!qrOk) {
   process.exit(1);
 }
 
+/*
+  The QR and its caption must share a centre line.
+
+  The caption is wider than the square, so the figure sizes to the text and a block
+  image without auto margins drifts to the left edge of it — about 7px, which reads as
+  sloppy without being obviously wrong enough to spot. Measured rather than eyeballed,
+  because that is the size of error a person skims past.
+*/
+const drift = await page.evaluate(() => {
+  const img = document.querySelector('.qr img').getBoundingClientRect();
+  const cap = document.querySelector('.qr figcaption').getBoundingClientRect();
+  return Math.abs((img.left + img.width / 2) - (cap.left + cap.width / 2));
+});
+if (drift > 0.5) {
+  await browser.close();
+  console.error(`  FAIL: QR is ${drift.toFixed(1)}px off the caption's centre line.`);
+  process.exit(1);
+}
+
 await page.pdf({
   path: out,
   format: 'A4',

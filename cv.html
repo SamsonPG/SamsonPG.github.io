@@ -72,7 +72,16 @@
   .contact span { white-space: nowrap; }
 
   .qr { text-align: center; flex: 0 0 auto; }
-  .qr svg, .qr img { width: 62px; height: 62px; display: block; }
+  /*
+    margin-inline: auto is doing real work here, not tidying.
+
+    The caption is wider than the 62px square, so the figure sizes itself to the text.
+    A display:block image with no auto margins then sits flush left inside that wider
+    box while the caption centres under it, and the two visibly disagree. Centring the
+    image inside its own column lines them up.
+  */
+  .qr a { display: block; }
+  .qr svg, .qr img { width: 62px; height: 62px; display: block; margin-inline: auto; }
   .qr figcaption {
     margin-top: .18rem;
     font-size: 6.2pt;
