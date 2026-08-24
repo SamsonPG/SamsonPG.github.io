@@ -154,6 +154,8 @@ async function extractText(file) {
 const MUST_EXTRACT = [
   // Identity and contact — useless if a parser cannot read them back.
   'Samson', 'samsonpg077@gmail.com', 'samsonpg.github.io', 'linkedin.com/in/samson-p-g-335964133',
+  // The phone is the field an incomplete-record filter looks for first.
+  '79945 77229', 'University of Calicut',
   // Keywords a role match depends on.
   'TypeScript', 'Next.js', 'PostgreSQL', 'Node.js', 'React', 'Acsaven',
   /*
