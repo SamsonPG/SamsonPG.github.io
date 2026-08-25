@@ -287,24 +287,26 @@ html[data-theme="dark"] .pg-haven__vignette {
   );
 }
 
-/* Signature: Ink Plum reading rail — transform-only, no blur */
+/* Signature: Ink Plum reading progress — top bar (Unbundl-style), transform-only */
 .ink-progress {
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 0;
-  width: 3px;
-  z-index: 55;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 70;
   pointer-events: none;
-  opacity: 0.75;
+  background: color-mix(in srgb, var(--line) 55%, transparent);
 }
 .ink-progress__bar {
   display: block;
   width: 100%;
   height: 100%;
-  transform: scaleY(0);
-  transform-origin: top center;
-  background: linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-deep) 55%, var(--green) 100%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--green) 45%, transparent);
 }
 @media (prefers-reduced-motion: reduce) {
   .ink-progress { display: none; }
