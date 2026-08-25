@@ -1739,8 +1739,21 @@ section.block:target {
   font-family: "Inter Display", sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.25rem); letter-spacing: -0.03em;
 }
-.rail__body h3 a { color: inherit; text-decoration: none; }
-.rail__body h3 a:hover { color: var(--green-deep); }
+/*
+  Every stage heading carries colour, not only the ones tied to a product.
+
+  The rule below applied --product-accent solely to steps with a data-product attribute, so
+  Acsaven and SoundShoppie stood out while Brototype, the Bahrain roles and the degree read
+  as plain body text. That made the earlier half of the timeline look like an afterthought
+  rather than part of the same story — the opposite of the point, since those years are the
+  reason the later ones read the way they do.
+
+  The accent is now the default for every heading; a product step still overrides it with
+  its own brand colour immediately below.
+*/
+.rail__body h3, .rail__body h3 a { color: var(--green-deep); }
+.rail__body h3 a { text-decoration: none; }
+.rail__body h3 a:hover { color: var(--ink); }
 .rail__step[data-product] .rail__body h3,
 .rail__step[data-product] .rail__body h3 a { color: var(--product-accent); }
 .rail__step[data-product] .rail__body h3 a:hover { color: var(--product-accent-dim); }
