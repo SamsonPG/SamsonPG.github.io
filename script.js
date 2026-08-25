@@ -135,7 +135,7 @@
     sigTick = false;
     var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     var p = Math.min(1, Math.max(0, window.scrollY / max));
-    if (inkBar) inkBar.style.transform = 'scaleY(' + p + ')';
+    if (inkBar) inkBar.style.width = (p * 100).toFixed(2) + '%';
     if (!reduce && heroEl) {
       var h = heroEl.offsetHeight || 1;
       var local = Math.min(1, Math.max(0, (window.innerHeight * 0.4 - heroEl.getBoundingClientRect().top) / h));

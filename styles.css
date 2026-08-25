@@ -266,10 +266,10 @@ html[data-theme="dark"] .pg-haven__grid { opacity: 0.14; }
   background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 26%, transparent) 0%, transparent 70%);
 }
 html[data-theme="dark"] .pg-haven__orb--a {
-  background: radial-gradient(circle, color-mix(in srgb, var(--green) 28%, transparent) 0%, transparent 68%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 52%, transparent) 0%, transparent 68%);
 }
 html[data-theme="dark"] .pg-haven__orb--b {
-  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 18%, transparent) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green-deep) 40%, transparent) 0%, transparent 70%);
 }
 .pg-haven__vignette {
   /* Light: softer edge so mesh reads; dark keeps more paper falloff */
@@ -287,27 +287,27 @@ html[data-theme="dark"] .pg-haven__vignette {
   );
 }
 
-/* Signature: Ink Plum reading rail — transform-only, no blur */
+/* Signature: Ink Plum reading progress — glued to the sticky nav’s bottom edge */
 .ink-progress {
-  position: fixed;
+  position: absolute;
   left: 0;
-  top: 0;
+  right: 0;
   bottom: 0;
-  width: 3px;
-  z-index: 55;
+  width: 100%;
+  height: 4px;
+  z-index: 2;
   pointer-events: none;
-  opacity: 0.75;
+  background: color-mix(in srgb, var(--line) 90%, transparent);
+  overflow: hidden;
 }
 .ink-progress__bar {
   display: block;
-  width: 100%;
   height: 100%;
-  transform: scaleY(0);
-  transform-origin: top center;
-  background: linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
-}
-@media (prefers-reduced-motion: reduce) {
-  .ink-progress { display: none; }
+  width: 0%;
+  max-width: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-deep) 50%, var(--green) 100%);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--green) 55%, transparent);
 }
 
 .skip,
@@ -338,6 +338,7 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
   /* Solid bar — backdrop-filter blur is costly on main-thread paint / SI */
   background: color-mix(in srgb, var(--paper) 94%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+  overflow: visible;
 }
 .top__inner {
   width: 100%;
