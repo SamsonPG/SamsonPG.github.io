@@ -12,9 +12,16 @@ Not full apps — design showcases only.
 
 ## Products
 
-trytokka, tryquickimg, trydevsnip, trycalculatingnow, acsaven, soundshoppie, 20x, portfolio
+trytokka, tryquickimg, trydevsnip, trycalculatingnow, acsaven, soundshoppie, 20x, llm-docs-lab, portfolio
 
 Each folder: themed index.html + shot.webp (live homepage capture).
+
+llm-docs-lab carries one extra thing: `results/`, the measured retrieval, model-comparison
+and prompt-injection numbers. They are original content rather than a capture, so unlike
+the clones that page stays indexable and canonicals to itself. The clone beside it is
+`noindex,follow` and canonicals to llmdocs.acsaven.com, like every other folder here.
+Its ask box cannot reach a Cloudflare Worker from GitHub Pages, so it answers in place
+and points at the live demo rather than failing into an error.
 
 ## Refresh a shot
 
