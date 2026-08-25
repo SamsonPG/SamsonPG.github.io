@@ -117,7 +117,16 @@
 
   /* Roles ----------------------------------------------------------------- */
 
-  .role { margin-top: .58rem; break-inside: avoid; }
+  /*
+    The role does NOT keep itself together. It used to, and the first role is tall enough
+    that it could not fit in what remained of page one, so the whole block jumped to page two
+    and left roughly half a page blank under Technical Skills.
+
+    What actually needs protecting is smaller: a job title must never sit alone at the foot of
+    a page, and a single bullet should not split across the break. The list itself is free to
+    flow, which is what fills the page.
+  */
+  .role { margin-top: .58rem; }
   .role:first-of-type { margin-top: 0; }
 
   .role-head {
@@ -165,6 +174,10 @@
     .sheet { max-width: none; padding: 0; }
     a { color: var(--ink); }
     h2 { break-after: avoid; }
+    .role-head, .role-note { break-after: avoid; }
+    .role-head { break-inside: avoid; }
+    li { break-inside: avoid; }
+    p, li { orphans: 2; widows: 2; }
   }
 </style>
 </head>
