@@ -37,10 +37,66 @@
     return Promise.resolve(new Response('', { status: 204 }))
   }
 
+  /*
+    The demo endpoints do not exist here, and a 404 is the wrong thing to show for it.
+
+    This folder is a capture of a page whose ask box talks to a Cloudflare Worker. On GitHub
+    Pages that Worker is absent, so /ask returned 404 and the page reported "Something went
+    wrong: HTTP 404" — describing a working system as a broken one, to the audience most
+    likely to be evaluating it.
+
+    This lives in the guard rather than in the capture script on purpose: the guard is copied
+    with the page, so a later re-capture cannot quietly lose the explanation. That has already
+    happened once.
+
+    The reply is shaped to match what the page expects. In events mode that is a server-sent
+    error frame, which the page's existing handler already renders properly, rather than a
+    second code path that would have to be kept in step with the first.
+  */
+  var DEMO_API = /^\/(ask|agent)(\/|$|\?)/
+  var NOTICE =
+    'This is a static copy, kept so the design and the measured results survive if the live ' +
+    'demo is unreachable. Answering needs the Cloudflare Worker, which is not part of this ' +
+    'copy — the live demo is at https://llmdocs.acsaven.com and the measurements are in ../results/.'
+
+  function demoPath(url) {
+    try {
+      var full = new URL(url, location.href)
+      if (full.origin !== location.origin) return ''
+      // The capture is served from a subfolder, so compare against the folder root.
+      var base = location.pathname.replace(/[^/]*$/, '')
+      return full.pathname.indexOf(base) === 0 ? '/' + full.pathname.slice(base.length) : full.pathname
+    } catch (e) {
+      return String(url || '')
+    }
+  }
+
+  function staticNotice(url) {
+    if (/[?&]events=1(&|$)/.test(String(url || ''))) {
+      var frame =
+        'event: error\ndata: ' +
+        JSON.stringify({ reason: 'static', message: NOTICE }) +
+        '\n\n'
+      return Promise.resolve(
+        new Response(frame, {
+          status: 200,
+          headers: { 'Content-Type': 'text/event-stream; charset=utf-8' },
+        }),
+      )
+    }
+    return Promise.resolve(
+      new Response(NOTICE, {
+        status: 200,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8', 'x-sources': '%5B%5D' },
+      }),
+    )
+  }
+
   var _fetch = window.fetch.bind(window)
   window.fetch = function (input, init) {
     var url = typeof input === 'string' ? input : input && input.url
     if (isExternal(url)) return emptyJson()
+    if (DEMO_API.test(demoPath(url))) return staticNotice(url)
     return _fetch(input, init)
   }
 
