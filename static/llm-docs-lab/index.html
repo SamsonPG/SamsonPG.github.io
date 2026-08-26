@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script src="./offline-guard.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>llm-docs-lab — ask about LLM provider pricing</title>
-<meta name="description" content="Ask about LLM provider pricing and rate limits. Answers come from a fixed snapshot of seven provider documentation pages, every claim cited, with published retrieval and prompt-injection measurements.">
 <meta name="robots" content="noindex,follow">
+<meta name="description" content="Ask about LLM provider pricing and rate limits. Answers come from a fixed snapshot of seven provider documentation pages, every claim cited, with published retrieval and prompt-injection measurements.">
 <link rel="canonical" href="https://llmdocs.acsaven.com/">
 <meta name="theme-color" content="#0B0A0E" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#F7F8F6" media="(prefers-color-scheme: light)">
@@ -507,6 +506,19 @@
   .go:active { transform: translateY(1px); }
   .go[disabled] { opacity: .5; cursor: progress; }
 
+  .quota {
+    margin: .85rem 0 0;
+    font-size: .8125rem;
+    color: var(--ink-3);
+    display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+  }
+  .quota__bar {
+    width: 108px; height: 5px; border-radius: 999px;
+    background: var(--sink); overflow: hidden; flex: 0 0 auto;
+  }
+  .quota__fill { display: block; height: 100%; background: var(--gold); border-radius: 999px; }
+  .quota__fill.is-low { background: var(--warn); }
+
   .chips {
     display: flex; flex-wrap: wrap; gap: .45rem;
     margin: 1rem 0 0; padding: 0; list-style: none;
@@ -776,6 +788,15 @@
       <li><button type="button" data-q="What is the base input token price for Claude Opus 5?">Claude Opus price</button></li>
       <li><button type="button" data-q="What does AWS Bedrock charge for Claude Sonnet?">something it cannot answer</button></li>
     </ul>
+
+    <!--
+      The allowance, in the open. This demo runs on a free daily allowance and used to
+      simply stop working when it ran out, which reads as a broken project rather than a
+      deliberate constraint. Saying what is left, and when it returns, turns a failure
+      into a fact a visitor can plan around. Hidden until the figure loads so the page
+      never shows an empty frame, and it says "estimated" because it is.
+    -->
+    <p class="quota" id="quota" hidden></p>
   </section>
 
   <section class="shell answer-wrap" id="answer-wrap" hidden>
@@ -857,6 +878,54 @@
   });
 
   /* ── Scroll: nav border, and back to top ────────────────────────────── */
+
+  /* -- Allowance, shown rather than discovered by hitting it -- */
+
+  const quotaEl = document.getElementById('quota');
+
+  function humanUntil(iso) {
+    const ms = new Date(iso).getTime() - Date.now();
+    if (!Number.isFinite(ms) || ms <= 0) return 'shortly';
+    const h = Math.floor(ms / 3600000);
+    const m = Math.round((ms % 3600000) / 60000);
+    return h ? h + 'h ' + m + 'm' : m + 'm';
+  }
+
+  async function refreshQuota() {
+    if (!quotaEl) return;
+    try {
+      const res = await fetch('/quota', { headers: { accept: 'application/json' } });
+      if (!res.ok) return;
+      const q = await res.json();
+      if (q.estimatedRemaining === null || q.estimatedRemaining === undefined) return;
+      const pct = Math.max(0, Math.min(100, Math.round((q.estimatedRemaining / q.dailyFreeNeurons) * 100)));
+      const low = pct <= 15;
+      quotaEl.textContent = '';
+      const bar = document.createElement('span');
+      bar.className = 'quota__bar';
+      const fill = document.createElement('span');
+      fill.className = 'quota__fill' + (low ? ' is-low' : '');
+      fill.style.width = pct + '%';
+      bar.appendChild(fill);
+      const text = document.createElement('span');
+      /*
+        Percentage first because it is the part a visitor can act on, the raw neuron
+        counts after it for anyone who wants them, and "estimated" said out loud: the
+        streaming API returns no usage figures, so this is computed from token estimates.
+      */
+      text.textContent = 
+        pct + '% of the free daily AI allowance left (estimated, ' + q.estimatedRemaining.toLocaleString()
+        + ' of ' + q.dailyFreeNeurons.toLocaleString() + ' neurons) · resets in ' + humanUntil(q.resetsAt);
+      quotaEl.appendChild(bar);
+      quotaEl.appendChild(text);
+      quotaEl.hidden = false;
+      quotaEl.title = q.basis || '';
+    } catch (e) {
+      /* A missing figure is not worth an error message; the line simply stays hidden. */
+    }
+  }
+
+  refreshQuota();
 
   const nav = document.getElementById('nav');
   const toTop = document.getElementById('totop');
@@ -1141,41 +1210,6 @@
   });
 })();
 </script>
-
-<script>
-/*
-  Static capture: /ask and /search belong to a Cloudflare Worker and do not exist on GitHub
-  Pages. Intercepting at the form is better than letting fetch 404 — the visitor gets an
-  explanation and a way through to the real thing, in the place they were already looking.
-*/
-(function () {
-  document.addEventListener('DOMContentLoaded', function () {
-    var form = document.querySelector('form');
-    var out = document.querySelector('.answer');
-    var srcs = document.querySelector('.srcs');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      if (srcs) srcs.hidden = true;
-      if (!out) return;
-      out.classList.remove('is-waiting');
-      out.textContent = '';
-      var p = document.createElement('span');
-      p.textContent = 'This is a static copy of the page, kept so the design survives if the live demo is unreachable. Answering needs the Cloudflare Worker, which is not part of this snapshot. ';
-      var a = document.createElement('a');
-      a.href = 'https://llmdocs.acsaven.com/';
-      a.textContent = 'Open the live demo';
-      a.rel = 'noopener';
-      var mid = document.createTextNode(' to ask it, or ');
-      var b = document.createElement('a');
-      b.href = './results/';
-      b.textContent = 'read the measured results';
-      var end = document.createTextNode(', which are published as numbers and do not depend on anything staying up.');
-      out.append(p, a, mid, b, end);
-    }, true);
-  });
-})();
-</script>
+<script src="./offline-guard.js"></script>
 </body>
 </html>
