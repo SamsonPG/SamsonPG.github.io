@@ -84,6 +84,8 @@ html[data-theme="light"] {
   --brand-scout-dim: #065f46;
   --brand-astro-ops: #c12127;
   --brand-astro-ops-dim: #991b1b;
+  --brand-llm-docs-lab: #8a6612;
+  --brand-llm-docs-lab-dim: #6e5010;
   /* Availability badge — real green, not Ink Plum chrome */
   --status-open: #047857;
   --status-open-soft: #ecfdf5;
@@ -108,6 +110,8 @@ html[data-theme="dark"] {
   --brand-scout-dim: #10b981;
   --brand-astro-ops: #f87171;
   --brand-astro-ops-dim: #ef4444;
+  --brand-llm-docs-lab: #e8b44a;
+  --brand-llm-docs-lab-dim: #f5c96b;
   --status-open: #34d399;
   --status-open-soft: rgba(52, 211, 153, 0.14);
   --status-open-deep: #a7f3d0;
@@ -122,6 +126,7 @@ html[data-theme="dark"] {
 [data-product="soundshoppie"] { --product-accent: var(--brand-soundshoppie); --product-accent-dim: var(--brand-soundshoppie-dim); }
 [data-product="scout"] { --product-accent: var(--brand-scout); --product-accent-dim: var(--brand-scout-dim); }
 [data-product="astro-ops"] { --product-accent: var(--brand-astro-ops); --product-accent-dim: var(--brand-astro-ops-dim); }
+[data-product="llm-docs-lab"] { --product-accent: var(--brand-llm-docs-lab); --product-accent-dim: var(--brand-llm-docs-lab-dim); }
 
 *, *::before, *::after { box-sizing: border-box; }
 html {
@@ -1388,6 +1393,14 @@ html[data-theme="dark"] .hero__hello {
   z-index: 7;
   transform: rotate(3deg);
 }
+.hero__tile--h {
+  width: 32%;
+  height: 30%;
+  left: 22%;
+  top: 42%;
+  z-index: 8;
+  transform: rotate(-4.5deg);
+}
 .hero__tile:hover {
   z-index: 10;
   transform: rotate(0deg) translateY(-6px) scale(1.04);
@@ -1428,6 +1441,17 @@ html[data-theme="dark"] .hero__hello {
   .hero__tile--e { width: 34%; height: 26%; right: 2%; bottom: 22%; }
   .hero__tile--f,
   .hero__tile--g { display: none; }
+  .hero__tile--h {
+    display: block;
+    width: 36%;
+    height: 28%;
+    left: 30%;
+    top: 36%;
+    right: auto;
+    bottom: auto;
+    z-index: 7;
+    transform: rotate(-3.5deg);
+  }
   .hero__title { max-width: 22ch; }
 }
 
