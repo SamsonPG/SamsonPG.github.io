@@ -12,7 +12,7 @@ Not full apps — design showcases only.
 
 ## Products
 
-trytokka, tryquickimg, trydevsnip, trycalculatingnow, acsaven, soundshoppie, 20x, llm-docs-lab, portfolio
+trytokka, tryquickimg, trydevsnip, trycalculatingnow, acsaven, soundshoppie, 20x, llm-docs-lab, repo-mentor, portfolio
 
 Each folder: themed index.html + shot.webp (live homepage capture).
 
