@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="rmCoverTitle">
+  <title id="rmCoverTitle">Repo Mentor — offline-first codebase onboarding</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#121A28"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1E2A3A" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.85"/>
+  <circle cx="1180" cy="280" r="220" fill="#0F766E" opacity="0.12"/>
+  <circle cx="380" cy="640" r="180" fill="#0284C7" opacity="0.1"/>
+
+  <!-- Knowledge DAG -->
+  <g stroke="#2DD4BF" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <path d="M620 280L760 400"/>
+    <path d="M980 280L840 400"/>
+    <path d="M800 470V620"/>
+    <path d="M860 470L1020 620"/>
+  </g>
+  <path d="M770 580L800 640L830 580" stroke="#5EEAD4" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="620" cy="280" r="28" fill="#38BDF8"/>
+  <circle cx="980" cy="280" r="28" fill="#67E8F9"/>
+  <circle cx="800" cy="420" r="42" fill="#2DD4BF"/>
+  <circle cx="800" cy="420" r="16" fill="#0B1220"/>
+  <circle cx="800" cy="640" r="30" fill="#5EEAD4"/>
+  <circle cx="1020" cy="620" r="24" fill="#94A3B8"/>
+
+  <text x="96" y="160" fill="#E8EEF5" font-family="Georgia, 'Source Serif 4', serif" font-size="72" font-weight="600">Repo Mentor</text>
+  <text x="96" y="230" fill="#2DD4BF" font-family="ui-monospace, monospace" font-size="28" letter-spacing="4">BY ACSAVEN · COGNITIVE LAB</text>
+  <text x="96" y="320" fill="#9AABBC" font-family="system-ui, sans-serif" font-size="34">Scan → brain → teach. Offline-first codebase onboarding.</text>
+  <text x="96" y="780" fill="#4A5D73" font-family="ui-monospace, monospace" font-size="24">repomentor.acsaven.com</text>
+</svg>
