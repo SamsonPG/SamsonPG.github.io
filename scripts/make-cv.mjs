@@ -177,6 +177,7 @@ const MUST_EXTRACT = [
   '79945 77229', 'University of Calicut',
   // Keywords a role match depends on.
   'TypeScript', 'Next.js', 'PostgreSQL', 'Node.js', 'React', 'Acsaven',
+  'Repo Mentor', 'llm-docs-lab',
   /*
     The section headings, as whole words.
 
@@ -218,8 +219,11 @@ const MUST_LINK = [
   'https://www.linkedin.com/in/samson-p-g-335964133',
   'https://github.com/SamsonPG',
   'https://trytokka.com',
+  'https://repomentor.acsaven.com',
+  'https://llmdocs.acsaven.com',
   'https://www.npmjs.com/package/@acsaven/astro-ops',
   'https://github.com/acsavenhq/trytokka-security',
+  'https://github.com/acsavenhq/repo-mentor',
   // The QR square itself, so it works on a screen and not only on paper.
   'https://samsonpg.github.io/QR-Code/',
 ];
