@@ -86,6 +86,9 @@ html[data-theme="light"] {
   --brand-astro-ops-dim: #991b1b;
   --brand-llm-docs-lab: #8a6612;
   --brand-llm-docs-lab-dim: #6e5010;
+  /* Repo Mentor — Atlas Cobalt */
+  --brand-repo-mentor: #1d4ed8;
+  --brand-repo-mentor-dim: #1e3a8a;
   /* Availability badge — real green, not Ink Plum chrome */
   --status-open: #047857;
   --status-open-soft: #ecfdf5;
@@ -112,6 +115,8 @@ html[data-theme="dark"] {
   --brand-astro-ops-dim: #ef4444;
   --brand-llm-docs-lab: #e8b44a;
   --brand-llm-docs-lab-dim: #f5c96b;
+  --brand-repo-mentor: #60a5fa;
+  --brand-repo-mentor-dim: #93c5fd;
   --status-open: #34d399;
   --status-open-soft: rgba(52, 211, 153, 0.14);
   --status-open-deep: #a7f3d0;
@@ -127,6 +132,7 @@ html[data-theme="dark"] {
 [data-product="scout"] { --product-accent: var(--brand-scout); --product-accent-dim: var(--brand-scout-dim); }
 [data-product="astro-ops"] { --product-accent: var(--brand-astro-ops); --product-accent-dim: var(--brand-astro-ops-dim); }
 [data-product="llm-docs-lab"] { --product-accent: var(--brand-llm-docs-lab); --product-accent-dim: var(--brand-llm-docs-lab-dim); }
+[data-product="repo-mentor"] { --product-accent: var(--brand-repo-mentor); --product-accent-dim: var(--brand-repo-mentor-dim); }
 
 *, *::before, *::after { box-sizing: border-box; }
 html {
