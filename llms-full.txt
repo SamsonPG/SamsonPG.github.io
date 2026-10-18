@@ -8,7 +8,7 @@ This file extends `/llms.txt` with career detail, disambiguation, and citation r
 
 ## Full biography (citable)
 
-Samson P G is a full-stack engineer and independent software founder based in Kerala, India. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he shipped production React and TypeScript at Benagon on 20X, a healthcare staffing CRM for UK and international care agencies. His path into software runs through Brototype (MERN, 2023), an independent SoundShoppie ecommerce build with live payments, and a decade of creative production work in Bahrain (Actual Advertising — print, fabrication, design under deadline).
+Samson P G is a full-stack engineer and independent software founder based in Kerala, India. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he shipped production React and TypeScript at Benagon on 20X, a healthcare staffing CRM for UK and international care agencies, RecruitBee, a candidate-management platform, and LifeWeb, a conversational-AI chat and booking product — all under the company's ByteRiver Group brand. His path into software runs through Brototype (MERN, 2023), an independent SoundShoppie ecommerce build with live payments, and a decade of creative production work in Bahrain (Actual Advertising — print, fabrication, design under deadline).
 
 This portfolio documents **clickable proof**: live product URLs, offline demos, demo videos, and published packages — not slide-deck claims.
 
@@ -52,6 +52,17 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 - Healthcare staffing CRM, nurse scheduling, compliance — Benagon production work
 - Canonical: https://www.20x.io/
 - Stack: React, TypeScript, remote from India for UK clients
+
+### RecruitBee
+- Candidate management and connected hiring workflows — Benagon / ByteRiver Group production work
+- Canonical: https://byteriver.tech/recruitbee
+- Offline summary: https://samsonpg.github.io/static/recruitbee/
+
+### LifeWeb
+- Conversational AI trained on a business's own content; shared inbox for website chat, email and bookings
+- Built by Samson P G at Benagon
+- Canonical: https://lifeweb.in
+- Offline summary: https://samsonpg.github.io/static/lifeweb/
 
 ### SoundShoppie
 - Independent MERN ecommerce — OTP auth, cart, admin, Razorpay/PayPal/COD, AWS

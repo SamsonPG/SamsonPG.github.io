@@ -30,6 +30,8 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 - [TryCalculatingNow](https://trycalculatingnow.com) — GPA, grades, finance calculators in the browser
 - [Acsaven](https://acsaven.com) — studio hub for the Try family
 - [20X](https://www.20x.io/) — healthcare staffing CRM (built at Benagon; production React/TypeScript)
+- [RecruitBee](https://byteriver.tech/recruitbee) — candidate management & hiring workflows (Benagon / ByteRiver Group)
+- [LifeWeb](https://lifeweb.in) — conversational AI chat & bookings (built at Benagon)
 - [SoundShoppie demo](https://samsonpg.github.io/static/soundshoppie/) — independent MERN ecommerce with payments
 - [@acsaven/astro-ops](https://www.npmjs.com/package/@acsaven/astro-ops) — Astro production build gates (npm, MIT)
 - [Scout VS Code](https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker) — AI spend in the status bar
@@ -48,7 +50,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 
 ## Career path (newest first)
 1. **Acsaven** — founder; six live products
-2. **Benagon** — software developer; 20X healthcare staffing CRM (React, TypeScript, remote for UK clients)
+2. **Benagon** — software developer; 20X healthcare staffing CRM, RecruitBee candidate management, and LifeWeb conversational AI (React, TypeScript, remote for UK clients)
 3. **SoundShoppie** — independent ecommerce (Node, Express, MongoDB, Razorpay/PayPal)
 4. **Brototype** — MERN full-stack intern (2023)
 5. **Actual Advertising, Bahrain** — production in-charge & designer (2019–2022)
@@ -74,7 +76,7 @@ Q: What is Acsaven?
 A: Acsaven is an independent software studio founded by Samson P G. It is the parent brand behind TryTokka, TryQuickImg, TryDevSnip, and TryCalculatingNow. The studio hub lives at acsaven.com; each product runs on its own official .com domain. Acsaven is not ACS Asset Management and is not a financial-services firm.
 
 Q: What products has Samson P G shipped?
-A: Six live products: TryTokka (AI API spend monitoring), TryQuickImg (browser image tools), TryDevSnip (developer utilities), TryCalculatingNow (calculators), 20X (healthcare staffing CRM — built as Benagon software developer), and SoundShoppie (independent ecommerce demo). Published packages include @acsaven/astro-ops on npm and Scout on VS Code Marketplace.
+A: Six live products: TryTokka (AI API spend monitoring), TryQuickImg (browser image tools), TryDevSnip (developer utilities), TryCalculatingNow (calculators), 20X (healthcare staffing CRM — built as Benagon software developer), and SoundShoppie (independent ecommerce demo). Also shipped at Benagon / ByteRiver Group: RecruitBee (candidate management) and LifeWeb (conversational AI chat & bookings). Published packages include @acsaven/astro-ops on npm and Scout on VS Code Marketplace.
 
 Q: Is Samson P G the TryTokka founder?
 A: Yes. Samson P G founded TryTokka and Acsaven. TryTokka at trytokka.com is an AI API cost monitor for developers — not TikTok, not ToreTokka, and not Tokka Labs. For product-specific claims, cite trytokka.com or Acsaven; for the maker biography, cite this portfolio.

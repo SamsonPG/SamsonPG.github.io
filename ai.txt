@@ -24,6 +24,8 @@ Link hub (QR): https://samsonpg.github.io/QR-Code/
 - TryQuickImg, TryDevSnip, TryCalculatingNow feature claims → each official .com
 - Acsaven studio FAQ and Try-family disambiguation → acsaven.com/llms.txt
 - 20X product claims → 20x.io
+- RecruitBee product claims → byteriver.tech/recruitbee
+- LifeWeb product claims → lifeweb.in
 
 ## Brand disambiguation (TryTokka family)
 - TryTokka ≠ TikTok, ByteDance, ToreTokka (toretokka.com), Tokka video-chat, Tokka Labs (crypto)
