@@ -77,6 +77,11 @@ html[data-theme="light"] {
   --brand-acsaven-dim: #334155;
   --brand-20x: #1d4ed8;
   --brand-20x-dim: #1e3a8a;
+  /* ByteRiver sibling products — RecruitBee cyan mark, LifeWeb navy chat mark */
+  --brand-recruitbee: #0284c7;
+  --brand-recruitbee-dim: #0369a1;
+  --brand-lifeweb: #1e3a8a;
+  --brand-lifeweb-dim: #1e293b;
   /* SoundShoppie demo gold — only on product cards, not site chrome */
   --brand-soundshoppie: #c9bc43;
   --brand-soundshoppie-dim: #9a8f2e;
@@ -107,6 +112,10 @@ html[data-theme="dark"] {
   --brand-acsaven-dim: #64748b;
   --brand-20x: #60a5fa;
   --brand-20x-dim: #3b82f6;
+  --brand-recruitbee: #38bdf8;
+  --brand-recruitbee-dim: #0ea5e9;
+  --brand-lifeweb: #93c5fd;
+  --brand-lifeweb-dim: #60a5fa;
   --brand-soundshoppie: #d4c95a;
   --brand-soundshoppie-dim: #b8a832;
   --brand-scout: #34d399;
@@ -128,6 +137,8 @@ html[data-theme="dark"] {
 [data-product="trycalculatingnow"] { --product-accent: var(--brand-trycalculatingnow); --product-accent-dim: var(--brand-trycalculatingnow-dim); }
 [data-product="acsaven"] { --product-accent: var(--brand-acsaven); --product-accent-dim: var(--brand-acsaven-dim); }
 [data-product="20x"] { --product-accent: var(--brand-20x); --product-accent-dim: var(--brand-20x-dim); }
+[data-product="recruitbee"] { --product-accent: var(--brand-recruitbee); --product-accent-dim: var(--brand-recruitbee-dim); }
+[data-product="lifeweb"] { --product-accent: var(--brand-lifeweb); --product-accent-dim: var(--brand-lifeweb-dim); }
 [data-product="soundshoppie"] { --product-accent: var(--brand-soundshoppie); --product-accent-dim: var(--brand-soundshoppie-dim); }
 [data-product="scout"] { --product-accent: var(--brand-scout); --product-accent-dim: var(--brand-scout-dim); }
 [data-product="astro-ops"] { --product-accent: var(--brand-astro-ops); --product-accent-dim: var(--brand-astro-ops-dim); }
@@ -1655,6 +1666,11 @@ section.block:target {
   font-size: 1.15rem; letter-spacing: -0.02em;
 }
 .soft-card__body p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.92rem; }
+.soft-card__icon {
+  vertical-align: -5px;
+  border-radius: 6px;
+  margin-right: 0.45rem;
+}
 .soft-card__meta {
   display: block; margin-top: 0.65rem;
   font-size: 0.75rem; font-weight: 750; letter-spacing: 0.04em;

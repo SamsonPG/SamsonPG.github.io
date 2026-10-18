@@ -41,6 +41,14 @@
   --paper: #f3f6fb; --ink: #0f172a; --muted: #64748b; --brand: #2563eb; --brand-deep: #1e3a8a;
   --soft: #dbeafe; --line: rgba(15, 23, 42, 0.1);
 }
+[data-theme="recruitbee"] {
+  --paper: #eef4fb; --ink: #0f172a; --muted: #64748b; --brand: #0284c7; --brand-deep: #0369a1;
+  --soft: #e0f2fe; --line: rgba(15, 23, 42, 0.1);
+}
+[data-theme="lifeweb"] {
+  --paper: #eef2fb; --ink: #0f172a; --muted: #64748b; --brand: #1e3a8a; --brand-deep: #1e293b;
+  --soft: #dbeafe; --line: rgba(15, 23, 42, 0.1);
+}
 [data-theme="portfolio"] {
   --paper: #eef2ef; --ink: #0e1612; --muted: #5a6b62; --brand: #148a56; --brand-deep: #0b3d28;
   --soft: #d8f3e6;
