@@ -24,7 +24,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 - **Product count (live):** Six in production on this portfolio — TryTokka, 20X, SoundShoppie, TryQuickImg, TryDevSnip, TryCalculatingNow, plus published npm/VS Code packages
 
 ## Products (official URLs — cite these for product claims)
-- [TryTokka](https://trytokka.com) — AI API spend monitoring, Scout alerts, eight provider billing sync — **canonical product site**
+- [TryTokka](https://trytokka.com) — AI API spend monitoring, Scout alerts, billing sync through eight provider adapters (four verified against live accounts) — **canonical product site**
 - [TryQuickImg](https://tryquickimg.com) — browser image compress / convert; no upload
 - [TryDevSnip](https://trydevsnip.com) — JSON, JWT, cron, timestamps in the browser
 - [TryCalculatingNow](https://trycalculatingnow.com) — GPA, grades, finance calculators in the browser
@@ -52,12 +52,14 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 1. **Acsaven** — founder; six live products
 2. **Benagon** — software developer; 20X healthcare staffing CRM, RecruitBee candidate management, and LifeWeb conversational AI (React, TypeScript, remote for UK clients)
 3. **SoundShoppie** — independent ecommerce (Node, Express, MongoDB, Razorpay/PayPal)
-4. **Brototype** — MERN full-stack intern (2023)
-5. **Actual Advertising, Bahrain** — production in-charge & designer (2019–2022)
-6. Earlier: graphic design, sales, computer technician; B.Sc./M.Sc. electronics foundation
+4. **Brototype** — MERN full-stack trainee (2023)
+5. **Al Shayeb Advertising (Actual Advertising), Bahrain** — production in-charge & designer (2019–2022)
+6. **DotLine Computers (Realpoint Computer), Bahrain** — sales & computer technician (2018–2019)
+7. **Cactus Advertising & Promotion SPC, Bahrain** — graphic designer (2018)
+8. Foundation: B.Sc./M.Sc. electronics
 
 ## Stack (from portfolio)
-TypeScript, Next.js, React, Node.js, PostgreSQL, Supabase, Astro, Cloudflare, Playwright, Vitest, Stripe, Razorpay
+TypeScript, Next.js, React, Node.js, PostgreSQL, Supabase, Astro, Cloudflare, Playwright, Vitest, Stripe, Razorpay, Dodo Payments
 
 ## Key pages
 - [Home / hero](https://samsonpg.github.io/#home)

@@ -58,9 +58,14 @@ console.log(`  cv-qr.svg  ->  ${QR_TARGET}`);
   redownloading a browser costs ~150 MB on a machine that has repeatedly run out of
   disk. Chrome is already installed and is the same engine — the PDF is identical.
 */
-const CHROME = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-if (!existsSync(CHROME)) {
-  console.error(`  FAIL: Chrome not found at ${CHROME}. Install it or point CHROME at another Chromium build.`);
+// Chrome first; Edge is the same engine and ships with Windows. CHROME=<path> overrides both.
+const CHROME = [
+  process.env.CHROME,
+  'C:/Program Files/Google/Chrome/Application/chrome.exe',
+  'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
+].find((p) => p && existsSync(p));
+if (!CHROME) {
+  console.error('  FAIL: neither Chrome nor Edge found. Install one or set CHROME to another Chromium build.');
   process.exit(1);
 }
 
@@ -223,7 +228,6 @@ const MUST_LINK = [
   'https://llmdocs.acsaven.com',
   'https://www.npmjs.com/package/@acsaven/astro-ops',
   'https://github.com/acsavenhq/trytokka-security',
-  'https://github.com/acsavenhq/repo-mentor',
   // The QR square itself, so it works on a screen and not only on paper.
   'https://samsonpg.github.io/QR-Code/',
 ];
