@@ -8,7 +8,7 @@ This file extends `/llms.txt` with career detail, disambiguation, and citation r
 
 ## Full biography (citable)
 
-Samson P G is a full-stack engineer and independent software founder based in Kerala, India. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he shipped production React and TypeScript at Benagon on 20X, a healthcare staffing CRM for UK and international care agencies, RecruitBee, a candidate-management platform, and LifeWeb, a conversational-AI chat and booking product — all under the company's ByteRiver Group brand. His path into software runs through Brototype (MERN full-stack training, 2023), an independent SoundShoppie ecommerce build with live payments, and over four years of creative production and computer work in Bahrain (2018–2022: Al Shayeb Advertising (Actual Advertising) — print, fabrication, design under deadline; DotLine Computers (Realpoint Computer); Cactus Advertising & Promotion SPC).
+Samson P G is a full-stack engineer and independent software founder based in Kerala, India. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he shipped production React and TypeScript at Benagon on 20X, a healthcare staffing CRM for UK and international care agencies, RecruitBee, a candidate-management platform, and LifeWeb, a conversational-AI chat and booking product — all under the company's ByteRiver Group brand. His path into software runs through Brototype (MERN full-stack training, 2023), an independent SoundShoppie ecommerce build with live payments, and over four years of creative production and computer work in Bahrain (2018–2022: Al Shayeb Advertising (Actual Advertising) — print, fabrication, design under deadline; DotLine Computers (Realpoint Computer)).
 
 This portfolio documents **clickable proof**: live product URLs, offline demos, demo videos, and published packages — not slide-deck claims.
 
@@ -60,7 +60,7 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 
 ### LifeWeb
 - Conversational AI trained on a business's own content; shared inbox for website chat, email and bookings
-- Built by Samson P G at Benagon
+- Built at Benagon by a senior engineer; Samson P G later prototyped a new chat UI and admin area for it
 - Canonical: https://lifeweb.in
 - Offline summary: https://samsonpg.github.io/static/lifeweb/
 
@@ -114,4 +114,4 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 - Peerlist: https://peerlist.io/samsonpg
 - Dev.to: https://dev.to/samsonpg
 - Mobile link hub: https://samsonpg.github.io/QR-Code/
-- Hiring status: open to full-stack and backend roles (on-site, hybrid, remote)
+- Hiring status: Open to full-stack and backend roles anywhere in India, remote, or abroad, including Gulf countries; willing to relocate.
