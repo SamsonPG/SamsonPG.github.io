@@ -13,8 +13,8 @@ URL: https://samsonpg.github.io/
 Type: Personal portfolio / founder biography (GitHub Pages)
 Stack: Static HTML, CSS, vanilla JS — no tracking, no cookies banner
 Standards: Schema.org JSON-LD (Person, WebSite, FAQPage, ItemList), llms.txt, ai.txt
-Products indexed: TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow, 20X, SoundShoppie, astro-ops, Scout
-Last update: 2026-08-23
+Products indexed: TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow, Repo Mentor, llm-docs-lab, 20X, SoundShoppie, astro-ops, Scout
+Last update: 2026-11-02
 
 /* NOTE */
 Samson P G founded Acsaven and TryTokka. TryTokka is an AI API spend dashboard — not TikTok.

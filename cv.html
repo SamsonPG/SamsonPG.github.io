@@ -271,16 +271,16 @@
       <li>
         Architected and shipped <b>TryTokka</b>, a multi-tenant SaaS for AI API spend
         monitoring, on <b>Next.js, TypeScript and PostgreSQL (Supabase)</b> deployed to
-        Vercel — <b>97 REST API routes, 71 database migrations, 639 automated tests and 22 end-to-end Playwright suites</b>.
+        Vercel — <b>99 REST API routes, 71 database migrations, 743 automated tests and 22 end-to-end Playwright suites</b>.
       </li>
       <li>
         Built a provider integration layer of <b>eight adapters, four verified against live
         accounts</b> (OpenAI, Anthropic, Gemini, OpenRouter), reading billing and usage
-        endpoints with per-provider rate-limit handling, retries and normalisation into a
-        single reporting schema.
+        endpoints one request at a time, so one provider's failure never blocks the others,
+        and normalising the results into a single reporting schema.
       </li>
       <li>
-        Implemented credential security to a publicly auditable standard: <b>AES-256-GCM</b>
+        Implemented publicly auditable credential security: <b>AES-256-GCM</b>
         encryption of stored API keys, PostgreSQL <b>Row-Level Security</b>, and <b>TOTP
         two-factor auth</b>. The three credential modules are open source so the claims can
         be checked.
@@ -288,8 +288,7 @@
       <li>
         Integrated <b>three payment providers</b> (Razorpay, Dodo, Stripe) with
         signature-verified, <b>idempotent webhooks</b> and a reconciliation ledger that raises
-        an alert when a payment is captured but not recorded — closing a class of silent
-        revenue loss.
+        an alert when a payment is captured but not recorded.
       </li>
       <li>
         Designed server-side <b>role-based access control</b> and found a
@@ -298,8 +297,8 @@
       </li>
       <li>
         Delivered three static products — <b>TryQuickImg, TryDevSnip and
-        TryCalculatingNow</b> — on <b>Astro and Cloudflare Workers</b>, ~700 pages combined,
-        with all file processing performed client-side so no user data leaves the browser.
+        TryCalculatingNow</b> — on <b>Astro and Cloudflare Workers</b>, ~670 pages combined,
+        with all processing done in the browser, so users' files and inputs never leave their device.
       </li>
       <li>
         Shipped <b>Repo Mentor</b> on <b>Cloudflare Workers</b> — offline-first codebase
@@ -345,7 +344,7 @@
         product, after taking it over from its original developer.
       </li>
       <li>
-        Promoted from frontend developer to full-stack software developer within four months.
+        Promoted from Frontend Web Developer to Software Developer within four months.
       </li>
     </ul>
   </div>

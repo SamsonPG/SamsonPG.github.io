@@ -32,7 +32,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 - [Acsaven](https://acsaven.com) — studio hub for the Try family
 - [20X](https://www.20x.io/) — healthcare staffing CRM (built at Benagon; production React/TypeScript)
 - [RecruitBee](https://byteriver.tech/recruitbee) — candidate management & hiring workflows (Benagon / ByteRiver Group)
-- [SoundShoppie demo](https://samsonpg.github.io/static/soundshoppie/) — independent MERN ecommerce with payments
+- [SoundShoppie demo](https://samsonpg.github.io/static/soundshoppie/) — independent MERN ecommerce with a checkout (payments in test mode)
 - [@acsaven/astro-ops](https://www.npmjs.com/package/@acsaven/astro-ops) — Astro production build gates (npm, MIT)
 - [Scout VS Code](https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker) — AI spend in the status bar
 
@@ -51,7 +51,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is a full-stack engineer based in Keral
 ## Career path (newest first)
 1. **Acsaven** — founder; six live products
 2. **Benagon** — software developer; 20X healthcare staffing CRM and RecruitBee candidate management (React, TypeScript, remote for UK clients)
-3. **SoundShoppie** — independent ecommerce (Node, Express, MongoDB, Razorpay/PayPal)
+3. **SoundShoppie** — independent ecommerce (Node, Express, MongoDB, Razorpay/PayPal in test mode)
 4. **Brototype** — MERN full-stack trainee (2023)
 5. **Al Shayeb Advertising (Actual Advertising), Bahrain** — production in-charge & designer (2019–2022)
 6. **DotLine Computers (Realpoint Computer), Bahrain** — sales & computer technician (2018–2019)
