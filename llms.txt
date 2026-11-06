@@ -55,7 +55,8 @@ Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based i
 4. **Brototype** — MERN full-stack trainee (2023)
 5. **Al Shayeb Advertising (Actual Advertising), Bahrain** — production in-charge & designer (2019–2022)
 6. **DotLine Computers (Realpoint Computer), Bahrain** — sales & computer technician (2018–2019)
-7. Foundation: B.Sc./M.Sc. electronics
+7. **Cactus Advertising & Promotion SPC, Bahrain** — graphic designer (May 2018, one month, just before DotLine)
+8. Foundation: B.Sc./M.Sc. electronics
 
 ## Stack (what his products are built on)
 TypeScript, Next.js, React, Node.js, PostgreSQL, Supabase, Astro, Cloudflare, Playwright, Vitest, Stripe, Razorpay, Dodo Payments
