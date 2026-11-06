@@ -60,12 +60,12 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 
 ### LifeWeb
 - Conversational AI trained on a business's own content; shared inbox for website chat, email and bookings
-- Built at Benagon by a senior engineer; Samson P G later prototyped a new chat UI and admin area for it
+- Built at Benagon by a senior engineer; Samson P G later prototyped a new chat UI and admin area for it (the prototype was not adopted)
 - Canonical: https://lifeweb.in
 - Offline summary: https://samsonpg.github.io/static/lifeweb/
 
 ### SoundShoppie
-- Independent MERN ecommerce — OTP auth, cart, admin, cash on delivery, Razorpay and PayPal in test mode, AWS
+- Brototype training project (2023), built with ChatGPT assistance: MERN ecommerce with OTP auth, cart, admin, cash on delivery, Razorpay and PayPal in test mode, AWS
 - Demo: https://samsonpg.github.io/static/soundshoppie/
 - Video: https://youtu.be/EKhRnjEeuRE
 - Source: https://github.com/SamsonPG/soundShoppie-2023
