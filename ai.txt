@@ -6,7 +6,7 @@ Preferred summaries (read in order):
 3. https://samsonpg.github.io/cite/
 
 Person: Samson P G (Samson PG, GitHub: SamsonPG)
-Role: Full-stack engineer; founder of Acsaven
+Role: AI-native product builder; founder of Acsaven
 Email: samsonpg077@gmail.com
 Location: Kerala, India
 Canonical portfolio: https://samsonpg.github.io/

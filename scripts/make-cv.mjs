@@ -27,8 +27,14 @@ import zlib from 'node:zlib';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const source = join(root, 'cv.html');
 
-const NAME = 'Samson-P-G-CV-Full-Stack-Engineer.pdf';
+const NAME = 'Samson-P-G-CV.pdf';
 const out = join(root, NAME);
+/**
+ * The file's name until 2026-11-06. "Full-Stack Engineer" overstated a builder who ships with
+ * Claude Code, so the name changed — but links already sent to recruiters point here, so the
+ * same PDF is written under this name too and those links keep serving the current CV.
+ */
+const LEGACY_NAME = 'Samson-P-G-CV-Full-Stack-Engineer.pdf';
 const QR_REPO = 'G:/MY Company/QR-Code';
 
 /** Where a scan lands: the link hub, not the portfolio — it fans out to everything else. */
@@ -251,9 +257,13 @@ if (failed) {
   process.exit(1);
 }
 
+copyFileSync(out, join(root, LEGACY_NAME));
+console.log(`  copied -> ${LEGACY_NAME} (old links)`);
+
 if (existsSync(QR_REPO)) {
   copyFileSync(out, join(QR_REPO, NAME));
-  console.log(`  copied -> ${join(QR_REPO, NAME)}`);
+  copyFileSync(out, join(QR_REPO, LEGACY_NAME));
+  console.log(`  copied -> ${join(QR_REPO, NAME)} (+ old name)`);
 } else {
   console.warn(`  QR repo not found at ${QR_REPO}; skipped that copy.`);
 }

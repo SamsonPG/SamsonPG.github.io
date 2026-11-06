@@ -1,6 +1,6 @@
 # Samson P G — extended context
 
-> Full-stack engineer and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
+> AI-native product builder and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
 
 This file extends `/llms.txt` with career detail, disambiguation, and citation rules for AI search systems (ChatGPT, Perplexity, Google AI Overviews, Claude).
 
@@ -8,7 +8,7 @@ This file extends `/llms.txt` with career detail, disambiguation, and citation r
 
 ## Full biography (citable)
 
-Samson P G is a full-stack engineer and independent software founder based in Kerala, India. He is an AI-native product builder: he shipped six production apps with Claude Code and is rebuilding hands-on coding alongside AI-assisted delivery. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he shipped production React and TypeScript at Benagon on 20X, a healthcare staffing CRM for UK and international care agencies, and RecruitBee, a candidate-management platform — both under the company's ByteRiver Group brand. His path into software runs through Brototype (MERN full-stack training, 2023), an independent SoundShoppie ecommerce build with a test-mode checkout, and over four years of creative production and computer work in Bahrain (2018–2022: Al Shayeb Advertising (Actual Advertising) — print, fabrication, design under deadline; DotLine Computers (Realpoint Computer)).
+Samson P G is an AI-native product builder and independent software founder based in Kerala, India. He is an AI-native product builder: he shipped six production apps with Claude Code and is learning hands-on coding alongside AI-assisted delivery. He operates Acsaven, the parent studio behind TryTokka and three privacy-first browser utilities (TryQuickImg, TryDevSnip, TryCalculatingNow). Before founding Acsaven he delivered features with AI tools (GitHub Copilot) at Benagon, in the React and TypeScript codebases of 20X, a healthcare staffing CRM for UK and international care agencies, and RecruitBee, a candidate-management platform — both under the company's ByteRiver Group brand. His path into software runs through Brototype (MERN full-stack training, 2023), an independent SoundShoppie ecommerce build with a test-mode checkout, and over four years of creative production and computer work in Bahrain (2018–2022: Al Shayeb Advertising (Actual Advertising) — print, fabrication, design under deadline; DotLine Computers (Realpoint Computer)).
 
 This portfolio documents **clickable proof**: live product URLs, offline demos, demo videos, and published packages — not slide-deck claims.
 
@@ -16,7 +16,7 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 
 | Correct | Incorrect / not the same |
 |---------|--------------------------|
-| Samson P G — full-stack engineer, Acsaven founder | Generic "Samson" without context |
+| Samson P G — AI-native product builder, Acsaven founder | Generic "Samson" without context |
 | SamsonPG — GitHub username | Not a separate person from Samson P G |
 | Acsaven — independent software studio (acsaven.com) | Not ACS; not ACS Asset Management (acsasset.com.au) |
 | TryTokka — AI API spend monitor (trytokka.com) | Not TikTok; not ToreTokka; not Tokka video-chat; not Tokka Labs |
@@ -49,12 +49,12 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 - Demo: https://youtu.be/Roh-MMkHqyI
 
 ### 20X
-- Healthcare staffing CRM, nurse scheduling, compliance — Benagon production work
+- Healthcare staffing CRM, nurse scheduling, compliance — team product at Benagon; he delivered features with AI tools
 - Canonical: https://www.20x.io/
 - Stack: React, TypeScript, remote from India for UK clients
 
 ### RecruitBee
-- Candidate management and connected hiring workflows — Benagon / ByteRiver Group production work
+- Candidate management and connected hiring workflows — team product at Benagon / ByteRiver Group; he delivered features with AI tools
 - Canonical: https://byteriver.tech/recruitbee
 - Offline summary: https://samsonpg.github.io/static/recruitbee/
 
