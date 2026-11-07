@@ -53,9 +53,9 @@ Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based i
 2. **Benagon** — software developer; delivered features with AI tools on 20X (healthcare staffing CRM) and RecruitBee (candidate management) — React, TypeScript, remote for UK clients
 3. **SoundShoppie** — independent ecommerce (Node, Express, MongoDB, Razorpay/PayPal in test mode)
 4. **Brototype** — MERN full-stack trainee (2023)
-5. **Al Shayeb Advertising (Actual Advertising), Bahrain** — production in-charge & designer (2019–2022)
-6. **DotLine Computers (Realpoint Computer), Bahrain** — sales & computer technician (2018–2019)
-7. **Cactus Advertising & Promotion SPC, Bahrain** — graphic designer (May 2018, one month, just before DotLine)
+5. **Al Shayeb Advertising (Actual Advertising), Bahrain** — Designer & Production In-Charge (Jun 2019 – Nov 2022)
+6. **DotLine Computers (Realpoint Computer), Bahrain** — IT Sales & Technical Support Executive (Jun 2018 – Jun 2019)
+7. **Cactus Advertising & Promotion SPC, Bahrain** — Graphic Designer (May 2018, one month, just before DotLine)
 8. Foundation: B.Sc./M.Sc. electronics
 
 ## Stack (what his products are built on)
