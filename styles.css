@@ -1682,6 +1682,11 @@ section.block:target {
   }
   .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body h3 { font-size: 1.3rem; }
   .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body p { font-size: 0.95rem; line-height: 1.5; }
+  /* Its buttons keep a normal button width instead of stretching into a bar across the row. */
+  .soft-grid > .soft-card:last-child:nth-child(odd) .feature__links .btn {
+    flex: 0 0 auto;
+    min-width: 12rem;
+  }
 }
 .soft-card__icon {
   vertical-align: -5px;
