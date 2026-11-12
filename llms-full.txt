@@ -110,7 +110,7 @@ This portfolio documents **clickable proof**: live product URLs, offline demos, 
 
 ## Contact
 - Email: samsonpg077@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samson-p-g-335964133
+- LinkedIn: https://www.linkedin.com/in/samsonpg
 - Peerlist: https://peerlist.io/samsonpg
 - Dev.to: https://dev.to/samsonpg
 - Mobile link hub: https://samsonpg.github.io/QR-Code/

@@ -183,7 +183,7 @@ async function extractText(file) {
 
 const MUST_EXTRACT = [
   // Identity and contact — useless if a parser cannot read them back.
-  'Samson', 'samsonpg077@gmail.com', 'samsonpg.github.io', 'linkedin.com/in/samson-p-g-335964133',
+  'Samson', 'samsonpg077@gmail.com', 'samsonpg.github.io', 'linkedin.com/in/samsonpg',
   // The phone is the field an incomplete-record filter looks for first.
   '79945 77229', 'University of Calicut',
   // Keywords a role match depends on.
@@ -227,7 +227,7 @@ const MUST_LINK = [
   'tel:+917994577229',
   'mailto:samsonpg077@gmail.com',
   'https://samsonpg.github.io',
-  'https://www.linkedin.com/in/samson-p-g-335964133',
+  'https://www.linkedin.com/in/samsonpg',
   'https://github.com/SamsonPG',
   'https://trytokka.com',
   'https://repomentor.acsaven.com',
@@ -244,6 +244,22 @@ if (deadLinks.length) {
   failed = true;
 } else {
   console.log(`  links OK - ${MUST_LINK.length} clickable annotations present`);
+}
+
+/*
+  4. Retired identifiers must be gone.
+
+  LinkedIn moved to /in/samsonpg on 2026-11-12. The checks above only prove the new address
+  is present; an old one left beside it would still pass them, so its absence is asserted —
+  in the text layer an ATS reads and in the link annotations.
+*/
+const RETIRED = ['samson-p-g-335964133'];
+const stale = RETIRED.filter((s) => extracted.includes(s) || raw.includes(s));
+if (stale.length) {
+  console.error(`  FAIL: retired identifiers still in the PDF: ${stale.join(', ')}`);
+  failed = true;
+} else {
+  console.log('  retired identifiers absent');
 }
 
 /*
