@@ -1668,28 +1668,17 @@ section.block:target {
 .soft-card__body p { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.92rem; }
 /*
   A card left alone on the last row of the two-column grid spans the whole row, however many
-  cards come before it (the last child in an odd position is always alone). Stretched as-is its
-  16:10 screenshot would fill the screen, so the lone card becomes a side-by-side feature:
-  screenshot on the left at its natural ratio, text on the right, vertically centred.
+  cards come before it (the last child in an odd position is always alone). Text stays under the
+  screenshot like every other card; stretched as-is its 16:10 screenshot would fill the screen,
+  so the lone card shows a wider, shorter crop taken from the top of the screenshot, where
+  product screenshots carry the logo and headline.
 */
 @media (min-width: 700px) {
-  .soft-grid > .soft-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    align-items: center;
-  }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img {
-    flex: 0 0 56%;
-    align-self: stretch;
-    min-height: 0;
-  }
-  /* When the text runs taller than the screenshot, crop from the right: product screenshots
-     carry the logo and headline on the left. */
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img img { object-position: left center; }
+  .soft-grid > .soft-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img { aspect-ratio: 21 / 8; }
+  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img img { object-position: center top; }
   .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: clamp(1rem, 2.4vw, 1.75rem);
+    padding: 1.1rem clamp(1.05rem, 2.4vw, 1.5rem) 1.3rem;
   }
   .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body h3 { font-size: 1.3rem; }
   .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body p { font-size: 0.95rem; line-height: 1.5; }
