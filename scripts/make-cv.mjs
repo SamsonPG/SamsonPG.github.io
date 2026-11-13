@@ -233,7 +233,6 @@ const MUST_LINK = [
   'https://repomentor.acsaven.com',
   'https://llmdocs.acsaven.com',
   'https://www.npmjs.com/package/@acsaven/astro-ops',
-  'https://github.com/acsavenhq/trytokka-security',
   // The QR square itself, so it works on a screen and not only on paper.
   'https://samsonpg.github.io/QR-Code/',
 ];

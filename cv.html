@@ -188,7 +188,7 @@
   <header>
     <div>
       <h1>Samson P G</h1>
-      <p class="title">AI-Native Product Builder — TypeScript, Next.js, Node.js, PostgreSQL</p>
+      <p class="title">Software Developer — React, Next.js, TypeScript · AI-Native Product Builder</p>
       <p class="contact">
         <span>Thrissur, Kerala, India</span> · <span>Open to roles in India, GCC countries and remote</span> ·
         <span>Available immediately</span><br>
@@ -230,20 +230,21 @@
 
   <h2>Professional Summary</h2>
   <p class="summary">
-    AI-native product builder with 2+ years in software roles, plus 10 months of intensive
-    full-stack training. Shipped six production apps with Claude Code across the
-    <b>Try family</b> and <b>Acsaven Lab</b> (including <b>Repo Mentor</b> and
-    <b>llm-docs-lab</b>) on <b>TypeScript, Next.js, Node.js and PostgreSQL</b>, owning the
-    work that appears after launch: authentication and authorisation, data encryption,
-    payment webhooks, automated testing and CI — and being the person on call when it
-    breaks. Looking for a full-time team role as a Frontend Developer, React Developer or
-    Full-Stack Developer in India, GCC countries or remote; prior work experience in
-    Bahrain (2018–2022).
+    Software developer with 2+ years across a product team and my own products. At
+    <b>Benagon Technologies</b> I delivered production modules for <b>20X</b>, a
+    <b>React and TypeScript</b> healthcare staffing SaaS used by care agencies in the UK and
+    beyond (Agreements, Training Matrix, Complaints and a Care Plan PDF export) and designed
+    the UI of its spin-off, <b>RecruitBee</b>. Since founding <b>Acsaven</b> I have shipped six
+    production apps with an AI-native workflow, including <b>TryTokka</b>, a multi-tenant SaaS
+    on <b>Next.js, Node.js and PostgreSQL</b> with encrypted credentials, role-based access,
+    payment webhooks and 743 automated tests, plus <b>Repo Mentor</b> and <b>llm-docs-lab</b>.
+    Looking for a full-time Frontend, React or Full-Stack Developer role in India, GCC
+    countries or remote; 4.5 years of earlier client-facing work in Bahrain.
   </p>
 
   <h2>Technical Skills</h2>
   <dl class="skills">
-    <div><dt>How I build</dt><dd>AI-assisted development with Claude Code and GitHub Copilot; the technologies below are what my shipped products use. I can follow code and its logic, and I am building my own coding skills.</dd></div>
+    <div><dt>How I build</dt><dd>AI-native delivery with Claude Code and GitHub Copilot: I own the product spec, technical decisions, review, testing and release, and the tools generate the implementation. The stack below is what my shipped products run on.</dd></div>
     <div><dt>Languages</dt><dd>TypeScript, JavaScript (ES6+), SQL, HTML5, CSS3</dd></div>
     <div><dt>Frontend</dt><dd>React, Next.js (App Router), Tailwind CSS, Astro, responsive design</dd></div>
     <div><dt>Backend</dt><dd>Node.js, Express, REST APIs, serverless functions, webhooks, authentication &amp; authorisation (RBAC, OAuth, TOTP 2FA)</dd></div>
@@ -265,27 +266,26 @@
       <span class="role-when">Jun 2026 – Present · Remote</span>
     </div>
     <p class="role-note">
-      Self-funded product lab that I run while looking for a full-time team role. Six products live across Try utilities and Lab teaching
-      systems, built alone by directing Claude Code: architecture, database design, security, payments,
-      testing, accessibility, SEO and deployment.
+      Self-funded product lab I run alongside my job search. Six products live, built alone by directing
+      Claude Code, from architecture and database design to security, payments, testing, SEO and deployment.
     </p>
     <ul>
       <li>
         Shipped <b>TryTokka</b>, a multi-tenant SaaS for AI API spend
         monitoring, on <b>Next.js, TypeScript and PostgreSQL (Supabase)</b> deployed to
-        Vercel — <b>99 REST API routes, 71 database migrations, 743 automated tests and 22 end-to-end Playwright suites</b>.
+        Vercel: <b>99 REST API routes, 71 database migrations, 743 automated tests and 22 end-to-end Playwright suites</b>.
       </li>
       <li>
         Built a provider integration layer of <b>eight adapters, four verified against live
-        accounts</b> (OpenAI, Anthropic, Gemini, OpenRouter), reading billing and usage
-        endpoints one request at a time, so one provider's failure never blocks the others,
-        and normalising the results into a single reporting schema.
+        accounts</b> (OpenAI, Anthropic, Gemini, OpenRouter) that reads billing and usage
+        endpoints one at a time, so one provider's failure never blocks the others, and
+        normalises the results into one reporting schema.
       </li>
       <li>
-        Shipped publicly auditable credential security: <b>AES-256-GCM</b>
-        encryption of stored API keys, PostgreSQL <b>Row-Level Security</b>, and <b>TOTP
-        two-factor auth</b>. The three credential modules are open source so the claims can
-        be checked.
+        Secured customer credentials and data with <b>AES-256-GCM</b> encryption at rest,
+        PostgreSQL <b>Row-Level Security</b>, <b>TOTP two-factor auth</b> and server-side
+        <b>role-based access control</b>, including a fix for a <b>privilege-escalation defect</b>
+        where three code paths compared roles by equality instead of exclusion.
       </li>
       <li>
         Integrated <b>three payment providers</b> (Razorpay, Dodo, Stripe) with
@@ -293,31 +293,20 @@
         an alert when a payment is captured but not recorded.
       </li>
       <li>
-        Shipped server-side <b>role-based access control</b> and fixed a
-        <b>privilege-escalation defect</b> where three code paths compared roles by equality
-        instead of exclusion, granting read-only users write access.
+        Delivered <b>TryQuickImg, TryDevSnip and TryCalculatingNow</b> on <b>Astro and
+        Cloudflare Workers</b>, ~670 pages combined, with all processing in the browser, so
+        users' files and inputs never leave their device.
       </li>
       <li>
-        Delivered three static products — <b>TryQuickImg, TryDevSnip and
-        TryCalculatingNow</b> — on <b>Astro and Cloudflare Workers</b>, ~670 pages combined,
-        with all processing done in the browser, so users' files and inputs never leave their device.
+        Built <b>llm-docs-lab</b> (RAG on Cloudflare Workers AI and Vectorize) with published
+        evals: <b>100% recall@6</b> on answerable golden-set questions and <b>0/10 prompt-injection
+        attacks</b> landing; and <b>Repo Mentor</b>, an offline codebase-onboarding tool with
+        quizzes and an architecture map, with no required LLM.
       </li>
       <li>
-        Shipped <b>Repo Mentor</b> on <b>Cloudflare Workers</b> — offline-first codebase
-        onboarding (scan → knowledge brain → teach) with playlists, SRS quizzes and a
-        <b>Blueprint architecture map</b> using fixed pin positions and camera pan/zoom;
-        no account and no required LLM.
-      </li>
-      <li>
-        Built <b>llm-docs-lab</b> on <b>Cloudflare Workers AI and Vectorize</b>: cited answers
-        over a fixed LLM-docs corpus, tool-calling agent ceilings, and published evals —
-        <b>100% recall@6</b> on answerable golden-set questions and <b>0/10 prompt-injection
-        attacks</b> landing.
-      </li>
-      <li>
-        Published <b>@acsaven/astro-ops</b> on npm (MIT) — automated build gates that turn
-        silent deploy failures into build failures — and <b>Scout</b>, a <b>VS Code
-        Marketplace</b> extension for live API spend via a read-only token.
+        Published <b>@acsaven/astro-ops</b> on npm (automated build gates that turn silent
+        deploy failures into build failures) and <b>Scout</b>, a <b>VS Code Marketplace</b>
+        extension for live API spend.
       </li>
     </ul>
   </div>
@@ -332,21 +321,27 @@
     </p>
     <ul>
       <li>
-        Delivered features on <b>20X</b>, a healthcare staffing
-        CRM — shift scheduling, compliance tracking and digital timesheets for UK and
-        international care agencies, using AI tools (GitHub Copilot) in its React and TypeScript codebase.
+        Delivered the <b>Agreements</b>, <b>Training Matrix</b> and <b>Complaints</b> modules for
+        <b>20X</b>, a healthcare staffing and compliance SaaS (shift scheduling, credentialing,
+        digital timesheets) for care agencies in the UK and beyond, in a <b>React and
+        TypeScript</b> codebase with GitHub Copilot.
       </li>
       <li>
-        Delivered candidate-management and connected hiring-workflow features for
-        <b>RecruitBee</b>, a recruitment platform under the company's ByteRiver Group brand —
-        a sibling product to 20X, same stack and team.
+        Built a <b>Care Plan PDF export</b> that gathers patient data from 11–20 JSON-driven
+        tiles into one printable document, adding <b>lazy loading</b> so the screen stayed fast.
       </li>
       <li>
-        Prototyped a new chat UI and admin area for <b>LifeWeb</b>, a conversational-AI chat
-        product, after taking it over from its original developer.
+        Designed the UI and delivered candidate-management and hiring-workflow features for
+        <b>RecruitBee</b>, the recruitment module of 20X relaunched as a standalone product
+        (ByteRiver Group).
       </li>
       <li>
-        Moved from a frontend internship to a full-time Software Developer role within four months.
+        Delivered features for a <b>custom staffing platform</b> that Benagon built for a large
+        nursing-agency client in Ireland.
+      </li>
+      <li>
+        Moved from frontend intern to full-time Software Developer within four months, working
+        day to day with senior developers and QA.
       </li>
     </ul>
   </div>
@@ -393,9 +388,11 @@
   <ul>
     <li>
       <b>Designer &amp; Production In-Charge — Al Shayeb Advertising (Actual Advertising)</b>,
-      Bahrain (Jun 2019 – Nov 2022) · <b>IT Sales &amp; Technical Support Executive — DotLine Computers (Realpoint
-      Computer)</b>, Bahrain (Jun 2018 – Jun 2019) · <b>Graphic Designer — Cactus Advertising &amp; Promotion
-      SPC</b>, Bahrain (May 2018). Client-facing delivery under hard deadlines.
+      Bahrain (Jun 2019 – Nov 2022): designed and produced seasonal sale campaigns for retail
+      clients (signage, large-format print, displays and laser-cut fabrication) against fixed
+      launch dates. · <b>IT Sales &amp; Technical Support Executive — DotLine Computers (Realpoint
+      Computer)</b>, Bahrain (Jun 2018 – Jun 2019): customer support, system setup and WordPress
+      websites. · <b>Graphic Designer — Cactus Advertising &amp; Promotion SPC</b>, Bahrain (May 2018).
     </li>
   </ul>
 
@@ -406,7 +403,6 @@
     <div><b>Repo Mentor</b> — <a href="https://repomentor.acsaven.com">repomentor.acsaven.com</a></div>
     <div><b>RAG + evals + agent</b> — <a href="https://llmdocs.acsaven.com">llmdocs.acsaven.com</a> · <a href="https://github.com/acsavenhq/llm-docs-lab">github.com/acsavenhq/llm-docs-lab</a></div>
     <div><b>npm package</b> — <a href="https://www.npmjs.com/package/@acsaven/astro-ops">npmjs.com/package/@acsaven/astro-ops</a></div>
-    <div><b>Open-source security modules</b> — <a href="https://github.com/acsavenhq/trytokka-security">github.com/acsavenhq/trytokka-security</a></div>
     <div><b>VS Code extension</b> — <a href="https://marketplace.visualstudio.com/items?itemName=trytokka.scout-ai-spend-tracker">marketplace.visualstudio.com</a> (search "Scout AI Spend Tracker")</div>
   </div>
 
