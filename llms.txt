@@ -47,6 +47,8 @@ Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based i
 - Instagram (Acsaven): https://www.instagram.com/acsavenhq/
 - Peerlist: https://peerlist.io/samsonpg
 - Dev.to: https://dev.to/samsonpg
+- Medium: https://medium.com/@samsonpg
+- Product Hunt: https://www.producthunt.com/@samsonpg
 
 ## Career path (newest first)
 1. **Acsaven** — founder; six live products
