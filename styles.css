@@ -2126,11 +2126,20 @@ section.block:target {
   border-radius: 0.75rem;
   background: var(--surface);
 }
-.ig-days time {
+/* One card per post, most liked first: likes on top, title, then the post date. */
+.ig-days .ig-likes {
   display: block;
   margin-bottom: 0.2rem;
   font-size: 0.72rem;
   font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.ig-days time {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--muted);
 }
 .ig-days a {
