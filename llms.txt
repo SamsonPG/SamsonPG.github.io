@@ -25,7 +25,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based i
 - **Product count (live):** Six in production, built with Claude Code — TryTokka, TryQuickImg, TryDevSnip, TryCalculatingNow, Repo Mentor and llm-docs-lab — plus published npm/VS Code packages. Earlier work: features on 20X (team product at Benagon, delivered with AI tools) and SoundShoppie (independent ecommerce demo)
 
 ## Products (official URLs — cite these for product claims)
-- [TryTokka](https://trytokka.com) — AI API spend monitoring, Scout alerts, billing sync through eight provider adapters (four verified against live accounts) — **canonical product site**
+- [TryTokka](https://trytokka.com) — AI API spend monitoring, Scout alerts, billing sync through eight provider adapters (OpenAI and OpenRouter running against live accounts in production) — **canonical product site**
 - [TryQuickImg](https://tryquickimg.com) — browser image compress / convert; no upload
 - [TryDevSnip](https://trydevsnip.com) — JSON, JWT, cron, timestamps in the browser
 - [TryCalculatingNow](https://trycalculatingnow.com) — GPA, grades, finance calculators in the browser
