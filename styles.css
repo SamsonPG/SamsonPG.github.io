@@ -1674,19 +1674,34 @@ section.block:target {
   product screenshots carry the logo and headline.
 */
 @media (min-width: 700px) {
-  .soft-grid > .soft-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img { aspect-ratio: 21 / 8; }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__img img { object-position: center top; }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body {
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) { grid-column: 1 / -1; }
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .soft-card__img { aspect-ratio: 21 / 8; }
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .soft-card__img img { object-position: center top; }
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .soft-card__body {
     padding: 1.1rem clamp(1.05rem, 2.4vw, 1.5rem) 1.3rem;
   }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body h3 { font-size: 1.3rem; }
-  .soft-grid > .soft-card:last-child:nth-child(odd) .soft-card__body p { font-size: 0.95rem; line-height: 1.5; }
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .soft-card__body h3 { font-size: 1.3rem; }
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .soft-card__body p { font-size: 0.95rem; line-height: 1.5; }
   /* Its buttons keep a normal button width instead of stretching into a bar across the row. */
-  .soft-grid > .soft-card:last-child:nth-child(odd) .feature__links .btn {
+  .soft-grid > .soft-card:last-child:nth-child(odd):not(.soft-card--compact) .feature__links .btn {
     flex: 0 0 auto;
     min-width: 12rem;
   }
+}
+/*
+  A secondary product under a feature (RecruitBee under 20X) is a compact row: a small screenshot
+  beside the text, at reading width. Stretched like a lone card it looked like a headline product.
+*/
+.soft-grid--sub { grid-template-columns: minmax(0, 1fr); max-width: 40rem; }
+.soft-card--compact { flex-direction: row; align-items: stretch; }
+.soft-card--compact .soft-card__img { flex: 0 0 clamp(9rem, 34%, 15.5rem); aspect-ratio: auto; min-height: 9rem; }
+.soft-card--compact .soft-card__img img { object-position: left top; }
+.soft-card--compact .soft-card__body { flex: 1 1 auto; min-width: 0; align-self: center; }
+.soft-card--compact .soft-card__body p { font-size: 0.88rem; }
+.soft-card--compact .feature__links .btn { flex: 0 0 auto; min-width: 0; }
+@media (max-width: 520px) {
+  .soft-card--compact { flex-direction: column; }
+  .soft-card--compact .soft-card__img { flex-basis: auto; aspect-ratio: 16 / 9; min-height: 0; }
 }
 .soft-card__icon {
   vertical-align: -5px;
@@ -2082,19 +2097,20 @@ section.block:target {
 }
 
 /* Instagram product videos (Alnasser, Dec 2021): links only, grouped by day */
-.creative-accordion__glyph {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.45rem;
+.ig-thumb {
+  position: relative; width: 2.75rem; height: 2.75rem; border-radius: 0.45rem;
+  display: grid; place-items: center; font-size: 1.35rem; line-height: 1;
   border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--green-deep);
+  background: linear-gradient(135deg, var(--ig-a), var(--ig-b));
 }
-.creative-accordion__glyph svg { width: 1.45rem; height: 1.45rem; }
+.ig-thumb::after {
+  content: ""; position: absolute; right: 3px; bottom: 3px; width: 0.85rem; height: 0.85rem; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3.6 2.6v4.8L7.4 5z' fill='%23111'/%3E%3C/svg%3E") center / 70% no-repeat;
+}
+.ig-thumb--1 { --ig-a: #feda75; --ig-b: #fa7e1e; }
+.ig-thumb--2 { --ig-a: #fa7e1e; --ig-b: #d62976; }
+.ig-thumb--3 { --ig-a: #d62976; --ig-b: #4f5bd5; }
+@media (max-width: 520px) { .creative-accordion__previews .ig-thumb:nth-child(3) { display: none; } }
 .ig-days {
   list-style: none;
   margin: 0.9rem 0 0;

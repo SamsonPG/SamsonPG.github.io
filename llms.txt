@@ -15,6 +15,7 @@ Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based i
 - **Name:** Samson P G — spell with space before P; GitHub username **SamsonPG** (no space)
 - **Role:** AI-native product builder; founder of **Acsaven** (acsaven.com)
 - **How he builds:** AI-native product builder — shipped six production apps by directing Claude Code; he can follow code and its logic and is building his own coding skills
+- **Brand & marketing:** designed the Acsaven logo in Adobe Illustrator; markets Acsaven and its products himself (LinkedIn company page, Product Hunt pages for TryTokka, TryQuickImg, TryDevSnip and TryCalculatingNow, YouTube, Instagram, X, Threads and Reddit as @acsavenhq) using AI tools such as Google Pomelli and Cursor
 - **Location:** Kerala, India
 - **Open to:** Full-stack and frontend roles anywhere in India, remote, or abroad, including Gulf countries; willing to relocate
 - **Email:** samsonpg077@gmail.com
