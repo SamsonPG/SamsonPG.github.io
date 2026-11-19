@@ -176,8 +176,14 @@
 
   var creativeAccordion = document.querySelector('.creative-accordion');
   function openCreativeIfTargeted() {
-    if (!creativeAccordion) return;
-    if (window.location.hash === '#creative') creativeAccordion.open = true;
+    if (creativeAccordion && window.location.hash === '#creative') creativeAccordion.open = true;
+    // A link straight to a fold-out panel (e.g. #alnasser-2021) opens it and brings it into view.
+    var id = window.location.hash.slice(1);
+    var panel = id && document.getElementById(id);
+    if (panel && panel.tagName === 'DETAILS' && !panel.open) {
+      panel.open = true;
+      panel.scrollIntoView({ block: 'start' });
+    }
   }
   openCreativeIfTargeted();
   window.addEventListener('hashchange', function () {

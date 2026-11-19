@@ -2081,6 +2081,57 @@ section.block:target {
   text-underline-offset: 2px;
 }
 
+/* Instagram product videos (Alnasser, Dec 2021): links only, grouped by day */
+.creative-accordion__glyph {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--green-deep);
+}
+.creative-accordion__glyph svg { width: 1.45rem; height: 1.45rem; }
+.ig-days {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr));
+  gap: 0.5rem;
+}
+.ig-days li {
+  min-width: 0;
+  padding: 0.55rem 0.75rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+.ig-days time {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.ig-days a {
+  display: block;
+  padding: 0.12rem 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+.ig-days a::after { content: " ↗"; color: var(--muted); font-weight: 400; }
+.ig-days a:hover, .ig-days a:focus-visible {
+  color: var(--green-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .skills {
   margin-top: 1.75rem; padding-top: 1.35rem; border-top: 1px dashed var(--line);
 }
