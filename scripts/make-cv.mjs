@@ -189,6 +189,9 @@ const MUST_EXTRACT = [
   // Keywords a role match depends on.
   'TypeScript', 'Next.js', 'PostgreSQL', 'Node.js', 'React', 'Acsaven',
   'Repo Mentor', 'llm-docs-lab',
+  // Benagon exactly as the experience certificate states it (HR, 28 May 2026): background checks
+  // compare these with HR records, so the CV must say Trainee and June, not "intern" and July.
+  'Software Developer Trainee', 'Jun 2024',
   /*
     The section headings, as whole words.
 
@@ -252,7 +255,8 @@ if (deadLinks.length) {
   is present; an old one left beside it would still pass them, so its absence is asserted —
   in the text layer an ATS reads and in the link annotations.
 */
-const RETIRED = ['samson-p-g-335964133'];
+// ...and the pre-certificate Benagon wording (2026-11-20), so it can't creep back.
+const RETIRED = ['samson-p-g-335964133', 'Frontend Web Developer (internship)', 'Jul 2024', 'frontend intern'];
 const stale = RETIRED.filter((s) => extracted.includes(s) || raw.includes(s));
 if (stale.length) {
   console.error(`  FAIL: retired identifiers still in the PDF: ${stale.join(', ')}`);
