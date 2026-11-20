@@ -1193,5 +1193,29 @@
     <path d="M12 19V5M5 12l7-7 7 7"></path>
   </svg>
 </button>
+<script>
+/* Domain fallback: if one of my domains stops serving (lapsed or parked), its links switch to the
+   free address that serves the same site. Probe = a small image only that site has. */
+(() => {
+  const SITES = [
+    ['acsaven.com', '/brand/acsaven-mark.svg', { 'acsaven.com': 'acsaven.pages.dev', 'repomentor.acsaven.com': 'repo-mentor.acsaven.workers.dev', 'llmdocs.acsaven.com': 'llm-docs-lab.acsaven.workers.dev' }],
+    ['tryquickimg.com', '/favicon.svg', { 'tryquickimg.com': 'tryquickimg.acsaven.workers.dev' }],
+    ['trydevsnip.com', '/favicon.svg', { 'trydevsnip.com': 'trydevsnip.acsaven.workers.dev' }],
+    ['trycalculatingnow.com', '/favicon.svg', { 'trycalculatingnow.com': 'trycalculatingnow.acsaven.workers.dev' }],
+    ['trytokka.com', '/favicon-48.png', { 'trytokka.com': 'trytokka.vercel.app' }],
+  ];
+  for (const [domain, probe, hosts] of SITES) {
+    const swap = () => document.querySelectorAll('a[href]').forEach((a) => {
+      const u = new URL(a.href);
+      if (hosts[u.hostname]) { u.hostname = hosts[u.hostname]; a.href = u.href; }
+    });
+    const img = new Image();
+    const timer = setTimeout(swap, 5000);
+    img.onload = () => clearTimeout(timer);
+    img.onerror = () => { clearTimeout(timer); swap(); };
+    img.src = 'https://' + domain + probe + '?ping=' + Date.now();
+  }
+})();
+</script>
 </body>
 </html>
