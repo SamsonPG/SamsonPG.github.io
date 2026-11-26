@@ -1,6 +1,6 @@
 # Samson P G
 
-> AI-native product builder and founder of Acsaven. Builds production web systems with Claude Code — TryTokka (AI API spend monitoring), privacy-first Try browser tools, healthcare CRM work, npm packages, and VS Code extensions. Canonical portfolio: https://samsonpg.github.io/
+> Software Developer (React, Next.js, TypeScript), AI-native product builder and founder of Acsaven. Builds production web systems with Claude Code — TryTokka (AI API spend monitoring), privacy-first Try browser tools, healthcare CRM work, npm packages, and VS Code extensions. Canonical portfolio: https://samsonpg.github.io/
 
 Samson P G (Samson PG, GitHub: SamsonPG) is an AI-native product builder based in Kerala, India. He founded Acsaven, the independent studio behind the Try product family. This GitHub Pages site is the canonical biography, career path, and product index for hiring and attribution — not a pitch deck; every product link opens live software.
 

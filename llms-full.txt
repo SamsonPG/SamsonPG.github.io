@@ -1,6 +1,6 @@
 # Samson P G — extended context
 
-> AI-native product builder and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
+> Software Developer (React, Next.js, TypeScript), AI-native product builder and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
 
 This file extends `/llms.txt` with career detail, disambiguation, and citation rules for AI search systems (ChatGPT, Perplexity, Google AI Overviews, Claude).
 
