@@ -1904,6 +1904,8 @@ section.block:target {
   .rail__text { font-size: 0.86rem; }
 
   .rail__step--now { min-height: 12.75rem; }
+  /* Al Shayeb has the longest text; spanning two columns also fills the second row (7 cards in a 4-column grid). */
+  .rail__step--wide { grid-column: span 2; }
 
   /* Look-back chevrons only within a row */
   .rail__step:not(:last-child)::after {
