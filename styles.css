@@ -2485,3 +2485,13 @@ html[data-theme="dark"] .faq-item__q::after {
     display: none !important;
   }
 }
+
+/* Testimonials */
+.testimonial-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); margin-top: 1.25rem; }
+.testimonial { margin: 0; padding: 1.1rem 1.15rem; background: var(--card); border: 1px solid var(--line); border-radius: 14px; display: flex; flex-direction: column; gap: 0.9rem; }
+.testimonial__quote { margin: 0; }
+.testimonial__quote p { margin: 0; color: var(--ink); line-height: 1.55; font-size: 0.95rem; }
+.testimonial__who { display: flex; gap: 0.7rem; align-items: center; margin-top: auto; font-size: 0.85rem; line-height: 1.35; }
+.testimonial__avatar { flex-shrink: 0; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.8rem; background: color-mix(in srgb, var(--green) 18%, var(--card)); color: var(--ink); }
+.testimonial__role, .testimonial__src { color: var(--muted); font-size: 0.78rem; }
+.testimonial__src[href] { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
