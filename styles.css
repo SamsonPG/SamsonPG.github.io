@@ -2502,3 +2502,5 @@ html[data-theme="dark"] .faq-item__q::after {
 .howibuild__steps { list-style: none; counter-reset: hib; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .howibuild__steps li { counter-increment: hib; font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 999px; background: color-mix(in srgb, var(--green) 14%, var(--card)); color: var(--ink); }
 .howibuild__steps li::before { content: counter(hib) ". "; color: var(--green); }
+
+.testimonial__avatar--photo { object-fit: cover; padding: 0; border: 2px solid color-mix(in srgb, var(--green) 45%, var(--card)); }
