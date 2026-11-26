@@ -2495,3 +2495,10 @@ html[data-theme="dark"] .faq-item__q::after {
 .testimonial__avatar { flex-shrink: 0; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 0.8rem; background: color-mix(in srgb, var(--green) 18%, var(--card)); color: var(--ink); }
 .testimonial__role, .testimonial__src { color: var(--muted); font-size: 0.78rem; }
 .testimonial__src[href] { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* How I build (hero) */
+.howibuild { margin: 1rem 0 1.25rem; padding: 0.85rem 1rem; border: 1px solid var(--line); border-radius: 14px; background: var(--card); max-width: 40rem; }
+.howibuild__lead { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.5; color: var(--ink); }
+.howibuild__steps { list-style: none; counter-reset: hib; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.howibuild__steps li { counter-increment: hib; font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 999px; background: color-mix(in srgb, var(--green) 14%, var(--card)); color: var(--ink); }
+.howibuild__steps li::before { content: counter(hib) ". "; color: var(--green); }
