@@ -2504,3 +2504,5 @@ html[data-theme="dark"] .faq-item__q::after {
 .howibuild__steps li::before { content: counter(hib) ". "; color: var(--green); }
 
 .testimonial__avatar--photo { object-fit: cover; padding: 0; border: 2px solid color-mix(in srgb, var(--green) 45%, var(--card)); }
+.testimonial__name { color: inherit; text-decoration: none; }
+.testimonial__name:hover, .testimonial__name:focus-visible { text-decoration: underline; text-underline-offset: 2px; }
