@@ -1,6 +1,6 @@
 # Samson P G — extended context
 
-> Creative technologist, graphic & UI designer, AI-native product builder and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
+> AI-native product builder, creative technologist, graphic & UI designer and Acsaven founder. Canonical portfolio: https://samsonpg.github.io/
 
 This file extends `/llms.txt` with career detail, disambiguation, and citation rules for AI search systems (ChatGPT, Perplexity, Google AI Overviews, Claude).
 
